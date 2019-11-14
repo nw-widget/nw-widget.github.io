@@ -40,7 +40,7 @@ module.exports = "<div class=\"jumbotron\">\r\n    <p class=\"lead\">This is a s
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">\r\n    <a class=\"navbar-brand\" href=\"#\">\r\n        <img src=\"/assets/images/logo.png\" alt=\"Home\">\r\n    </a>\r\n\r\n    <div class=\"navbar-collapse\" id=\"navbarTogglerDemo03\">\r\n        <ul class=\"navbar-nav mr-auto mt-2 mt-lg-0\">\r\n            <li class=\"nav-item\" *ngFor=\"let item of navs\" routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{exact: true}\">\r\n                <a class=\"nav-link\" [routerLink]=\"item.route\" routerLinkActive=\"router-link-active\" [title]=\"item.title\">{{item.name}} <span class=\"sr-only\">(current)</span></a>\r\n            </li>\r\n        </ul>\r\n        <form class=\"form-inline my-2 my-lg-0\">\r\n            <input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">\r\n            <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>\r\n        </form>\r\n    </div>\r\n</nav>"
+module.exports = "<nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">\r\n    <a class=\"navbar-brand\" href=\"#\">\r\n        <img src=\"/assets/images/logo.png\" alt=\"Home\">\r\n    </a>\r\n\r\n    <div class=\"navbar-collapse\" id=\"navbarTogglerDemo03\">\r\n        <ul class=\"navbar-nav mr-auto mt-2 mt-lg-0\">\r\n            <li class=\"nav-item\" *ngFor=\"let item of navs\" [class.active]=\"isActive(item.route, false)\">\r\n                <a class=\"nav-link\" [routerLink]=\"item.route\" [class.active]=\"isActive(item.route, false)\" [title]=\"item.title\">{{item.name}} <span class=\"sr-only\">(current)</span></a>\r\n            </li>\r\n        </ul>\r\n        <form class=\"form-inline my-2 my-lg-0\">\r\n            <input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">\r\n            <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>\r\n        </form>\r\n    </div>\r\n</nav>"
 
 /***/ }),
 
@@ -51,7 +51,7 @@ module.exports = "<nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand-lg sidebar p-0\">\r\n    <div class=\"align-items-center d-flex navbar-toggler w-100\">\r\n        <span class=\"mr-auto\">Menu</span>\r\n        <button class=\"btn navbar-toggler-button\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarTogglerDemo03\"\r\n            aria-controls=\"navbarTogglerDemo03\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n            <svg class=\"align-middle\" focusable=\"false\" height=\"30\" viewBox=\"0 0 30 30\" width=\"30\"\r\n                xmlns=\"http://www.w3.org/2000/svg\">\r\n                <title>Menu</title>\r\n                <path d=\"M4 7h22M4 15h22M4 23h22\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-miterlimit=\"10\"\r\n                    stroke-width=\"2\"></path>\r\n            </svg>\r\n        </button>\r\n    </div>\r\n    <div class=\"collapse navbar-collapse\" id=\"navbarTogglerDemo03\">\r\n        <ul class=\"navbar-nav mr-auto mt-2 mt-lg-0\">\r\n            <li class=\"nav-item\" [class.group-item]=\"item.hasChild\" *ngFor=\"let item of navs\" routerLinkActive=\"active\"\r\n                [routerLinkActiveOptions]=\"{exact: true}\">\r\n                <a class=\"nav-link\" [routerLink]=\"item.route\" routerLinkActive=\"router-link-active\"\r\n                    [title]=\"item.title\">{{item.name}} <span class=\"sr-only\">(current)</span></a>\r\n            </li>\r\n        </ul>\r\n    </div>\r\n</nav>"
+module.exports = "<nav class=\"navbar navbar-expand-lg sidebar p-0\">\r\n    <div class=\"align-items-center d-flex navbar-toggler w-100\">\r\n        <span class=\"mr-auto\">Menu</span>\r\n        <button class=\"btn navbar-toggler-button\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarTogglerDemo03\"\r\n            aria-controls=\"navbarTogglerDemo03\" aria-expanded=\"false\" aria-label=\"Toggle navigation\" (click)=\"onToggleNavigation($event)\">\r\n            <svg class=\"align-middle\" focusable=\"false\" height=\"30\" viewBox=\"0 0 30 30\" width=\"30\"\r\n                xmlns=\"http://www.w3.org/2000/svg\">\r\n                <title>Menu</title>\r\n                <path d=\"M4 7h22M4 15h22M4 23h22\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-miterlimit=\"10\"\r\n                    stroke-width=\"2\"></path>\r\n            </svg>\r\n        </button>\r\n    </div>\r\n    <div class=\"collapse navbar-collapse\" [class.show]=\"!collapse\" id=\"navbarTogglerDemo03\">\r\n        <ul class=\"navbar-nav mr-auto mt-2 mt-lg-0\">\r\n            <li class=\"nav-item\" [class.group-item]=\"!item.hasChild\" *ngFor=\"let item of navs\" [class.active]=\"isActive(item.route, false)\">\r\n                <a class=\"nav-link\" [routerLink]=\"item.route\" [class.active]=\"isActive(item.route, false)\"\r\n                    [title]=\"item.title\">{{item.name}} <span class=\"sr-only\">(current)</span></a>\r\n            </li>\r\n        </ul>\r\n    </div>\r\n</nav>"
 
 /***/ }),
 
@@ -574,32 +574,41 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _views_views_routing_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../views/views-routing.module */ "./src/app/views/views-routing.module.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "../node_modules/@angular/router/fesm2015/router.js");
+
 
 
 
 let HeaderComponent = class HeaderComponent {
-    constructor() {
+    constructor(router) {
+        this.router = router;
         this.routes = _views_views_routing_module__WEBPACK_IMPORTED_MODULE_2__["VIEWS_ROUTES"];
+        this.viewRoutes = ['home', 'getting-started', 'components'];
         this.navs = [];
-        this.getNavFromRoute = (r) => {
+        this.getNavFromViewRoute = (vr) => {
             const route = ['/'];
-            if (r.path && r.path.length) {
-                route.push(r.path);
-                if (r.children && r.children.length) {
-                    route.push(r.children[0].path);
-                }
+            if (vr) {
+                route.push(vr);
             }
+            const current = this.routes.find(r => r.path === vr);
             this.navs.push({
-                name: r.data && r.data.name ? r.data.name : r.path,
+                name: current && current.data && current.data.name ? current.data.name : vr,
                 route,
-                title: r.data && r.data.title ? r.data.title : r.path
+                title: current && current.data && current.data.title ? current.data.title : vr
             });
         };
     }
     ngOnInit() {
-        this.routes.forEach(r => this.getNavFromRoute(r));
+        this.viewRoutes.forEach(this.getNavFromViewRoute);
+    }
+    isActive(currentRoute, exact = true) {
+        console.log('isActive', currentRoute, exact, this.router.createUrlTree(currentRoute), this.router.isActive(this.router.createUrlTree(currentRoute), exact));
+        return this.router.isActive(this.router.createUrlTree(currentRoute), exact);
     }
 };
+HeaderComponent.ctorParameters = () => [
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
+];
 HeaderComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-header',
@@ -636,39 +645,44 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _views_views_routing_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../views/views-routing.module */ "./src/app/views/views-routing.module.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "../node_modules/@angular/router/fesm2015/router.js");
+
 
 
 
 let NavigationComponent = class NavigationComponent {
-    constructor() {
-        this.routes = _views_views_routing_module__WEBPACK_IMPORTED_MODULE_2__["VIEWS_ROUTES"];
+    constructor(router) {
+        this.router = router;
+        this.routes = _views_views_routing_module__WEBPACK_IMPORTED_MODULE_2__["VIEWS_SIDEBAR_ROUTES"];
+        this.collapse = true;
         this.navs = [];
         this.getNavFromRoute = (r) => {
             if (r.path !== '') {
-                const route = ['/', r.path];
+                const route = ['/', ...r.path.split('/')];
                 this.navs.push({
                     name: r.data && r.data.name ? r.data.name : r.path,
-                    route: r.children && r.children.length ? route.concat(r.children[0].path) : route,
+                    route,
                     title: r.data && r.data.title ? r.data.title : r.path,
-                    hasChild: true
+                    hasChild: r.children !== undefined && r.children !== null
                 });
-                if (r.children && r.children.length) {
-                    r.children.forEach(c => {
-                        if (!(c.data && c.data.hide))
-                            this.navs.push({
-                                name: c.data && c.data.name ? c.data.name : c.path,
-                                route: route.concat(c.path),
-                                title: c.data && c.data.title ? c.data.title : c.path
-                            });
-                    });
-                }
             }
+        };
+        this.onToggleNavigation = ($event) => {
+            $event.preventDefault();
+            this.collapse = !this.collapse;
         };
     }
     ngOnInit() {
         this.routes.forEach(r => this.getNavFromRoute(r));
     }
+    isActive(currentRoute, exact = true) {
+        console.log('isActive', currentRoute, exact, this.router.createUrlTree(currentRoute), this.router.isActive(this.router.createUrlTree(currentRoute), exact));
+        return this.router.isActive(this.router.createUrlTree(currentRoute), exact);
+    }
 };
+NavigationComponent.ctorParameters = () => [
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
+];
 NavigationComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-navigation',
@@ -942,7 +956,7 @@ SharedModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".content {\n  padding: 0.5rem 0;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImRlbW8vc3JjL2FwcC92aWV3cy9nZXR0aW5nLXN0YXJ0ZWQvRjpcXFNvdXJjZVxcQW5ndWxhclxcbmV3IHByb2plY3RcXG53LXdpZGdldC9kZW1vXFxzcmNcXGFwcFxcdmlld3NcXGdldHRpbmctc3RhcnRlZFxcZ2V0dGluZy1zdGFydGVkLmNvbXBvbmVudC5zY3NzIiwiZGVtby9zcmMvYXBwL3ZpZXdzL2dldHRpbmctc3RhcnRlZC9nZXR0aW5nLXN0YXJ0ZWQuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxpQkFBQTtBQ0NKIiwiZmlsZSI6ImRlbW8vc3JjL2FwcC92aWV3cy9nZXR0aW5nLXN0YXJ0ZWQvZ2V0dGluZy1zdGFydGVkLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNvbnRlbnQge1xyXG4gICAgcGFkZGluZzogMC41cmVtIDA7XHJcbn0iLCIuY29udGVudCB7XG4gIHBhZGRpbmc6IDAuNXJlbSAwO1xufSJdfQ== */"
+module.exports = ".content {\n  padding-top: 0.5rem;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImRlbW8vc3JjL2FwcC92aWV3cy9nZXR0aW5nLXN0YXJ0ZWQvRjpcXFNvdXJjZVxcQW5ndWxhclxcbmV3IHByb2plY3RcXG53LXdpZGdldC9kZW1vXFxzcmNcXGFwcFxcdmlld3NcXGdldHRpbmctc3RhcnRlZFxcZ2V0dGluZy1zdGFydGVkLmNvbXBvbmVudC5zY3NzIiwiZGVtby9zcmMvYXBwL3ZpZXdzL2dldHRpbmctc3RhcnRlZC9nZXR0aW5nLXN0YXJ0ZWQuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxtQkFBQTtBQ0NKIiwiZmlsZSI6ImRlbW8vc3JjL2FwcC92aWV3cy9nZXR0aW5nLXN0YXJ0ZWQvZ2V0dGluZy1zdGFydGVkLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNvbnRlbnQge1xyXG4gICAgcGFkZGluZy10b3A6IDAuNXJlbTtcclxufSIsIi5jb250ZW50IHtcbiAgcGFkZGluZy10b3A6IDAuNXJlbTtcbn0iXX0= */"
 
 /***/ }),
 
@@ -1115,11 +1129,12 @@ TimelineComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*!***********************************************!*\
   !*** ./src/app/views/views-routing.module.ts ***!
   \***********************************************/
-/*! exports provided: VIEWS_ROUTES, ViewsRoutingModule */
+/*! exports provided: VIEWS_SIDEBAR_ROUTES, VIEWS_ROUTES, ViewsRoutingModule */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VIEWS_SIDEBAR_ROUTES", function() { return VIEWS_SIDEBAR_ROUTES; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VIEWS_ROUTES", function() { return VIEWS_ROUTES; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ViewsRoutingModule", function() { return ViewsRoutingModule; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
@@ -1136,15 +1151,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const VIEWS_ROUTES = [
-    {
-        path: '',
-        component: _home_home_component__WEBPACK_IMPORTED_MODULE_4__["HomeComponent"],
-        data: {
-            name: 'Home',
-            title: 'Trang chủ'
-        }
-    },
+const VIEWS_SIDEBAR_ROUTES = [
     {
         path: 'getting-started',
         component: _getting_started_getting_started_component__WEBPACK_IMPORTED_MODULE_6__["GettingStartedComponent"],
@@ -1154,22 +1161,62 @@ const VIEWS_ROUTES = [
         }
     },
     {
-        path: 'component',
-        component: _views_component__WEBPACK_IMPORTED_MODULE_3__["ViewsComponent"],
+        path: 'components',
+        pathMatch: 'full',
+        redirectTo: 'components/timeline',
         data: {
-            name: 'Component',
+            name: 'Components',
             title: 'Thành phần'
+        }
+    },
+    {
+        path: 'components/timeline',
+        data: {
+            name: 'Timeline',
+            title: 'Dòng thời gian'
         },
         children: [
             {
-                path: 'timeline',
-                component: _timeline_timeline_component__WEBPACK_IMPORTED_MODULE_5__["TimelineComponent"],
-                data: {
-                    name: 'Timeline',
-                    title: 'Dòng thời gian'
-                }
+                path: '', pathMatch: 'full', redirectTo: 'examples'
+            },
+            {
+                path: '',
+                component: _views_component__WEBPACK_IMPORTED_MODULE_3__["ViewsComponent"],
+                children: [
+                    {
+                        path: 'examples',
+                        component: _timeline_timeline_component__WEBPACK_IMPORTED_MODULE_5__["TimelineComponent"]
+                    },
+                    {
+                        path: 'api',
+                        component: _timeline_timeline_component__WEBPACK_IMPORTED_MODULE_5__["TimelineComponent"]
+                    }
+                ]
             }
         ]
+    }
+];
+const VIEWS_ROUTES = [
+    {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'home',
+        data: {
+            name: 'Home',
+            title: 'Trang chủ'
+        }
+    },
+    {
+        path: 'home',
+        component: _home_home_component__WEBPACK_IMPORTED_MODULE_4__["HomeComponent"],
+        data: {
+            name: 'Home',
+            title: 'Trang chủ'
+        }
+    },
+    ...VIEWS_SIDEBAR_ROUTES,
+    {
+        path: '**', redirectTo: 'home'
     }
 ];
 let ViewsRoutingModule = class ViewsRoutingModule {
@@ -1208,13 +1255,50 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ViewsComponent", function() { return ViewsComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "../node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "../node_modules/rxjs/_esm2015/operators/index.js");
+
+
 
 
 let ViewsComponent = class ViewsComponent {
-    constructor() { }
+    constructor(route, _router, ngZone) {
+        this.route = route;
+        this._router = _router;
+        this.activeTab = 'examples';
+        this.sidebarCollapsed = true;
+        this.tableOfContent = [];
+        // This component is used in route definition 'components'
+        // So next child route will always be ':componentType' & next one will always be ':pageType' (or tab)
+        this._router.events.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["filter"])(event => event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_2__["NavigationEnd"])).subscribe(() => {
+            const parentRoute = this.route.snapshot.parent;
+            const tabRoute = this.route.snapshot.firstChild;
+            console.log('component', parentRoute);
+            console.log('activeTab', tabRoute);
+            this.component = parentRoute.url[1].path;
+            this.activeTab = tabRoute.url[0].path;
+        });
+        // information extracted from https://getbootstrap.com/docs/4.1/layout/overview/
+        // TODO: we should implements our own mediamatcher, according to bootstrap layout.
+        const smallScreenQL = matchMedia('(max-width: 767.98px)');
+        // tslint:disable-next-line:deprecation
+        smallScreenQL.addListener((event) => ngZone.run(() => this.isSmallScreenOrLess = event.matches));
+        this.isSmallScreenOrLess = smallScreenQL.matches;
+        const largeScreenQL = matchMedia('(max-width: 1199.98px)');
+        this.isLargeScreenOrLess = largeScreenQL.matches;
+        // tslint:disable-next-line:deprecation
+        largeScreenQL.addListener((event) => ngZone.run(() => this.isLargeScreenOrLess = event.matches));
+        console.log('isSmallScreenOrLess', this.isSmallScreenOrLess);
+        console.log('isLargeScreenOrLess', this.isLargeScreenOrLess);
+    }
     ngOnInit() {
     }
 };
+ViewsComponent.ctorParameters = () => [
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
+    { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"] }
+];
 ViewsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-views',

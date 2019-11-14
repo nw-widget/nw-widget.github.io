@@ -676,7 +676,6 @@ let NavigationComponent = class NavigationComponent {
         this.routes.forEach(r => this.getNavFromRoute(r));
     }
     isActive(currentRoute, exact = true) {
-        console.log('isActive', currentRoute, exact, this.router.createUrlTree(currentRoute), this.router.isActive(this.router.createUrlTree(currentRoute), exact));
         return this.router.isActive(this.router.createUrlTree(currentRoute), exact);
     }
 };

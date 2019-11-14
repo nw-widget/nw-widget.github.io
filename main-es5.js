@@ -702,7 +702,6 @@ var NavigationComponent = /** @class */ (function () {
     };
     NavigationComponent.prototype.isActive = function (currentRoute, exact) {
         if (exact === void 0) { exact = true; }
-        console.log('isActive', currentRoute, exact, this.router.createUrlTree(currentRoute), this.router.isActive(this.router.createUrlTree(currentRoute), exact));
         return this.router.isActive(this.router.createUrlTree(currentRoute), exact);
     };
     NavigationComponent.ctorParameters = function () { return [

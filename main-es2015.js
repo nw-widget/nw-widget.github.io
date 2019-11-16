@@ -326,7 +326,7 @@ module.exports = "<router-outlet></router-outlet>"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron\">\r\n    <p class=\"lead\">This is a simple project built in Angular 8+.</p>\r\n    <hr class=\"my-2\">\r\n    <p>oNiwa &copy;2019</p>\r\n</div>"
+module.exports = "<div class=\"jumbotron\">\r\n    <p>oNiwa &copy;2019</p>\r\n</div>"
 
 /***/ }),
 
@@ -349,6 +349,39 @@ module.exports = "<nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">
 /***/ (function(module, exports) {
 
 module.exports = "<nav class=\"navbar navbar-expand-lg sidebar p-0\">\r\n    <div class=\"align-items-center d-flex navbar-toggler w-100\">\r\n        <span class=\"mr-auto\">Menu</span>\r\n        <button class=\"btn navbar-toggler-button\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarTogglerDemo03\"\r\n            aria-controls=\"navbarTogglerDemo03\" aria-expanded=\"false\" aria-label=\"Toggle navigation\" (click)=\"onToggleNavigation($event)\">\r\n            <svg class=\"align-middle\" focusable=\"false\" height=\"30\" viewBox=\"0 0 30 30\" width=\"30\"\r\n                xmlns=\"http://www.w3.org/2000/svg\">\r\n                <title>Menu</title>\r\n                <path d=\"M4 7h22M4 15h22M4 23h22\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-miterlimit=\"10\"\r\n                    stroke-width=\"2\"></path>\r\n            </svg>\r\n        </button>\r\n    </div>\r\n    <div class=\"collapse navbar-collapse\" [class.show]=\"!collapse\" id=\"navbarTogglerDemo03\">\r\n        <ul class=\"navbar-nav mr-auto mt-2 mt-lg-0\">\r\n            <li class=\"nav-item\" [class.group-item]=\"!item.hasChild\" *ngFor=\"let item of navs\" [class.active]=\"isActive(item.route, false)\">\r\n                <a class=\"nav-link\" [routerLink]=\"item.route\" [class.active]=\"isActive(item.route, false)\"\r\n                    [title]=\"item.title\">{{item.name}} <span class=\"sr-only\">(current)</span></a>\r\n            </li>\r\n        </ul>\r\n    </div>\r\n</nav>"
+
+/***/ }),
+
+/***/ "../node_modules/raw-loader/index.js!./src/app/shared/components/api-docs/api-docs-class.component.html":
+/*!*****************************************************************************************************!*\
+  !*** ../node_modules/raw-loader!./src/app/shared/components/api-docs/api-docs-class.component.html ***!
+  \*****************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"api-doc-component\" [class.deprecated]=\"apiDocs.deprecated\">\n  <h3>\n    <a\n      class=\"title-fragment\"\n      [routerLink]=\"\"\n      fragment=\"{{apiDocs.className}}\" appFragment\n      title=\"Anchor link to: {{apiDocs.className}}\"\n    >\n      <img src=\"assets/images/link-symbol.svg\" alt=\"Anchor link to: {{apiDocs.className}}\"/>\n    </a>\n    <span>\n      {{apiDocs.className}}<span class=\"text-muted font-weight-light\" *ngIf=\"apiDocs.typeParameter\">&lt;{{apiDocs.typeParameter}}&gt;</span>\n    </span>\n    <a\n      class=\"github-link\"\n      (click)=\"trackSourceClick()\"\n      href=\"{{fbTreeMaster}}/{{apiDocs.fileName}}\"\n      target=\"_blank\"\n      title=\"Link to Github: {{apiDocs.className}}\"\n    >\n      <img src=\"assets/images/github.svg\" alt=\"Link to Github {{apiDocs.className}}\"/>\n    </a>\n  </h3>\n  <nw-api-docs-badge [type]=\"apiDocs.type\" [deprecated]=\"apiDocs.deprecated\" [since]=\"apiDocs.since\"></nw-api-docs-badge>\n  <p *ngIf=\"apiDocs.deprecated\">{{ apiDocs.deprecated.description }}</p>\n  <p class=\"lead\" [innerHTML]=\"apiDocs.description\"></p>\n\n  <ng-template [ngIf]=\"apiDocs.properties && apiDocs.properties.length\">\n    <section>\n      <h4>Properties</h4>\n      <table class=\"table table-sm\">\n        <tbody>\n        <tr *ngFor=\"let prop of apiDocs.properties\" [class.deprecated]=\"prop.deprecated\">\n          <td class=\"label-cell\">\n            <code>{{prop.name}}</code><br>\n            <span *ngIf=\"prop.since\" class=\"badge badge-info\">since {{ prop.since.version }}</span>&ngsp;\n            <span *ngIf=\"prop.deprecated\" class=\"badge badge-secondary\">deprecated {{ prop.deprecated.version }}</span>\n          </td>\n          <td class=\"content-cell\">\n            <p *ngIf=\"prop.deprecated\">{{ prop.deprecated.description }}</p>\n            <p class=\"description\" [innerHTML]=\"prop.description\"></p>\n            <div class=\"meta\">\n              <div>\n                <i>Type: </i><code>{{ prop.type }}</code>\n              </div>\n              <div *ngIf=\"prop.defaultValue\">\n                <i>Default value: </i><code>{{prop.defaultValue || '-'}}</code>\n              </div>\n            </div>\n          </td>\n        </tr>\n        </tbody>\n      </table>\n    </section>\n  </ng-template>\n\n  <ng-template [ngIf]=\"apiDocs.methods && apiDocs.methods.length\">\n    <section>\n      <h4>Methods</h4>\n      <table class=\"table table-sm\">\n        <tbody>\n          <tr *ngFor=\"let method of apiDocs.methods\" [class.deprecated]=\"method.deprecated\">\n            <td class=\"label-cell\">\n              <code>{{method.name}}</code><br>\n              <span *ngIf=\"method.since\" class=\"badge badge-info\">since {{ method.since.version }}</span>&ngsp;\n              <span *ngIf=\"method.deprecated\" class=\"badge badge-secondary\">deprecated {{ method.deprecated.version }}</span>\n            </td>\n            <td class=\"content-cell\">\n                <p class=\"signature\">\n                    <code>{{methodSignature(method)}}</code>&ngsp;\n                    <small class=\"text-muted\" title=\"Return type\">=&gt; {{ method.returnType }}</small>\n                </p>\n                <p *ngIf=\"method.deprecated\">{{ method.deprecated.description }}</p>\n                <p class=\"description\" [innerHTML]=\"method.description\"></p>\n            </td>\n          </tr>\n        </tbody>\n      </table>\n    </section>\n  </ng-template>\n</div>\n\n"
+
+/***/ }),
+
+/***/ "../node_modules/raw-loader/index.js!./src/app/shared/components/api-docs/api-docs-config.component.html":
+/*!******************************************************************************************************!*\
+  !*** ../node_modules/raw-loader!./src/app/shared/components/api-docs/api-docs-config.component.html ***!
+  \******************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div (click)=\"trackSourceClick()\" class=\"api-doc-component\" [class.deprecated]=\"apiDocs.deprecated\">\n  <h3>\n    <a\n      class=\"title-fragment\"\n      [routerLink]=\"\"\n      fragment=\"{{apiDocs.className}}\"\n      appFragment\n      title=\"Anchor link to: {{apiDocs.className}}\"\n    >\n      <img src=\"assets/images/link-symbol.svg\" alt=\"Anchor link to: {{apiDocs.className}}\"/>\n    </a>\n    <span>\n      {{apiDocs.className}}<span class=\"text-muted font-weight-light\" *ngIf=\"apiDocs.typeParameter\">&lt;{{apiDocs.typeParameter}}&gt;</span>\n    </span>\n    <a\n      class=\"github-link\"\n      href=\"{{fbTreeMaster}}/{{apiDocs.fileName}}\"\n      target=\"_blank\"\n      title=\"Link to Github: {{apiDocs.className}}\"\n    >\n      <img src=\"assets/images/github.svg\" alt=\"Link to Github {{apiDocs.className}}\"/>\n    </a>\n  </h3>\n  <nw-api-docs-badge type=\"Configuration\" [deprecated]=\"apiDocs.deprecated\" [since]=\"apiDocs.since\"></nw-api-docs-badge>\n  <p *ngIf=\"apiDocs.deprecated\">{{ apiDocs.deprecated.description }}</p>\n  <p class=\"lead\" [innerHTML]=\"apiDocs.description\"></p>\n\n  <ng-template [ngIf]=\"apiDocs.properties && apiDocs.properties.length\">\n    <section>\n      <h4>Properties</h4>\n      <p class=\"description\">\n        <ng-template ngFor let-property [ngForOf]=\"apiDocs.properties\">\n          <code class=\"pr-2\">{{ property.name }}</code>&ngsp;\n        </ng-template>\n      </p>\n      <p class=\"mt-3\">Documentation available in <a [routerLink]=\"\" fragment=\"{{directiveName}}\">{{ directiveName }}</a></p>\n    </section>\n  </ng-template>\n</div>\n\n"
+
+/***/ }),
+
+/***/ "../node_modules/raw-loader/index.js!./src/app/shared/components/api-docs/api-docs.component.html":
+/*!***********************************************************************************************!*\
+  !*** ../node_modules/raw-loader!./src/app/shared/components/api-docs/api-docs.component.html ***!
+  \***********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"api-doc-component\" [class.deprecated]=\"apiDocs.deprecated\">\n  <h3 class=\"title\">\n    <a\n      [routerLink]=\"\"\n      [fragment]=\"apiDocs.className\" appFragment\n      title=\"Anchor link to: {{apiDocs.className}}\"\n    >\n      <img src=\"assets/images/link-symbol.svg\" alt=\"Anchor link to: {{apiDocs.className}}\"/>\n    </a>\n    <span>\n      {{apiDocs.className}}<span class=\"text-muted font-weight-light\" *ngIf=\"apiDocs.typeParameter\">&lt;{{apiDocs.typeParameter}}&gt;</span>\n    </span>\n    <a\n      class=\"github-link\"\n      (click)=\"trackSourceClick()\"\n      href=\"{{fbTreeMaster}}/{{apiDocs.fileName}}\"\n      target=\"_blank\"\n      title=\"Link to Github: {{apiDocs.className}}\"\n    >\n      <img src=\"assets/images/github.svg\" alt=\"Link to Github {{apiDocs.className}}\"/>\n    </a>\n  </h3>\n  <nw-api-docs-badge [type]=\"apiDocs.type\" [deprecated]=\"apiDocs.deprecated\" [since]=\"apiDocs.since\"></nw-api-docs-badge>\n  <p *ngIf=\"apiDocs.deprecated\">{{ apiDocs.deprecated.description }}</p>\n  <p class=\"lead\" [innerHTML]=\"apiDocs.description\">\n  </p>\n\n  <section>\n    <h4>Selector <small><code class=\"selector\">{{apiDocs.selector}}</code></small></h4>\n    <h6 *ngIf=\"apiDocs.exportAs\">Exported as <small><code class=\"export-as\">{{apiDocs.exportAs}}</code></small></h6>\n  </section>\n\n  <ng-template [ngIf]=\"apiDocs.inputs.length\">\n    <section>\n      <h4>Inputs</h4>\n      <table class=\"table table-sm\">\n        <tbody>\n        <tr *ngFor=\"let input of apiDocs.inputs\" [class.deprecated]=\"input.deprecated\">\n          <td class=\"label-cell\">\n            <code>{{input.name}}</code><br>\n            <span *ngIf=\"input.since\" class=\"badge badge-info\">since {{ input.since.version }}</span>&ngsp;\n            <span *ngIf=\"input.deprecated\" class=\"badge badge-secondary\">deprecated {{ input.deprecated.version }}</span>\n          </td>\n          <td class=\"content-cell\">\n            <p *ngIf=\"input.deprecated\">{{ input.deprecated.description }}</p>\n            <p class=\"description\" [innerHTML]=\"input.description\"></p>\n            <div class=\"meta\">\n              <div>\n                <i>Type: </i><code>{{ input.type }}</code>\n              </div>\n              <div *ngIf=\"defaultInputValue(input) || hasConfigProperty(input)\">\n                <span><i>Default value: </i><code>{{ defaultInputValue(input) || '-' }}</code></span>&ngsp;\n                <span *ngIf=\"hasConfigProperty(input)\">&mdash; initialized from {{ configServiceName }} service</span>\n              </div>\n            </div>\n          </td>\n        </tr>\n        </tbody>\n      </table>\n    </section>\n  </ng-template>\n\n  <ng-template [ngIf]=\"apiDocs.outputs.length\">\n    <section>\n      <h4>Outputs</h4>\n      <table class=\"table table-sm\">\n        <tbody>\n          <tr *ngFor=\"let output of apiDocs.outputs\" [class.deprecated]=\"output.deprecated\">\n            <td class=\"label-cell\">\n              <code>{{output.name}}</code><br>\n              <span *ngIf=\"output.since\" class=\"badge badge-info\">since {{ output.since.version }}</span>&ngsp;\n              <span *ngIf=\"output.deprecated\" class=\"badge badge-secondary\">deprecated {{ output.deprecated.version }}</span>\n            </td>\n            <td class=\"content-cell\">\n              <p *ngIf=\"output.deprecated\">{{ output.deprecated.description }}</p>\n              <p class=\"description\" [innerHTML]=\"output.description\"></p>\n            </td>\n          </tr>\n        </tbody>\n      </table>\n    </section>\n  </ng-template>\n\n  <ng-template [ngIf]=\"apiDocs.methods.length && apiDocs.exportAs\">\n    <section>\n      <h4>Methods</h4>\n      <table class=\"table table-sm\">\n        <tbody>\n          <tr *ngFor=\"let method of apiDocs.methods\" [class.deprecated]=\"method.deprecated\">\n            <td class=\"label-cell\">\n              <code>{{method.name}}</code><br>\n              <span *ngIf=\"method.since\" class=\"badge badge-info\">since {{ method.since.version }}</span>&ngsp;\n              <span *ngIf=\"method.deprecated\" class=\"badge badge-secondary\">deprecated {{ method.deprecated.version }}</span>\n            </td>\n            <td class=\"content-cell\">\n                <p class=\"signature\">\n                    <code>{{methodSignature(method)}}</code>&ngsp;\n                    <small class=\"text-muted\" title=\"Return type\">=&gt; {{ method.returnType }}</small>\n                </p>\n                <p *ngIf=\"method.deprecated\">{{ method.deprecated.description }}</p>\n                <p class=\"description\" [innerHTML]=\"method.description\"></p>\n            </td>\n          </tr>\n        </tbody>\n      </table>\n    </section>\n  </ng-template>\n</div>\n"
 
 /***/ }),
 
@@ -381,7 +414,7 @@ module.exports = "<div class=\"widget-partial-wrapper\">\n    <a [id]=\"id\"></a
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-header></app-header>\r\n<div class=\"container-fluid\">\r\n    <div class=\"row\">\r\n        <div class=\"col-12 col-lg-3\">\r\n            <app-navigation></app-navigation>\r\n        </div>\r\n        <div class=\"col-12 col-lg-9\">\r\n            <!--Getting started content here-->\r\n            <div class=\"row\">\r\n                <div class=\"col-md-12 content\">\r\n                    <p>After installing the above dependencies, install <code>nw-widget</code> via:</p>\r\n\r\n                    <niwa-code [snippet]=\"codeInstall\"></niwa-code>\r\n\r\n                    <p>Once installed you need to import our main module.</p>\r\n\r\n                    <niwa-code [snippet]=\"codeRoot\"></niwa-code>\r\n\r\n                    <p>Alternatively you could only import modules with components you need, ex. pagination and alert.\r\n                        The resulting bundle will be smaller in this case.</p>\r\n\r\n                    <niwa-code [snippet]=\"codeOther\"></niwa-code>\r\n                    <br>\r\n\r\n                    <h4>\r\n                        SystemJS\r\n                    </h4>\r\n                    <p>\r\n                        If you are using SystemJS, you should also adjust your configuration to point to the UMD bundle.\r\n                    </p>\r\n                    <p>\r\n                        In your SystemJS config file, <code>map</code> needs to tell the System loader where to look for\r\n                        <code>nw-widget</code>:\r\n                    </p>\r\n\r\n                    <niwa-code [snippet]=\"codeSystem\"></niwa-code>\r\n                    <br>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n<app-footer></app-footer>"
+module.exports = "<app-header></app-header>\r\n<div class=\"container-fluid\">\r\n    <div class=\"row\">\r\n        <div class=\"col-12 col-lg-2\" style=\"border-right: 1px solid rgba(0, 0, 0, 0.1)\">\r\n            <app-navigation></app-navigation>\r\n        </div>\r\n        <div class=\"col-12 col-lg-10\">\r\n            <!--Getting started content here-->\r\n            <div class=\"row\">\r\n                <div class=\"col-md-12 content\">\r\n                    <p>After installing the above dependencies, install <code>nw-widget</code> via:</p>\r\n\r\n                    <niwa-code [snippet]=\"codeInstall\"></niwa-code>\r\n\r\n                    <p>Once installed you need to import our main module.</p>\r\n\r\n                    <niwa-code [snippet]=\"codeRoot\"></niwa-code>\r\n\r\n                    <p>Alternatively you could only import modules with components you need, ex. pagination and alert.\r\n                        The resulting bundle will be smaller in this case.</p>\r\n\r\n                    <niwa-code [snippet]=\"codeOther\"></niwa-code>\r\n                    <br>\r\n\r\n                    <h4>\r\n                        SystemJS\r\n                    </h4>\r\n                    <p>\r\n                        If you are using SystemJS, you should also adjust your configuration to point to the UMD bundle.\r\n                    </p>\r\n                    <p>\r\n                        In your SystemJS config file, <code>map</code> needs to tell the System loader where to look for\r\n                        <code>nw-widget</code>:\r\n                    </p>\r\n\r\n                    <niwa-code [snippet]=\"codeSystem\"></niwa-code>\r\n                    <br>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n<app-footer></app-footer>"
 
 /***/ }),
 
@@ -392,7 +425,7 @@ module.exports = "<app-header></app-header>\r\n<div class=\"container-fluid\">\r
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->\r\n<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->\r\n<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->\r\n<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->\r\n<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->\r\n<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->\r\n<!-- * * * * * * * to get started with your project! * * * * * * * * -->\r\n<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->\r\n\r\n<style>\r\n  :host {\r\n    font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\";\r\n    font-size: 14px;\r\n    color: #333;\r\n    box-sizing: border-box;\r\n    -webkit-font-smoothing: antialiased;\r\n    -moz-osx-font-smoothing: grayscale;\r\n  }\r\n\r\n  h1,\r\n  h2,\r\n  h3,\r\n  h4,\r\n  h5,\r\n  h6 {\r\n    margin: 8px 0;\r\n  }\r\n\r\n  p {\r\n    margin: 0;\r\n  }\r\n\r\n  .spacer {\r\n    flex: 1;\r\n  }\r\n\r\n  .toolbar {\r\n    height: 60px;\r\n    margin: -8px;\r\n    display: flex;\r\n    align-items: center;\r\n    background-color: #1976d2;\r\n    color: white;\r\n    font-weight: 600;\r\n  }\r\n\r\n  .toolbar img {\r\n    margin: 0 16px;\r\n  }\r\n\r\n  .toolbar #twitter-logo {\r\n    height: 40px;\r\n    margin: 0 16px;\r\n  }\r\n\r\n  .toolbar #twitter-logo:hover {\r\n    opacity: 0.8;\r\n  }\r\n\r\n  .content {\r\n    display: flex;\r\n    margin: 32px auto;\r\n    padding: 0 16px;\r\n    max-width: 960px;\r\n    flex-direction: column;\r\n    align-items: center;\r\n  }\r\n\r\n  svg.material-icons {\r\n    height: 24px;\r\n    width: auto;\r\n  }\r\n\r\n  svg.material-icons:not(:last-child) {\r\n    margin-right: 8px;\r\n  }\r\n\r\n  .card svg.material-icons path {\r\n    fill: #888;\r\n  }\r\n\r\n  .card-container {\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    justify-content: center;\r\n    margin-top: 16px;\r\n  }\r\n\r\n  .card {\r\n    border-radius: 4px;\r\n    border: 1px solid #eee;\r\n    background-color: #fafafa;\r\n    height: 40px;\r\n    width: 200px;\r\n    margin: 0 8px 16px;\r\n    padding: 16px;\r\n    display: flex;\r\n    flex-direction: row;\r\n    justify-content: center;\r\n    align-items: center;\r\n    transition: all 0.2s ease-in-out;\r\n    line-height: 24px;\r\n  }\r\n\r\n  .card-container .card:not(:last-child) {\r\n    margin-right: 0;\r\n  }\r\n\r\n  .card.card-small {\r\n    height: 16px;\r\n    width: 168px;\r\n  }\r\n\r\n  .card-container .card:not(.highlight-card) {\r\n    cursor: pointer;\r\n  }\r\n\r\n  .card-container .card:not(.highlight-card):hover {\r\n    transform: translateY(-3px);\r\n    box-shadow: 0 4px 17px rgba(black, 0.35);\r\n  }\r\n\r\n  .card-container .card:not(.highlight-card):hover .material-icons path {\r\n    fill: rgb(105, 103, 103);\r\n  }\r\n\r\n  .card.highlight-card {\r\n    background-color: #1976d2;\r\n    color: white;\r\n    font-weight: 600;\r\n    border: none;\r\n    width: auto;\r\n    min-width: 30%;\r\n    position: relative;\r\n  }\r\n\r\n  .card.card.highlight-card span {\r\n    margin-left: 45px;\r\n  }\r\n\r\n  @-webkit-keyframes spin {\r\n    from {\r\n      transform: rotate(0deg);\r\n    }\r\n\r\n    to {\r\n      transform: rotate(360deg);\r\n    }\r\n  }\r\n\r\n  @keyframes spin {\r\n    from {\r\n      transform: rotate(0deg);\r\n    }\r\n\r\n    to {\r\n      transform: rotate(360deg);\r\n    }\r\n  }\r\n\r\n  @-webkit-keyframes flash {\r\n    0% {\r\n      opacity: 1;\r\n    }\r\n\r\n    50% {\r\n      opacity: .1;\r\n    }\r\n\r\n    100% {\r\n      opacity: 1;\r\n    }\r\n  }\r\n\r\n  @keyframes flash {\r\n    0% {\r\n      opacity: 1;\r\n    }\r\n\r\n    50% {\r\n      opacity: .1;\r\n    }\r\n\r\n    100% {\r\n      opacity: 1;\r\n    }\r\n  }\r\n\r\n  @-webkit-keyframes pulse {\r\n    0% {\r\n      width: 60px;\r\n    }\r\n\r\n    25% {\r\n      width: 70px;\r\n    }\r\n\r\n    50% {\r\n      width: 80px;\r\n    }\r\n\r\n    75% {\r\n      width: 90px;\r\n    }\r\n\r\n    100% {\r\n      width: 100px;\r\n    }\r\n  }\r\n\r\n  @keyframes pulse {\r\n    0% {\r\n      width: 60px;\r\n    }\r\n\r\n    25% {\r\n      width: 70px;\r\n    }\r\n\r\n    50% {\r\n      width: 80px;\r\n    }\r\n\r\n    75% {\r\n      width: 90px;\r\n    }\r\n\r\n    100% {\r\n      width: 100px;\r\n    }\r\n  }\r\n\r\n  svg#star {\r\n    width: 80px;\r\n    position: absolute;\r\n    left: -25px;\r\n    top: -35px;\r\n    animation: spin 20s infinite linear;\r\n    animation-direction: reverse;\r\n  }\r\n\r\n  svg#sky {\r\n    width: 80px;\r\n    position: absolute;\r\n    left: -25px;\r\n    top: -35px;\r\n    -webkit-animation: flash linear .5s infinite;\r\n    animation: flash linear .5s infinite;\r\n  }\r\n\r\n  svg#niwa-pro {\r\n    width: 80px;\r\n    position: absolute;\r\n    left: -25px;\r\n    top: -35px;\r\n    -webkit-animation: pulse linear .5s infinite;\r\n    animation: pulse linear .5s infinite;\r\n  }\r\n\r\n  svg#rocket-smoke {\r\n    height: 100vh;\r\n    position: absolute;\r\n    top: 10px;\r\n    right: 180px;\r\n    z-index: -10;\r\n  }\r\n\r\n  a,\r\n  a:visited,\r\n  a:hover {\r\n    color: #1976d2;\r\n    text-decoration: none;\r\n  }\r\n\r\n  a:hover {\r\n    color: #125699;\r\n  }\r\n\r\n  .terminal {\r\n    position: relative;\r\n    width: 80%;\r\n    max-width: 600px;\r\n    border-radius: 6px;\r\n    padding-top: 45px;\r\n    margin-top: 40px;\r\n    overflow: hidden;\r\n    background-color: rgb(15, 15, 16);\r\n  }\r\n\r\n  .terminal::before {\r\n    content: \"\\2022 \\2022 \\2022\";\r\n    position: absolute;\r\n    top: 0;\r\n    left: 0;\r\n    height: 4px;\r\n    background: rgb(58, 58, 58);\r\n    color: #c2c3c4;\r\n    width: 100%;\r\n    font-size: 2rem;\r\n    line-height: 0;\r\n    padding: 14px 0;\r\n    text-indent: 4px;\r\n  }\r\n\r\n  .terminal pre {\r\n    font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;\r\n    color: white;\r\n    padding: 0 1rem 1rem;\r\n    margin: 0;\r\n  }\r\n\r\n  .circle-link {\r\n    height: 40px;\r\n    width: 40px;\r\n    border-radius: 40px;\r\n    margin: 8px;\r\n    background-color: white;\r\n    border: 1px solid #eeeeee;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    cursor: pointer;\r\n    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);\r\n    transition: 1s ease-out;\r\n  }\r\n\r\n  .circle-link:hover {\r\n    transform: translateY(-0.25rem);\r\n    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);\r\n  }\r\n\r\n  footer {\r\n    margin-top: 8px;\r\n    display: flex;\r\n    align-items: center;\r\n    line-height: 20px;\r\n  }\r\n\r\n  footer a {\r\n    display: flex;\r\n    align-items: center;\r\n  }\r\n\r\n  .github-star-badge {\r\n    color: #24292e;\r\n    display: flex;\r\n    align-items: center;\r\n    font-size: 12px;\r\n    padding: 3px 10px;\r\n    border: 1px solid rgba(27, 31, 35, .2);\r\n    border-radius: 3px;\r\n    background-image: linear-gradient(-180deg, #fafbfc, #eff3f6 90%);\r\n    margin-left: 4px;\r\n    font-weight: 600;\r\n    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;\r\n  }\r\n\r\n  .github-star-badge:hover {\r\n    background-image: linear-gradient(-180deg, #f0f3f6, #e6ebf1 90%);\r\n    border-color: rgba(27, 31, 35, .35);\r\n    background-position: -.5em;\r\n  }\r\n\r\n  .github-star-badge .material-icons {\r\n    height: 16px;\r\n    width: 16px;\r\n    margin-right: 4px;\r\n  }\r\n\r\n  svg#clouds {\r\n    position: fixed;\r\n    bottom: -160px;\r\n    left: -230px;\r\n    z-index: -10;\r\n    width: 1920px;\r\n  }\r\n\r\n  /* Responsive Styles */\r\n  @media screen and (max-width: 767px) {\r\n\r\n    .card-container>*:not(.circle-link),\r\n    .terminal {\r\n      width: 100%;\r\n    }\r\n\r\n    .card:not(.highlight-card) {\r\n      height: 16px;\r\n      margin: 8px 0;\r\n    }\r\n\r\n    .card.highlight-card span {\r\n      margin-left: 72px;\r\n    }\r\n\r\n    svg#rocket-smoke {\r\n      right: 120px;\r\n      transform: rotate(-5deg);\r\n    }\r\n  }\r\n\r\n  @media screen and (max-width: 575px) {\r\n    svg#rocket-smoke {\r\n      display: none;\r\n      visibility: hidden;\r\n    }\r\n  }\r\n</style>\r\n\r\n<!-- Toolbar -->\r\n<app-header></app-header>\r\n\r\n<div class=\"content\" role=\"main\">\r\n\r\n  <!-- Highlight Card -->\r\n  <div class=\"card highlight-card card-small\">\r\n    <svg id=\"star\" alt=\"Star\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"\r\n      style=\"isolation:isolate\" viewBox=\"0 0 80 80\" width=\"80pt\" height=\"80pt\">\r\n      <defs>\r\n        <clipPath id=\"_clipPath_nN7Mb5n0tuPDSXTmdTVPdFSccqAIWDKO\">\r\n          <rect width=\"80\" height=\"80\" />\r\n        </clipPath>\r\n      </defs>\r\n      <g clip-path=\"url(#_clipPath_nN7Mb5n0tuPDSXTmdTVPdFSccqAIWDKO)\">\r\n        <path\r\n          d=\" M 64.789 74.087 L 43.318 65.665 L 24.789 80 L 20.874 55.905 L 0 45.913 L 17.557 30.24 L 15.211 5.913 L 36.682 14.335 L 55.211 0 L 59.126 24.095 L 80 34.087 L 62.443 49.76 L 64.789 74.087 Z \"\r\n          fill=\"rgb(255,0,0)\" />\r\n      </g>\r\n    </svg>\r\n    <svg id=\"niwa-pro\" alt=\"Niwa Pro\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"\r\n      style=\"isolation:isolate\" viewBox=\"0 0 80 80\" width=\"80pt\" height=\"80pt\">\r\n      <defs>\r\n        <clipPath id=\"_clipPath_6SpAH4XaTOrmFkyWiqn9hg9NSLyzr5iX\">\r\n          <rect width=\"80\" height=\"80\" />\r\n        </clipPath>\r\n      </defs>\r\n      <g clip-path=\"url(#_clipPath_6SpAH4XaTOrmFkyWiqn9hg9NSLyzr5iX)\">\r\n        <clipPath id=\"_clipPath_SpA2AxjxA11QtXdXpEZQClaJ8Zcd4y8j\">\r\n          <rect x=\"10\" y=\"27.5\" width=\"60\" height=\"21\" transform=\"matrix(1,0,0,1,0,0)\" fill=\"rgb(255,255,255)\" />\r\n        </clipPath>\r\n        <g clip-path=\"url(#_clipPath_SpA2AxjxA11QtXdXpEZQClaJ8Zcd4y8j)\">\r\n          <clipPath id=\"_clipPath_ZwGmpbt2kqInrbXERM2Inejg3zOefUNz\">\r\n            <path d=\" M 10 27.5 L 70 27.5 L 70 48.5 L 10 48.5 L 10 27.5 Z \" fill=\"rgb(255,255,255)\" />\r\n          </clipPath>\r\n          <g clip-path=\"url(#_clipPath_ZwGmpbt2kqInrbXERM2Inejg3zOefUNz)\">\r\n            <path\r\n              d=\" M 20.389 38.893 C 19.768 38.888 19.278 39.17 18.919 39.741 C 18.616 40.221 18.464 40.782 18.464 41.423 C 18.464 42.029 18.636 42.494 18.98 42.818 C 19.253 43.075 19.571 43.204 19.934 43.204 C 20.374 43.204 20.755 43.055 21.079 42.757 C 21.447 42.408 21.644 41.936 21.67 41.34 C 21.735 39.713 21.308 38.898 20.389 38.893 Z  M 19.934 45.197 C 19 45.197 18.197 44.876 17.525 44.234 C 16.787 43.532 16.401 42.595 16.365 41.423 C 16.33 40.307 16.636 39.312 17.282 38.438 C 18.05 37.407 19.119 36.892 20.488 36.892 C 21.498 36.892 22.301 37.296 22.897 38.105 C 23.433 38.832 23.7 39.734 23.7 40.81 C 23.7 41.981 23.387 42.982 22.761 43.81 C 22.058 44.735 21.116 45.197 19.934 45.197 Z \"\r\n              fill=\"rgb(255,255,255)\" />\r\n            <path\r\n              d=\" M 36.181 42.886 C 36.181 43.138 36.137 43.537 36.052 44.083 C 35.95 44.735 35.582 45.061 34.945 45.061 C 34.592 45.061 34.192 44.861 33.748 44.462 C 31.803 42.709 29.608 40.252 27.163 37.089 C 27.133 38.403 27.118 39.208 27.118 39.506 C 27.118 39.905 27.127 40.506 27.145 41.31 C 27.162 42.113 27.171 42.714 27.171 43.113 C 27.171 44.603 26.807 45.349 26.08 45.349 C 25.711 45.349 25.415 45.235 25.193 45.007 C 24.996 44.805 24.898 44.56 24.898 44.272 C 24.898 44.07 24.914 43.765 24.947 43.355 C 24.98 42.946 24.996 42.641 24.996 42.439 C 24.996 42.141 25.006 41.693 25.026 41.098 C 25.047 40.501 25.057 40.054 25.057 39.756 C 25.057 39.438 25.049 38.958 25.034 38.317 C 25.019 37.675 25.012 37.195 25.012 36.877 C 25.012 36.574 24.981 36.122 24.92 35.521 C 24.86 34.92 24.829 34.467 24.829 34.164 C 24.829 33.861 24.96 33.591 25.22 33.354 C 25.48 33.116 25.777 32.998 26.11 32.998 C 26.484 32.998 26.898 33.321 27.353 33.967 C 29.646 37.241 31.909 39.91 34.142 41.977 C 34.147 41.815 34.15 41.431 34.15 40.825 C 34.15 38.335 34.124 36.655 34.074 35.786 C 34.064 35.639 34.031 35.367 33.975 34.967 C 33.925 34.614 33.9 34.336 33.9 34.134 C 33.9 33.437 34.268 33.088 35.006 33.088 C 35.829 33.088 36.241 34.359 36.241 36.9 C 36.241 36.955 36.236 37.354 36.226 38.097 C 36.196 40.663 36.181 42.259 36.181 42.886 Z \"\r\n              fill=\"rgb(255,255,255)\" />\r\n            <path\r\n              d=\" M 39.317 35.642 C 38.994 35.642 38.714 35.533 38.476 35.316 C 38.239 35.099 38.12 34.834 38.12 34.52 C 38.12 34.207 38.239 33.942 38.476 33.725 C 38.714 33.508 38.994 33.399 39.317 33.399 C 39.641 33.399 39.92 33.508 40.155 33.725 C 40.39 33.942 40.507 34.207 40.507 34.52 C 40.507 34.834 40.39 35.099 40.155 35.316 C 39.92 35.533 39.641 35.642 39.317 35.642 Z  M 39.961 41.196 C 39.961 41.484 39.97 41.946 39.988 42.583 C 40.006 43.219 40.015 43.681 40.015 43.969 C 40.015 44.262 39.916 44.504 39.719 44.693 C 39.522 44.882 39.272 44.977 38.969 44.977 C 38.666 44.977 38.416 44.882 38.219 44.693 C 38.022 44.504 37.923 44.262 37.923 43.969 C 37.923 43.681 37.914 43.219 37.897 42.583 C 37.879 41.946 37.87 41.484 37.87 41.196 C 37.87 40.746 37.895 40.183 37.946 39.506 C 37.996 38.829 38.022 38.266 38.022 37.817 C 38.022 37.524 38.12 37.282 38.317 37.093 C 38.514 36.904 38.764 36.809 39.067 36.809 C 39.371 36.809 39.621 36.904 39.818 37.093 C 40.015 37.282 40.113 37.524 40.113 37.817 C 40.113 38.266 40.088 38.829 40.037 39.506 C 39.987 40.183 39.961 40.746 39.961 41.196 Z \"\r\n              fill=\"rgb(255,255,255)\" />\r\n            <path\r\n              d=\" M 51.631 38.074 C 51.1 40.054 50.567 41.853 50.032 43.469 C 49.88 43.924 49.633 44.391 49.289 44.871 C 49.047 45.204 48.724 45.368 48.319 45.363 C 47.683 45.353 47.183 44.74 46.819 43.522 C 46.683 43.058 46.521 42.191 46.334 40.923 C 46.228 41.146 46.162 41.294 46.137 41.37 C 45.874 41.997 45.49 42.969 44.986 44.288 C 44.91 44.5 44.796 44.669 44.644 44.795 C 44.432 45.134 44.116 45.311 43.697 45.326 C 43.46 45.336 43.21 45.124 42.947 44.689 C 42.669 44.249 42.444 43.684 42.273 42.992 C 42.116 42.365 41.874 41.001 41.545 38.9 C 41.475 38.446 41.439 38.09 41.439 37.832 C 41.439 37.554 41.544 37.323 41.754 37.139 C 41.963 36.954 42.214 36.862 42.508 36.862 C 43.053 36.862 43.389 37.132 43.515 37.673 C 43.581 37.955 43.637 38.304 43.682 38.718 C 43.743 39.314 43.78 39.665 43.796 39.771 C 43.861 40.165 43.962 40.81 44.099 41.704 C 44.473 40.678 44.902 39.403 45.387 37.877 C 45.594 37.221 45.983 36.892 46.554 36.892 C 47.115 36.892 47.483 37.259 47.66 37.991 C 47.787 38.506 47.92 39.175 48.062 39.999 C 48.269 41.196 48.395 41.908 48.441 42.136 C 48.486 41.979 48.883 40.443 49.63 37.529 C 49.741 37.094 50.057 36.877 50.578 36.877 C 50.866 36.877 51.119 36.971 51.339 37.157 C 51.559 37.344 51.669 37.577 51.669 37.855 C 51.669 37.905 51.656 37.978 51.631 38.074 Z \"\r\n              fill=\"rgb(255,255,255)\" />\r\n            <path\r\n              d=\" M 57.215 40.052 C 57.215 39.89 57.227 39.705 57.249 39.495 C 57.272 39.285 57.306 39.051 57.352 38.794 C 57.251 38.744 57.161 38.707 57.083 38.684 C 57.005 38.661 56.937 38.65 56.882 38.65 C 56.195 38.65 55.594 38.919 55.079 39.457 C 54.563 39.995 54.306 40.618 54.306 41.325 C 54.306 42.002 54.427 42.51 54.67 42.852 C 54.912 43.193 55.276 43.363 55.76 43.363 C 56.074 43.363 56.371 43.311 56.651 43.208 C 56.931 43.104 57.195 42.951 57.443 42.749 C 57.291 41.547 57.215 40.648 57.215 40.052 Z  M 59.095 45.167 C 58.862 45.167 58.493 44.942 57.988 44.492 C 57.524 44.715 57.114 44.883 56.761 44.996 C 56.407 45.11 56.107 45.167 55.859 45.167 C 54.642 45.167 53.729 44.841 53.12 44.189 C 52.511 43.537 52.207 42.562 52.207 41.264 C 52.207 40.047 52.656 39.005 53.556 38.139 C 54.455 37.272 55.531 36.839 56.784 36.839 C 57.263 36.839 57.819 36.974 58.451 37.244 C 59.213 37.569 59.595 37.947 59.595 38.377 C 59.595 38.557 59.537 38.715 59.42 38.85 C 59.37 39.05 59.331 39.301 59.303 39.604 C 59.275 39.906 59.261 40.26 59.261 40.665 C 59.261 41.62 59.33 42.308 59.466 42.728 C 59.481 42.773 59.597 43.033 59.814 43.508 C 60.011 43.939 60.11 44.184 60.11 44.244 C 60.11 44.509 60.008 44.729 59.803 44.904 C 59.598 45.079 59.362 45.167 59.095 45.167 Z \"\r\n              fill=\"rgb(255,255,255)\" />\r\n            <path\r\n              d=\" M 54.127 31.918 C 53.965 31.918 53.8 31.956 53.632 32.032 C 53.464 32.108 53.295 32.222 53.125 32.374 C 53.156 32.906 53.171 33.439 53.171 33.973 C 53.401 34.048 53.631 34.085 53.86 34.085 C 54.126 34.085 54.33 33.991 54.472 33.802 C 54.601 33.632 54.665 33.403 54.665 33.114 C 54.665 32.765 54.65 32.524 54.619 32.39 C 54.544 32.075 54.38 31.918 54.127 31.918 Z  M 53.86 35.119 C 53.638 35.119 53.405 35.093 53.159 35.041 L 53.156 36.62 C 53.156 36.77 53.105 36.894 53.005 36.992 C 52.904 37.09 52.776 37.139 52.622 37.139 C 52.467 37.139 52.339 37.09 52.238 36.992 C 52.138 36.894 52.088 36.77 52.088 36.62 C 52.088 36.499 52.09 36.018 52.095 35.176 C 52.1 34.552 52.1 34.042 52.095 33.648 C 52.088 33.09 52.07 32.611 52.041 32.208 C 52.002 31.653 51.983 31.399 51.983 31.445 C 51.983 31.231 52.031 31.048 52.126 30.896 C 52.237 30.723 52.387 30.636 52.575 30.636 C 52.72 30.636 52.841 30.685 52.939 30.784 C 53.037 30.882 53.086 30.999 53.086 31.136 L 53.082 31.174 C 53.255 31.076 53.429 31.003 53.603 30.956 C 53.777 30.908 53.952 30.884 54.127 30.884 C 54.721 30.884 55.154 31.136 55.428 31.639 C 55.632 32.018 55.733 32.51 55.733 33.114 C 55.733 33.679 55.572 34.147 55.25 34.519 C 54.904 34.918 54.441 35.119 53.86 35.119 Z \"\r\n              fill=\"rgb(255,255,255)\" />\r\n            <path\r\n              d=\" M 59.554 32.099 C 59.531 32.494 59.351 32.692 59.016 32.692 C 58.691 32.692 58.528 32.524 58.528 32.189 L 58.509 31.798 C 57.928 31.89 57.513 32.189 57.262 32.692 L 57.266 34.639 C 57.266 34.786 57.216 34.907 57.115 35.004 C 57.015 35.101 56.887 35.15 56.732 35.15 C 56.572 35.15 56.448 35.098 56.36 34.994 C 56.278 34.902 56.237 34.783 56.237 34.639 L 56.237 32.103 C 56.237 32.024 56.239 31.904 56.245 31.745 C 56.249 31.587 56.252 31.467 56.252 31.387 C 56.252 31.243 56.296 31.122 56.382 31.025 C 56.468 30.929 56.591 30.88 56.751 30.88 C 57.038 30.88 57.208 31.027 57.262 31.322 C 57.719 30.981 58.226 30.811 58.784 30.811 C 59.3 30.811 59.558 31.154 59.558 31.84 C 59.558 31.972 59.556 32.058 59.554 32.099 Z \"\r\n              fill=\"rgb(255,255,255)\" />\r\n            <path\r\n              d=\" M 61.946 31.898 C 61.628 31.896 61.378 32.04 61.195 32.332 C 61.04 32.577 60.963 32.863 60.963 33.191 C 60.963 33.5 61.05 33.738 61.226 33.903 C 61.365 34.035 61.528 34.1 61.714 34.1 C 61.938 34.1 62.133 34.024 62.298 33.872 C 62.487 33.694 62.587 33.453 62.6 33.148 C 62.634 32.318 62.415 31.901 61.946 31.898 Z  M 61.714 35.118 C 61.236 35.118 60.826 34.955 60.483 34.627 C 60.106 34.268 59.909 33.79 59.89 33.191 C 59.873 32.621 60.028 32.112 60.359 31.666 C 60.751 31.139 61.297 30.876 61.996 30.876 C 62.512 30.876 62.922 31.083 63.227 31.496 C 63.501 31.867 63.637 32.328 63.637 32.877 C 63.637 33.476 63.477 33.987 63.157 34.41 C 62.799 34.882 62.317 35.118 61.714 35.118 Z \"\r\n              fill=\"rgb(255,255,255)\" />\r\n          </g>\r\n        </g>\r\n      </g>\r\n    </svg>\r\n    <svg id=\"sky\" alt=\"Sky\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"\r\n      style=\"isolation:isolate\" viewBox=\"0 0 80 80\" width=\"80pt\" height=\"80pt\">\r\n      <defs>\r\n        <clipPath id=\"_clipPath_QC0p9cNzzv42tNDhldXIv2IchmC47l8D\">\r\n          <rect width=\"80\" height=\"80\" />\r\n        </clipPath>\r\n      </defs>\r\n      <g clip-path=\"url(#_clipPath_QC0p9cNzzv42tNDhldXIv2IchmC47l8D)\">\r\n        <path\r\n          d=\" M 11.662 5.492 L 8.317 6.745 L 7.452 10.211 L 5.226 7.416 L 1.662 7.665 L 3.633 4.685 L 2.295 1.372 L 5.738 2.325 L 8.476 0.029 L 8.633 3.598 L 11.662 5.492 Z \"\r\n          fill=\"rgb(255,0,255)\" />\r\n        <path\r\n          d=\" M 71.744 69.463 L 68.398 70.716 L 67.533 74.182 L 65.308 71.387 L 61.744 71.635 L 63.715 68.655 L 62.377 65.343 L 65.82 66.296 L 68.557 64 L 68.715 67.569 L 71.744 69.463 Z \"\r\n          fill=\"rgb(255,0,255)\" />\r\n        <path\r\n          d=\" M 21.662 21.807 L 18.317 23.06 L 17.452 26.526 L 15.226 23.731 L 11.662 23.98 L 13.633 21 L 12.295 17.687 L 15.738 18.64 L 18.476 16.344 L 18.633 19.913 L 21.662 21.807 Z \"\r\n          fill=\"rgb(255,0,255)\" />\r\n        <path\r\n          d=\" M 30.748 78.078 L 27.383 76.977 L 24.568 79.125 L 24.575 75.584 L 21.662 73.571 L 25.032 72.483 L 26.047 69.091 L 28.122 71.96 L 31.662 71.877 L 29.575 74.737 L 30.748 78.078 Z \"\r\n          fill=\"rgb(255,0,255)\" />\r\n        <path\r\n          d=\" M 54.385 11.399 L 51.419 9.539 L 48.205 10.927 L 49.058 7.531 L 46.744 4.903 L 50.237 4.665 L 52.022 1.653 L 53.328 4.901 L 56.744 5.667 L 54.058 7.913 L 54.385 11.399 Z \"\r\n          fill=\"rgb(255,0,255)\" />\r\n        <path\r\n          d=\" M 76.744 13.326 L 73.228 13.403 L 71.298 16.344 L 70.137 13.024 L 66.744 12.098 L 69.543 9.968 L 69.376 6.454 L 72.266 8.458 L 75.556 7.213 L 74.543 10.582 L 76.744 13.326 Z \"\r\n          fill=\"rgb(255,0,255)\" />\r\n        <path\r\n          d=\" M 11.662 69.463 L 8.317 70.716 L 7.452 74.182 L 5.226 71.387 L 1.662 71.635 L 3.633 68.655 L 2.295 65.343 L 5.738 66.296 L 8.476 64 L 8.633 67.569 L 11.662 69.463 Z \"\r\n          fill=\"rgb(255,0,255)\" />\r\n        <path\r\n          d=\" M 66.744 51.281 L 63.398 52.534 L 62.533 56 L 60.308 53.205 L 56.744 53.453 L 58.715 50.473 L 57.377 47.161 L 60.82 48.114 L 63.557 45.818 L 63.715 49.387 L 66.744 51.281 Z \"\r\n          fill=\"rgb(255,0,255)\" />\r\n      </g>\r\n    </svg>\r\n\r\n    <span>{{ title }} app demo is running!</span>\r\n\r\n    <svg id=\"rocket-smoke\" alt=\"Rocket Ship Smoke\" xmlns=\"http://www.w3.org/2000/svg\" width=\"516.119\" height=\"1083.632\"\r\n      viewBox=\"0 0 516.119 1083.632\">\r\n      <path id=\"Path_40\" data-name=\"Path 40\"\r\n        d=\"M644.6,141S143.02,215.537,147.049,870.207s342.774,201.755,342.774,201.755S404.659,847.213,388.815,762.2c-27.116-145.51-11.551-384.124,271.9-609.1C671.15,139.365,644.6,141,644.6,141Z\"\r\n        transform=\"translate(-147.025 -140.939)\" fill=\"#f5f5f5\" />\r\n    </svg>\r\n\r\n  </div>\r\n\r\n  <!-- Terminal -->\r\n  <div class=\"terminal\">\r\n    <pre>npm i @nw-widget/nw-widget</pre>\r\n    <pre># OR</pre>\r\n    <pre>npm i @nw-widget/nw-widget --save</pre>\r\n  </div>\r\n\r\n  <svg id=\"clouds\" alt=\"Gray Clouds Background\" xmlns=\"http://www.w3.org/2000/svg\" width=\"2611.084\" height=\"485.677\"\r\n    viewBox=\"0 0 2611.084 485.677\">\r\n    <path id=\"Path_39\" data-name=\"Path 39\"\r\n      d=\"M2379.709,863.793c10-93-77-171-168-149-52-114-225-105-264,15-75,3-140,59-152,133-30,2.83-66.725,9.829-93.5,26.25-26.771-16.421-63.5-23.42-93.5-26.25-12-74-77-130-152-133-39-120-212-129-264-15-54.084-13.075-106.753,9.173-138.488,48.9-31.734-39.726-84.4-61.974-138.487-48.9-52-114-225-105-264,15a162.027,162.027,0,0,0-103.147,43.044c-30.633-45.365-87.1-72.091-145.206-58.044-52-114-225-105-264,15-75,3-140,59-152,133-53,5-127,23-130,83-2,42,35,72,70,86,49,20,106,18,157,5a165.625,165.625,0,0,0,120,0c47,94,178,113,251,33,61.112,8.015,113.854-5.72,150.492-29.764a165.62,165.62,0,0,0,110.861-3.236c47,94,178,113,251,33,31.385,4.116,60.563,2.495,86.487-3.311,25.924,5.806,55.1,7.427,86.488,3.311,73,80,204,61,251-33a165.625,165.625,0,0,0,120,0c51,13,108,15,157-5a147.188,147.188,0,0,0,33.5-18.694,147.217,147.217,0,0,0,33.5,18.694c49,20,106,18,157,5a165.625,165.625,0,0,0,120,0c47,94,178,113,251,33C2446.709,1093.793,2554.709,922.793,2379.709,863.793Z\"\r\n      transform=\"translate(142.69 -634.312)\" fill=\"#eee\" />\r\n  </svg>\r\n\r\n</div>\r\n\r\n<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->\r\n<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->\r\n<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->\r\n<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->\r\n<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->\r\n<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->\r\n<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->\r\n\r\n<app-footer></app-footer>"
+module.exports = "<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->\r\n<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->\r\n<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->\r\n<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->\r\n<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->\r\n<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->\r\n<!-- * * * * * * * to get started with your project! * * * * * * * * -->\r\n<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->\r\n\r\n<style>\r\n  :host {\r\n    font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\";\r\n    font-size: 14px;\r\n    color: #333;\r\n    box-sizing: border-box;\r\n    -webkit-font-smoothing: antialiased;\r\n    -moz-osx-font-smoothing: grayscale;\r\n  }\r\n\r\n  h1,\r\n  h2,\r\n  h3,\r\n  h4,\r\n  h5,\r\n  h6 {\r\n    margin: 8px 0;\r\n  }\r\n\r\n  p {\r\n    margin: 0;\r\n  }\r\n\r\n  .spacer {\r\n    flex: 1;\r\n  }\r\n\r\n  .toolbar {\r\n    height: 60px;\r\n    margin: -8px;\r\n    display: flex;\r\n    align-items: center;\r\n    background-color: #1976d2;\r\n    color: white;\r\n    font-weight: 600;\r\n  }\r\n\r\n  .toolbar img {\r\n    margin: 0 16px;\r\n  }\r\n\r\n  .toolbar #twitter-logo {\r\n    height: 40px;\r\n    margin: 0 16px;\r\n  }\r\n\r\n  .toolbar #twitter-logo:hover {\r\n    opacity: 0.8;\r\n  }\r\n\r\n  .content {\r\n    display: flex;\r\n    margin: 32px auto;\r\n    padding: 0 16px;\r\n    max-width: 960px;\r\n    flex-direction: column;\r\n    align-items: center;\r\n  }\r\n\r\n  svg.material-icons {\r\n    height: 24px;\r\n    width: auto;\r\n  }\r\n\r\n  svg.material-icons:not(:last-child) {\r\n    margin-right: 8px;\r\n  }\r\n\r\n  .card svg.material-icons path {\r\n    fill: #888;\r\n  }\r\n\r\n  .card-container {\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    justify-content: center;\r\n    margin-top: 16px;\r\n  }\r\n\r\n  .card {\r\n    border-radius: 4px;\r\n    border: 1px solid #eee;\r\n    background-color: #fafafa;\r\n    height: 40px;\r\n    width: 200px;\r\n    margin: 0 8px 16px;\r\n    padding: 16px;\r\n    display: flex;\r\n    flex-direction: row;\r\n    justify-content: center;\r\n    align-items: center;\r\n    transition: all 0.2s ease-in-out;\r\n    line-height: 24px;\r\n  }\r\n\r\n  .card-container .card:not(:last-child) {\r\n    margin-right: 0;\r\n  }\r\n\r\n  .card.card-small {\r\n    height: 16px;\r\n    width: 168px;\r\n  }\r\n\r\n  .card-container .card:not(.highlight-card) {\r\n    cursor: pointer;\r\n  }\r\n\r\n  .card-container .card:not(.highlight-card):hover {\r\n    transform: translateY(-3px);\r\n    box-shadow: 0 4px 17px rgba(black, 0.35);\r\n  }\r\n\r\n  .card-container .card:not(.highlight-card):hover .material-icons path {\r\n    fill: rgb(105, 103, 103);\r\n  }\r\n\r\n  .card.highlight-card {\r\n    background-color: #1976d2;\r\n    color: white;\r\n    font-weight: 600;\r\n    border: none;\r\n    width: auto;\r\n    min-width: 30%;\r\n    position: relative;\r\n  }\r\n\r\n  .card.card.highlight-card span {\r\n    margin-left: 45px;\r\n  }\r\n\r\n  @-webkit-keyframes spin {\r\n    from {\r\n      transform: rotate(0deg);\r\n    }\r\n\r\n    to {\r\n      transform: rotate(360deg);\r\n    }\r\n  }\r\n\r\n  @keyframes spin {\r\n    from {\r\n      transform: rotate(0deg);\r\n    }\r\n\r\n    to {\r\n      transform: rotate(360deg);\r\n    }\r\n  }\r\n\r\n  @-webkit-keyframes flash {\r\n    0% {\r\n      opacity: 1;\r\n    }\r\n\r\n    50% {\r\n      opacity: .1;\r\n    }\r\n\r\n    100% {\r\n      opacity: 1;\r\n    }\r\n  }\r\n\r\n  @keyframes flash {\r\n    0% {\r\n      opacity: 1;\r\n    }\r\n\r\n    50% {\r\n      opacity: .1;\r\n    }\r\n\r\n    100% {\r\n      opacity: 1;\r\n    }\r\n  }\r\n\r\n  @-webkit-keyframes pulse {\r\n    0% {\r\n      width: 60px;\r\n    }\r\n\r\n    25% {\r\n      width: 70px;\r\n    }\r\n\r\n    50% {\r\n      width: 80px;\r\n    }\r\n\r\n    75% {\r\n      width: 90px;\r\n    }\r\n\r\n    100% {\r\n      width: 100px;\r\n    }\r\n  }\r\n\r\n  @keyframes pulse {\r\n    0% {\r\n      width: 60px;\r\n    }\r\n\r\n    25% {\r\n      width: 70px;\r\n    }\r\n\r\n    50% {\r\n      width: 80px;\r\n    }\r\n\r\n    75% {\r\n      width: 90px;\r\n    }\r\n\r\n    100% {\r\n      width: 100px;\r\n    }\r\n  }\r\n\r\n  svg#star {\r\n    width: 80px;\r\n    position: absolute;\r\n    left: -25px;\r\n    top: -35px;\r\n    animation: spin 20s infinite linear;\r\n    animation-direction: reverse;\r\n  }\r\n\r\n  svg#sky {\r\n    width: 80px;\r\n    position: absolute;\r\n    left: -25px;\r\n    top: -35px;\r\n    -webkit-animation: flash linear .5s infinite;\r\n    animation: flash linear .5s infinite;\r\n  }\r\n\r\n  svg#niwa-pro {\r\n    width: 80px;\r\n    position: absolute;\r\n    left: -25px;\r\n    top: -35px;\r\n    -webkit-animation: pulse linear .5s infinite;\r\n    animation: pulse linear .5s infinite;\r\n  }\r\n\r\n  a,\r\n  a:visited,\r\n  a:hover {\r\n    color: #1976d2;\r\n    text-decoration: none;\r\n  }\r\n\r\n  a:hover {\r\n    color: #125699;\r\n  }\r\n\r\n  .terminal {\r\n    position: relative;\r\n    width: 80%;\r\n    max-width: 600px;\r\n    border-radius: 6px;\r\n    padding-top: 45px;\r\n    margin-top: 40px;\r\n    overflow: hidden;\r\n    background-color: rgb(15, 15, 16);\r\n  }\r\n\r\n  .terminal::before {\r\n    content: \"\\2022 \\2022 \\2022\";\r\n    position: absolute;\r\n    top: 0;\r\n    left: 0;\r\n    height: 4px;\r\n    background: rgb(58, 58, 58);\r\n    color: #c2c3c4;\r\n    width: 100%;\r\n    font-size: 2rem;\r\n    line-height: 0;\r\n    padding: 14px 0;\r\n    text-indent: 4px;\r\n  }\r\n\r\n  .terminal pre {\r\n    font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;\r\n    color: white;\r\n    padding: 0 1rem 1rem;\r\n    margin: 0;\r\n  }\r\n\r\n  .circle-link {\r\n    height: 40px;\r\n    width: 40px;\r\n    border-radius: 40px;\r\n    margin: 8px;\r\n    background-color: white;\r\n    border: 1px solid #eeeeee;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    cursor: pointer;\r\n    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);\r\n    transition: 1s ease-out;\r\n  }\r\n\r\n  .circle-link:hover {\r\n    transform: translateY(-0.25rem);\r\n    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);\r\n  }\r\n\r\n  footer {\r\n    margin-top: 8px;\r\n    display: flex;\r\n    align-items: center;\r\n    line-height: 20px;\r\n  }\r\n\r\n  footer a {\r\n    display: flex;\r\n    align-items: center;\r\n  }\r\n\r\n  .github-star-badge {\r\n    color: #24292e;\r\n    display: flex;\r\n    align-items: center;\r\n    font-size: 12px;\r\n    padding: 3px 10px;\r\n    border: 1px solid rgba(27, 31, 35, .2);\r\n    border-radius: 3px;\r\n    background-image: linear-gradient(-180deg, #fafbfc, #eff3f6 90%);\r\n    margin-left: 4px;\r\n    font-weight: 600;\r\n    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;\r\n  }\r\n\r\n  .github-star-badge:hover {\r\n    background-image: linear-gradient(-180deg, #f0f3f6, #e6ebf1 90%);\r\n    border-color: rgba(27, 31, 35, .35);\r\n    background-position: -.5em;\r\n  }\r\n\r\n  .github-star-badge .material-icons {\r\n    height: 16px;\r\n    width: 16px;\r\n    margin-right: 4px;\r\n  }\r\n\r\n  /* Responsive Styles */\r\n  @media screen and (max-width: 767px) {\r\n\r\n    .card-container>*:not(.circle-link),\r\n    .terminal {\r\n      width: 100%;\r\n    }\r\n\r\n    .card:not(.highlight-card) {\r\n      height: 16px;\r\n      margin: 8px 0;\r\n    }\r\n\r\n    .card.highlight-card span {\r\n      margin-left: 72px;\r\n    }\r\n\r\n    svg#rocket-smoke {\r\n      right: 120px;\r\n      transform: rotate(-5deg);\r\n    }\r\n  }\r\n\r\n  @media screen and (max-width: 575px) {\r\n    svg#rocket-smoke {\r\n      display: none;\r\n      visibility: hidden;\r\n    }\r\n  }\r\n</style>\r\n\r\n<!-- Toolbar -->\r\n<app-header></app-header>\r\n\r\n<div class=\"content\" role=\"main\">\r\n\r\n  <!-- Highlight Card -->\r\n  <div class=\"card highlight-card card-small\">\r\n    <svg id=\"star\" alt=\"Star\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"\r\n      style=\"isolation:isolate\" viewBox=\"0 0 80 80\" width=\"80pt\" height=\"80pt\">\r\n      <defs>\r\n        <clipPath id=\"_clipPath_nN7Mb5n0tuPDSXTmdTVPdFSccqAIWDKO\">\r\n          <rect width=\"80\" height=\"80\" />\r\n        </clipPath>\r\n      </defs>\r\n      <g clip-path=\"url(#_clipPath_nN7Mb5n0tuPDSXTmdTVPdFSccqAIWDKO)\">\r\n        <path\r\n          d=\" M 64.789 74.087 L 43.318 65.665 L 24.789 80 L 20.874 55.905 L 0 45.913 L 17.557 30.24 L 15.211 5.913 L 36.682 14.335 L 55.211 0 L 59.126 24.095 L 80 34.087 L 62.443 49.76 L 64.789 74.087 Z \"\r\n          fill=\"rgb(255,0,0)\" />\r\n      </g>\r\n    </svg>\r\n    <svg id=\"niwa-pro\" alt=\"Niwa Pro\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"\r\n      style=\"isolation:isolate\" viewBox=\"0 0 80 80\" width=\"80pt\" height=\"80pt\">\r\n      <defs>\r\n        <clipPath id=\"_clipPath_6SpAH4XaTOrmFkyWiqn9hg9NSLyzr5iX\">\r\n          <rect width=\"80\" height=\"80\" />\r\n        </clipPath>\r\n      </defs>\r\n      <g clip-path=\"url(#_clipPath_6SpAH4XaTOrmFkyWiqn9hg9NSLyzr5iX)\">\r\n        <clipPath id=\"_clipPath_SpA2AxjxA11QtXdXpEZQClaJ8Zcd4y8j\">\r\n          <rect x=\"10\" y=\"27.5\" width=\"60\" height=\"21\" transform=\"matrix(1,0,0,1,0,0)\" fill=\"rgb(255,255,255)\" />\r\n        </clipPath>\r\n        <g clip-path=\"url(#_clipPath_SpA2AxjxA11QtXdXpEZQClaJ8Zcd4y8j)\">\r\n          <clipPath id=\"_clipPath_ZwGmpbt2kqInrbXERM2Inejg3zOefUNz\">\r\n            <path d=\" M 10 27.5 L 70 27.5 L 70 48.5 L 10 48.5 L 10 27.5 Z \" fill=\"rgb(255,255,255)\" />\r\n          </clipPath>\r\n          <g clip-path=\"url(#_clipPath_ZwGmpbt2kqInrbXERM2Inejg3zOefUNz)\">\r\n            <path\r\n              d=\" M 20.389 38.893 C 19.768 38.888 19.278 39.17 18.919 39.741 C 18.616 40.221 18.464 40.782 18.464 41.423 C 18.464 42.029 18.636 42.494 18.98 42.818 C 19.253 43.075 19.571 43.204 19.934 43.204 C 20.374 43.204 20.755 43.055 21.079 42.757 C 21.447 42.408 21.644 41.936 21.67 41.34 C 21.735 39.713 21.308 38.898 20.389 38.893 Z  M 19.934 45.197 C 19 45.197 18.197 44.876 17.525 44.234 C 16.787 43.532 16.401 42.595 16.365 41.423 C 16.33 40.307 16.636 39.312 17.282 38.438 C 18.05 37.407 19.119 36.892 20.488 36.892 C 21.498 36.892 22.301 37.296 22.897 38.105 C 23.433 38.832 23.7 39.734 23.7 40.81 C 23.7 41.981 23.387 42.982 22.761 43.81 C 22.058 44.735 21.116 45.197 19.934 45.197 Z \"\r\n              fill=\"rgb(255,255,255)\" />\r\n            <path\r\n              d=\" M 36.181 42.886 C 36.181 43.138 36.137 43.537 36.052 44.083 C 35.95 44.735 35.582 45.061 34.945 45.061 C 34.592 45.061 34.192 44.861 33.748 44.462 C 31.803 42.709 29.608 40.252 27.163 37.089 C 27.133 38.403 27.118 39.208 27.118 39.506 C 27.118 39.905 27.127 40.506 27.145 41.31 C 27.162 42.113 27.171 42.714 27.171 43.113 C 27.171 44.603 26.807 45.349 26.08 45.349 C 25.711 45.349 25.415 45.235 25.193 45.007 C 24.996 44.805 24.898 44.56 24.898 44.272 C 24.898 44.07 24.914 43.765 24.947 43.355 C 24.98 42.946 24.996 42.641 24.996 42.439 C 24.996 42.141 25.006 41.693 25.026 41.098 C 25.047 40.501 25.057 40.054 25.057 39.756 C 25.057 39.438 25.049 38.958 25.034 38.317 C 25.019 37.675 25.012 37.195 25.012 36.877 C 25.012 36.574 24.981 36.122 24.92 35.521 C 24.86 34.92 24.829 34.467 24.829 34.164 C 24.829 33.861 24.96 33.591 25.22 33.354 C 25.48 33.116 25.777 32.998 26.11 32.998 C 26.484 32.998 26.898 33.321 27.353 33.967 C 29.646 37.241 31.909 39.91 34.142 41.977 C 34.147 41.815 34.15 41.431 34.15 40.825 C 34.15 38.335 34.124 36.655 34.074 35.786 C 34.064 35.639 34.031 35.367 33.975 34.967 C 33.925 34.614 33.9 34.336 33.9 34.134 C 33.9 33.437 34.268 33.088 35.006 33.088 C 35.829 33.088 36.241 34.359 36.241 36.9 C 36.241 36.955 36.236 37.354 36.226 38.097 C 36.196 40.663 36.181 42.259 36.181 42.886 Z \"\r\n              fill=\"rgb(255,255,255)\" />\r\n            <path\r\n              d=\" M 39.317 35.642 C 38.994 35.642 38.714 35.533 38.476 35.316 C 38.239 35.099 38.12 34.834 38.12 34.52 C 38.12 34.207 38.239 33.942 38.476 33.725 C 38.714 33.508 38.994 33.399 39.317 33.399 C 39.641 33.399 39.92 33.508 40.155 33.725 C 40.39 33.942 40.507 34.207 40.507 34.52 C 40.507 34.834 40.39 35.099 40.155 35.316 C 39.92 35.533 39.641 35.642 39.317 35.642 Z  M 39.961 41.196 C 39.961 41.484 39.97 41.946 39.988 42.583 C 40.006 43.219 40.015 43.681 40.015 43.969 C 40.015 44.262 39.916 44.504 39.719 44.693 C 39.522 44.882 39.272 44.977 38.969 44.977 C 38.666 44.977 38.416 44.882 38.219 44.693 C 38.022 44.504 37.923 44.262 37.923 43.969 C 37.923 43.681 37.914 43.219 37.897 42.583 C 37.879 41.946 37.87 41.484 37.87 41.196 C 37.87 40.746 37.895 40.183 37.946 39.506 C 37.996 38.829 38.022 38.266 38.022 37.817 C 38.022 37.524 38.12 37.282 38.317 37.093 C 38.514 36.904 38.764 36.809 39.067 36.809 C 39.371 36.809 39.621 36.904 39.818 37.093 C 40.015 37.282 40.113 37.524 40.113 37.817 C 40.113 38.266 40.088 38.829 40.037 39.506 C 39.987 40.183 39.961 40.746 39.961 41.196 Z \"\r\n              fill=\"rgb(255,255,255)\" />\r\n            <path\r\n              d=\" M 51.631 38.074 C 51.1 40.054 50.567 41.853 50.032 43.469 C 49.88 43.924 49.633 44.391 49.289 44.871 C 49.047 45.204 48.724 45.368 48.319 45.363 C 47.683 45.353 47.183 44.74 46.819 43.522 C 46.683 43.058 46.521 42.191 46.334 40.923 C 46.228 41.146 46.162 41.294 46.137 41.37 C 45.874 41.997 45.49 42.969 44.986 44.288 C 44.91 44.5 44.796 44.669 44.644 44.795 C 44.432 45.134 44.116 45.311 43.697 45.326 C 43.46 45.336 43.21 45.124 42.947 44.689 C 42.669 44.249 42.444 43.684 42.273 42.992 C 42.116 42.365 41.874 41.001 41.545 38.9 C 41.475 38.446 41.439 38.09 41.439 37.832 C 41.439 37.554 41.544 37.323 41.754 37.139 C 41.963 36.954 42.214 36.862 42.508 36.862 C 43.053 36.862 43.389 37.132 43.515 37.673 C 43.581 37.955 43.637 38.304 43.682 38.718 C 43.743 39.314 43.78 39.665 43.796 39.771 C 43.861 40.165 43.962 40.81 44.099 41.704 C 44.473 40.678 44.902 39.403 45.387 37.877 C 45.594 37.221 45.983 36.892 46.554 36.892 C 47.115 36.892 47.483 37.259 47.66 37.991 C 47.787 38.506 47.92 39.175 48.062 39.999 C 48.269 41.196 48.395 41.908 48.441 42.136 C 48.486 41.979 48.883 40.443 49.63 37.529 C 49.741 37.094 50.057 36.877 50.578 36.877 C 50.866 36.877 51.119 36.971 51.339 37.157 C 51.559 37.344 51.669 37.577 51.669 37.855 C 51.669 37.905 51.656 37.978 51.631 38.074 Z \"\r\n              fill=\"rgb(255,255,255)\" />\r\n            <path\r\n              d=\" M 57.215 40.052 C 57.215 39.89 57.227 39.705 57.249 39.495 C 57.272 39.285 57.306 39.051 57.352 38.794 C 57.251 38.744 57.161 38.707 57.083 38.684 C 57.005 38.661 56.937 38.65 56.882 38.65 C 56.195 38.65 55.594 38.919 55.079 39.457 C 54.563 39.995 54.306 40.618 54.306 41.325 C 54.306 42.002 54.427 42.51 54.67 42.852 C 54.912 43.193 55.276 43.363 55.76 43.363 C 56.074 43.363 56.371 43.311 56.651 43.208 C 56.931 43.104 57.195 42.951 57.443 42.749 C 57.291 41.547 57.215 40.648 57.215 40.052 Z  M 59.095 45.167 C 58.862 45.167 58.493 44.942 57.988 44.492 C 57.524 44.715 57.114 44.883 56.761 44.996 C 56.407 45.11 56.107 45.167 55.859 45.167 C 54.642 45.167 53.729 44.841 53.12 44.189 C 52.511 43.537 52.207 42.562 52.207 41.264 C 52.207 40.047 52.656 39.005 53.556 38.139 C 54.455 37.272 55.531 36.839 56.784 36.839 C 57.263 36.839 57.819 36.974 58.451 37.244 C 59.213 37.569 59.595 37.947 59.595 38.377 C 59.595 38.557 59.537 38.715 59.42 38.85 C 59.37 39.05 59.331 39.301 59.303 39.604 C 59.275 39.906 59.261 40.26 59.261 40.665 C 59.261 41.62 59.33 42.308 59.466 42.728 C 59.481 42.773 59.597 43.033 59.814 43.508 C 60.011 43.939 60.11 44.184 60.11 44.244 C 60.11 44.509 60.008 44.729 59.803 44.904 C 59.598 45.079 59.362 45.167 59.095 45.167 Z \"\r\n              fill=\"rgb(255,255,255)\" />\r\n            <path\r\n              d=\" M 54.127 31.918 C 53.965 31.918 53.8 31.956 53.632 32.032 C 53.464 32.108 53.295 32.222 53.125 32.374 C 53.156 32.906 53.171 33.439 53.171 33.973 C 53.401 34.048 53.631 34.085 53.86 34.085 C 54.126 34.085 54.33 33.991 54.472 33.802 C 54.601 33.632 54.665 33.403 54.665 33.114 C 54.665 32.765 54.65 32.524 54.619 32.39 C 54.544 32.075 54.38 31.918 54.127 31.918 Z  M 53.86 35.119 C 53.638 35.119 53.405 35.093 53.159 35.041 L 53.156 36.62 C 53.156 36.77 53.105 36.894 53.005 36.992 C 52.904 37.09 52.776 37.139 52.622 37.139 C 52.467 37.139 52.339 37.09 52.238 36.992 C 52.138 36.894 52.088 36.77 52.088 36.62 C 52.088 36.499 52.09 36.018 52.095 35.176 C 52.1 34.552 52.1 34.042 52.095 33.648 C 52.088 33.09 52.07 32.611 52.041 32.208 C 52.002 31.653 51.983 31.399 51.983 31.445 C 51.983 31.231 52.031 31.048 52.126 30.896 C 52.237 30.723 52.387 30.636 52.575 30.636 C 52.72 30.636 52.841 30.685 52.939 30.784 C 53.037 30.882 53.086 30.999 53.086 31.136 L 53.082 31.174 C 53.255 31.076 53.429 31.003 53.603 30.956 C 53.777 30.908 53.952 30.884 54.127 30.884 C 54.721 30.884 55.154 31.136 55.428 31.639 C 55.632 32.018 55.733 32.51 55.733 33.114 C 55.733 33.679 55.572 34.147 55.25 34.519 C 54.904 34.918 54.441 35.119 53.86 35.119 Z \"\r\n              fill=\"rgb(255,255,255)\" />\r\n            <path\r\n              d=\" M 59.554 32.099 C 59.531 32.494 59.351 32.692 59.016 32.692 C 58.691 32.692 58.528 32.524 58.528 32.189 L 58.509 31.798 C 57.928 31.89 57.513 32.189 57.262 32.692 L 57.266 34.639 C 57.266 34.786 57.216 34.907 57.115 35.004 C 57.015 35.101 56.887 35.15 56.732 35.15 C 56.572 35.15 56.448 35.098 56.36 34.994 C 56.278 34.902 56.237 34.783 56.237 34.639 L 56.237 32.103 C 56.237 32.024 56.239 31.904 56.245 31.745 C 56.249 31.587 56.252 31.467 56.252 31.387 C 56.252 31.243 56.296 31.122 56.382 31.025 C 56.468 30.929 56.591 30.88 56.751 30.88 C 57.038 30.88 57.208 31.027 57.262 31.322 C 57.719 30.981 58.226 30.811 58.784 30.811 C 59.3 30.811 59.558 31.154 59.558 31.84 C 59.558 31.972 59.556 32.058 59.554 32.099 Z \"\r\n              fill=\"rgb(255,255,255)\" />\r\n            <path\r\n              d=\" M 61.946 31.898 C 61.628 31.896 61.378 32.04 61.195 32.332 C 61.04 32.577 60.963 32.863 60.963 33.191 C 60.963 33.5 61.05 33.738 61.226 33.903 C 61.365 34.035 61.528 34.1 61.714 34.1 C 61.938 34.1 62.133 34.024 62.298 33.872 C 62.487 33.694 62.587 33.453 62.6 33.148 C 62.634 32.318 62.415 31.901 61.946 31.898 Z  M 61.714 35.118 C 61.236 35.118 60.826 34.955 60.483 34.627 C 60.106 34.268 59.909 33.79 59.89 33.191 C 59.873 32.621 60.028 32.112 60.359 31.666 C 60.751 31.139 61.297 30.876 61.996 30.876 C 62.512 30.876 62.922 31.083 63.227 31.496 C 63.501 31.867 63.637 32.328 63.637 32.877 C 63.637 33.476 63.477 33.987 63.157 34.41 C 62.799 34.882 62.317 35.118 61.714 35.118 Z \"\r\n              fill=\"rgb(255,255,255)\" />\r\n          </g>\r\n        </g>\r\n      </g>\r\n    </svg>\r\n    <svg id=\"sky\" alt=\"Sky\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"\r\n      style=\"isolation:isolate\" viewBox=\"0 0 80 80\" width=\"80pt\" height=\"80pt\">\r\n      <defs>\r\n        <clipPath id=\"_clipPath_QC0p9cNzzv42tNDhldXIv2IchmC47l8D\">\r\n          <rect width=\"80\" height=\"80\" />\r\n        </clipPath>\r\n      </defs>\r\n      <g clip-path=\"url(#_clipPath_QC0p9cNzzv42tNDhldXIv2IchmC47l8D)\">\r\n        <path\r\n          d=\" M 11.662 5.492 L 8.317 6.745 L 7.452 10.211 L 5.226 7.416 L 1.662 7.665 L 3.633 4.685 L 2.295 1.372 L 5.738 2.325 L 8.476 0.029 L 8.633 3.598 L 11.662 5.492 Z \"\r\n          fill=\"rgb(255,0,255)\" />\r\n        <path\r\n          d=\" M 71.744 69.463 L 68.398 70.716 L 67.533 74.182 L 65.308 71.387 L 61.744 71.635 L 63.715 68.655 L 62.377 65.343 L 65.82 66.296 L 68.557 64 L 68.715 67.569 L 71.744 69.463 Z \"\r\n          fill=\"rgb(255,0,255)\" />\r\n        <path\r\n          d=\" M 21.662 21.807 L 18.317 23.06 L 17.452 26.526 L 15.226 23.731 L 11.662 23.98 L 13.633 21 L 12.295 17.687 L 15.738 18.64 L 18.476 16.344 L 18.633 19.913 L 21.662 21.807 Z \"\r\n          fill=\"rgb(255,0,255)\" />\r\n        <path\r\n          d=\" M 30.748 78.078 L 27.383 76.977 L 24.568 79.125 L 24.575 75.584 L 21.662 73.571 L 25.032 72.483 L 26.047 69.091 L 28.122 71.96 L 31.662 71.877 L 29.575 74.737 L 30.748 78.078 Z \"\r\n          fill=\"rgb(255,0,255)\" />\r\n        <path\r\n          d=\" M 54.385 11.399 L 51.419 9.539 L 48.205 10.927 L 49.058 7.531 L 46.744 4.903 L 50.237 4.665 L 52.022 1.653 L 53.328 4.901 L 56.744 5.667 L 54.058 7.913 L 54.385 11.399 Z \"\r\n          fill=\"rgb(255,0,255)\" />\r\n        <path\r\n          d=\" M 76.744 13.326 L 73.228 13.403 L 71.298 16.344 L 70.137 13.024 L 66.744 12.098 L 69.543 9.968 L 69.376 6.454 L 72.266 8.458 L 75.556 7.213 L 74.543 10.582 L 76.744 13.326 Z \"\r\n          fill=\"rgb(255,0,255)\" />\r\n        <path\r\n          d=\" M 11.662 69.463 L 8.317 70.716 L 7.452 74.182 L 5.226 71.387 L 1.662 71.635 L 3.633 68.655 L 2.295 65.343 L 5.738 66.296 L 8.476 64 L 8.633 67.569 L 11.662 69.463 Z \"\r\n          fill=\"rgb(255,0,255)\" />\r\n        <path\r\n          d=\" M 66.744 51.281 L 63.398 52.534 L 62.533 56 L 60.308 53.205 L 56.744 53.453 L 58.715 50.473 L 57.377 47.161 L 60.82 48.114 L 63.557 45.818 L 63.715 49.387 L 66.744 51.281 Z \"\r\n          fill=\"rgb(255,0,255)\" />\r\n      </g>\r\n    </svg>\r\n\r\n    <span>{{ title }} app demo is running!</span>\r\n\r\n  </div>\r\n\r\n  <!-- Terminal -->\r\n  <div class=\"terminal\">\r\n    <pre>npm i @nw-widget/nw-widget</pre>\r\n    <pre># OR</pre>\r\n    <pre>npm i @nw-widget/nw-widget --save</pre>\r\n  </div>\r\n\r\n  <svg id=\"clouds\" alt=\"Gray Clouds Background\" xmlns=\"http://www.w3.org/2000/svg\" width=\"2611.084\" height=\"485.677\"\r\n    viewBox=\"0 0 2611.084 485.677\">\r\n    <path id=\"Path_39\" data-name=\"Path 39\"\r\n      d=\"M2379.709,863.793c10-93-77-171-168-149-52-114-225-105-264,15-75,3-140,59-152,133-30,2.83-66.725,9.829-93.5,26.25-26.771-16.421-63.5-23.42-93.5-26.25-12-74-77-130-152-133-39-120-212-129-264-15-54.084-13.075-106.753,9.173-138.488,48.9-31.734-39.726-84.4-61.974-138.487-48.9-52-114-225-105-264,15a162.027,162.027,0,0,0-103.147,43.044c-30.633-45.365-87.1-72.091-145.206-58.044-52-114-225-105-264,15-75,3-140,59-152,133-53,5-127,23-130,83-2,42,35,72,70,86,49,20,106,18,157,5a165.625,165.625,0,0,0,120,0c47,94,178,113,251,33,61.112,8.015,113.854-5.72,150.492-29.764a165.62,165.62,0,0,0,110.861-3.236c47,94,178,113,251,33,31.385,4.116,60.563,2.495,86.487-3.311,25.924,5.806,55.1,7.427,86.488,3.311,73,80,204,61,251-33a165.625,165.625,0,0,0,120,0c51,13,108,15,157-5a147.188,147.188,0,0,0,33.5-18.694,147.217,147.217,0,0,0,33.5,18.694c49,20,106,18,157,5a165.625,165.625,0,0,0,120,0c47,94,178,113,251,33C2446.709,1093.793,2554.709,922.793,2379.709,863.793Z\"\r\n      transform=\"translate(142.69 -634.312)\" fill=\"#eee\" />\r\n  </svg>\r\n\r\n</div>\r\n\r\n<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->\r\n<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->\r\n<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->\r\n<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->\r\n<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->\r\n<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->\r\n<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->\r\n\r\n<app-footer></app-footer>"
 
 /***/ }),
 
@@ -429,6 +462,17 @@ module.exports = "import { Component, OnInit, OnDestroy } from '@angular/core';\
 
 /***/ }),
 
+/***/ "../node_modules/raw-loader/index.js!./src/app/views/tutorials/fake-api/overview/fake-api-overview.component.html":
+/*!***************************************************************************************************************!*\
+  !*** ../node_modules/raw-loader!./src/app/views/tutorials/fake-api/overview/fake-api-overview.component.html ***!
+  \***************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  Toasts provide feedback messages as notifications to the user.<br />\n  Goal is to mimic the push notifications available both on mobile and desktop operating systems.\n</p>\n\n<nw-overview-section [section]=\"sections['inline-usage']\">\n  <p><a [routerLink]=\"['..', 'api']\" fragment=\"nwToast\">nwToast</a> component allows you to only render the corresponding markup. Use it in one of your templates, and you are done. It will render a toast.</p>\n  <niwa-code [snippet]=\"TOAST_INLINE_BASIC\"></niwa-code>\n  <br />\n  <p>Live example available <a [routerLink]=\"['..', 'examples']\" fragment=\"inline\" title=\"Declarative inline usage\">here</a>.</p>\n  <p>\n    Nonetheless, with this inline technique, you must handle the toast's lifecycle yourself, i.e. it won't disappear automagically or in other words we don't remove the markup, nor destroy the component.\n  </p><p>\n    To make it disappear, you can listen to the <a [routerLink]=\"['..', 'api']\" fragment=\"nwToast\"><code>(hide)</code></a>\n    output and remove/destroy/hide it yourself, and <a routerLink=\".\" fragment=\"toast-service\">next section</a> details how to do that in a real application environment.\n  </p>\n  <niwa-code [snippet]=\"TOAST_INLINE_LIFECYCLE\"></niwa-code>\n</nw-overview-section>\n\n<nw-overview-section [section]=\"sections['toast-service']\">\n  <p>Let's take the opportunity to demonstrate how to simply build a global toast management service.</p>\n  <!-- <nw-alert [dismissible]=\"false\" type=\"secondary\">\n    <strong>TLDR;</strong>\n    You don't feel reading these long explanations? Go to the live example <a [routerLink]=\"['..', 'examples']\" fragment=\"howto-global\" title=\"Toast management service\">here</a>.\n  </nw-alert> -->\n\n  <p>In order to create our global toast system, 3 simple steps need to be done:<p>\n  <ol>\n    <li>Create a global <code>AppToastService</code> to act as a global storage for toasts.</li>\n    <li>Create a container component <code>&lt;app-toasts&gt;</code>, acting as the host in the application to display your toasts.\n    You could use <code>&lt;nw-toast&gt;</code> with an <code>*ngFor</code> to read the list of toasts to display from the service.</li>\n    <li>Finally, use this container component in your application.</li>\n  </ol>\n\n  <h4>1. Global toast service</h4>\n  <p>\n    Relying on Angular dependency injection to share some piece of logic application-wide is always a good and solid starting choice.\n  </p>\n  <p>\n    The service manages a collection of toasts. It also provides a public method to push a new toast to that same collection.\n    <niwa-code [snippet]=\"APP_TOAST_SERVICE\"></niwa-code>\n  </p>\n\n  <!-- <nw-alert [dismissible]=\"false\" type=\"warning\">\n    <svg:svg nwIcon=\"lightbulb\" fill=\"currentColor\" />\n    You could also create an interface to type your toast instead of using <code>any[]</code> here.\n  </nw-alert> -->\n  <p>\n    Additionally, a method to remove an existing toast from the collection is also implemented.\n    <niwa-code [snippet]=\"APP_TOAST_SERVICE_REMOVE\"></niwa-code>\n  </p>\n\n  <h4>2. Toast container component</h4>\n  <p>\n    As stated previously, <code>&lt;nw-toast&gt;</code> only generates a valid Bootstrap toast markup.\n    You'll still have to position them properly on the screen.\n    <br />\n    Thus, as a suggestion, toasts could be rendered in the top right corner of the application, as a kind of overlay.\n  </p>\n  <p>\n    To achieve that, you could create a dedicated container component/element to render all toasts in a convenient way.\n    For example, this container could be positionned using CSS property <code>position: static</code>.\n  </p>\n  <nw-tabset>\n    <nw-tab title=\"Template\">\n      <niwa-code *nwTabContent [snippet]=\"APP_TOASTS_CONTAINER_TPL\"></niwa-code>\n    </nw-tab>\n    <nw-tab title=\"Styles\">\n      <div *nwTabContent>\n        <niwa-code [snippet]=\"APP_TOASTS_CONTAINER_STYLES\"></niwa-code>\n        <p>We provide a dedicated <code>nw-toasts</code> CSS class you could use, or write your own styles in case some specificities would be needed.</p>\n      </div>\n    </nw-tab>\n    <nw-tab title=\"Component\">\n      <niwa-code *nwTabContent [snippet]=\"APP_TOASTS_CONTAINER\"></niwa-code>\n    </nw-tab>\n  </nw-tabset>\n  <hr />\n  <p>\n    Lastly, let's use this container. Common sense would suggest to put it somewhere quite high in your hierarchy of components.\n    Your root component would be a good candidate.\n  </p>\n  <niwa-code [snippet]=\"CONTAINER_USAGE\"></niwa-code>\n  <p>You're done! Just inject and use your <code>AppToastService</code> anywhere you want to create a new toast. <code>&lt;app-toasts&gt;</code> will take care of displaying them.</p>\n\n  <!-- <nw-alert [dismissible]=\"false\" type=\"warning\" class=\"d-flex flex-row\">\n    <div class=\"mr-1\">\n      <svg:svg nwIcon=\"lightbulb\" fill=\"currentColor\" />\n    </div>\n    <div>\n      Note the accessibility attributes <code>aria-live=\"polite\"</code> &amp; <code>aria-atomic=\"true\"</code>. They are <strong>mandatory</strong> in order to be compliant with screen readers technology. More information available on <a href=\"https://getbootstrap.com/docs/4.3/components/toasts/#accessibility\" target=\"_blank\" rel=\"noopener noreferrer\">Bootstrap documentation</a>.\n    </div>\n  </nw-alert> -->\n\n  <p>\n    Click <a [routerLink]=\"['..', 'examples']\" fragment=\"howto-global\" title=\"Toast management service\">here</a> to see an example a bit more advanced of this how-to.\n  </p>\n</nw-overview-section>\n"
+
+/***/ }),
+
 /***/ "../node_modules/raw-loader/index.js!./src/app/views/views.component.html":
 /*!***********************************************************************!*\
   !*** ../node_modules/raw-loader!./src/app/views/views.component.html ***!
@@ -436,7 +480,7 @@ module.exports = "import { Component, OnInit, OnDestroy } from '@angular/core';\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-header></app-header>\r\n<div class=\"container-fluid\">\r\n    <div class=\"row\">\r\n        <div class=\"col-12 col-lg-3\">\r\n            <app-navigation></app-navigation>\r\n        </div>\r\n        <div class=\"col-12 col-lg-9\"><router-outlet></router-outlet></div>\r\n    </div>\r\n</div>\r\n<app-footer></app-footer>"
+module.exports = "<app-header></app-header>\r\n<div class=\"container-fluid\">\r\n    <div class=\"row\">\r\n        <div class=\"col-12 col-lg-2\" style=\"border-right: 1px solid rgba(0, 0, 0, 0.1)\">\r\n            <app-navigation></app-navigation>\r\n        </div>\r\n        <div class=\"col-12 col-lg-10\">\r\n            <!-- <router-outlet></router-outlet> -->\r\n            <header class=\"bg-light pt-4 pb-md-5 px-4 px-lg-5 d-flex d-md-block align-items-center title\">\r\n                <h1 class=\"mb-4 mr-auto mr-md-none\">{{ component | titlecase }}</h1>\r\n\r\n                <ul class=\"nav nav-tabs px-4 px-lg-5 content-tabset justify-content-md-start justify-content-end\">\r\n\r\n                    <li class=\"nav-item\" *ngFor=\"let childRoute of route.routeConfig.children\">\r\n                        <a class=\"nav-link\" routerLink=\"./{{childRoute.path}}\"\r\n                            [class.active]=\"activeTab === childRoute.path\">\r\n                            {{ childRoute.path | titlecase }}\r\n                        </a>\r\n                    </li>\r\n\r\n                    <li ngbDropdown placement=\"bottom-right\"\r\n                        class=\"nav-item align-self-center ml-0 ml-md-auto navigation-dropdown\"\r\n                        *ngIf=\"tableOfContent.length && isLargeScreenOrLess\">\r\n                        <span ngbDropdownToggle class=\"nav-link\" title=\"Table of content\">\r\n                            <span class=\"sr-only\">Table of content</span>\r\n                            <svg aria-hidden=\"true\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 512 512\">\r\n                                <path fill=\"currentColor\"\r\n                                    d=\"M464 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V80c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V86a6 6 0 0 1 6-6h404a6 6 0 0 1 6 6v340a6 6 0 0 1-6 6zm-42-92v24c0 6.627-5.373 12-12 12H204c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h200c6.627 0 12 5.373 12 12zm0-96v24c0 6.627-5.373 12-12 12H204c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h200c6.627 0 12 5.373 12 12zm0-96v24c0 6.627-5.373 12-12 12H204c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h200c6.627 0 12 5.373 12 12zm-252 12c0 19.882-16.118 36-36 36s-36-16.118-36-36 16.118-36 36-36 36 16.118 36 36zm0 96c0 19.882-16.118 36-36 36s-36-16.118-36-36 16.118-36 36-36 36 16.118 36 36zm0 96c0 19.882-16.118 36-36 36s-36-16.118-36-36 16.118-36 36-36 36 16.118 36 36z\">\r\n                                </path>\r\n                            </svg>\r\n                        </span>\r\n\r\n                        <div class=\"dropdown-menu-right\" ngbDropdownMenu>\r\n                            <ng-template ngFor [ngForOf]=\"tableOfContent\" let-topic>\r\n                                <a *ngIf=\"topic.title else divider\" class=\"dropdown-item\"\r\n                                    [routerLink]=\"['.', this.activeTab]\" [fragment]=\"topic.fragment\">{{topic.title}}</a>\r\n                            </ng-template>\r\n                            <ng-template #divider>\r\n                                <div class=\"dropdown-divider\"></div>\r\n                            </ng-template>\r\n                        </div>\r\n                    </li>\r\n                </ul>\r\n            </header>\r\n\r\n            <section class=\"row py-5 px-2 px-md-4 px-lg-5\">\r\n                <div class=\"col-12 col-xl-9 px-md-0 pr-xl-4\">\r\n                    <router-outlet (activate)=\"updateNavigation($event)\"></router-outlet>\r\n                </div>\r\n\r\n                <div class=\"col-12 col-xl-3 d-none d-xl-block contextual-nav\" *ngIf=\"!isLargeScreenOrLess\">\r\n                    <ul class=\"nav flex-column text-muted pt-4\">\r\n                        <li *ngFor=\"let topic of tableOfContent\" class=\"nav-item\">\r\n                            <a *ngIf=\"topic.title else divider\" class=\"nav-link\" [routerLink]=\"['.', this.activeTab]\"\r\n                                [fragment]=\"topic.fragment\">{{topic.title}}</a>\r\n                        </li>\r\n                        <ng-template #divider>&nbsp;</ng-template>\r\n                    </ul>\r\n                </div>\r\n            </section>\r\n        </div>\r\n    </div>\r\n</div>\r\n<app-footer></app-footer>"
 
 /***/ }),
 
@@ -944,6 +988,211 @@ webpackAsyncContext.keys = function webpackAsyncContextKeys() {
 };
 webpackAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 module.exports = webpackAsyncContext;
+
+/***/ }),
+
+/***/ "./src/api-docs.ts":
+/*!*************************!*\
+  !*** ./src/api-docs.ts ***!
+  \*************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+const API_DOCS = {
+    "NwTabsetConfig": {
+        "fileName": "src/lib/nw-tabset/nw-tabset-config.ts",
+        "className": "NwTabsetConfig",
+        "description": "<p>A configuration service for the <a href=\"#/components/nw-tabset/api#NwTabset\"><code>NwTabset</code></a> component.</p>\n<p>You can inject this service, typically in your root component, and customize the values of its properties in\norder to provide default values for all the tabsets used in the application.</p>",
+        "type": "Service",
+        "methods": [],
+        "properties": [
+            {
+                "name": "justify",
+                "defaultValue": "start",
+                "type": "\"start\" | \"center\" | \"end\" | \"fill\" | \"justified\"",
+                "description": ""
+            },
+            {
+                "name": "orientation",
+                "defaultValue": "horizontal",
+                "type": "\"horizontal\" | \"vertical\"",
+                "description": ""
+            },
+            {
+                "name": "type",
+                "defaultValue": "tabs",
+                "type": "\"tabs\" | \"pills\"",
+                "description": ""
+            }
+        ]
+    },
+    "NwTabTitle": {
+        "fileName": "src/lib/nw-tabset/nw-tabset.ts",
+        "className": "NwTabTitle",
+        "description": "<p>A directive to wrap tab titles that need to contain HTML markup or other directives.</p>\n<p>Alternatively you could use the <code>NwTab.title</code> input for string titles.</p>",
+        "type": "Directive",
+        "selector": "ng-template[NwTabTitle]",
+        "inputs": [],
+        "outputs": [],
+        "properties": [],
+        "methods": []
+    },
+    "NwTabContent": {
+        "fileName": "src/lib/nw-tabset/nw-tabset.ts",
+        "className": "NwTabContent",
+        "description": "<p>A directive to wrap content to be displayed in a tab.</p>",
+        "type": "Directive",
+        "selector": "ng-template[NwTabContent]",
+        "inputs": [],
+        "outputs": [],
+        "properties": [],
+        "methods": []
+    },
+    "NwTab": {
+        "fileName": "src/lib/nw-tabset/nw-tabset.ts",
+        "className": "NwTab",
+        "description": "<p>A directive representing an individual tab.</p>",
+        "type": "Directive",
+        "selector": "Nw-tab",
+        "inputs": [
+            {
+                "name": "disabled",
+                "defaultValue": "false",
+                "type": "boolean",
+                "description": "<p>If <code>true</code>, the current tab is disabled and can&#39;t be toggled.</p>"
+            },
+            {
+                "name": "id",
+                "type": "string",
+                "description": "<p>The tab identifier.</p>\n<p>Must be unique for the entire document for proper accessibility support.</p>"
+            },
+            {
+                "name": "title",
+                "type": "string",
+                "description": "<p>The tab title.</p>\n<p>Use the <a href=\"#/components/nw-tabset/api#NwTabTitle\"><code>NwTabTitle</code></a> directive for non-string titles.</p>"
+            }
+        ],
+        "outputs": [],
+        "properties": [
+            {
+                "name": "contentTpl",
+                "type": "NwTabContent",
+                "description": ""
+            },
+            {
+                "name": "contentTpls",
+                "type": "QueryList<NwTabContent>",
+                "description": ""
+            },
+            {
+                "name": "titleTpl",
+                "type": "NwTabTitle",
+                "description": ""
+            },
+            {
+                "name": "titleTpls",
+                "type": "QueryList<NwTabTitle>",
+                "description": ""
+            }
+        ],
+        "methods": []
+    },
+    "NwTabChangeEvent": {
+        "fileName": "src/lib/nw-tabset/nw-tabset.ts",
+        "className": "NwTabChangeEvent",
+        "description": "<p>The payload of the change event fired right before the tab change.</p>",
+        "type": "Interface",
+        "methods": [],
+        "properties": [
+            {
+                "name": "activeId",
+                "type": "string",
+                "description": "<p>The id of the currently active tab.</p>"
+            },
+            {
+                "name": "nextId",
+                "type": "string",
+                "description": "<p>The id of the newly selected tab.</p>"
+            },
+            {
+                "name": "preventDefault",
+                "type": "() => void",
+                "description": "<p>Calling this function will prevent tab switching.</p>"
+            }
+        ]
+    },
+    "NwTabset": {
+        "fileName": "src/lib/nw-tabset/nw-tabset.ts",
+        "className": "NwTabset",
+        "description": "<p>A component that makes it easy to create tabbed interface.</p>",
+        "type": "Component",
+        "selector": "Nw-tabset",
+        "exportAs": "NwTabset",
+        "inputs": [
+            {
+                "name": "activeId",
+                "type": "string",
+                "description": "<p>The identifier of the tab that should be opened <strong>initially</strong>.</p>\n<p>For subsequent tab switches use the <code>.select()</code> method and the <code>(tabChange)</code> event.</p>"
+            },
+            {
+                "name": "destroyOnHide",
+                "defaultValue": "true",
+                "type": "boolean",
+                "description": "<p>If <code>true</code>, non-visible tabs content will be removed from DOM. Otherwise it will just be hidden.</p>"
+            },
+            {
+                "name": "justify",
+                "type": "\"start\" | \"center\" | \"end\" | \"fill\" | \"justified\"",
+                "description": "<p>The horizontal alignment of the tabs with flexbox utilities.</p>"
+            },
+            {
+                "name": "orientation",
+                "type": "\"horizontal\" | \"vertical\"",
+                "description": "<p>The orientation of the tabset.</p>"
+            },
+            {
+                "name": "type",
+                "type": "string",
+                "description": "<p>Type of navigation to be used for tabs.</p>\n<p>Currently Bootstrap supports only <code>&quot;tabs&quot;</code> and <code>&quot;pills&quot;</code>.</p>\n<p>Since <code>3.0.0</code> can also be an arbitrary string (ex. for custom themes).</p>"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "tabChange",
+                "description": "<p>A tab change event emitted right before the tab change happens.</p>\n<p>See <a href=\"#/components/nw-tabset/api#NwTabChangeEvent\"><code>NwTabChangeEvent</code></a> for payload details.</p>"
+            }
+        ],
+        "properties": [
+            {
+                "name": "justifyClass",
+                "type": "string",
+                "description": ""
+            },
+            {
+                "name": "tabs",
+                "type": "QueryList<NwTab>",
+                "description": ""
+            }
+        ],
+        "methods": [
+            {
+                "name": "select",
+                "description": "<p>Selects the tab with the given id and shows its associated content panel.</p>\n<p>Any other tab that was previously selected becomes unselected and its associated pane is removed from DOM or\nhidden depending on the <code>destroyOnHide</code> value.</p>",
+                "args": [
+                    {
+                        "name": "tabId",
+                        "type": "string"
+                    }
+                ],
+                "returnType": "void"
+            }
+        ]
+    }
+};
+/* harmony default export */ __webpack_exports__["default"] = (API_DOCS);
+
 
 /***/ }),
 
@@ -1612,7 +1861,7 @@ SeoService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".jumbotron {\n  padding: 1rem;\n  margin-bottom: 0;\n  background: none;\n  width: 50%;\n  margin: auto;\n  text-align: end;\n}\n\n.lead {\n  font-size: 1.125rem;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImRlbW8vc3JjL2FwcC9sYXlvdXQvZm9vdGVyL0Y6XFxTb3VyY2VcXEFuZ3VsYXJcXG5ldyBwcm9qZWN0XFxudy13aWRnZXQvZGVtb1xcc3JjXFxhcHBcXGxheW91dFxcZm9vdGVyXFxmb290ZXIuY29tcG9uZW50LnNjc3MiLCJkZW1vL3NyYy9hcHAvbGF5b3V0L2Zvb3Rlci9mb290ZXIuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxhQUFBO0VBQ0EsZ0JBQUE7RUFDQSxnQkFBQTtFQUNBLFVBQUE7RUFDQSxZQUFBO0VBQ0EsZUFBQTtBQ0NKOztBREVBO0VBQ0ksbUJBQUE7QUNDSiIsImZpbGUiOiJkZW1vL3NyYy9hcHAvbGF5b3V0L2Zvb3Rlci9mb290ZXIuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuanVtYm90cm9uIHtcclxuICAgIHBhZGRpbmc6IDFyZW07XHJcbiAgICBtYXJnaW4tYm90dG9tOiAwO1xyXG4gICAgYmFja2dyb3VuZDogbm9uZTtcclxuICAgIHdpZHRoOiA1MCU7XHJcbiAgICBtYXJnaW46IGF1dG87XHJcbiAgICB0ZXh0LWFsaWduOiBlbmQ7XHJcbn1cclxuXHJcbi5sZWFkIHtcclxuICAgIGZvbnQtc2l6ZTogMS4xMjVyZW07XHJcbn0iLCIuanVtYm90cm9uIHtcbiAgcGFkZGluZzogMXJlbTtcbiAgbWFyZ2luLWJvdHRvbTogMDtcbiAgYmFja2dyb3VuZDogbm9uZTtcbiAgd2lkdGg6IDUwJTtcbiAgbWFyZ2luOiBhdXRvO1xuICB0ZXh0LWFsaWduOiBlbmQ7XG59XG5cbi5sZWFkIHtcbiAgZm9udC1zaXplOiAxLjEyNXJlbTtcbn0iXX0= */"
+module.exports = ".jumbotron {\n  position: fixed;\n  bottom: 0;\n  padding: 0.5rem 1.5rem;\n  margin-bottom: 0;\n  background: transparent;\n  margin: auto;\n  text-align: end;\n  width: 100%;\n}\n.jumbotron p {\n  margin-bottom: 0.25rem;\n}\n::ng-deep app-home .jumbotron {\n  width: 50%;\n}\n.lead {\n  font-size: 1.125rem;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImRlbW8vc3JjL2FwcC9sYXlvdXQvZm9vdGVyL0Y6XFxTb3VyY2VcXEFuZ3VsYXJcXG5ldyBwcm9qZWN0XFxudy13aWRnZXQvZGVtb1xcc3JjXFxhcHBcXGxheW91dFxcZm9vdGVyXFxmb290ZXIuY29tcG9uZW50LnNjc3MiLCJkZW1vL3NyYy9hcHAvbGF5b3V0L2Zvb3Rlci9mb290ZXIuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxlQUFBO0VBQ0EsU0FBQTtFQUNBLHNCQUFBO0VBQ0EsZ0JBQUE7RUFDQSx1QkFBQTtFQUNBLFlBQUE7RUFDQSxlQUFBO0VBQ0EsV0FBQTtBQ0NKO0FEQUk7RUFDSSxzQkFBQTtBQ0VSO0FESVE7RUFDSSxVQUFBO0FDRFo7QURNQTtFQUNJLG1CQUFBO0FDSEoiLCJmaWxlIjoiZGVtby9zcmMvYXBwL2xheW91dC9mb290ZXIvZm9vdGVyLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmp1bWJvdHJvbiB7XHJcbiAgICBwb3NpdGlvbjogZml4ZWQ7XHJcbiAgICBib3R0b206IDA7XHJcbiAgICBwYWRkaW5nOiAwLjVyZW0gMS41cmVtO1xyXG4gICAgbWFyZ2luLWJvdHRvbTogMDtcclxuICAgIGJhY2tncm91bmQ6IHRyYW5zcGFyZW50O1xyXG4gICAgbWFyZ2luOiBhdXRvO1xyXG4gICAgdGV4dC1hbGlnbjogZW5kO1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgICBwIHtcclxuICAgICAgICBtYXJnaW4tYm90dG9tOiAuMjVyZW07XHJcbiAgICB9XHJcbn1cclxuXHJcbjo6bmctZGVlcCB7XHJcbiAgICBhcHAtaG9tZSB7XHJcbiAgICAgICAgLmp1bWJvdHJvbiB7XHJcbiAgICAgICAgICAgIHdpZHRoOiA1MCU7XHJcbiAgICAgICAgfVxyXG4gICAgfVxyXG59XHJcblxyXG4ubGVhZCB7XHJcbiAgICBmb250LXNpemU6IDEuMTI1cmVtO1xyXG59IiwiLmp1bWJvdHJvbiB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgYm90dG9tOiAwO1xuICBwYWRkaW5nOiAwLjVyZW0gMS41cmVtO1xuICBtYXJnaW4tYm90dG9tOiAwO1xuICBiYWNrZ3JvdW5kOiB0cmFuc3BhcmVudDtcbiAgbWFyZ2luOiBhdXRvO1xuICB0ZXh0LWFsaWduOiBlbmQ7XG4gIHdpZHRoOiAxMDAlO1xufVxuLmp1bWJvdHJvbiBwIHtcbiAgbWFyZ2luLWJvdHRvbTogMC4yNXJlbTtcbn1cblxuOjpuZy1kZWVwIGFwcC1ob21lIC5qdW1ib3Ryb24ge1xuICB3aWR0aDogNTAlO1xufVxuXG4ubGVhZCB7XG4gIGZvbnQtc2l6ZTogMS4xMjVyZW07XG59Il19 */"
 
 /***/ }),
 
@@ -1794,6 +2043,305 @@ NavigationComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
+/***/ "./src/app/shared/components/api-docs/api-docs-badge.component.ts":
+/*!************************************************************************!*\
+  !*** ./src/app/shared/components/api-docs/api-docs-badge.component.ts ***!
+  \************************************************************************/
+/*! exports provided: NwApiDocsBadge */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NwApiDocsBadge", function() { return NwApiDocsBadge; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm2015/core.js");
+
+
+const BADGES = {
+    'Directive': 'success',
+    'Component': 'success',
+    'Service': 'primary',
+    'Configuration': 'primary',
+    'Class': 'danger',
+    'Interface': 'danger'
+};
+let NwApiDocsBadge = class NwApiDocsBadge {
+    set type(type) {
+        this.text = type;
+        this.badgeClass = `badge-${BADGES[type] || 'secondary'}`;
+    }
+};
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], NwApiDocsBadge.prototype, "deprecated", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], NwApiDocsBadge.prototype, "since", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], NwApiDocsBadge.prototype, "type", null);
+NwApiDocsBadge = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'nw-api-docs-badge',
+        template: `
+    <h5>
+      <span *ngIf="deprecated" class="badge badge-secondary" >Deprecated {{ deprecated.version }}</span>&ngsp;
+      <span *ngIf="since" class="badge badge-info" >Since {{ since.version }}</span>&ngsp;
+      <span class="badge" [ngClass]="badgeClass">{{text}}</span>
+    </h5>
+  `,
+        changeDetection: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectionStrategy"].OnPush
+    })
+], NwApiDocsBadge);
+
+
+
+/***/ }),
+
+/***/ "./src/app/shared/components/api-docs/api-docs-class.component.ts":
+/*!************************************************************************!*\
+  !*** ./src/app/shared/components/api-docs/api-docs-class.component.ts ***!
+  \************************************************************************/
+/*! exports provided: NwApiDocsClass */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NwApiDocsClass", function() { return NwApiDocsClass; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _api_docs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../api-docs */ "./src/api-docs.ts");
+/* harmony import */ var _api_docs_model__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./api-docs.model */ "./src/app/shared/components/api-docs/api-docs.model.ts");
+/* harmony import */ var src_app_core_services_analytic_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/core/services/analytic.service */ "./src/app/core/services/analytic.service.ts");
+
+
+
+
+
+/**
+ * Displays the API docs of a class, which is not a directive.
+ *
+ * For Config services, use NgbdApiDocsConfig instead.
+ */
+let NwApiDocsClass = class NwApiDocsClass {
+    constructor(_analytics) {
+        this._analytics = _analytics;
+        this.fbTreeMaster = 'https://github.com/nw-widget/nw-widget/tree/master';
+    }
+    set type(typeName) {
+        this.apiDocs = _api_docs__WEBPACK_IMPORTED_MODULE_2__["default"][typeName];
+    }
+    methodSignature(method) { return Object(_api_docs_model__WEBPACK_IMPORTED_MODULE_3__["signature"])(method); }
+    trackSourceClick() {
+        this._analytics.trackEvent('Source File View', this.apiDocs.className);
+    }
+};
+NwApiDocsClass.ctorParameters = () => [
+    { type: src_app_core_services_analytic_service__WEBPACK_IMPORTED_MODULE_4__["AnalyticService"] }
+];
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], NwApiDocsClass.prototype, "type", null);
+NwApiDocsClass = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'nw-api-docs-class',
+        changeDetection: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectionStrategy"].OnPush,
+        template: __webpack_require__(/*! raw-loader!./api-docs-class.component.html */ "../node_modules/raw-loader/index.js!./src/app/shared/components/api-docs/api-docs-class.component.html"),
+        styles: ["\n    .label-cell {\n      width: 25%;\n    }\n    .content-cell {\n      width: 75%;\n    }\n    "]
+    })
+], NwApiDocsClass);
+
+
+
+/***/ }),
+
+/***/ "./src/app/shared/components/api-docs/api-docs-config.component.ts":
+/*!*************************************************************************!*\
+  !*** ./src/app/shared/components/api-docs/api-docs-config.component.ts ***!
+  \*************************************************************************/
+/*! exports provided: NwApiDocsConfig */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NwApiDocsConfig", function() { return NwApiDocsConfig; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _api_docs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../api-docs */ "./src/api-docs.ts");
+/* harmony import */ var src_app_core_services_analytic_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/core/services/analytic.service */ "./src/app/core/services/analytic.service.ts");
+
+
+
+
+const CONFIG_SUFFIX_LENGTH = 'Config'.length;
+/**
+ * Displays the API docs of a Config service. A Config service for a component Foo is named, by convention,
+ * FooConfig, and only has properties, whose name matches with an input of the directive.
+ * In order to avoid cluttering the demo pages, the only things displayed by this component
+ * is the description of the Config service and the list of its properties, whose documentation and
+ * default value is documented in the directive itself.
+ */
+let NwApiDocsConfig = class NwApiDocsConfig {
+    constructor(_analytics) {
+        this._analytics = _analytics;
+        this.fbTreeMaster = 'https://github.com/nw-widget/nw-widget/tree/master';
+    }
+    set type(typeName) {
+        this.apiDocs = _api_docs__WEBPACK_IMPORTED_MODULE_2__["default"][typeName];
+        this.directiveName = typeName.slice(0, -CONFIG_SUFFIX_LENGTH);
+    }
+    trackSourceClick() {
+        this._analytics.trackEvent('Source File View', this.apiDocs.className);
+    }
+};
+NwApiDocsConfig.ctorParameters = () => [
+    { type: src_app_core_services_analytic_service__WEBPACK_IMPORTED_MODULE_3__["AnalyticService"] }
+];
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], NwApiDocsConfig.prototype, "type", null);
+NwApiDocsConfig = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'nw-api-docs-config',
+        changeDetection: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectionStrategy"].OnPush,
+        template: __webpack_require__(/*! raw-loader!./api-docs-config.component.html */ "../node_modules/raw-loader/index.js!./src/app/shared/components/api-docs/api-docs-config.component.html")
+    })
+], NwApiDocsConfig);
+
+
+
+/***/ }),
+
+/***/ "./src/app/shared/components/api-docs/api-docs.component.ts":
+/*!******************************************************************!*\
+  !*** ./src/app/shared/components/api-docs/api-docs.component.ts ***!
+  \******************************************************************/
+/*! exports provided: NwApiDocs */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NwApiDocs", function() { return NwApiDocs; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _api_docs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../api-docs */ "./src/api-docs.ts");
+/* harmony import */ var _api_docs_model__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./api-docs.model */ "./src/app/shared/components/api-docs/api-docs.model.ts");
+/* harmony import */ var src_app_core_services_analytic_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/core/services/analytic.service */ "./src/app/core/services/analytic.service.ts");
+
+
+
+
+
+/**
+ * Displays the API docs of a directive.
+ *
+ * The default values of its inputs are looked for in the directive api doc itself, or in the matching property
+ * of associated Config service, if any.
+ *
+ * The config service of a directive NgbFoo is, by convention, named NgbFooConfig.
+ */
+let NwApiDocs = class NwApiDocs {
+    constructor(_analytics) {
+        this._analytics = _analytics;
+        this.fbTreeMaster = 'https://github.com/nw-widget/nw-widget/tree/master';
+    }
+    set directive(directiveName) {
+        this.apiDocs = _api_docs__WEBPACK_IMPORTED_MODULE_2__["default"][directiveName];
+        this.configServiceName = `${directiveName}Config`;
+        const configApiDocs = _api_docs__WEBPACK_IMPORTED_MODULE_2__["default"][this.configServiceName];
+        this._configProperties = {};
+        if (configApiDocs) {
+            this.apiDocs.inputs.forEach(input => this._configProperties[input.name] = this._findInputConfigProperty(configApiDocs, input));
+        }
+    }
+    /**
+     * Returns the default value of the given directive input by first looking for it in the matching config service
+     * property. If there is no matching config property, it reads it from the input.
+     */
+    defaultInputValue(input) {
+        const configProperty = this._configProperties[input.name];
+        return configProperty ? configProperty.defaultValue : input.defaultValue;
+    }
+    /**
+     * Returns true if there is a config service property matching with the given directive input
+     */
+    hasConfigProperty(input) {
+        return !!this._configProperties[input.name];
+    }
+    methodSignature(method) { return Object(_api_docs_model__WEBPACK_IMPORTED_MODULE_3__["signature"])(method); }
+    trackSourceClick() {
+        this._analytics.trackEvent('Source File View', this.apiDocs.className);
+    }
+    _findInputConfigProperty(configApiDocs, input) {
+        return configApiDocs.properties.filter(prop => prop.name === input.name)[0];
+    }
+};
+NwApiDocs.ctorParameters = () => [
+    { type: src_app_core_services_analytic_service__WEBPACK_IMPORTED_MODULE_4__["AnalyticService"] }
+];
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], NwApiDocs.prototype, "directive", null);
+NwApiDocs = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'nw-api-docs',
+        changeDetection: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectionStrategy"].OnPush,
+        template: __webpack_require__(/*! raw-loader!./api-docs.component.html */ "../node_modules/raw-loader/index.js!./src/app/shared/components/api-docs/api-docs.component.html"),
+        styles: ["\n    .label-cell {\n      width: 25%;\n    }\n    .content-cell {\n      width: 75%;\n    }\n    "]
+    })
+], NwApiDocs);
+
+
+
+/***/ }),
+
+/***/ "./src/app/shared/components/api-docs/api-docs.model.ts":
+/*!**************************************************************!*\
+  !*** ./src/app/shared/components/api-docs/api-docs.model.ts ***!
+  \**************************************************************/
+/*! exports provided: signature */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "signature", function() { return signature; });
+function signature(method) {
+    const args = method['args'].map(arg => `${arg.name}: ${arg.type}`).join(', ');
+    return `${method.name}(${args})`;
+}
+
+
+/***/ }),
+
+/***/ "./src/app/shared/components/api-docs/index.ts":
+/*!*****************************************************!*\
+  !*** ./src/app/shared/components/api-docs/index.ts ***!
+  \*****************************************************/
+/*! exports provided: NwApiDocs, NwApiDocsBadge, NwApiDocsClass, NwApiDocsConfig */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _api_docs_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./api-docs.component */ "./src/app/shared/components/api-docs/api-docs.component.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NwApiDocs", function() { return _api_docs_component__WEBPACK_IMPORTED_MODULE_0__["NwApiDocs"]; });
+
+/* harmony import */ var _api_docs_badge_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./api-docs-badge.component */ "./src/app/shared/components/api-docs/api-docs-badge.component.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NwApiDocsBadge", function() { return _api_docs_badge_component__WEBPACK_IMPORTED_MODULE_1__["NwApiDocsBadge"]; });
+
+/* harmony import */ var _api_docs_class_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./api-docs-class.component */ "./src/app/shared/components/api-docs/api-docs-class.component.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NwApiDocsClass", function() { return _api_docs_class_component__WEBPACK_IMPORTED_MODULE_2__["NwApiDocsClass"]; });
+
+/* harmony import */ var _api_docs_config_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./api-docs-config.component */ "./src/app/shared/components/api-docs/api-docs-config.component.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NwApiDocsConfig", function() { return _api_docs_config_component__WEBPACK_IMPORTED_MODULE_3__["NwApiDocsConfig"]; });
+
+
+
+
+
+
+
+/***/ }),
+
 /***/ "./src/app/shared/components/code/code.component.scss":
 /*!************************************************************!*\
   !*** ./src/app/shared/components/code/code.component.scss ***!
@@ -1879,6 +2427,96 @@ function Snippet({ lang, code }) {
 
 /***/ }),
 
+/***/ "./src/app/shared/components/overview/index.ts":
+/*!*****************************************************!*\
+  !*** ./src/app/shared/components/overview/index.ts ***!
+  \*****************************************************/
+/*! exports provided: NwOverviewDirective, NwOverviewSectionComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _overview_directive__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./overview.directive */ "./src/app/shared/components/overview/overview.directive.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NwOverviewDirective", function() { return _overview_directive__WEBPACK_IMPORTED_MODULE_0__["NwOverviewDirective"]; });
+
+/* harmony import */ var _overview_section_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./overview-section.component */ "./src/app/shared/components/overview/overview-section.component.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NwOverviewSectionComponent", function() { return _overview_section_component__WEBPACK_IMPORTED_MODULE_1__["NwOverviewSectionComponent"]; });
+
+
+
+
+
+/***/ }),
+
+/***/ "./src/app/shared/components/overview/overview-section.component.ts":
+/*!**************************************************************************!*\
+  !*** ./src/app/shared/components/overview/overview-section.component.ts ***!
+  \**************************************************************************/
+/*! exports provided: NwOverviewSectionComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NwOverviewSectionComponent", function() { return NwOverviewSectionComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm2015/core.js");
+
+
+let NwOverviewSectionComponent = class NwOverviewSectionComponent {
+};
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], NwOverviewSectionComponent.prototype, "section", void 0);
+NwOverviewSectionComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'nw-overview-section',
+        changeDetection: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectionStrategy"].OnPush,
+        host: {
+            'class': 'd-block'
+        },
+        template: `
+    <h2>
+      <a class="title-fragment" [routerLink]="" [fragment]="section.fragment" nwFragment>
+        <img src="assets/images/link-symbol.svg" />
+      </a>
+      {{ section.title }}
+    </h2>
+
+    <ng-content></ng-content>
+  `
+    })
+], NwOverviewSectionComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/shared/components/overview/overview.directive.ts":
+/*!******************************************************************!*\
+  !*** ./src/app/shared/components/overview/overview.directive.ts ***!
+  \******************************************************************/
+/*! exports provided: NwOverviewDirective */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NwOverviewDirective", function() { return NwOverviewDirective; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm2015/core.js");
+
+
+let NwOverviewDirective = class NwOverviewDirective {
+};
+NwOverviewDirective = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"])({
+        selector: '[nwOverview]'
+    })
+], NwOverviewDirective);
+
+
+
+/***/ }),
+
 /***/ "./src/app/shared/components/widget-partial/widget-partial.component.scss":
 /*!********************************************************************************!*\
   !*** ./src/app/shared/components/widget-partial/widget-partial.component.scss ***!
@@ -1886,7 +2524,7 @@ function Snippet({ lang, code }) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "a.title-fragment {\n  opacity: 0;\n  transition: opacity 125ms ease;\n  line-height: inherit;\n  position: absolute;\n  margin-left: -1.2em;\n  padding-right: 0.5em;\n}\na.title-fragment > img {\n  width: 1em;\n  height: 1em;\n}\ndiv.widget-partial-wrapper {\n  margin-bottom: 1.5rem;\n  margin-top: 1.5rem;\n}\ndiv.widget-partial-wrapper h2 {\n  display: flex;\n  margin-bottom: 1rem;\n}\ndiv.widget-partial-wrapper h2 span {\n  flex-grow: 1;\n}\ndiv.widget-partial-wrapper h2 .stackblitz, div.widget-partial-wrapper h2 .toggle-code {\n  display: flex;\n  align-items: center;\n  align-self: center;\n}\ndiv.widget-partial-wrapper h2 .toggle-code svg {\n  vertical-align: middle;\n  fill: #28a745;\n}\ndiv.widget-partial-wrapper h2 .stackblitz .stackblitz-icon {\n  height: 1.2rem;\n  margin-left: -0.5rem;\n}\ndiv.widget-partial-wrapper h2:hover > .title-fragment {\n  opacity: 1;\n}\ndiv.widget-partial-wrapper .tabset-code nw-tabset ::ng-deep .nav {\n  padding: 0.5rem 1.25rem 0;\n  font-size: 80%;\n}\ndiv.widget-partial-wrapper .tabset-code nw-tabset ::ng-deep .nav .nav-link.active {\n  background-color: #f5f2f0;\n  border-bottom: 1px solid #f5f2f0;\n}\ndiv.widget-partial-wrapper .tabset-code nw-tabset ::ng-deep .nav .nav-link:not(.active) {\n  color: #999;\n}\ndiv.widget-partial-wrapper .tabset-code nw-tabset ::ng-deep .nav .nav-link:not(.active):hover {\n  color: #666;\n}\ndiv.widget-partial-wrapper .tabset-code nw-tabset ::ng-deep .nav.nav-pills {\n  border-right: 1px solid #dee2e6;\n  padding-left: 0.75rem;\n  padding-right: 0;\n}\ndiv.widget-partial-wrapper .tabset-code nw-tabset ::ng-deep .nav.nav-pills .nav-link.active {\n  color: #666;\n  background-color: #f5f5f5;\n  border: 1px solid #dee2e6;\n  border-right-color: #f5f5f5;\n  border-top-right-radius: 0;\n  border-bottom-right-radius: 0;\n  margin-right: -1px;\n}\ndiv.widget-partial-wrapper .tabset-code nw-tabset ::ng-deep .nav.nav-pills + .tab-content {\n  flex: 1;\n  overflow: hidden;\n}\ndiv.widget-partial-wrapper .tabset-code nw-tabset ::ng-deep pre {\n  margin: 0;\n  max-height: 500px;\n  overflow: auto;\n}\n.examples-legend {\n  font-size: 80%;\n}\nnw-api-docs,\nnw-api-docs-class,\nnw-api-docs-config {\n  display: block;\n}\nnw-api-docs:not(:first-child),\nnw-api-docs-class:not(:first-child),\nnw-api-docs-config:not(:first-child) {\n  margin-top: 3rem;\n  border-top: 1px solid #999;\n  padding-top: 1rem;\n}\n.overview .alert {\n  border-left-width: 5px;\n  border-radius: 0;\n  padding-left: 0.5rem;\n  padding-right: 0.5rem;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImRlbW8vc3JjL2FwcC9zaGFyZWQvY29tcG9uZW50cy93aWRnZXQtcGFydGlhbC9GOlxcU291cmNlXFxBbmd1bGFyXFxuZXcgcHJvamVjdFxcbnctd2lkZ2V0L2RlbW9cXHNyY1xcYXBwXFxzaGFyZWRcXGNvbXBvbmVudHNcXHdpZGdldC1wYXJ0aWFsXFx3aWRnZXQtcGFydGlhbC5jb21wb25lbnQuc2NzcyIsImRlbW8vc3JjL2FwcC9zaGFyZWQvY29tcG9uZW50cy93aWRnZXQtcGFydGlhbC93aWRnZXQtcGFydGlhbC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLFVBQUE7RUFDQSw4QkFBQTtFQUNBLG9CQUFBO0VBQ0Esa0JBQUE7RUFDQSxtQkFBQTtFQUNBLG9CQUFBO0FDQ0o7QURDSTtFQUNFLFVBQUE7RUFDQSxXQUFBO0FDQ047QURHRTtFQUNFLHFCQUFBO0VBQ0Esa0JBQUE7QUNBSjtBRENJO0VBQ0UsYUFBQTtFQUNBLG1CQUFBO0FDQ047QURDTTtFQUNFLFlBQUE7QUNDUjtBREVNO0VBQ0UsYUFBQTtFQUNBLG1CQUFBO0VBQ0Esa0JBQUE7QUNBUjtBREdNO0VBQ0Usc0JBQUE7RUFDQSxhQUFBO0FDRFI7QURJTTtFQUNFLGNBQUE7RUFDQSxvQkFBQTtBQ0ZSO0FETVE7RUFDRSxVQUFBO0FDSlY7QURXUTtFQUNFLHlCQUFBO0VBQ0EsY0FBQTtBQ1RWO0FEV1U7RUFDRSx5QkFBQTtFQUNBLGdDQUFBO0FDVFo7QURZVTtFQUNFLFdBQUE7QUNWWjtBRFdZO0VBQ0UsV0FBQTtBQ1RkO0FEY1E7RUFDRSwrQkFBQTtFQUNBLHFCQUFBO0VBQ0EsZ0JBQUE7QUNaVjtBRGNVO0VBQ0UsV0FBQTtFQUNBLHlCQUFBO0VBQ0EseUJBQUE7RUFDQSwyQkFBQTtFQUNBLDBCQUFBO0VBQ0EsNkJBQUE7RUFDQSxrQkFBQTtBQ1paO0FEZVU7RUFDRSxPQUFBO0VBQ0EsZ0JBQUE7QUNiWjtBRGlCUTtFQUNFLFNBQUE7RUFDQSxpQkFBQTtFQUNBLGNBQUE7QUNmVjtBRHFCRTtFQUNFLGNBQUE7QUNsQko7QURxQkU7OztFQUdFLGNBQUE7QUNsQko7QURvQkk7OztFQUNFLGdCQUFBO0VBQ0EsMEJBQUE7RUFDQSxpQkFBQTtBQ2hCTjtBRHFCSTtFQUNFLHNCQUFBO0VBQ0EsZ0JBQUE7RUFDQSxvQkFBQTtFQUNBLHFCQUFBO0FDbEJOIiwiZmlsZSI6ImRlbW8vc3JjL2FwcC9zaGFyZWQvY29tcG9uZW50cy93aWRnZXQtcGFydGlhbC93aWRnZXQtcGFydGlhbC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbImEudGl0bGUtZnJhZ21lbnQge1xyXG4gICAgb3BhY2l0eTogMDtcclxuICAgIHRyYW5zaXRpb246IG9wYWNpdHkgMTI1bXMgZWFzZTtcclxuICAgIGxpbmUtaGVpZ2h0OiBpbmhlcml0O1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgbWFyZ2luLWxlZnQ6IC0xLjJlbTtcclxuICAgIHBhZGRpbmctcmlnaHQ6IDAuNWVtO1xyXG4gIFxyXG4gICAgJiA+IGltZyB7XHJcbiAgICAgIHdpZHRoOiAxZW07XHJcbiAgICAgIGhlaWdodDogMWVtO1xyXG4gICAgfVxyXG4gIH1cclxuICBcclxuICBkaXYud2lkZ2V0LXBhcnRpYWwtd3JhcHBlciB7XHJcbiAgICBtYXJnaW4tYm90dG9tOiAxLjVyZW07XHJcbiAgICBtYXJnaW4tdG9wOiAxLjVyZW07XHJcbiAgICBoMiB7XHJcbiAgICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICAgIG1hcmdpbi1ib3R0b206IDFyZW07XHJcbiAgXHJcbiAgICAgIHNwYW4ge1xyXG4gICAgICAgIGZsZXgtZ3JvdzogMTtcclxuICAgICAgfVxyXG4gIFxyXG4gICAgICAuc3RhY2tibGl0eiwgLnRvZ2dsZS1jb2RlIHtcclxuICAgICAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcbiAgICAgICAgYWxpZ24tc2VsZjogY2VudGVyO1xyXG4gICAgICB9XHJcbiAgXHJcbiAgICAgIC50b2dnbGUtY29kZSBzdmcge1xyXG4gICAgICAgIHZlcnRpY2FsLWFsaWduOiBtaWRkbGU7XHJcbiAgICAgICAgZmlsbDogIzI4YTc0NTtcclxuICAgICAgfVxyXG4gIFxyXG4gICAgICAuc3RhY2tibGl0eiAuc3RhY2tibGl0ei1pY29uIHtcclxuICAgICAgICBoZWlnaHQ6IDEuMnJlbTtcclxuICAgICAgICBtYXJnaW4tbGVmdDogLTAuNXJlbTtcclxuICAgICAgfVxyXG4gIFxyXG4gICAgICAmOmhvdmVyIHtcclxuICAgICAgICAmID4gLnRpdGxlLWZyYWdtZW50IHtcclxuICAgICAgICAgIG9wYWNpdHk6IDE7XHJcbiAgICAgICAgfVxyXG4gICAgICB9XHJcbiAgICB9XHJcbiAgXHJcbiAgICAudGFic2V0LWNvZGUge1xyXG4gICAgICBudy10YWJzZXQge1xyXG4gICAgICAgIDo6bmctZGVlcCAubmF2IHtcclxuICAgICAgICAgIHBhZGRpbmc6IDAuNXJlbSAxLjI1cmVtIDA7XHJcbiAgICAgICAgICBmb250LXNpemU6IDgwJTtcclxuICBcclxuICAgICAgICAgIC5uYXYtbGluay5hY3RpdmUge1xyXG4gICAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjVmMmYwO1xyXG4gICAgICAgICAgICBib3JkZXItYm90dG9tOiAxcHggc29saWQgI2Y1ZjJmMDtcclxuICAgICAgICAgIH1cclxuICBcclxuICAgICAgICAgIC5uYXYtbGluazpub3QoLmFjdGl2ZSkge1xyXG4gICAgICAgICAgICBjb2xvcjogIzk5OTtcclxuICAgICAgICAgICAgJjpob3ZlciB7XHJcbiAgICAgICAgICAgICAgY29sb3I6ICM2NjY7XHJcbiAgICAgICAgICAgIH1cclxuICAgICAgICAgIH1cclxuICAgICAgICB9XHJcbiAgXHJcbiAgICAgICAgOjpuZy1kZWVwIC5uYXYubmF2LXBpbGxzIHtcclxuICAgICAgICAgIGJvcmRlci1yaWdodDogMXB4IHNvbGlkICAjZGVlMmU2O1xyXG4gICAgICAgICAgcGFkZGluZy1sZWZ0OiAuNzVyZW07XHJcbiAgICAgICAgICBwYWRkaW5nLXJpZ2h0OiAwO1xyXG4gIFxyXG4gICAgICAgICAgLm5hdi1saW5rLmFjdGl2ZSB7XHJcbiAgICAgICAgICAgIGNvbG9yOiAjNjY2O1xyXG4gICAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjVmNWY1O1xyXG4gICAgICAgICAgICBib3JkZXI6IDFweCBzb2xpZCAgI2RlZTJlNjtcclxuICAgICAgICAgICAgYm9yZGVyLXJpZ2h0LWNvbG9yOiAjZjVmNWY1O1xyXG4gICAgICAgICAgICBib3JkZXItdG9wLXJpZ2h0LXJhZGl1czogMDtcclxuICAgICAgICAgICAgYm9yZGVyLWJvdHRvbS1yaWdodC1yYWRpdXM6IDA7XHJcbiAgICAgICAgICAgIG1hcmdpbi1yaWdodDogLTFweDtcclxuICAgICAgICAgIH1cclxuICBcclxuICAgICAgICAgICYgKyAudGFiLWNvbnRlbnQge1xyXG4gICAgICAgICAgICBmbGV4OiAxO1xyXG4gICAgICAgICAgICBvdmVyZmxvdzogaGlkZGVuO1xyXG4gICAgICAgICAgfVxyXG4gICAgICAgIH1cclxuICBcclxuICAgICAgICA6Om5nLWRlZXAgcHJlIHtcclxuICAgICAgICAgIG1hcmdpbjogMDtcclxuICAgICAgICAgIG1heC1oZWlnaHQ6IDUwMHB4O1xyXG4gICAgICAgICAgb3ZlcmZsb3c6IGF1dG87XHJcbiAgICAgICAgfVxyXG4gICAgICB9XHJcbiAgICB9XHJcbiAgfVxyXG5cclxuICAuZXhhbXBsZXMtbGVnZW5kIHtcclxuICAgIGZvbnQtc2l6ZTogODAlO1xyXG4gIH1cclxuICBcclxuICBudy1hcGktZG9jcyxcclxuICBudy1hcGktZG9jcy1jbGFzcyxcclxuICBudy1hcGktZG9jcy1jb25maWcge1xyXG4gICAgZGlzcGxheTogYmxvY2s7XHJcbiAgXHJcbiAgICAmOm5vdCg6Zmlyc3QtY2hpbGQpIHtcclxuICAgICAgbWFyZ2luLXRvcDogM3JlbTtcclxuICAgICAgYm9yZGVyLXRvcDogMXB4IHNvbGlkICM5OTk7XHJcbiAgICAgIHBhZGRpbmctdG9wOiAxcmVtO1xyXG4gICAgfVxyXG4gIH1cclxuICBcclxuICAub3ZlcnZpZXcge1xyXG4gICAgLmFsZXJ0IHtcclxuICAgICAgYm9yZGVyLWxlZnQtd2lkdGg6IDVweDtcclxuICAgICAgYm9yZGVyLXJhZGl1czogMDtcclxuICAgICAgcGFkZGluZy1sZWZ0OiAwLjVyZW07XHJcbiAgICAgIHBhZGRpbmctcmlnaHQ6IDAuNXJlbTtcclxuICAgIH1cclxuICB9IiwiYS50aXRsZS1mcmFnbWVudCB7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IG9wYWNpdHkgMTI1bXMgZWFzZTtcbiAgbGluZS1oZWlnaHQ6IGluaGVyaXQ7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgbWFyZ2luLWxlZnQ6IC0xLjJlbTtcbiAgcGFkZGluZy1yaWdodDogMC41ZW07XG59XG5hLnRpdGxlLWZyYWdtZW50ID4gaW1nIHtcbiAgd2lkdGg6IDFlbTtcbiAgaGVpZ2h0OiAxZW07XG59XG5cbmRpdi53aWRnZXQtcGFydGlhbC13cmFwcGVyIHtcbiAgbWFyZ2luLWJvdHRvbTogMS41cmVtO1xuICBtYXJnaW4tdG9wOiAxLjVyZW07XG59XG5kaXYud2lkZ2V0LXBhcnRpYWwtd3JhcHBlciBoMiB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIG1hcmdpbi1ib3R0b206IDFyZW07XG59XG5kaXYud2lkZ2V0LXBhcnRpYWwtd3JhcHBlciBoMiBzcGFuIHtcbiAgZmxleC1ncm93OiAxO1xufVxuZGl2LndpZGdldC1wYXJ0aWFsLXdyYXBwZXIgaDIgLnN0YWNrYmxpdHosIGRpdi53aWRnZXQtcGFydGlhbC13cmFwcGVyIGgyIC50b2dnbGUtY29kZSB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGFsaWduLXNlbGY6IGNlbnRlcjtcbn1cbmRpdi53aWRnZXQtcGFydGlhbC13cmFwcGVyIGgyIC50b2dnbGUtY29kZSBzdmcge1xuICB2ZXJ0aWNhbC1hbGlnbjogbWlkZGxlO1xuICBmaWxsOiAjMjhhNzQ1O1xufVxuZGl2LndpZGdldC1wYXJ0aWFsLXdyYXBwZXIgaDIgLnN0YWNrYmxpdHogLnN0YWNrYmxpdHotaWNvbiB7XG4gIGhlaWdodDogMS4ycmVtO1xuICBtYXJnaW4tbGVmdDogLTAuNXJlbTtcbn1cbmRpdi53aWRnZXQtcGFydGlhbC13cmFwcGVyIGgyOmhvdmVyID4gLnRpdGxlLWZyYWdtZW50IHtcbiAgb3BhY2l0eTogMTtcbn1cbmRpdi53aWRnZXQtcGFydGlhbC13cmFwcGVyIC50YWJzZXQtY29kZSBudy10YWJzZXQgOjpuZy1kZWVwIC5uYXYge1xuICBwYWRkaW5nOiAwLjVyZW0gMS4yNXJlbSAwO1xuICBmb250LXNpemU6IDgwJTtcbn1cbmRpdi53aWRnZXQtcGFydGlhbC13cmFwcGVyIC50YWJzZXQtY29kZSBudy10YWJzZXQgOjpuZy1kZWVwIC5uYXYgLm5hdi1saW5rLmFjdGl2ZSB7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmNWYyZjA7XG4gIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCAjZjVmMmYwO1xufVxuZGl2LndpZGdldC1wYXJ0aWFsLXdyYXBwZXIgLnRhYnNldC1jb2RlIG53LXRhYnNldCA6Om5nLWRlZXAgLm5hdiAubmF2LWxpbms6bm90KC5hY3RpdmUpIHtcbiAgY29sb3I6ICM5OTk7XG59XG5kaXYud2lkZ2V0LXBhcnRpYWwtd3JhcHBlciAudGFic2V0LWNvZGUgbnctdGFic2V0IDo6bmctZGVlcCAubmF2IC5uYXYtbGluazpub3QoLmFjdGl2ZSk6aG92ZXIge1xuICBjb2xvcjogIzY2Njtcbn1cbmRpdi53aWRnZXQtcGFydGlhbC13cmFwcGVyIC50YWJzZXQtY29kZSBudy10YWJzZXQgOjpuZy1kZWVwIC5uYXYubmF2LXBpbGxzIHtcbiAgYm9yZGVyLXJpZ2h0OiAxcHggc29saWQgI2RlZTJlNjtcbiAgcGFkZGluZy1sZWZ0OiAwLjc1cmVtO1xuICBwYWRkaW5nLXJpZ2h0OiAwO1xufVxuZGl2LndpZGdldC1wYXJ0aWFsLXdyYXBwZXIgLnRhYnNldC1jb2RlIG53LXRhYnNldCA6Om5nLWRlZXAgLm5hdi5uYXYtcGlsbHMgLm5hdi1saW5rLmFjdGl2ZSB7XG4gIGNvbG9yOiAjNjY2O1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjVmNWY1O1xuICBib3JkZXI6IDFweCBzb2xpZCAjZGVlMmU2O1xuICBib3JkZXItcmlnaHQtY29sb3I6ICNmNWY1ZjU7XG4gIGJvcmRlci10b3AtcmlnaHQtcmFkaXVzOiAwO1xuICBib3JkZXItYm90dG9tLXJpZ2h0LXJhZGl1czogMDtcbiAgbWFyZ2luLXJpZ2h0OiAtMXB4O1xufVxuZGl2LndpZGdldC1wYXJ0aWFsLXdyYXBwZXIgLnRhYnNldC1jb2RlIG53LXRhYnNldCA6Om5nLWRlZXAgLm5hdi5uYXYtcGlsbHMgKyAudGFiLWNvbnRlbnQge1xuICBmbGV4OiAxO1xuICBvdmVyZmxvdzogaGlkZGVuO1xufVxuZGl2LndpZGdldC1wYXJ0aWFsLXdyYXBwZXIgLnRhYnNldC1jb2RlIG53LXRhYnNldCA6Om5nLWRlZXAgcHJlIHtcbiAgbWFyZ2luOiAwO1xuICBtYXgtaGVpZ2h0OiA1MDBweDtcbiAgb3ZlcmZsb3c6IGF1dG87XG59XG5cbi5leGFtcGxlcy1sZWdlbmQge1xuICBmb250LXNpemU6IDgwJTtcbn1cblxubnctYXBpLWRvY3MsXG5udy1hcGktZG9jcy1jbGFzcyxcbm53LWFwaS1kb2NzLWNvbmZpZyB7XG4gIGRpc3BsYXk6IGJsb2NrO1xufVxubnctYXBpLWRvY3M6bm90KDpmaXJzdC1jaGlsZCksXG5udy1hcGktZG9jcy1jbGFzczpub3QoOmZpcnN0LWNoaWxkKSxcbm53LWFwaS1kb2NzLWNvbmZpZzpub3QoOmZpcnN0LWNoaWxkKSB7XG4gIG1hcmdpbi10b3A6IDNyZW07XG4gIGJvcmRlci10b3A6IDFweCBzb2xpZCAjOTk5O1xuICBwYWRkaW5nLXRvcDogMXJlbTtcbn1cblxuLm92ZXJ2aWV3IC5hbGVydCB7XG4gIGJvcmRlci1sZWZ0LXdpZHRoOiA1cHg7XG4gIGJvcmRlci1yYWRpdXM6IDA7XG4gIHBhZGRpbmctbGVmdDogMC41cmVtO1xuICBwYWRkaW5nLXJpZ2h0OiAwLjVyZW07XG59Il19 */"
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJkZW1vL3NyYy9hcHAvc2hhcmVkL2NvbXBvbmVudHMvd2lkZ2V0LXBhcnRpYWwvd2lkZ2V0LXBhcnRpYWwuY29tcG9uZW50LnNjc3MifQ== */"
 
 /***/ }),
 
@@ -2032,6 +2670,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_code_code_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/code/code.component */ "./src/app/shared/components/code/code.component.ts");
 /* harmony import */ var _components_widget_partial_widget_partial_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/widget-partial/widget-partial.component */ "./src/app/shared/components/widget-partial/widget-partial.component.ts");
 /* harmony import */ var _directives_fragment_directive__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./directives/fragment.directive */ "./src/app/shared/directives/fragment.directive.ts");
+/* harmony import */ var _components_api_docs__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/api-docs */ "./src/app/shared/components/api-docs/index.ts");
+/* harmony import */ var _components_overview__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/overview */ "./src/app/shared/components/overview/index.ts");
 
 
 
@@ -2040,14 +2680,15 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+const FLY_DECLARATION = [_components_code_code_component__WEBPACK_IMPORTED_MODULE_5__["CodeComponent"], _components_widget_partial_widget_partial_component__WEBPACK_IMPORTED_MODULE_6__["WidgetPartialComponent"], _components_overview__WEBPACK_IMPORTED_MODULE_9__["NwOverviewSectionComponent"], _components_api_docs__WEBPACK_IMPORTED_MODULE_8__["NwApiDocs"], _components_api_docs__WEBPACK_IMPORTED_MODULE_8__["NwApiDocsConfig"], _components_api_docs__WEBPACK_IMPORTED_MODULE_8__["NwApiDocsClass"], _components_api_docs__WEBPACK_IMPORTED_MODULE_8__["NwApiDocsBadge"], _components_overview__WEBPACK_IMPORTED_MODULE_9__["NwOverviewDirective"], _directives_fragment_directive__WEBPACK_IMPORTED_MODULE_7__["FragmentDirective"]];
 let SharedModule = class SharedModule {
 };
 SharedModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
         declarations: [
-            _components_code_code_component__WEBPACK_IMPORTED_MODULE_5__["CodeComponent"],
-            _components_widget_partial_widget_partial_component__WEBPACK_IMPORTED_MODULE_6__["WidgetPartialComponent"],
-            _directives_fragment_directive__WEBPACK_IMPORTED_MODULE_7__["FragmentDirective"]
+            ...FLY_DECLARATION
         ],
         imports: [
             _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
@@ -2060,9 +2701,7 @@ SharedModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
             _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"],
             _nw_widget_nw_widget__WEBPACK_IMPORTED_MODULE_4__["NwWidgetModule"],
-            _components_code_code_component__WEBPACK_IMPORTED_MODULE_5__["CodeComponent"],
-            _components_widget_partial_widget_partial_component__WEBPACK_IMPORTED_MODULE_6__["WidgetPartialComponent"],
-            _directives_fragment_directive__WEBPACK_IMPORTED_MODULE_7__["FragmentDirective"]
+            ...FLY_DECLARATION
         ],
         schemas: [_angular_core__WEBPACK_IMPORTED_MODULE_2__["NO_ERRORS_SCHEMA"]]
     })
@@ -2388,9 +3027,13 @@ const PARTIALS = {
         type: _filter_filter_component__WEBPACK_IMPORTED_MODULE_3__["FilterComponent"]
     }
 };
+const OVERVIEW = {
+    'inline-usage': 'Declarative usage',
+    'toast-service': 'Building a toast management service'
+};
 let FakeApiModule = class FakeApiModule {
     constructor(partialService) {
-        partialService.register('fake-api', PARTIALS);
+        partialService.register('fake-api', PARTIALS, OVERVIEW);
     }
 };
 FakeApiModule.ctorParameters = () => [
@@ -2525,6 +3168,262 @@ FilterModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
+/***/ "./src/app/views/tutorials/fake-api/overview/fake-api-overview.component.ts":
+/*!**********************************************************************************!*\
+  !*** ./src/app/views/tutorials/fake-api/overview/fake-api-overview.component.ts ***!
+  \**********************************************************************************/
+/*! exports provided: FakeApiOverviewComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FakeApiOverviewComponent", function() { return FakeApiOverviewComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var src_app_shared_components_code_code_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/shared/components/code/code.component */ "./src/app/shared/components/code/code.component.ts");
+/* harmony import */ var src_app_core_services_post_partial_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/core/services/post-partial.service */ "./src/app/core/services/post-partial.service.ts");
+
+
+
+
+let FakeApiOverviewComponent = class FakeApiOverviewComponent {
+    constructor(partialService) {
+        this.TOAST_INLINE_BASIC = Object(src_app_shared_components_code_code_component__WEBPACK_IMPORTED_MODULE_2__["Snippet"])({
+            lang: 'html',
+            code: `
+      <nw-toast header="Notification header">
+        Content of the notification
+      </nw-toast>`
+        });
+        this.TOAST_INLINE_LIFECYCLE = Object(src_app_shared_components_code_code_component__WEBPACK_IMPORTED_MODULE_2__["Snippet"])({
+            lang: 'html',
+            code: `
+      <!-- Using *ngIf to toggle display (showToast = true initially) -->
+      <nw-toast header="I can be closed!" *ngIf="showToast" (hide)="showToast = false">
+        <!-- Content here -->
+      </nw-toast>
+
+      <!-- or looping over a collection of toasts with *ngFor -->
+      <nw-toast [header]="'Toast #'+index+' here!'"
+        *ngFor="let toast of toasts; index as index" (hide)="toasts.splice(index, 1)">
+        <!-- Content here -->
+      </nw-toast>`,
+        });
+        this.APP_TOAST_SERVICE = Object(src_app_shared_components_code_code_component__WEBPACK_IMPORTED_MODULE_2__["Snippet"])({
+            lang: 'typescript',
+            code: `
+      @Injectable({ providedIn: 'root' })
+      export class AppToastService {
+        toasts: any[] = [];
+
+        show(header: string, body: string) {
+          this.toasts.push({ header, body });
+        }
+      }`,
+        });
+        this.APP_TOAST_SERVICE_REMOVE = Object(src_app_shared_components_code_code_component__WEBPACK_IMPORTED_MODULE_2__["Snippet"])({
+            lang: 'typescript',
+            code: `
+      remove(toast) {
+        this.toasts = this.toasts.filter(t => t != toast);
+      }`,
+        });
+        this.APP_TOASTS_CONTAINER_TPL = Object(src_app_shared_components_code_code_component__WEBPACK_IMPORTED_MODULE_2__["Snippet"])({
+            lang: 'html',
+            code: `
+      <nw-toast
+        *ngFor="let toast of toastService.toasts"
+        [header]="toast.header" [autohide]="true" [delay]="toast.delay || 5000"
+        (hide)="toastService.remove(toast)"
+      >{{toast.body}}</nw-toast>`,
+        });
+        this.APP_TOASTS_CONTAINER_STYLES = Object(src_app_shared_components_code_code_component__WEBPACK_IMPORTED_MODULE_2__["Snippet"])({
+            lang: 'css',
+            code: `
+      :host {
+        position: fixed;
+        top: 0;
+        right: 0;
+        margin: 0.5em;
+        z-index: 1200;
+      }`,
+        });
+        this.APP_TOASTS_CONTAINER = Object(src_app_shared_components_code_code_component__WEBPACK_IMPORTED_MODULE_2__["Snippet"])({
+            lang: 'typescript',
+            code: `
+      @Component({
+        selector: 'app-toasts',
+        template: ' ... ',
+        styles: [' ... ']
+      })
+      export class AppToastsComponent {
+        constructor(toastService: AppToastService) {}
+      }`,
+        });
+        this.CONTAINER_USAGE = Object(src_app_shared_components_code_code_component__WEBPACK_IMPORTED_MODULE_2__["Snippet"])({
+            lang: 'html',
+            code: `
+      <!-- somewhere in your root component template -->
+      <app-toasts aria-live="polite" aria-atomic="true"></app-toasts>`,
+        });
+        this.sections = {};
+        this.sections = partialService.getOverviewSections('fake-api');
+    }
+};
+FakeApiOverviewComponent.ctorParameters = () => [
+    { type: src_app_core_services_post_partial_service__WEBPACK_IMPORTED_MODULE_3__["PostPartialService"] }
+];
+FakeApiOverviewComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-fake-api-overview',
+        template: __webpack_require__(/*! raw-loader!./fake-api-overview.component.html */ "../node_modules/raw-loader/index.js!./src/app/views/tutorials/fake-api/overview/fake-api-overview.component.html"),
+        host: { '[class.overview]': 'true' }
+    })
+], FakeApiOverviewComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/views/tutorials/tutorials-api.component.ts":
+/*!************************************************************!*\
+  !*** ./src/app/views/tutorials/tutorials-api.component.ts ***!
+  \************************************************************/
+/*! exports provided: getApis, TutorialsApiComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getApis", function() { return getApis; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TutorialsApiComponent", function() { return TutorialsApiComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "../node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _api_docs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../api-docs */ "./src/api-docs.ts");
+
+
+
+
+function getApis(component) {
+    const components = [];
+    const classes = [];
+    const configs = [];
+    Object.values(_api_docs__WEBPACK_IMPORTED_MODULE_3__["default"])
+        .filter(entity => entity.fileName.startsWith(`src/lib/${component}`))
+        .forEach(entity => {
+        switch (entity.type) {
+            case 'Directive':
+            case 'Component':
+                components.push(entity.className);
+                break;
+            case 'Service':
+                if (entity.className.endsWith('Config')) {
+                    configs.push(entity.className);
+                }
+                else {
+                    classes.push(entity.className);
+                }
+                break;
+            default:
+                classes.push(entity.className);
+                break;
+        }
+    });
+    return { components, classes, configs };
+}
+let TutorialsApiComponent = class TutorialsApiComponent {
+    constructor(route) {
+        const component = route.parent.parent.snapshot.url[1].path;
+        // const apis = getApis(component);
+        const apis = getApis('nw-tabset');
+        this.components = apis.components.sort();
+        this.classes = apis.classes.sort();
+        this.configs = apis.configs.sort();
+    }
+};
+TutorialsApiComponent.ctorParameters = () => [
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] }
+];
+TutorialsApiComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-tutorials-api',
+        template: `
+    <nw-api-docs *ngFor="let component of components" [directive]="component"></nw-api-docs>
+    <nw-api-docs-class *ngFor="let klass of classes" [type]="klass"></nw-api-docs-class>
+    <nw-api-docs-config *ngFor="let config of configs" [type]="config"></nw-api-docs-config>
+    `
+    })
+], TutorialsApiComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/views/tutorials/tutorials-examples.component.ts":
+/*!*****************************************************************!*\
+  !*** ./src/app/views/tutorials/tutorials-examples.component.ts ***!
+  \*****************************************************************/
+/*! exports provided: TutorialsExampleComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TutorialsExampleComponent", function() { return TutorialsExampleComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "../node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var src_app_core_services_post_partial_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/core/services/post-partial.service */ "./src/app/core/services/post-partial.service.ts");
+
+
+
+
+let TutorialsExampleComponent = class TutorialsExampleComponent {
+    constructor(route, partialService) {
+        this.partials = [];
+        // We go up to parent route defining /{parent route}/:widget to read the widget name
+        // This route is declared in root views-routing.module.ts.
+        const _component = (this.component =
+            route.parent.parent.snapshot.url[1].path);
+        if (_component) {
+            const _partials = partialService.getPartials(_component);
+            console.log('_partials', _partials, _component, this.component);
+            if (_partials) {
+                this.partials = Object.keys(_partials).map(id => {
+                    return Object.assign({ id }, _partials[id]);
+                });
+            }
+        }
+    }
+};
+TutorialsExampleComponent.ctorParameters = () => [
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] },
+    { type: src_app_core_services_post_partial_service__WEBPACK_IMPORTED_MODULE_3__["PostPartialService"] }
+];
+TutorialsExampleComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-tutorials-wrapper',
+        template: `
+        <app-widget-partial
+            *ngFor="let partial of partials"
+            [id]="partial.id"
+            [partialTitle]="partial.title"
+            [code]="partial.code"
+            [markup]="partial.markup"
+            [stylesheet]="partial.stylesheet"
+            [component]="component"
+            [files]="partial.files"
+            [showCode]="partial.showCode"
+        >
+            <ng-template [ngComponentOutlet]="partial.type"></ng-template>
+        </app-widget-partial>
+    `
+    })
+], TutorialsExampleComponent);
+
+
+
+/***/ }),
+
 /***/ "./src/app/views/tutorials/tutorials-routing.module.ts":
 /*!*************************************************************!*\
   !*** ./src/app/views/tutorials/tutorials-routing.module.ts ***!
@@ -2540,12 +3439,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "../node_modules/@angular/router/fesm2015/router.js");
 /* harmony import */ var _views_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../views.component */ "./src/app/views/views.component.ts");
-/* harmony import */ var _tutorials_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./tutorials.component */ "./src/app/views/tutorials/tutorials.component.ts");
+/* harmony import */ var _tutorials_examples_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./tutorials-examples.component */ "./src/app/views/tutorials/tutorials-examples.component.ts");
+/* harmony import */ var _tutorials_api_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./tutorials-api.component */ "./src/app/views/tutorials/tutorials-api.component.ts");
+/* harmony import */ var _fake_api_overview_fake_api_overview_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./fake-api/overview/fake-api-overview.component */ "./src/app/views/tutorials/fake-api/overview/fake-api-overview.component.ts");
 
 
 
 
 
+
+
+const OVERVIEW = {
+    'inline-usage': 'Declarative usage',
+    'toast-service': 'Building a toast management service'
+};
 const TUTORIALS_VIEWS_ROUTES = [
     {
         path: 'tutorials',
@@ -2569,14 +3476,19 @@ const TUTORIALS_VIEWS_ROUTES = [
             {
                 path: '',
                 component: _views_component__WEBPACK_IMPORTED_MODULE_3__["ViewsComponent"],
+                data: { OVERVIEW },
                 children: [
                     {
+                        path: 'overview',
+                        component: _fake_api_overview_fake_api_overview_component__WEBPACK_IMPORTED_MODULE_6__["FakeApiOverviewComponent"]
+                    },
+                    {
                         path: 'examples',
-                        component: _tutorials_component__WEBPACK_IMPORTED_MODULE_4__["TutorialsComponent"]
+                        component: _tutorials_examples_component__WEBPACK_IMPORTED_MODULE_4__["TutorialsExampleComponent"]
                     },
                     {
                         path: 'api',
-                        component: _tutorials_component__WEBPACK_IMPORTED_MODULE_4__["TutorialsComponent"]
+                        component: _tutorials_api_component__WEBPACK_IMPORTED_MODULE_5__["TutorialsApiComponent"]
                     }
                 ]
             }
@@ -2591,71 +3503,6 @@ TutorialsRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]]
     })
 ], TutorialsRoutingModule);
-
-
-
-/***/ }),
-
-/***/ "./src/app/views/tutorials/tutorials.component.ts":
-/*!********************************************************!*\
-  !*** ./src/app/views/tutorials/tutorials.component.ts ***!
-  \********************************************************/
-/*! exports provided: TutorialsComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TutorialsComponent", function() { return TutorialsComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "../node_modules/@angular/router/fesm2015/router.js");
-/* harmony import */ var src_app_core_services_post_partial_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/core/services/post-partial.service */ "./src/app/core/services/post-partial.service.ts");
-
-
-
-
-let TutorialsComponent = class TutorialsComponent {
-    constructor(route, partialService) {
-        this.partials = [];
-        // We go up to parent route defining /{parent route}/:widget to read the widget name
-        // This route is declared in root views-routing.module.ts.
-        const _component = (this.component =
-            route.parent.parent.snapshot.url[1].path);
-        if (_component) {
-            const _partials = partialService.getPartials(_component);
-            console.log('_partials', _partials, _component, this.component);
-            if (_partials) {
-                this.partials = Object.keys(_partials).map(id => {
-                    return Object.assign({ id }, _partials[id]);
-                });
-            }
-        }
-    }
-};
-TutorialsComponent.ctorParameters = () => [
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] },
-    { type: src_app_core_services_post_partial_service__WEBPACK_IMPORTED_MODULE_3__["PostPartialService"] }
-];
-TutorialsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'app-tutorials-wrapper',
-        template: `
-        <app-widget-partial
-            *ngFor="let partial of partials"
-            [id]="partial.id"
-            [partialTitle]="partial.title"
-            [code]="partial.code"
-            [markup]="partial.markup"
-            [stylesheet]="partial.stylesheet"
-            [component]="component"
-            [files]="partial.files"
-            [showCode]="partial.showCode"
-        >
-            <ng-template [ngComponentOutlet]="partial.type"></ng-template>
-        </app-widget-partial>
-    `
-    })
-], TutorialsComponent);
 
 
 
@@ -2676,8 +3523,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "../node_modules/@angular/common/fesm2015/common.js");
 /* harmony import */ var src_app_shared_shared_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/shared/shared.module */ "./src/app/shared/shared.module.ts");
 /* harmony import */ var _tutorials_routing_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./tutorials-routing.module */ "./src/app/views/tutorials/tutorials-routing.module.ts");
-/* harmony import */ var _tutorials_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./tutorials.component */ "./src/app/views/tutorials/tutorials.component.ts");
+/* harmony import */ var _tutorials_examples_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./tutorials-examples.component */ "./src/app/views/tutorials/tutorials-examples.component.ts");
 /* harmony import */ var _fake_api_fake_api_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./fake-api/fake-api.module */ "./src/app/views/tutorials/fake-api/fake-api.module.ts");
+/* harmony import */ var _tutorials_api_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./tutorials-api.component */ "./src/app/views/tutorials/tutorials-api.component.ts");
+/* harmony import */ var _fake_api_overview_fake_api_overview_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./fake-api/overview/fake-api-overview.component */ "./src/app/views/tutorials/fake-api/overview/fake-api-overview.component.ts");
+
+
 
 
 
@@ -2689,7 +3540,11 @@ let TutorialsModule = class TutorialsModule {
 };
 TutorialsModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-        declarations: [_tutorials_component__WEBPACK_IMPORTED_MODULE_5__["TutorialsComponent"]],
+        declarations: [
+            _tutorials_examples_component__WEBPACK_IMPORTED_MODULE_5__["TutorialsExampleComponent"],
+            _tutorials_api_component__WEBPACK_IMPORTED_MODULE_7__["TutorialsApiComponent"],
+            _fake_api_overview_fake_api_overview_component__WEBPACK_IMPORTED_MODULE_8__["FakeApiOverviewComponent"]
+        ],
         imports: [
             _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
             src_app_shared_shared_module__WEBPACK_IMPORTED_MODULE_3__["SharedModule"],
@@ -2793,6 +3648,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "../node_modules/@angular/router/fesm2015/router.js");
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "../node_modules/rxjs/_esm2015/operators/index.js");
+/* harmony import */ var _tutorials_tutorials_examples_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./tutorials/tutorials-examples.component */ "./src/app/views/tutorials/tutorials-examples.component.ts");
+/* harmony import */ var _tutorials_tutorials_api_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./tutorials/tutorials-api.component */ "./src/app/views/tutorials/tutorials-api.component.ts");
+
+
 
 
 
@@ -2828,6 +3687,42 @@ let ViewsComponent = class ViewsComponent {
         // console.log('isLargeScreenOrLess', this.isLargeScreenOrLess);
     }
     ngOnInit() {
+    }
+    updateNavigation(component) {
+        const getLinks = (typeCollection) => {
+            return typeCollection.map(item => ({
+                fragment: item,
+                title: item
+            }));
+        };
+        this.tableOfContent = [];
+        if (component instanceof _tutorials_tutorials_examples_component__WEBPACK_IMPORTED_MODULE_4__["TutorialsExampleComponent"]) {
+            this.tableOfContent = component.partials.map(partial => {
+                return {
+                    fragment: partial.id,
+                    title: partial.title
+                };
+            });
+        }
+        else if (component instanceof _tutorials_tutorials_api_component__WEBPACK_IMPORTED_MODULE_5__["TutorialsApiComponent"]) {
+            let toc = [
+                ...getLinks(component.components)
+            ];
+            if (component.classes.length > 0) {
+                const klasses = getLinks(component.classes);
+                toc = toc.concat(toc.length > 0 ? [{}, ...klasses] : klasses);
+            }
+            if (component.configs.length > 0) {
+                const configs = getLinks(component.configs);
+                toc = toc.concat(toc.length > 0 ? [{}, ...configs] : configs);
+            }
+            this.tableOfContent = toc;
+        }
+        else /* Overview */ {
+            // TODO: maybe we should also have an abstract class to test instanceof
+            console.log('component.sections', component.sections);
+            this.tableOfContent = Object.values(component.sections).map(section => section);
+        }
     }
 };
 ViewsComponent.ctorParameters = () => [

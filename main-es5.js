@@ -370,7 +370,7 @@ module.exports = "<pre class=\"language-{{ snippet.lang }}\"><code #code class=\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"widget-partial-wrapper\">\n    <a [id]=\"id\"></a>\n    <h2>\n        <a [routerLink]=\"\" [fragment]=\"id\" appFragment title=\"Anchor link to demo: {{id}}\">\n            <img src=\"/assets/images/link-symbol.svg\" alt=\"Anchor link to: {{id}}\" />\n        </a>\n        <span>{{ partialTitle }}</span>\n        <button type=\"button\" class=\"btn btn-light mr-2 toggle-code\" [class.active]=\"showCode\"\n            (click)=\"showCode = !showCode; trackShowCodeClick()\">\n            <svg aria-hidden=\"true\" xmlns=\"http://www.w3.org/2000/svg\" width=\"18\" height=\"18\" viewBox=\"0 0 24 24\">\n                <path\n                    d=\"M24 10.935v2.131l-8 3.947v-2.23l5.64-2.783-5.64-2.79v-2.223l8 3.948zm-16 3.848l-5.64-2.783 5.64-2.79v-2.223l-8 3.948v2.131l8 3.947v-2.23zm7.047-10.783h-2.078l-4.011 16h2.073l4.016-16z\" />\n            </svg>\n            <span class=\"ml-1\">Code</span>\n        </button>\n        <a role=\"button\" (click)=\"trackStackBlitzClick()\" class=\"stackblitz btn btn-light\" target=\"_blank\"\n            href=\"/stackblitzes/{{component}}/{{id}}/stackblitz.html\" title=\"Edit in StackBlitz\">\n            <img class=\"stackblitz-icon\" src=\"/assets/images/stackblitz-icon.svg\" alt=\"StackBlitz icon\" />\n            StackBlitz\n        </a>\n    </h2>\n    <div class=\"card\">\n        <div *ngIf=\"showCode\" class=\"bg-light border-bottom tabset-code\">\n            <nw-tabset [type]=\"hasManyFiles ? 'pills' : 'tabs'\" [class.d-flex]=\"hasManyFiles\"\n                [class.flex-row]=\"hasManyFiles\" [orientation]=\"hasManyFiles ? 'vertical' : 'horizontal'\">\n                <ng-template [ngIf]=\"files\" [ngIfElse]=\"old\">\n                    <nw-tab *ngFor=\"let file of files; index as index\" id=\"{{component}}-{{file.name}}-{{index}}\">\n                        <ng-template nwTabTitle>\n                            <span class=\"text-truncate\" [title]=\"tabType(file.name)\">{{file.name}}</span>\n                        </ng-template>\n                        <ng-template nwTabContent>\n                            <niwa-code [snippet]=\"getFileSnippet(file)\"></niwa-code>\n                        </ng-template>\n                    </nw-tab>\n                </ng-template>\n\n                <ng-template #old>\n                    <nw-tab id=\"{{component}}-{{id}}-html\">\n                        <ng-template nwTabTitle>\n                            <span class=\"ml-2\">{{component}}-{{id}}.html</span>\n                        </ng-template>\n                        <ng-template nwTabContent>\n                            <niwa-code [snippet]=\"markupSnippet\"></niwa-code>\n                        </ng-template>\n                    </nw-tab>\n                    <nw-tab id=\"{{component}}-{{id}}-typescript\">\n                        <ng-template nwTabTitle>\n                            <span class=\"ml-2\">{{component}}-{{id}}.ts</span>\n                        </ng-template>\n                        <ng-template nwTabContent>\n                            <niwa-code [snippet]=\"codeSnippet\"></niwa-code>\n                        </ng-template>\n                    </nw-tab>\n                </ng-template>\n            </nw-tabset>\n        </div>\n        <div class=\"card-body\">\n            <ng-content></ng-content>\n        </div>\n\n    </div>\n</div>"
+module.exports = "<div class=\"widget-partial-wrapper\">\n    <a [id]=\"id\"></a>\n    <h2>\n        <a [routerLink]=\"\" [fragment]=\"id\" appFragment title=\"Anchor link to demo: {{id}}\">\n            <img src=\"/assets/images/link-symbol.svg\" alt=\"Anchor link to: {{id}}\" />\n        </a>\n        <span>{{ partialTitle }}</span>\n        <button type=\"button\" class=\"btn btn-light mr-2 toggle-code\" [class.active]=\"showCode\"\n            (click)=\"showCode = !showCode; trackShowCodeClick()\">\n            <svg aria-hidden=\"true\" xmlns=\"http://www.w3.org/2000/svg\" width=\"18\" height=\"18\" viewBox=\"0 0 24 24\">\n                <path\n                    d=\"M24 10.935v2.131l-8 3.947v-2.23l5.64-2.783-5.64-2.79v-2.223l8 3.948zm-16 3.848l-5.64-2.783 5.64-2.79v-2.223l-8 3.948v2.131l8 3.947v-2.23zm7.047-10.783h-2.078l-4.011 16h2.073l4.016-16z\" />\n            </svg>\n            <span class=\"ml-1\">Code</span>\n        </button>\n        <a role=\"button\" (click)=\"trackStackBlitzClick()\" class=\"stackblitz btn btn-light\" target=\"_blank\"\n            href=\"/stackblitzes/{{component}}/{{id}}/stackblitz.html\" title=\"Edit in StackBlitz\">\n            <img class=\"stackblitz-icon\" src=\"/assets/images/stackblitz-icon.svg\" alt=\"StackBlitz icon\" />\n            StackBlitz\n        </a>\n    </h2>\n    <div class=\"card\">\n        <div *ngIf=\"showCode\" class=\"bg-light border-bottom tabset-code\">\n            <nw-tabset [type]=\"hasManyFiles ? 'pills' : 'tabs'\" [class.d-flex]=\"hasManyFiles\"\n                [class.flex-row]=\"hasManyFiles\" [orientation]=\"hasManyFiles ? 'vertical' : 'horizontal'\">\n                <ng-template [ngIf]=\"files\" [ngIfElse]=\"old\">\n                    <nw-tab *ngFor=\"let file of files; index as index\" id=\"{{component}}-{{file.name}}-{{index}}\">\n                        <ng-template nwTabTitle>\n                            <span class=\"text-truncate\" [title]=\"tabType(file.name)\">{{file.name}}</span>\n                        </ng-template>\n                        <ng-template nwTabContent>\n                            <niwa-code [snippet]=\"getFileSnippet(file)\"></niwa-code>\n                        </ng-template>\n                    </nw-tab>\n                </ng-template>\n\n                <ng-template #old>\n                    <nw-tab id=\"{{component}}-{{id}}-html\" *ngIf=\"markup\">\n                        <ng-template nwTabTitle>\n                            <span class=\"ml-2\">{{component}}-{{id}}.html</span>\n                        </ng-template>\n                        <ng-template nwTabContent>\n                            <niwa-code [snippet]=\"markupSnippet\"></niwa-code>\n                        </ng-template>\n                    </nw-tab>\n                    <nw-tab id=\"{{component}}-{{id}}-{{stylesheet.lang}}\" *ngIf=\"stylesheet\">\n                        <ng-template nwTabTitle>\n                            <span class=\"ml-2\">{{component}}-{{id}}.{{stylesheet.lang}}</span>\n                        </ng-template>\n                        <ng-template nwTabContent>\n                            <niwa-code [snippet]=\"stylesheetSnippet\"></niwa-code>\n                        </ng-template>\n                    </nw-tab>\n                    <nw-tab id=\"{{component}}-{{id}}-typescript\" *ngIf=\"code\">\n                        <ng-template nwTabTitle>\n                            <span class=\"ml-2\">{{component}}-{{id}}.ts</span>\n                        </ng-template>\n                        <ng-template nwTabContent>\n                            <niwa-code [snippet]=\"codeSnippet\"></niwa-code>\n                        </ng-template>\n                    </nw-tab>\n                </ng-template>\n            </nw-tabset>\n        </div>\n        <div class=\"card-body\">\n            <ng-content></ng-content>\n        </div>\n\n    </div>\n</div>"
 
 /***/ }),
 
@@ -1888,7 +1888,9 @@ function findIndentLevel(lines) {
 }
 function fixIndent(lines) {
     removeEmptyLineAtIndex(lines, 0);
-    removeEmptyLineAtIndex(lines, lines.length - 1);
+    if (lines.length > 0) {
+        removeEmptyLineAtIndex(lines, lines.length - 1);
+    }
     var indentLevel = findIndentLevel(lines);
     return lines.map(function (line) { return line.substring(indentLevel); });
 }
@@ -1942,6 +1944,11 @@ var WidgetPartialComponent = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
+    Object.defineProperty(WidgetPartialComponent.prototype, "stylesheetSnippet", {
+        get: function () { return Object(_code_code_component__WEBPACK_IMPORTED_MODULE_2__["Snippet"])(this.stylesheet); },
+        enumerable: true,
+        configurable: true
+    });
     Object.defineProperty(WidgetPartialComponent.prototype, "codeSnippet", {
         get: function () { return Object(_code_code_component__WEBPACK_IMPORTED_MODULE_2__["Snippet"])({ lang: 'typescript', code: this.code }); },
         enumerable: true,
@@ -1990,6 +1997,9 @@ var WidgetPartialComponent = /** @class */ (function () {
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
     ], WidgetPartialComponent.prototype, "code", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+    ], WidgetPartialComponent.prototype, "stylesheet", void 0);
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
     ], WidgetPartialComponent.prototype, "markup", void 0);
@@ -2414,7 +2424,6 @@ var PARTIALS = {
         type: _filter_filter_component__WEBPACK_IMPORTED_MODULE_3__["FilterComponent"]
     }
 };
-console.log('IIIIIIIIIIIIIIIIIII', __webpack_require__(/*! raw-loader!./filter/filter.component */ "../node_modules/raw-loader/index.js!./src/app/views/tutorials/fake-api/filter/filter.component.ts"));
 var FakeApiModule = /** @class */ (function () {
     function FakeApiModule(partialService) {
         partialService.register('fake-api', PARTIALS);
@@ -2637,7 +2646,7 @@ var TutorialsComponent = /** @class */ (function () {
     TutorialsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-tutorials-wrapper',
-            template: "\n        <app-widget-partial\n            *ngFor=\"let partial of partials\"\n            [id]=\"partial.id\"\n            [partialTitle]=\"partial.title\"\n            [code]=\"partial.code\"\n            [markup]=\"partial.markup\"\n            [component]=\"component\"\n            [files]=\"partial.files\"\n            [showCode]=\"partial.showCode\"\n        >\n            <ng-template [ngComponentOutlet]=\"partial.type\"></ng-template>\n        </app-widget-partial>\n    "
+            template: "\n        <app-widget-partial\n            *ngFor=\"let partial of partials\"\n            [id]=\"partial.id\"\n            [partialTitle]=\"partial.title\"\n            [code]=\"partial.code\"\n            [markup]=\"partial.markup\"\n            [stylesheet]=\"partial.stylesheet\"\n            [component]=\"component\"\n            [files]=\"partial.files\"\n            [showCode]=\"partial.showCode\"\n        >\n            <ng-template [ngComponentOutlet]=\"partial.type\"></ng-template>\n        </app-widget-partial>\n    "
         })
     ], TutorialsComponent);
     return TutorialsComponent;

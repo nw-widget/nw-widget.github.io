@@ -1,5 +1,302 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["main"],{
 
+/***/ "../node_modules/moment/locale sync recursive ^\\.\\/.*$":
+/*!***************************************************!*\
+  !*** ../node_modules/moment/locale sync ^\.\/.*$ ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./af": "../node_modules/moment/locale/af.js",
+	"./af.js": "../node_modules/moment/locale/af.js",
+	"./ar": "../node_modules/moment/locale/ar.js",
+	"./ar-dz": "../node_modules/moment/locale/ar-dz.js",
+	"./ar-dz.js": "../node_modules/moment/locale/ar-dz.js",
+	"./ar-kw": "../node_modules/moment/locale/ar-kw.js",
+	"./ar-kw.js": "../node_modules/moment/locale/ar-kw.js",
+	"./ar-ly": "../node_modules/moment/locale/ar-ly.js",
+	"./ar-ly.js": "../node_modules/moment/locale/ar-ly.js",
+	"./ar-ma": "../node_modules/moment/locale/ar-ma.js",
+	"./ar-ma.js": "../node_modules/moment/locale/ar-ma.js",
+	"./ar-sa": "../node_modules/moment/locale/ar-sa.js",
+	"./ar-sa.js": "../node_modules/moment/locale/ar-sa.js",
+	"./ar-tn": "../node_modules/moment/locale/ar-tn.js",
+	"./ar-tn.js": "../node_modules/moment/locale/ar-tn.js",
+	"./ar.js": "../node_modules/moment/locale/ar.js",
+	"./az": "../node_modules/moment/locale/az.js",
+	"./az.js": "../node_modules/moment/locale/az.js",
+	"./be": "../node_modules/moment/locale/be.js",
+	"./be.js": "../node_modules/moment/locale/be.js",
+	"./bg": "../node_modules/moment/locale/bg.js",
+	"./bg.js": "../node_modules/moment/locale/bg.js",
+	"./bm": "../node_modules/moment/locale/bm.js",
+	"./bm.js": "../node_modules/moment/locale/bm.js",
+	"./bn": "../node_modules/moment/locale/bn.js",
+	"./bn.js": "../node_modules/moment/locale/bn.js",
+	"./bo": "../node_modules/moment/locale/bo.js",
+	"./bo.js": "../node_modules/moment/locale/bo.js",
+	"./br": "../node_modules/moment/locale/br.js",
+	"./br.js": "../node_modules/moment/locale/br.js",
+	"./bs": "../node_modules/moment/locale/bs.js",
+	"./bs.js": "../node_modules/moment/locale/bs.js",
+	"./ca": "../node_modules/moment/locale/ca.js",
+	"./ca.js": "../node_modules/moment/locale/ca.js",
+	"./cs": "../node_modules/moment/locale/cs.js",
+	"./cs.js": "../node_modules/moment/locale/cs.js",
+	"./cv": "../node_modules/moment/locale/cv.js",
+	"./cv.js": "../node_modules/moment/locale/cv.js",
+	"./cy": "../node_modules/moment/locale/cy.js",
+	"./cy.js": "../node_modules/moment/locale/cy.js",
+	"./da": "../node_modules/moment/locale/da.js",
+	"./da.js": "../node_modules/moment/locale/da.js",
+	"./de": "../node_modules/moment/locale/de.js",
+	"./de-at": "../node_modules/moment/locale/de-at.js",
+	"./de-at.js": "../node_modules/moment/locale/de-at.js",
+	"./de-ch": "../node_modules/moment/locale/de-ch.js",
+	"./de-ch.js": "../node_modules/moment/locale/de-ch.js",
+	"./de.js": "../node_modules/moment/locale/de.js",
+	"./dv": "../node_modules/moment/locale/dv.js",
+	"./dv.js": "../node_modules/moment/locale/dv.js",
+	"./el": "../node_modules/moment/locale/el.js",
+	"./el.js": "../node_modules/moment/locale/el.js",
+	"./en-SG": "../node_modules/moment/locale/en-SG.js",
+	"./en-SG.js": "../node_modules/moment/locale/en-SG.js",
+	"./en-au": "../node_modules/moment/locale/en-au.js",
+	"./en-au.js": "../node_modules/moment/locale/en-au.js",
+	"./en-ca": "../node_modules/moment/locale/en-ca.js",
+	"./en-ca.js": "../node_modules/moment/locale/en-ca.js",
+	"./en-gb": "../node_modules/moment/locale/en-gb.js",
+	"./en-gb.js": "../node_modules/moment/locale/en-gb.js",
+	"./en-ie": "../node_modules/moment/locale/en-ie.js",
+	"./en-ie.js": "../node_modules/moment/locale/en-ie.js",
+	"./en-il": "../node_modules/moment/locale/en-il.js",
+	"./en-il.js": "../node_modules/moment/locale/en-il.js",
+	"./en-nz": "../node_modules/moment/locale/en-nz.js",
+	"./en-nz.js": "../node_modules/moment/locale/en-nz.js",
+	"./eo": "../node_modules/moment/locale/eo.js",
+	"./eo.js": "../node_modules/moment/locale/eo.js",
+	"./es": "../node_modules/moment/locale/es.js",
+	"./es-do": "../node_modules/moment/locale/es-do.js",
+	"./es-do.js": "../node_modules/moment/locale/es-do.js",
+	"./es-us": "../node_modules/moment/locale/es-us.js",
+	"./es-us.js": "../node_modules/moment/locale/es-us.js",
+	"./es.js": "../node_modules/moment/locale/es.js",
+	"./et": "../node_modules/moment/locale/et.js",
+	"./et.js": "../node_modules/moment/locale/et.js",
+	"./eu": "../node_modules/moment/locale/eu.js",
+	"./eu.js": "../node_modules/moment/locale/eu.js",
+	"./fa": "../node_modules/moment/locale/fa.js",
+	"./fa.js": "../node_modules/moment/locale/fa.js",
+	"./fi": "../node_modules/moment/locale/fi.js",
+	"./fi.js": "../node_modules/moment/locale/fi.js",
+	"./fo": "../node_modules/moment/locale/fo.js",
+	"./fo.js": "../node_modules/moment/locale/fo.js",
+	"./fr": "../node_modules/moment/locale/fr.js",
+	"./fr-ca": "../node_modules/moment/locale/fr-ca.js",
+	"./fr-ca.js": "../node_modules/moment/locale/fr-ca.js",
+	"./fr-ch": "../node_modules/moment/locale/fr-ch.js",
+	"./fr-ch.js": "../node_modules/moment/locale/fr-ch.js",
+	"./fr.js": "../node_modules/moment/locale/fr.js",
+	"./fy": "../node_modules/moment/locale/fy.js",
+	"./fy.js": "../node_modules/moment/locale/fy.js",
+	"./ga": "../node_modules/moment/locale/ga.js",
+	"./ga.js": "../node_modules/moment/locale/ga.js",
+	"./gd": "../node_modules/moment/locale/gd.js",
+	"./gd.js": "../node_modules/moment/locale/gd.js",
+	"./gl": "../node_modules/moment/locale/gl.js",
+	"./gl.js": "../node_modules/moment/locale/gl.js",
+	"./gom-latn": "../node_modules/moment/locale/gom-latn.js",
+	"./gom-latn.js": "../node_modules/moment/locale/gom-latn.js",
+	"./gu": "../node_modules/moment/locale/gu.js",
+	"./gu.js": "../node_modules/moment/locale/gu.js",
+	"./he": "../node_modules/moment/locale/he.js",
+	"./he.js": "../node_modules/moment/locale/he.js",
+	"./hi": "../node_modules/moment/locale/hi.js",
+	"./hi.js": "../node_modules/moment/locale/hi.js",
+	"./hr": "../node_modules/moment/locale/hr.js",
+	"./hr.js": "../node_modules/moment/locale/hr.js",
+	"./hu": "../node_modules/moment/locale/hu.js",
+	"./hu.js": "../node_modules/moment/locale/hu.js",
+	"./hy-am": "../node_modules/moment/locale/hy-am.js",
+	"./hy-am.js": "../node_modules/moment/locale/hy-am.js",
+	"./id": "../node_modules/moment/locale/id.js",
+	"./id.js": "../node_modules/moment/locale/id.js",
+	"./is": "../node_modules/moment/locale/is.js",
+	"./is.js": "../node_modules/moment/locale/is.js",
+	"./it": "../node_modules/moment/locale/it.js",
+	"./it-ch": "../node_modules/moment/locale/it-ch.js",
+	"./it-ch.js": "../node_modules/moment/locale/it-ch.js",
+	"./it.js": "../node_modules/moment/locale/it.js",
+	"./ja": "../node_modules/moment/locale/ja.js",
+	"./ja.js": "../node_modules/moment/locale/ja.js",
+	"./jv": "../node_modules/moment/locale/jv.js",
+	"./jv.js": "../node_modules/moment/locale/jv.js",
+	"./ka": "../node_modules/moment/locale/ka.js",
+	"./ka.js": "../node_modules/moment/locale/ka.js",
+	"./kk": "../node_modules/moment/locale/kk.js",
+	"./kk.js": "../node_modules/moment/locale/kk.js",
+	"./km": "../node_modules/moment/locale/km.js",
+	"./km.js": "../node_modules/moment/locale/km.js",
+	"./kn": "../node_modules/moment/locale/kn.js",
+	"./kn.js": "../node_modules/moment/locale/kn.js",
+	"./ko": "../node_modules/moment/locale/ko.js",
+	"./ko.js": "../node_modules/moment/locale/ko.js",
+	"./ku": "../node_modules/moment/locale/ku.js",
+	"./ku.js": "../node_modules/moment/locale/ku.js",
+	"./ky": "../node_modules/moment/locale/ky.js",
+	"./ky.js": "../node_modules/moment/locale/ky.js",
+	"./lb": "../node_modules/moment/locale/lb.js",
+	"./lb.js": "../node_modules/moment/locale/lb.js",
+	"./lo": "../node_modules/moment/locale/lo.js",
+	"./lo.js": "../node_modules/moment/locale/lo.js",
+	"./lt": "../node_modules/moment/locale/lt.js",
+	"./lt.js": "../node_modules/moment/locale/lt.js",
+	"./lv": "../node_modules/moment/locale/lv.js",
+	"./lv.js": "../node_modules/moment/locale/lv.js",
+	"./me": "../node_modules/moment/locale/me.js",
+	"./me.js": "../node_modules/moment/locale/me.js",
+	"./mi": "../node_modules/moment/locale/mi.js",
+	"./mi.js": "../node_modules/moment/locale/mi.js",
+	"./mk": "../node_modules/moment/locale/mk.js",
+	"./mk.js": "../node_modules/moment/locale/mk.js",
+	"./ml": "../node_modules/moment/locale/ml.js",
+	"./ml.js": "../node_modules/moment/locale/ml.js",
+	"./mn": "../node_modules/moment/locale/mn.js",
+	"./mn.js": "../node_modules/moment/locale/mn.js",
+	"./mr": "../node_modules/moment/locale/mr.js",
+	"./mr.js": "../node_modules/moment/locale/mr.js",
+	"./ms": "../node_modules/moment/locale/ms.js",
+	"./ms-my": "../node_modules/moment/locale/ms-my.js",
+	"./ms-my.js": "../node_modules/moment/locale/ms-my.js",
+	"./ms.js": "../node_modules/moment/locale/ms.js",
+	"./mt": "../node_modules/moment/locale/mt.js",
+	"./mt.js": "../node_modules/moment/locale/mt.js",
+	"./my": "../node_modules/moment/locale/my.js",
+	"./my.js": "../node_modules/moment/locale/my.js",
+	"./nb": "../node_modules/moment/locale/nb.js",
+	"./nb.js": "../node_modules/moment/locale/nb.js",
+	"./ne": "../node_modules/moment/locale/ne.js",
+	"./ne.js": "../node_modules/moment/locale/ne.js",
+	"./nl": "../node_modules/moment/locale/nl.js",
+	"./nl-be": "../node_modules/moment/locale/nl-be.js",
+	"./nl-be.js": "../node_modules/moment/locale/nl-be.js",
+	"./nl.js": "../node_modules/moment/locale/nl.js",
+	"./nn": "../node_modules/moment/locale/nn.js",
+	"./nn.js": "../node_modules/moment/locale/nn.js",
+	"./pa-in": "../node_modules/moment/locale/pa-in.js",
+	"./pa-in.js": "../node_modules/moment/locale/pa-in.js",
+	"./pl": "../node_modules/moment/locale/pl.js",
+	"./pl.js": "../node_modules/moment/locale/pl.js",
+	"./pt": "../node_modules/moment/locale/pt.js",
+	"./pt-br": "../node_modules/moment/locale/pt-br.js",
+	"./pt-br.js": "../node_modules/moment/locale/pt-br.js",
+	"./pt.js": "../node_modules/moment/locale/pt.js",
+	"./ro": "../node_modules/moment/locale/ro.js",
+	"./ro.js": "../node_modules/moment/locale/ro.js",
+	"./ru": "../node_modules/moment/locale/ru.js",
+	"./ru.js": "../node_modules/moment/locale/ru.js",
+	"./sd": "../node_modules/moment/locale/sd.js",
+	"./sd.js": "../node_modules/moment/locale/sd.js",
+	"./se": "../node_modules/moment/locale/se.js",
+	"./se.js": "../node_modules/moment/locale/se.js",
+	"./si": "../node_modules/moment/locale/si.js",
+	"./si.js": "../node_modules/moment/locale/si.js",
+	"./sk": "../node_modules/moment/locale/sk.js",
+	"./sk.js": "../node_modules/moment/locale/sk.js",
+	"./sl": "../node_modules/moment/locale/sl.js",
+	"./sl.js": "../node_modules/moment/locale/sl.js",
+	"./sq": "../node_modules/moment/locale/sq.js",
+	"./sq.js": "../node_modules/moment/locale/sq.js",
+	"./sr": "../node_modules/moment/locale/sr.js",
+	"./sr-cyrl": "../node_modules/moment/locale/sr-cyrl.js",
+	"./sr-cyrl.js": "../node_modules/moment/locale/sr-cyrl.js",
+	"./sr.js": "../node_modules/moment/locale/sr.js",
+	"./ss": "../node_modules/moment/locale/ss.js",
+	"./ss.js": "../node_modules/moment/locale/ss.js",
+	"./sv": "../node_modules/moment/locale/sv.js",
+	"./sv.js": "../node_modules/moment/locale/sv.js",
+	"./sw": "../node_modules/moment/locale/sw.js",
+	"./sw.js": "../node_modules/moment/locale/sw.js",
+	"./ta": "../node_modules/moment/locale/ta.js",
+	"./ta.js": "../node_modules/moment/locale/ta.js",
+	"./te": "../node_modules/moment/locale/te.js",
+	"./te.js": "../node_modules/moment/locale/te.js",
+	"./tet": "../node_modules/moment/locale/tet.js",
+	"./tet.js": "../node_modules/moment/locale/tet.js",
+	"./tg": "../node_modules/moment/locale/tg.js",
+	"./tg.js": "../node_modules/moment/locale/tg.js",
+	"./th": "../node_modules/moment/locale/th.js",
+	"./th.js": "../node_modules/moment/locale/th.js",
+	"./tl-ph": "../node_modules/moment/locale/tl-ph.js",
+	"./tl-ph.js": "../node_modules/moment/locale/tl-ph.js",
+	"./tlh": "../node_modules/moment/locale/tlh.js",
+	"./tlh.js": "../node_modules/moment/locale/tlh.js",
+	"./tr": "../node_modules/moment/locale/tr.js",
+	"./tr.js": "../node_modules/moment/locale/tr.js",
+	"./tzl": "../node_modules/moment/locale/tzl.js",
+	"./tzl.js": "../node_modules/moment/locale/tzl.js",
+	"./tzm": "../node_modules/moment/locale/tzm.js",
+	"./tzm-latn": "../node_modules/moment/locale/tzm-latn.js",
+	"./tzm-latn.js": "../node_modules/moment/locale/tzm-latn.js",
+	"./tzm.js": "../node_modules/moment/locale/tzm.js",
+	"./ug-cn": "../node_modules/moment/locale/ug-cn.js",
+	"./ug-cn.js": "../node_modules/moment/locale/ug-cn.js",
+	"./uk": "../node_modules/moment/locale/uk.js",
+	"./uk.js": "../node_modules/moment/locale/uk.js",
+	"./ur": "../node_modules/moment/locale/ur.js",
+	"./ur.js": "../node_modules/moment/locale/ur.js",
+	"./uz": "../node_modules/moment/locale/uz.js",
+	"./uz-latn": "../node_modules/moment/locale/uz-latn.js",
+	"./uz-latn.js": "../node_modules/moment/locale/uz-latn.js",
+	"./uz.js": "../node_modules/moment/locale/uz.js",
+	"./vi": "../node_modules/moment/locale/vi.js",
+	"./vi.js": "../node_modules/moment/locale/vi.js",
+	"./x-pseudo": "../node_modules/moment/locale/x-pseudo.js",
+	"./x-pseudo.js": "../node_modules/moment/locale/x-pseudo.js",
+	"./yo": "../node_modules/moment/locale/yo.js",
+	"./yo.js": "../node_modules/moment/locale/yo.js",
+	"./zh-cn": "../node_modules/moment/locale/zh-cn.js",
+	"./zh-cn.js": "../node_modules/moment/locale/zh-cn.js",
+	"./zh-hk": "../node_modules/moment/locale/zh-hk.js",
+	"./zh-hk.js": "../node_modules/moment/locale/zh-hk.js",
+	"./zh-tw": "../node_modules/moment/locale/zh-tw.js",
+	"./zh-tw.js": "../node_modules/moment/locale/zh-tw.js"
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	if(!__webpack_require__.o(map, req)) {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return map[req];
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "../node_modules/moment/locale sync recursive ^\\.\\/.*$";
+
+/***/ }),
+
+/***/ "../node_modules/raw-loader/index.js!../src/lib/nw-tabset/nw-tabset.component.html":
+/*!********************************************************************************!*\
+  !*** ../node_modules/raw-loader!../src/lib/nw-tabset/nw-tabset.component.html ***!
+  \********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<ul [class]=\"'nav nav-' + type + (orientation == 'horizontal'?  ' ' + justifyClass : ' flex-column')\" role=\"tablist\">\n    <li class=\"nav-item\" *ngFor=\"let tab of tabs\">\n        <a [id]=\"tab.id\" class=\"nav-link\" [class.active]=\"tab.id === activeId\" [class.disabled]=\"tab.disabled\" href\n            (click)=\"select(tab.id); $event.preventDefault()\" role=\"tab\"\n            [attr.tabindex]=\"(tab.disabled ? '-1': undefined)\"\n            [attr.aria-controls]=\"(!destroyOnHide || tab.id === activeId ? tab.id + '-panel' : null)\"\n            [attr.aria-selected]=\"tab.id === activeId\" [attr.aria-disabled]=\"tab.disabled\">\n            {{tab.title}}<ng-template [ngTemplateOutlet]=\"tab.titleTpl?.templateRef\"></ng-template>\n        </a>\n    </li>\n</ul>\n<div class=\"tab-content\">\n    <ng-template ngFor let-tab [ngForOf]=\"tabs\">\n        <div class=\"tab-pane {{tab.id === activeId ? 'active' : null}}\" *ngIf=\"!destroyOnHide || tab.id === activeId\"\n            role=\"tabpanel\" [attr.aria-labelledby]=\"tab.id\" id=\"{{tab.id}}-panel\">\n            <ng-template [ngTemplateOutlet]=\"tab.contentTpl?.templateRef\"></ng-template>\n        </div>\n    </ng-template>\n</div>"
+
+/***/ }),
+
 /***/ "../node_modules/raw-loader/index.js!../src/lib/nw-timeline/nw-timeline.component.html":
 /*!************************************************************************************!*\
   !*** ../node_modules/raw-loader!../src/lib/nw-timeline/nw-timeline.component.html ***!
@@ -66,6 +363,17 @@ module.exports = "<pre class=\"language-{{ snippet.lang }}\"><code #code class=\
 
 /***/ }),
 
+/***/ "../node_modules/raw-loader/index.js!./src/app/shared/components/widget-partial/widget-partial.component.html":
+/*!***********************************************************************************************************!*\
+  !*** ../node_modules/raw-loader!./src/app/shared/components/widget-partial/widget-partial.component.html ***!
+  \***********************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"widget-partial-wrapper\">\n    <a [id]=\"id\"></a>\n    <h2>\n        <a [routerLink]=\"\" [fragment]=\"id\" appFragment title=\"Anchor link to demo: {{id}}\">\n            <img src=\"/assets/images/link-symbol.svg\" alt=\"Anchor link to: {{id}}\" />\n        </a>\n        <span>{{ partialTitle }}</span>\n        <button type=\"button\" class=\"btn btn-light mr-2 toggle-code\" [class.active]=\"showCode\"\n            (click)=\"showCode = !showCode; trackShowCodeClick()\">\n            <svg aria-hidden=\"true\" xmlns=\"http://www.w3.org/2000/svg\" width=\"18\" height=\"18\" viewBox=\"0 0 24 24\">\n                <path\n                    d=\"M24 10.935v2.131l-8 3.947v-2.23l5.64-2.783-5.64-2.79v-2.223l8 3.948zm-16 3.848l-5.64-2.783 5.64-2.79v-2.223l-8 3.948v2.131l8 3.947v-2.23zm7.047-10.783h-2.078l-4.011 16h2.073l4.016-16z\" />\n            </svg>\n            <span class=\"ml-1\">Code</span>\n        </button>\n        <a role=\"button\" (click)=\"trackStackBlitzClick()\" class=\"stackblitz btn btn-light\" target=\"_blank\"\n            href=\"/stackblitzes/{{component}}/{{id}}/stackblitz.html\" title=\"Edit in StackBlitz\">\n            <img class=\"stackblitz-icon\" src=\"/assets/images/stackblitz-icon.svg\" alt=\"StackBlitz icon\" />\n            StackBlitz\n        </a>\n    </h2>\n    <div class=\"card\">\n        <div *ngIf=\"showCode\" class=\"bg-light border-bottom tabset-code\">\n            <nw-tabset [type]=\"hasManyFiles ? 'pills' : 'tabs'\" [class.d-flex]=\"hasManyFiles\"\n                [class.flex-row]=\"hasManyFiles\" [orientation]=\"hasManyFiles ? 'vertical' : 'horizontal'\">\n                <ng-template [ngIf]=\"files\" [ngIfElse]=\"old\">\n                    <nw-tab *ngFor=\"let file of files; index as index\" id=\"{{component}}-{{file.name}}-{{index}}\">\n                        <ng-template nwTabTitle>\n                            <span class=\"text-truncate\" [title]=\"tabType(file.name)\">{{file.name}}</span>\n                        </ng-template>\n                        <ng-template nwTabContent>\n                            <niwa-code [snippet]=\"getFileSnippet(file)\"></niwa-code>\n                        </ng-template>\n                    </nw-tab>\n                </ng-template>\n\n                <ng-template #old>\n                    <nw-tab id=\"{{component}}-{{id}}-html\">\n                        <ng-template nwTabTitle>\n                            <span class=\"ml-2\">{{component}}-{{id}}.html</span>\n                        </ng-template>\n                        <ng-template nwTabContent>\n                            <niwa-code [snippet]=\"markupSnippet\"></niwa-code>\n                        </ng-template>\n                    </nw-tab>\n                    <nw-tab id=\"{{component}}-{{id}}-typescript\">\n                        <ng-template nwTabTitle>\n                            <span class=\"ml-2\">{{component}}-{{id}}.ts</span>\n                        </ng-template>\n                        <ng-template nwTabContent>\n                            <niwa-code [snippet]=\"codeSnippet\"></niwa-code>\n                        </ng-template>\n                    </nw-tab>\n                </ng-template>\n            </nw-tabset>\n        </div>\n        <div class=\"card-body\">\n            <ng-content></ng-content>\n        </div>\n\n    </div>\n</div>"
+
+/***/ }),
+
 /***/ "../node_modules/raw-loader/index.js!./src/app/views/getting-started/getting-started.component.html":
 /*!*************************************************************************************************!*\
   !*** ../node_modules/raw-loader!./src/app/views/getting-started/getting-started.component.html ***!
@@ -99,6 +407,28 @@ module.exports = "<div class=\"container\">\r\n    <div id=\"accordion\" class=\
 
 /***/ }),
 
+/***/ "../node_modules/raw-loader/index.js!./src/app/views/tutorials/fake-api/filter/filter.component.html":
+/*!**************************************************************************************************!*\
+  !*** ../node_modules/raw-loader!./src/app/views/tutorials/fake-api/filter/filter.component.html ***!
+  \**************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>filter works!</p>\n"
+
+/***/ }),
+
+/***/ "../node_modules/raw-loader/index.js!./src/app/views/tutorials/fake-api/filter/filter.component.ts":
+/*!************************************************************************************************!*\
+  !*** ../node_modules/raw-loader!./src/app/views/tutorials/fake-api/filter/filter.component.ts ***!
+  \************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-filter',\n  templateUrl: './filter.component.html',\n  styleUrls: ['./filter.component.scss']\n})\nexport class FilterComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit() {\n  }\n\n}\n"
+
+/***/ }),
+
 /***/ "../node_modules/raw-loader/index.js!./src/app/views/views.component.html":
 /*!***********************************************************************!*\
   !*** ../node_modules/raw-loader!./src/app/views/views.component.html ***!
@@ -107,6 +437,328 @@ module.exports = "<div class=\"container\">\r\n    <div id=\"accordion\" class=\
 /***/ (function(module, exports) {
 
 module.exports = "<app-header></app-header>\r\n<div class=\"container-fluid\">\r\n    <div class=\"row\">\r\n        <div class=\"col-12 col-lg-3\">\r\n            <app-navigation></app-navigation>\r\n        </div>\r\n        <div class=\"col-12 col-lg-9\"><router-outlet></router-outlet></div>\r\n    </div>\r\n</div>\r\n<app-footer></app-footer>"
+
+/***/ }),
+
+/***/ "../src/lib/nw-tabset/nw-tab-content.directive.ts":
+/*!********************************************************!*\
+  !*** ../src/lib/nw-tabset/nw-tab-content.directive.ts ***!
+  \********************************************************/
+/*! exports provided: NwTabContent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NwTabContent", function() { return NwTabContent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm2015/core.js");
+
+
+let NwTabContent = class NwTabContent {
+    constructor(templateRef) {
+        this.templateRef = templateRef;
+        console.log('templateRef', templateRef);
+    }
+};
+NwTabContent.ctorParameters = () => [
+    { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"] }
+];
+NwTabContent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"])({
+        selector: 'ng-template[nwTabContent]'
+    })
+], NwTabContent);
+
+
+
+/***/ }),
+
+/***/ "../src/lib/nw-tabset/nw-tab-title.directive.ts":
+/*!******************************************************!*\
+  !*** ../src/lib/nw-tabset/nw-tab-title.directive.ts ***!
+  \******************************************************/
+/*! exports provided: NwTabTitle */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NwTabTitle", function() { return NwTabTitle; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm2015/core.js");
+
+
+let NwTabTitle = class NwTabTitle {
+    constructor(templateRef) {
+        this.templateRef = templateRef;
+    }
+};
+NwTabTitle.ctorParameters = () => [
+    { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"] }
+];
+NwTabTitle = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"])({
+        selector: 'ng-template[nwTabTitle]'
+    })
+], NwTabTitle);
+
+
+
+/***/ }),
+
+/***/ "../src/lib/nw-tabset/nw-tab.directive.ts":
+/*!************************************************!*\
+  !*** ../src/lib/nw-tabset/nw-tab.directive.ts ***!
+  \************************************************/
+/*! exports provided: NwTab */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NwTab", function() { return NwTab; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _nw_tab_content_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./nw-tab-content.directive */ "../src/lib/nw-tabset/nw-tab-content.directive.ts");
+/* harmony import */ var _nw_tab_title_directive__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./nw-tab-title.directive */ "../src/lib/nw-tabset/nw-tab-title.directive.ts");
+
+
+
+
+let nwTabNextId = 0;
+let NwTab = class NwTab {
+    constructor() {
+        /**
+         * The tab identifier.
+         *
+         * Must be unique for the entire document for proper accessibility support.
+         */
+        this.id = `ngb-tab-${nwTabNextId++}`;
+        /**
+         * If `true`, the current tab is disabled and can't be toggled.
+         */
+        this.disabled = false;
+    }
+    ngAfterContentChecked() {
+        // We are using @ContentChildren instead of @ContentChild as in the Angular version being used
+        // only @ContentChildren allows us to specify the {descendants: false} option.
+        // Without {descendants: false} we are hitting bugs described in:
+        // https://github.com/ng-bootstrap/ng-bootstrap/issues/2240
+        this.titleTpl = this.titleTpls.first;
+        this.contentTpl = this.contentTpls.first;
+    }
+};
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], NwTab.prototype, "id", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], NwTab.prototype, "title", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], NwTab.prototype, "disabled", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ContentChildren"])(_nw_tab_title_directive__WEBPACK_IMPORTED_MODULE_3__["NwTabTitle"], { descendants: false })
+], NwTab.prototype, "titleTpls", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ContentChildren"])(_nw_tab_content_directive__WEBPACK_IMPORTED_MODULE_2__["NwTabContent"], { descendants: false })
+], NwTab.prototype, "contentTpls", void 0);
+NwTab = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"])({
+        selector: 'nw-tab',
+        exportAs: 'nwTab'
+    })
+], NwTab);
+
+
+
+/***/ }),
+
+/***/ "../src/lib/nw-tabset/nw-tabset-config.service.ts":
+/*!********************************************************!*\
+  !*** ../src/lib/nw-tabset/nw-tabset-config.service.ts ***!
+  \********************************************************/
+/*! exports provided: NwTabsetConfig */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NwTabsetConfig", function() { return NwTabsetConfig; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm2015/core.js");
+
+
+let NwTabsetConfig = class NwTabsetConfig {
+    constructor() {
+        this.justify = 'start';
+        this.orientation = 'horizontal';
+        this.type = 'tabs';
+    }
+};
+NwTabsetConfig = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: 'root'
+    })
+], NwTabsetConfig);
+
+
+
+/***/ }),
+
+/***/ "../src/lib/nw-tabset/nw-tabset.component.scss":
+/*!*****************************************************!*\
+  !*** ../src/lib/nw-tabset/nw-tabset.component.scss ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvbGliL253LXRhYnNldC9udy10YWJzZXQuY29tcG9uZW50LnNjc3MifQ== */"
+
+/***/ }),
+
+/***/ "../src/lib/nw-tabset/nw-tabset.component.ts":
+/*!***************************************************!*\
+  !*** ../src/lib/nw-tabset/nw-tabset.component.ts ***!
+  \***************************************************/
+/*! exports provided: NwTabsetComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NwTabsetComponent", function() { return NwTabsetComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _nw_tab_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./nw-tab.directive */ "../src/lib/nw-tabset/nw-tab.directive.ts");
+/* harmony import */ var _nw_tabset_config_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./nw-tabset-config.service */ "../src/lib/nw-tabset/nw-tabset-config.service.ts");
+
+
+
+
+let NwTabsetComponent = class NwTabsetComponent {
+    constructor(config) {
+        /**
+         * If `true`, non-visible tabs content will be removed from DOM. Otherwise it will just be hidden.
+         */
+        this.destroyOnHide = true;
+        /**
+         * A tab change event emitted right before the tab change happens.
+         *
+         * See [`NgbTabChangeEvent`](#/components/tabset/api#NgbTabChangeEvent) for payload details.
+         */
+        this.tabChange = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        this.type = config.type;
+        this.justify = config.justify;
+        this.orientation = config.orientation;
+    }
+    /**
+     * The horizontal alignment of the tabs with flexbox utilities.
+     */
+    set justify(className) {
+        if (className === 'fill' || className === 'justified') {
+            this.justifyClass = `nav-${className}`;
+        }
+        else {
+            this.justifyClass = `justify-content-${className}`;
+        }
+    }
+    /**
+     * Selects the tab with the given id and shows its associated content panel.
+     *
+     * Any other tab that was previously selected becomes unselected and its associated pane is removed from DOM or
+     * hidden depending on the `destroyOnHide` value.
+     */
+    select(tabId) {
+        let selectedTab = this._getTabById(tabId);
+        if (selectedTab && !selectedTab.disabled && this.activeId !== selectedTab.id) {
+            let defaultPrevented = false;
+            this.tabChange.emit({ activeId: this.activeId, nextId: selectedTab.id, preventDefault: () => { defaultPrevented = true; } });
+            if (!defaultPrevented) {
+                this.activeId = selectedTab.id;
+            }
+        }
+    }
+    ngAfterContentChecked() {
+        // auto-correct activeId that might have been set incorrectly as input
+        let activeTab = this._getTabById(this.activeId);
+        this.activeId = activeTab ? activeTab.id : (this.tabs.length ? this.tabs.first.id : null);
+    }
+    _getTabById(id) {
+        let tabsWithId = this.tabs.filter(tab => tab.id === id);
+        return tabsWithId.length ? tabsWithId[0] : null;
+    }
+};
+NwTabsetComponent.ctorParameters = () => [
+    { type: _nw_tabset_config_service__WEBPACK_IMPORTED_MODULE_3__["NwTabsetConfig"] }
+];
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ContentChildren"])(_nw_tab_directive__WEBPACK_IMPORTED_MODULE_2__["NwTab"])
+], NwTabsetComponent.prototype, "tabs", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], NwTabsetComponent.prototype, "activeId", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], NwTabsetComponent.prototype, "destroyOnHide", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], NwTabsetComponent.prototype, "justify", null);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], NwTabsetComponent.prototype, "orientation", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], NwTabsetComponent.prototype, "type", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])()
+], NwTabsetComponent.prototype, "tabChange", void 0);
+NwTabsetComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'nw-tabset',
+        exportAs: 'nwTabset',
+        template: __webpack_require__(/*! raw-loader!./nw-tabset.component.html */ "../node_modules/raw-loader/index.js!../src/lib/nw-tabset/nw-tabset.component.html"),
+        styles: [__webpack_require__(/*! ./nw-tabset.component.scss */ "../src/lib/nw-tabset/nw-tabset.component.scss")]
+    })
+], NwTabsetComponent);
+
+
+
+/***/ }),
+
+/***/ "../src/lib/nw-tabset/nw-tabset.module.ts":
+/*!************************************************!*\
+  !*** ../src/lib/nw-tabset/nw-tabset.module.ts ***!
+  \************************************************/
+/*! exports provided: NwTabsetModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NwTabsetModule", function() { return NwTabsetModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "../node_modules/@angular/common/fesm2015/common.js");
+/* harmony import */ var _nw_tabset_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./nw-tabset.component */ "../src/lib/nw-tabset/nw-tabset.component.ts");
+/* harmony import */ var _nw_tab_directive__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./nw-tab.directive */ "../src/lib/nw-tabset/nw-tab.directive.ts");
+/* harmony import */ var _nw_tab_content_directive__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./nw-tab-content.directive */ "../src/lib/nw-tabset/nw-tab-content.directive.ts");
+/* harmony import */ var _nw_tab_title_directive__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./nw-tab-title.directive */ "../src/lib/nw-tabset/nw-tab-title.directive.ts");
+
+
+
+
+
+
+
+let NwTabsetModule = class NwTabsetModule {
+};
+NwTabsetModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+        declarations: [_nw_tabset_component__WEBPACK_IMPORTED_MODULE_3__["NwTabsetComponent"], _nw_tab_directive__WEBPACK_IMPORTED_MODULE_4__["NwTab"], _nw_tab_content_directive__WEBPACK_IMPORTED_MODULE_5__["NwTabContent"], _nw_tab_title_directive__WEBPACK_IMPORTED_MODULE_6__["NwTabTitle"]],
+        imports: [
+            _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"]
+        ],
+        exports: [_nw_tabset_component__WEBPACK_IMPORTED_MODULE_3__["NwTabsetComponent"], _nw_tab_directive__WEBPACK_IMPORTED_MODULE_4__["NwTab"], _nw_tab_content_directive__WEBPACK_IMPORTED_MODULE_5__["NwTabContent"], _nw_tab_title_directive__WEBPACK_IMPORTED_MODULE_6__["NwTabTitle"]]
+    })
+], NwTabsetModule);
+
+
 
 /***/ }),
 
@@ -206,7 +858,7 @@ NwTimelineModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*!**************************************!*\
   !*** ../src/lib/nw-widget.module.ts ***!
   \**************************************/
-/*! exports provided: NwWidgetModule, NwTimelineModule */
+/*! exports provided: NwWidgetModule, NwTimelineModule, NwTabsetModule */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -215,19 +867,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _nw_timeline_nw_timeline_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./nw-timeline/nw-timeline.module */ "../src/lib/nw-timeline/nw-timeline.module.ts");
+/* harmony import */ var _nw_tabset_nw_tabset_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./nw-tabset/nw-tabset.module */ "../src/lib/nw-tabset/nw-tabset.module.ts");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NwTimelineModule", function() { return _nw_timeline_nw_timeline_module__WEBPACK_IMPORTED_MODULE_2__["NwTimelineModule"]; });
 
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NwTabsetModule", function() { return _nw_tabset_nw_tabset_module__WEBPACK_IMPORTED_MODULE_3__["NwTabsetModule"]; });
 
 
 
 
-const NW_WIDGET_MODULE = [_nw_timeline_nw_timeline_module__WEBPACK_IMPORTED_MODULE_2__["NwTimelineModule"]];
+
+
+
+const NW_WIDGET_MODULE = [_nw_timeline_nw_timeline_module__WEBPACK_IMPORTED_MODULE_2__["NwTimelineModule"], _nw_tabset_nw_tabset_module__WEBPACK_IMPORTED_MODULE_3__["NwTabsetModule"]];
 let NwWidgetModule = class NwWidgetModule {
 };
 NwWidgetModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
         imports: NW_WIDGET_MODULE,
-        exports: NW_WIDGET_MODULE
+        exports: NW_WIDGET_MODULE,
     })
 ], NwWidgetModule);
 
@@ -239,7 +896,7 @@ NwWidgetModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*!****************************!*\
   !*** ../src/public-api.ts ***!
   \****************************/
-/*! exports provided: NwWidgetModule, NwTimelineModule */
+/*! exports provided: NwWidgetModule, NwTimelineModule, NwTabsetModule */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -248,6 +905,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NwWidgetModule", function() { return _lib_nw_widget_module__WEBPACK_IMPORTED_MODULE_0__["NwWidgetModule"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NwTimelineModule", function() { return _lib_nw_widget_module__WEBPACK_IMPORTED_MODULE_0__["NwTimelineModule"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NwTabsetModule", function() { return _lib_nw_widget_module__WEBPACK_IMPORTED_MODULE_0__["NwTabsetModule"]; });
 
 /*
  * Public API Surface of nw-widgets
@@ -308,6 +967,9 @@ const routes = [
     {
         path: '',
         loadChildren: './views/views.module#ViewsModule'
+    },
+    {
+        path: '**', redirectTo: 'home'
     }
 ];
 let AppRoutingModule = class AppRoutingModule {
@@ -428,6 +1090,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
 /* harmony import */ var _shared_shared_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./shared/shared.module */ "./src/app/shared/shared.module.ts");
 /* harmony import */ var _views_views_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./views/views.module */ "./src/app/views/views.module.ts");
+/* harmony import */ var _core_core_module__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./core/core.module */ "./src/app/core/core.module.ts");
+
 
 
 
@@ -446,12 +1110,411 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
             _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
             _shared_shared_module__WEBPACK_IMPORTED_MODULE_5__["SharedModule"],
-            _views_views_module__WEBPACK_IMPORTED_MODULE_6__["ViewsModule"]
+            _views_views_module__WEBPACK_IMPORTED_MODULE_6__["ViewsModule"],
+            _core_core_module__WEBPACK_IMPORTED_MODULE_7__["CoreModule"]
         ],
         providers: [],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
     })
 ], AppModule);
+
+
+
+/***/ }),
+
+/***/ "./src/app/core/core.module.ts":
+/*!*************************************!*\
+  !*** ./src/app/core/core.module.ts ***!
+  \*************************************/
+/*! exports provided: CoreModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreModule", function() { return CoreModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "../node_modules/@angular/common/fesm2015/common.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "../node_modules/@angular/common/fesm2015/http.js");
+/* harmony import */ var angular_in_memory_web_api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! angular-in-memory-web-api */ "../node_modules/angular-in-memory-web-api/index.js");
+/* harmony import */ var _fake_api_fake_api_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./fake-api/fake-api.service */ "./src/app/core/fake-api/fake-api.service.ts");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../environments/environment */ "./src/environments/environment.ts");
+
+
+
+
+
+
+
+let CoreModule = class CoreModule {
+};
+CoreModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+        declarations: [],
+        imports: [
+            _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
+            _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"],
+            _environments_environment__WEBPACK_IMPORTED_MODULE_6__["environment"].enableMockUp ? angular_in_memory_web_api__WEBPACK_IMPORTED_MODULE_4__["HttpClientInMemoryWebApiModule"].forRoot(_fake_api_fake_api_service__WEBPACK_IMPORTED_MODULE_5__["FakeApiService"]) : [],
+        ],
+        exports: [
+            _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"],
+            angular_in_memory_web_api__WEBPACK_IMPORTED_MODULE_4__["HttpClientInMemoryWebApiModule"]
+        ]
+    })
+], CoreModule);
+
+
+
+/***/ }),
+
+/***/ "./src/app/core/fake-api/context/database.context.ts":
+/*!***********************************************************!*\
+  !*** ./src/app/core/fake-api/context/database.context.ts ***!
+  \***********************************************************/
+/*! exports provided: DatabaseContext */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DatabaseContext", function() { return DatabaseContext; });
+/* harmony import */ var _database_person_datatable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./database/person.datatable */ "./src/app/core/fake-api/context/database/person.datatable.ts");
+
+class DatabaseContext {
+}
+DatabaseContext.persons = _database_person_datatable__WEBPACK_IMPORTED_MODULE_0__["PersonDatatable"].persons;
+
+
+/***/ }),
+
+/***/ "./src/app/core/fake-api/context/database/person.datatable.ts":
+/*!********************************************************************!*\
+  !*** ./src/app/core/fake-api/context/database/person.datatable.ts ***!
+  \********************************************************************/
+/*! exports provided: PersonDatatable */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PersonDatatable", function() { return PersonDatatable; });
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! moment */ "../node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_0__);
+
+class PersonDatatable {
+}
+PersonDatatable.persons = [
+    {
+        id: '5dcfbe4aef051e03d0c31cd4',
+        name: 'Daphne Beasley',
+        birthday: moment__WEBPACK_IMPORTED_MODULE_0__('07-01-2010', 'MM-DD-YYYY'),
+        gender: 'female',
+        email: 'daphnebeasley@architax.com',
+        phone: '(958) 546-3235',
+        address: '307 Rockwell Place, Bentley, Maryland, 9925'
+    }, {
+        id: '5dcfbe4acd50d57e51ddf61c',
+        name: 'Russo Ray',
+        birthday: moment__WEBPACK_IMPORTED_MODULE_0__('01-06-1990', 'MM-DD-YYYY'),
+        gender: 'male',
+        email: 'russoray@architax.com',
+        phone: '(826) 479-2379',
+        address: '209 Doughty Street, Kersey, Texas, 7549'
+    }, {
+        id: '5dcfbe4a49c43ce5b46e9fcd',
+        name: 'Carla Hogan',
+        birthday: moment__WEBPACK_IMPORTED_MODULE_0__('07-30-1970', 'MM-DD-YYYY'),
+        gender: 'female',
+        email: 'carlahogan@architax.com',
+        phone: '(830) 457-2405',
+        address: '960 Louisa Street, Downsville, New Jersey, 4644'
+    }, {
+        id: '5dcfbe4af838d207966c80b7',
+        name: 'Steele Sargent',
+        birthday: moment__WEBPACK_IMPORTED_MODULE_0__('05-24-2015', 'MM-DD-YYYY'),
+        gender: 'male',
+        email: 'steelesargent@architax.com',
+        phone: '(953) 580-2504',
+        address: '665 Williamsburg Street, Efland, Northern Mariana Islands, 7168'
+    }, {
+        id: '5dcfbe4a29b4869ec39dd86a',
+        name: 'Michele Cantrell',
+        birthday: moment__WEBPACK_IMPORTED_MODULE_0__('07-04-1971', 'MM-DD-YYYY'),
+        gender: 'female',
+        email: 'michelecantrell@architax.com',
+        phone: '(891) 549-3461',
+        address: '246 Broadway , Dalton, Virgin Islands, 2918'
+    }, {
+        id: '5dcfbe4a49a49f624450b847',
+        name: 'Cooke Knight',
+        birthday: moment__WEBPACK_IMPORTED_MODULE_0__('07-12-1980', 'MM-DD-YYYY'),
+        gender: 'male',
+        email: 'cookeknight@architax.com',
+        phone: '(812) 482-2197',
+        address: '170 Nevins Street, Enoree, Kentucky, 7418'
+    }, {
+        id: '5dcfbe4a170d855e2266bddf',
+        name: 'Sears Gross',
+        birthday: moment__WEBPACK_IMPORTED_MODULE_0__('06-13-2006', 'MM-DD-YYYY'),
+        gender: 'male',
+        email: 'searsgross@architax.com',
+        phone: '(839) 505-2064',
+        address: '556 Ivan Court, Bynum, North Dakota, 9556'
+    }, {
+        id: '5dcfbe4ae8c4854989bea1e9',
+        name: 'Olson Walker',
+        birthday: moment__WEBPACK_IMPORTED_MODULE_0__('02-03-2008', 'MM-DD-YYYY'),
+        gender: 'male',
+        email: 'olsonwalker@architax.com',
+        phone: '(878) 549-3213',
+        address: '232 Allen Avenue, Roberts, Minnesota, 2194'
+    }, {
+        id: '5dcfbe4a7f569838f7eff817',
+        name: 'Kerr Ferguson',
+        birthday: moment__WEBPACK_IMPORTED_MODULE_0__('08-05-2004', 'MM-DD-YYYY'),
+        gender: 'male',
+        email: 'kerrferguson@architax.com',
+        phone: '(899) 515-3211',
+        address: '214 Crawford Avenue, Boykin, Alaska, 9151'
+    }, {
+        id: '5dcfbe4ae8bd207d7339d332',
+        name: 'Roberta Cole',
+        birthday: moment__WEBPACK_IMPORTED_MODULE_0__('12-18-1987', 'MM-DD-YYYY'),
+        gender: 'female',
+        email: 'robertacole@architax.com',
+        phone: '(882) 419-3716',
+        address: '478 Livingston Street, Cressey, Delaware, 5136'
+    }, {
+        id: '5dcfbe4af823e350cc9bbeb6',
+        name: 'Billie Fischer',
+        birthday: moment__WEBPACK_IMPORTED_MODULE_0__('11-23-2001', 'MM-DD-YYYY'),
+        gender: 'female',
+        email: 'billiefischer@architax.com',
+        phone: '(825) 515-2932',
+        address: '880 Dennett Place, Eden, American Samoa, 303'
+    }, {
+        id: '5dcfbe4a7dfb1d994a24a061',
+        name: 'Saunders Booth',
+        birthday: moment__WEBPACK_IMPORTED_MODULE_0__('09-13-1991', 'MM-DD-YYYY'),
+        gender: 'male',
+        email: 'saundersbooth@architax.com',
+        phone: '(896) 556-3337',
+        address: '491 Mill Road, Macdona, New Mexico, 7329'
+    }, {
+        id: '5dcfbe4a683f9586448f622e',
+        name: 'Jewel Pena',
+        birthday: moment__WEBPACK_IMPORTED_MODULE_0__('02-12-1987', 'MM-DD-YYYY'),
+        gender: 'female',
+        email: 'jewelpena@architax.com',
+        phone: '(990) 456-3996',
+        address: '319 Dakota Place, Detroit, Connecticut, 6180'
+    }, {
+        id: '5dcfbe4a09664a31b34af187',
+        name: 'Olga Calderon',
+        birthday: moment__WEBPACK_IMPORTED_MODULE_0__('07-18-1999', 'MM-DD-YYYY'),
+        gender: 'female',
+        email: 'olgacalderon@architax.com',
+        phone: '(829) 494-3430',
+        address: '333 Irving Place, Noxen, Ohio, 4845'
+    }, {
+        id: '5dcfbe4a044d133498e0df51',
+        name: 'Swanson Bowman',
+        birthday: moment__WEBPACK_IMPORTED_MODULE_0__('06-17-2019', 'MM-DD-YYYY'),
+        gender: 'male',
+        email: 'swansonbowman@architax.com',
+        phone: '(997) 540-3005',
+        address: '137 Catherine Street, Woodlake, District Of Columbia, 811'
+    }, {
+        id: '5dcfbe4a3e9c7aa9bf267e87',
+        name: 'Agnes Justice',
+        birthday: moment__WEBPACK_IMPORTED_MODULE_0__('01-14-2004', 'MM-DD-YYYY'),
+        gender: 'female',
+        email: 'agnesjustice@architax.com',
+        phone: '(859) 481-3245',
+        address: '828 Foster Avenue, Coaldale, West Virginia, 7124'
+    }
+];
+
+
+/***/ }),
+
+/***/ "./src/app/core/fake-api/fake-api.service.ts":
+/*!***************************************************!*\
+  !*** ./src/app/core/fake-api/fake-api.service.ts ***!
+  \***************************************************/
+/*! exports provided: FakeApiService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FakeApiService", function() { return FakeApiService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _context_database_context__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./context/database.context */ "./src/app/core/fake-api/context/database.context.ts");
+
+
+
+let FakeApiService = class FakeApiService {
+    constructor() { }
+    createDb(reqInfo) {
+        let context = {
+            persons: _context_database_context__WEBPACK_IMPORTED_MODULE_2__["DatabaseContext"].persons
+        };
+        return context;
+    }
+};
+FakeApiService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: 'root'
+    })
+], FakeApiService);
+
+
+
+/***/ }),
+
+/***/ "./src/app/core/services/analytic.service.ts":
+/*!***************************************************!*\
+  !*** ./src/app/core/services/analytic.service.ts ***!
+  \***************************************************/
+/*! exports provided: AnalyticService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AnalyticService", function() { return AnalyticService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "../node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ "../node_modules/@angular/common/fesm2015/common.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "../node_modules/rxjs/_esm2015/operators/index.js");
+
+
+
+
+
+let AnalyticService = class AnalyticService {
+    constructor(_location, _router) {
+        this._location = _location;
+        this._router = _router;
+        this._enabled = window.location.href.indexOf('nw-widget.github.io') >= 0;
+    }
+    /**
+     * Intended to be called only once. Subscribes to router events and sends a page view
+     * after each ended navigation event.
+     */
+    trackPageViews() {
+        if (this._enabled) {
+            this._router.events.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["filter"])(event => event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_2__["NavigationEnd"])).subscribe(() => {
+                ga('send', { hitType: 'pageview', page: this._location.path() });
+            });
+        }
+    }
+    /**
+     * Sends an event.
+     */
+    trackEvent(action, category) {
+        if (this._enabled) {
+            ga('send', { hitType: 'event', eventCategory: category, eventAction: action });
+        }
+    }
+};
+AnalyticService.ctorParameters = () => [
+    { type: _angular_common__WEBPACK_IMPORTED_MODULE_3__["Location"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] }
+];
+AnalyticService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: 'root'
+    })
+], AnalyticService);
+
+
+
+/***/ }),
+
+/***/ "./src/app/core/services/code-highlight.service.ts":
+/*!*********************************************************!*\
+  !*** ./src/app/core/services/code-highlight.service.ts ***!
+  \*********************************************************/
+/*! exports provided: CodeHighlightService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CodeHighlightService", function() { return CodeHighlightService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var prismjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prismjs */ "../node_modules/prismjs/prism.js");
+/* harmony import */ var prismjs__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prismjs__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var prismjs_components_prism_typescript__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prismjs/components/prism-typescript */ "../node_modules/prismjs/components/prism-typescript.js");
+/* harmony import */ var prismjs_components_prism_typescript__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prismjs_components_prism_typescript__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var prismjs_components_prism_bash__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prismjs/components/prism-bash */ "../node_modules/prismjs/components/prism-bash.js");
+/* harmony import */ var prismjs_components_prism_bash__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prismjs_components_prism_bash__WEBPACK_IMPORTED_MODULE_4__);
+
+
+
+
+
+// Prism tries to highlight the whole document on DOMContentLoad.
+// Unfortunately with webpack the only way of disabling it
+// is by simply forcing it to highlight no elements -> []
+prismjs__WEBPACK_IMPORTED_MODULE_2__["hooks"].add('before-highlightall', (env) => {
+    env['elements'] = [];
+});
+let CodeHighlightService = class CodeHighlightService {
+    highlight(code, lang) {
+        return prismjs__WEBPACK_IMPORTED_MODULE_2__["highlight"](code.trim(), prismjs__WEBPACK_IMPORTED_MODULE_2__["languages"][lang], lang);
+    }
+};
+CodeHighlightService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: 'root'
+    })
+], CodeHighlightService);
+
+
+
+/***/ }),
+
+/***/ "./src/app/core/services/post-partial.service.ts":
+/*!*******************************************************!*\
+  !*** ./src/app/core/services/post-partial.service.ts ***!
+  \*******************************************************/
+/*! exports provided: PostPartialService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PostPartialService", function() { return PostPartialService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm2015/core.js");
+
+
+let PostPartialService = class PostPartialService {
+    constructor() {
+        this._partials = {};
+        this._overviews = {};
+    }
+    register(widget, partialArguments, overview) {
+        this._partials[widget] = partialArguments;
+        if (overview) {
+            this._overviews[widget] = overview;
+        }
+    }
+    getPartials(widget) { return this._partials[widget]; }
+    getOverviewSections(widget) {
+        const overview = this._overviews[widget];
+        const sections = {};
+        if (overview) {
+            Object.keys(overview).forEach(fragment => { sections[fragment] = { fragment, title: overview[fragment] }; });
+        }
+        return sections;
+    }
+};
+PostPartialService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: 'root'
+    })
+], PostPartialService);
 
 
 
@@ -602,7 +1665,6 @@ let HeaderComponent = class HeaderComponent {
         this.viewRoutes.forEach(this.getNavFromViewRoute);
     }
     isActive(currentRoute, exact = true) {
-        console.log('isActive', currentRoute, exact, this.router.createUrlTree(currentRoute), this.router.isActive(this.router.createUrlTree(currentRoute), exact));
         return this.router.isActive(this.router.createUrlTree(currentRoute), exact);
     }
 };
@@ -646,6 +1708,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _views_views_routing_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../views/views-routing.module */ "./src/app/views/views-routing.module.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "../node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var src_app_views_previews_previews_routing_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/views/previews/previews-routing.module */ "./src/app/views/previews/previews-routing.module.ts");
+/* harmony import */ var src_app_views_tutorials_tutorials_routing_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/views/tutorials/tutorials-routing.module */ "./src/app/views/tutorials/tutorials-routing.module.ts");
+
+
 
 
 
@@ -653,7 +1719,7 @@ __webpack_require__.r(__webpack_exports__);
 let NavigationComponent = class NavigationComponent {
     constructor(router) {
         this.router = router;
-        this.routes = _views_views_routing_module__WEBPACK_IMPORTED_MODULE_2__["VIEWS_SIDEBAR_ROUTES"];
+        this.routes = [..._views_views_routing_module__WEBPACK_IMPORTED_MODULE_2__["VIEWS_SIDEBAR_ROUTES"], ...src_app_views_previews_previews_routing_module__WEBPACK_IMPORTED_MODULE_4__["PREVIEWS_VIEWS_ROUTES"], ...src_app_views_tutorials_tutorials_routing_module__WEBPACK_IMPORTED_MODULE_5__["TUTORIALS_VIEWS_ROUTES"]];
         this.collapse = true;
         this.navs = [];
         this.getNavFromRoute = (r) => {
@@ -718,7 +1784,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Snippet", function() { return Snippet; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _services_code_highlight_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/code-highlight.service */ "./src/app/shared/services/code-highlight.service.ts");
+/* harmony import */ var _core_services_code_highlight_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../core/services/code-highlight.service */ "./src/app/core/services/code-highlight.service.ts");
 
 
 
@@ -731,7 +1797,7 @@ let CodeComponent = class CodeComponent {
     }
 };
 CodeComponent.ctorParameters = () => [
-    { type: _services_code_highlight_service__WEBPACK_IMPORTED_MODULE_2__["CodeHighlightService"] }
+    { type: _core_services_code_highlight_service__WEBPACK_IMPORTED_MODULE_2__["CodeHighlightService"] }
 ];
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('code', { static: true })
@@ -777,119 +1843,133 @@ function Snippet({ lang, code }) {
 
 /***/ }),
 
-/***/ "./src/app/shared/services/code-highlight.service.ts":
-/*!***********************************************************!*\
-  !*** ./src/app/shared/services/code-highlight.service.ts ***!
-  \***********************************************************/
-/*! exports provided: CodeHighlightService */
+/***/ "./src/app/shared/components/widget-partial/widget-partial.component.scss":
+/*!********************************************************************************!*\
+  !*** ./src/app/shared/components/widget-partial/widget-partial.component.scss ***!
+  \********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "a.title-fragment {\n  opacity: 0;\n  transition: opacity 125ms ease;\n  line-height: inherit;\n  position: absolute;\n  margin-left: -1.2em;\n  padding-right: 0.5em;\n}\na.title-fragment > img {\n  width: 1em;\n  height: 1em;\n}\ndiv.widget-partial-wrapper {\n  margin-bottom: 1.5rem;\n  margin-top: 1.5rem;\n}\ndiv.widget-partial-wrapper h2 {\n  display: flex;\n  margin-bottom: 1rem;\n}\ndiv.widget-partial-wrapper h2 span {\n  flex-grow: 1;\n}\ndiv.widget-partial-wrapper h2 .stackblitz, div.widget-partial-wrapper h2 .toggle-code {\n  display: flex;\n  align-items: center;\n  align-self: center;\n}\ndiv.widget-partial-wrapper h2 .toggle-code svg {\n  vertical-align: middle;\n  fill: #28a745;\n}\ndiv.widget-partial-wrapper h2 .stackblitz .stackblitz-icon {\n  height: 1.2rem;\n  margin-left: -0.5rem;\n}\ndiv.widget-partial-wrapper h2:hover > .title-fragment {\n  opacity: 1;\n}\ndiv.widget-partial-wrapper .tabset-code nw-tabset ::ng-deep .nav {\n  padding: 0.5rem 1.25rem 0;\n  font-size: 80%;\n}\ndiv.widget-partial-wrapper .tabset-code nw-tabset ::ng-deep .nav .nav-link.active {\n  background-color: #f5f2f0;\n  border-bottom: 1px solid #f5f2f0;\n}\ndiv.widget-partial-wrapper .tabset-code nw-tabset ::ng-deep .nav .nav-link:not(.active) {\n  color: #999;\n}\ndiv.widget-partial-wrapper .tabset-code nw-tabset ::ng-deep .nav .nav-link:not(.active):hover {\n  color: #666;\n}\ndiv.widget-partial-wrapper .tabset-code nw-tabset ::ng-deep .nav.nav-pills {\n  border-right: 1px solid #dee2e6;\n  padding-left: 0.75rem;\n  padding-right: 0;\n}\ndiv.widget-partial-wrapper .tabset-code nw-tabset ::ng-deep .nav.nav-pills .nav-link.active {\n  color: #666;\n  background-color: #f5f5f5;\n  border: 1px solid #dee2e6;\n  border-right-color: #f5f5f5;\n  border-top-right-radius: 0;\n  border-bottom-right-radius: 0;\n  margin-right: -1px;\n}\ndiv.widget-partial-wrapper .tabset-code nw-tabset ::ng-deep .nav.nav-pills + .tab-content {\n  flex: 1;\n  overflow: hidden;\n}\ndiv.widget-partial-wrapper .tabset-code nw-tabset ::ng-deep pre {\n  margin: 0;\n  max-height: 500px;\n  overflow: auto;\n}\n.examples-legend {\n  font-size: 80%;\n}\nnw-api-docs,\nnw-api-docs-class,\nnw-api-docs-config {\n  display: block;\n}\nnw-api-docs:not(:first-child),\nnw-api-docs-class:not(:first-child),\nnw-api-docs-config:not(:first-child) {\n  margin-top: 3rem;\n  border-top: 1px solid #999;\n  padding-top: 1rem;\n}\n.overview .alert {\n  border-left-width: 5px;\n  border-radius: 0;\n  padding-left: 0.5rem;\n  padding-right: 0.5rem;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImRlbW8vc3JjL2FwcC9zaGFyZWQvY29tcG9uZW50cy93aWRnZXQtcGFydGlhbC9GOlxcU291cmNlXFxBbmd1bGFyXFxuZXcgcHJvamVjdFxcbnctd2lkZ2V0L2RlbW9cXHNyY1xcYXBwXFxzaGFyZWRcXGNvbXBvbmVudHNcXHdpZGdldC1wYXJ0aWFsXFx3aWRnZXQtcGFydGlhbC5jb21wb25lbnQuc2NzcyIsImRlbW8vc3JjL2FwcC9zaGFyZWQvY29tcG9uZW50cy93aWRnZXQtcGFydGlhbC93aWRnZXQtcGFydGlhbC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLFVBQUE7RUFDQSw4QkFBQTtFQUNBLG9CQUFBO0VBQ0Esa0JBQUE7RUFDQSxtQkFBQTtFQUNBLG9CQUFBO0FDQ0o7QURDSTtFQUNFLFVBQUE7RUFDQSxXQUFBO0FDQ047QURHRTtFQUNFLHFCQUFBO0VBQ0Esa0JBQUE7QUNBSjtBRENJO0VBQ0UsYUFBQTtFQUNBLG1CQUFBO0FDQ047QURDTTtFQUNFLFlBQUE7QUNDUjtBREVNO0VBQ0UsYUFBQTtFQUNBLG1CQUFBO0VBQ0Esa0JBQUE7QUNBUjtBREdNO0VBQ0Usc0JBQUE7RUFDQSxhQUFBO0FDRFI7QURJTTtFQUNFLGNBQUE7RUFDQSxvQkFBQTtBQ0ZSO0FETVE7RUFDRSxVQUFBO0FDSlY7QURXUTtFQUNFLHlCQUFBO0VBQ0EsY0FBQTtBQ1RWO0FEV1U7RUFDRSx5QkFBQTtFQUNBLGdDQUFBO0FDVFo7QURZVTtFQUNFLFdBQUE7QUNWWjtBRFdZO0VBQ0UsV0FBQTtBQ1RkO0FEY1E7RUFDRSwrQkFBQTtFQUNBLHFCQUFBO0VBQ0EsZ0JBQUE7QUNaVjtBRGNVO0VBQ0UsV0FBQTtFQUNBLHlCQUFBO0VBQ0EseUJBQUE7RUFDQSwyQkFBQTtFQUNBLDBCQUFBO0VBQ0EsNkJBQUE7RUFDQSxrQkFBQTtBQ1paO0FEZVU7RUFDRSxPQUFBO0VBQ0EsZ0JBQUE7QUNiWjtBRGlCUTtFQUNFLFNBQUE7RUFDQSxpQkFBQTtFQUNBLGNBQUE7QUNmVjtBRHFCRTtFQUNFLGNBQUE7QUNsQko7QURxQkU7OztFQUdFLGNBQUE7QUNsQko7QURvQkk7OztFQUNFLGdCQUFBO0VBQ0EsMEJBQUE7RUFDQSxpQkFBQTtBQ2hCTjtBRHFCSTtFQUNFLHNCQUFBO0VBQ0EsZ0JBQUE7RUFDQSxvQkFBQTtFQUNBLHFCQUFBO0FDbEJOIiwiZmlsZSI6ImRlbW8vc3JjL2FwcC9zaGFyZWQvY29tcG9uZW50cy93aWRnZXQtcGFydGlhbC93aWRnZXQtcGFydGlhbC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbImEudGl0bGUtZnJhZ21lbnQge1xyXG4gICAgb3BhY2l0eTogMDtcclxuICAgIHRyYW5zaXRpb246IG9wYWNpdHkgMTI1bXMgZWFzZTtcclxuICAgIGxpbmUtaGVpZ2h0OiBpbmhlcml0O1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgbWFyZ2luLWxlZnQ6IC0xLjJlbTtcclxuICAgIHBhZGRpbmctcmlnaHQ6IDAuNWVtO1xyXG4gIFxyXG4gICAgJiA+IGltZyB7XHJcbiAgICAgIHdpZHRoOiAxZW07XHJcbiAgICAgIGhlaWdodDogMWVtO1xyXG4gICAgfVxyXG4gIH1cclxuICBcclxuICBkaXYud2lkZ2V0LXBhcnRpYWwtd3JhcHBlciB7XHJcbiAgICBtYXJnaW4tYm90dG9tOiAxLjVyZW07XHJcbiAgICBtYXJnaW4tdG9wOiAxLjVyZW07XHJcbiAgICBoMiB7XHJcbiAgICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICAgIG1hcmdpbi1ib3R0b206IDFyZW07XHJcbiAgXHJcbiAgICAgIHNwYW4ge1xyXG4gICAgICAgIGZsZXgtZ3JvdzogMTtcclxuICAgICAgfVxyXG4gIFxyXG4gICAgICAuc3RhY2tibGl0eiwgLnRvZ2dsZS1jb2RlIHtcclxuICAgICAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcbiAgICAgICAgYWxpZ24tc2VsZjogY2VudGVyO1xyXG4gICAgICB9XHJcbiAgXHJcbiAgICAgIC50b2dnbGUtY29kZSBzdmcge1xyXG4gICAgICAgIHZlcnRpY2FsLWFsaWduOiBtaWRkbGU7XHJcbiAgICAgICAgZmlsbDogIzI4YTc0NTtcclxuICAgICAgfVxyXG4gIFxyXG4gICAgICAuc3RhY2tibGl0eiAuc3RhY2tibGl0ei1pY29uIHtcclxuICAgICAgICBoZWlnaHQ6IDEuMnJlbTtcclxuICAgICAgICBtYXJnaW4tbGVmdDogLTAuNXJlbTtcclxuICAgICAgfVxyXG4gIFxyXG4gICAgICAmOmhvdmVyIHtcclxuICAgICAgICAmID4gLnRpdGxlLWZyYWdtZW50IHtcclxuICAgICAgICAgIG9wYWNpdHk6IDE7XHJcbiAgICAgICAgfVxyXG4gICAgICB9XHJcbiAgICB9XHJcbiAgXHJcbiAgICAudGFic2V0LWNvZGUge1xyXG4gICAgICBudy10YWJzZXQge1xyXG4gICAgICAgIDo6bmctZGVlcCAubmF2IHtcclxuICAgICAgICAgIHBhZGRpbmc6IDAuNXJlbSAxLjI1cmVtIDA7XHJcbiAgICAgICAgICBmb250LXNpemU6IDgwJTtcclxuICBcclxuICAgICAgICAgIC5uYXYtbGluay5hY3RpdmUge1xyXG4gICAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjVmMmYwO1xyXG4gICAgICAgICAgICBib3JkZXItYm90dG9tOiAxcHggc29saWQgI2Y1ZjJmMDtcclxuICAgICAgICAgIH1cclxuICBcclxuICAgICAgICAgIC5uYXYtbGluazpub3QoLmFjdGl2ZSkge1xyXG4gICAgICAgICAgICBjb2xvcjogIzk5OTtcclxuICAgICAgICAgICAgJjpob3ZlciB7XHJcbiAgICAgICAgICAgICAgY29sb3I6ICM2NjY7XHJcbiAgICAgICAgICAgIH1cclxuICAgICAgICAgIH1cclxuICAgICAgICB9XHJcbiAgXHJcbiAgICAgICAgOjpuZy1kZWVwIC5uYXYubmF2LXBpbGxzIHtcclxuICAgICAgICAgIGJvcmRlci1yaWdodDogMXB4IHNvbGlkICAjZGVlMmU2O1xyXG4gICAgICAgICAgcGFkZGluZy1sZWZ0OiAuNzVyZW07XHJcbiAgICAgICAgICBwYWRkaW5nLXJpZ2h0OiAwO1xyXG4gIFxyXG4gICAgICAgICAgLm5hdi1saW5rLmFjdGl2ZSB7XHJcbiAgICAgICAgICAgIGNvbG9yOiAjNjY2O1xyXG4gICAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjVmNWY1O1xyXG4gICAgICAgICAgICBib3JkZXI6IDFweCBzb2xpZCAgI2RlZTJlNjtcclxuICAgICAgICAgICAgYm9yZGVyLXJpZ2h0LWNvbG9yOiAjZjVmNWY1O1xyXG4gICAgICAgICAgICBib3JkZXItdG9wLXJpZ2h0LXJhZGl1czogMDtcclxuICAgICAgICAgICAgYm9yZGVyLWJvdHRvbS1yaWdodC1yYWRpdXM6IDA7XHJcbiAgICAgICAgICAgIG1hcmdpbi1yaWdodDogLTFweDtcclxuICAgICAgICAgIH1cclxuICBcclxuICAgICAgICAgICYgKyAudGFiLWNvbnRlbnQge1xyXG4gICAgICAgICAgICBmbGV4OiAxO1xyXG4gICAgICAgICAgICBvdmVyZmxvdzogaGlkZGVuO1xyXG4gICAgICAgICAgfVxyXG4gICAgICAgIH1cclxuICBcclxuICAgICAgICA6Om5nLWRlZXAgcHJlIHtcclxuICAgICAgICAgIG1hcmdpbjogMDtcclxuICAgICAgICAgIG1heC1oZWlnaHQ6IDUwMHB4O1xyXG4gICAgICAgICAgb3ZlcmZsb3c6IGF1dG87XHJcbiAgICAgICAgfVxyXG4gICAgICB9XHJcbiAgICB9XHJcbiAgfVxyXG5cclxuICAuZXhhbXBsZXMtbGVnZW5kIHtcclxuICAgIGZvbnQtc2l6ZTogODAlO1xyXG4gIH1cclxuICBcclxuICBudy1hcGktZG9jcyxcclxuICBudy1hcGktZG9jcy1jbGFzcyxcclxuICBudy1hcGktZG9jcy1jb25maWcge1xyXG4gICAgZGlzcGxheTogYmxvY2s7XHJcbiAgXHJcbiAgICAmOm5vdCg6Zmlyc3QtY2hpbGQpIHtcclxuICAgICAgbWFyZ2luLXRvcDogM3JlbTtcclxuICAgICAgYm9yZGVyLXRvcDogMXB4IHNvbGlkICM5OTk7XHJcbiAgICAgIHBhZGRpbmctdG9wOiAxcmVtO1xyXG4gICAgfVxyXG4gIH1cclxuICBcclxuICAub3ZlcnZpZXcge1xyXG4gICAgLmFsZXJ0IHtcclxuICAgICAgYm9yZGVyLWxlZnQtd2lkdGg6IDVweDtcclxuICAgICAgYm9yZGVyLXJhZGl1czogMDtcclxuICAgICAgcGFkZGluZy1sZWZ0OiAwLjVyZW07XHJcbiAgICAgIHBhZGRpbmctcmlnaHQ6IDAuNXJlbTtcclxuICAgIH1cclxuICB9IiwiYS50aXRsZS1mcmFnbWVudCB7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IG9wYWNpdHkgMTI1bXMgZWFzZTtcbiAgbGluZS1oZWlnaHQ6IGluaGVyaXQ7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgbWFyZ2luLWxlZnQ6IC0xLjJlbTtcbiAgcGFkZGluZy1yaWdodDogMC41ZW07XG59XG5hLnRpdGxlLWZyYWdtZW50ID4gaW1nIHtcbiAgd2lkdGg6IDFlbTtcbiAgaGVpZ2h0OiAxZW07XG59XG5cbmRpdi53aWRnZXQtcGFydGlhbC13cmFwcGVyIHtcbiAgbWFyZ2luLWJvdHRvbTogMS41cmVtO1xuICBtYXJnaW4tdG9wOiAxLjVyZW07XG59XG5kaXYud2lkZ2V0LXBhcnRpYWwtd3JhcHBlciBoMiB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIG1hcmdpbi1ib3R0b206IDFyZW07XG59XG5kaXYud2lkZ2V0LXBhcnRpYWwtd3JhcHBlciBoMiBzcGFuIHtcbiAgZmxleC1ncm93OiAxO1xufVxuZGl2LndpZGdldC1wYXJ0aWFsLXdyYXBwZXIgaDIgLnN0YWNrYmxpdHosIGRpdi53aWRnZXQtcGFydGlhbC13cmFwcGVyIGgyIC50b2dnbGUtY29kZSB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGFsaWduLXNlbGY6IGNlbnRlcjtcbn1cbmRpdi53aWRnZXQtcGFydGlhbC13cmFwcGVyIGgyIC50b2dnbGUtY29kZSBzdmcge1xuICB2ZXJ0aWNhbC1hbGlnbjogbWlkZGxlO1xuICBmaWxsOiAjMjhhNzQ1O1xufVxuZGl2LndpZGdldC1wYXJ0aWFsLXdyYXBwZXIgaDIgLnN0YWNrYmxpdHogLnN0YWNrYmxpdHotaWNvbiB7XG4gIGhlaWdodDogMS4ycmVtO1xuICBtYXJnaW4tbGVmdDogLTAuNXJlbTtcbn1cbmRpdi53aWRnZXQtcGFydGlhbC13cmFwcGVyIGgyOmhvdmVyID4gLnRpdGxlLWZyYWdtZW50IHtcbiAgb3BhY2l0eTogMTtcbn1cbmRpdi53aWRnZXQtcGFydGlhbC13cmFwcGVyIC50YWJzZXQtY29kZSBudy10YWJzZXQgOjpuZy1kZWVwIC5uYXYge1xuICBwYWRkaW5nOiAwLjVyZW0gMS4yNXJlbSAwO1xuICBmb250LXNpemU6IDgwJTtcbn1cbmRpdi53aWRnZXQtcGFydGlhbC13cmFwcGVyIC50YWJzZXQtY29kZSBudy10YWJzZXQgOjpuZy1kZWVwIC5uYXYgLm5hdi1saW5rLmFjdGl2ZSB7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmNWYyZjA7XG4gIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCAjZjVmMmYwO1xufVxuZGl2LndpZGdldC1wYXJ0aWFsLXdyYXBwZXIgLnRhYnNldC1jb2RlIG53LXRhYnNldCA6Om5nLWRlZXAgLm5hdiAubmF2LWxpbms6bm90KC5hY3RpdmUpIHtcbiAgY29sb3I6ICM5OTk7XG59XG5kaXYud2lkZ2V0LXBhcnRpYWwtd3JhcHBlciAudGFic2V0LWNvZGUgbnctdGFic2V0IDo6bmctZGVlcCAubmF2IC5uYXYtbGluazpub3QoLmFjdGl2ZSk6aG92ZXIge1xuICBjb2xvcjogIzY2Njtcbn1cbmRpdi53aWRnZXQtcGFydGlhbC13cmFwcGVyIC50YWJzZXQtY29kZSBudy10YWJzZXQgOjpuZy1kZWVwIC5uYXYubmF2LXBpbGxzIHtcbiAgYm9yZGVyLXJpZ2h0OiAxcHggc29saWQgI2RlZTJlNjtcbiAgcGFkZGluZy1sZWZ0OiAwLjc1cmVtO1xuICBwYWRkaW5nLXJpZ2h0OiAwO1xufVxuZGl2LndpZGdldC1wYXJ0aWFsLXdyYXBwZXIgLnRhYnNldC1jb2RlIG53LXRhYnNldCA6Om5nLWRlZXAgLm5hdi5uYXYtcGlsbHMgLm5hdi1saW5rLmFjdGl2ZSB7XG4gIGNvbG9yOiAjNjY2O1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjVmNWY1O1xuICBib3JkZXI6IDFweCBzb2xpZCAjZGVlMmU2O1xuICBib3JkZXItcmlnaHQtY29sb3I6ICNmNWY1ZjU7XG4gIGJvcmRlci10b3AtcmlnaHQtcmFkaXVzOiAwO1xuICBib3JkZXItYm90dG9tLXJpZ2h0LXJhZGl1czogMDtcbiAgbWFyZ2luLXJpZ2h0OiAtMXB4O1xufVxuZGl2LndpZGdldC1wYXJ0aWFsLXdyYXBwZXIgLnRhYnNldC1jb2RlIG53LXRhYnNldCA6Om5nLWRlZXAgLm5hdi5uYXYtcGlsbHMgKyAudGFiLWNvbnRlbnQge1xuICBmbGV4OiAxO1xuICBvdmVyZmxvdzogaGlkZGVuO1xufVxuZGl2LndpZGdldC1wYXJ0aWFsLXdyYXBwZXIgLnRhYnNldC1jb2RlIG53LXRhYnNldCA6Om5nLWRlZXAgcHJlIHtcbiAgbWFyZ2luOiAwO1xuICBtYXgtaGVpZ2h0OiA1MDBweDtcbiAgb3ZlcmZsb3c6IGF1dG87XG59XG5cbi5leGFtcGxlcy1sZWdlbmQge1xuICBmb250LXNpemU6IDgwJTtcbn1cblxubnctYXBpLWRvY3MsXG5udy1hcGktZG9jcy1jbGFzcyxcbm53LWFwaS1kb2NzLWNvbmZpZyB7XG4gIGRpc3BsYXk6IGJsb2NrO1xufVxubnctYXBpLWRvY3M6bm90KDpmaXJzdC1jaGlsZCksXG5udy1hcGktZG9jcy1jbGFzczpub3QoOmZpcnN0LWNoaWxkKSxcbm53LWFwaS1kb2NzLWNvbmZpZzpub3QoOmZpcnN0LWNoaWxkKSB7XG4gIG1hcmdpbi10b3A6IDNyZW07XG4gIGJvcmRlci10b3A6IDFweCBzb2xpZCAjOTk5O1xuICBwYWRkaW5nLXRvcDogMXJlbTtcbn1cblxuLm92ZXJ2aWV3IC5hbGVydCB7XG4gIGJvcmRlci1sZWZ0LXdpZHRoOiA1cHg7XG4gIGJvcmRlci1yYWRpdXM6IDA7XG4gIHBhZGRpbmctbGVmdDogMC41cmVtO1xuICBwYWRkaW5nLXJpZ2h0OiAwLjVyZW07XG59Il19 */"
+
+/***/ }),
+
+/***/ "./src/app/shared/components/widget-partial/widget-partial.component.ts":
+/*!******************************************************************************!*\
+  !*** ./src/app/shared/components/widget-partial/widget-partial.component.ts ***!
+  \******************************************************************************/
+/*! exports provided: WidgetPartialComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CodeHighlightService", function() { return CodeHighlightService; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WidgetPartialComponent", function() { return WidgetPartialComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var prismjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prismjs */ "../node_modules/prismjs/prism.js");
-/* harmony import */ var prismjs__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prismjs__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var prismjs_components_prism_typescript__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prismjs/components/prism-typescript */ "../node_modules/prismjs/components/prism-typescript.js");
-/* harmony import */ var prismjs_components_prism_typescript__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prismjs_components_prism_typescript__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var prismjs_components_prism_bash__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prismjs/components/prism-bash */ "../node_modules/prismjs/components/prism-bash.js");
-/* harmony import */ var prismjs_components_prism_bash__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prismjs_components_prism_bash__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _code_code_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../code/code.component */ "./src/app/shared/components/code/code.component.ts");
+/* harmony import */ var src_app_core_services_analytic_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/core/services/analytic.service */ "./src/app/core/services/analytic.service.ts");
 
 
 
 
-
-// Prism tries to highlight the whole document on DOMContentLoad.
-// Unfortunately with webpack the only way of disabling it
-// is by simply forcing it to highlight no elements -> []
-prismjs__WEBPACK_IMPORTED_MODULE_2__["hooks"].add('before-highlightall', (env) => {
-    env['elements'] = [];
-});
-let CodeHighlightService = class CodeHighlightService {
-    highlight(code, lang) {
-        return prismjs__WEBPACK_IMPORTED_MODULE_2__["highlight"](code.trim(), prismjs__WEBPACK_IMPORTED_MODULE_2__["languages"][lang], lang);
+let WidgetPartialComponent = class WidgetPartialComponent {
+    constructor(_analytics) {
+        this._analytics = _analytics;
+        this.showCode = false;
+    }
+    get markupSnippet() { return Object(_code_code_component__WEBPACK_IMPORTED_MODULE_2__["Snippet"])({ lang: 'html', code: this.markup }); }
+    get codeSnippet() { return Object(_code_code_component__WEBPACK_IMPORTED_MODULE_2__["Snippet"])({ lang: 'typescript', code: this.code }); }
+    getFileSnippet({ name, source }) {
+        return Object(_code_code_component__WEBPACK_IMPORTED_MODULE_2__["Snippet"])({ code: source, lang: name.split('.').pop() });
+    }
+    get hasManyFiles() {
+        return this.files && this.files.length > 5;
+    }
+    tabType(name) {
+        const ext = name.split('.').pop();
+        return ({
+            html: 'HTML',
+            scss: 'Style (SCSS)',
+            css: 'Style (CSS)',
+            ts: 'Typescript'
+        }[ext] || 'Code');
+    }
+    trackStackBlitzClick() {
+        this._analytics.trackEvent('StackBlitz View', this.component + ' ' + this.id);
+    }
+    trackShowCodeClick() {
+        if (this.showCode) {
+            this._analytics.trackEvent('Show Code View', this.component + ' ' + this.id);
+        }
     }
 };
-CodeHighlightService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
-        providedIn: 'root'
+WidgetPartialComponent.ctorParameters = () => [
+    { type: src_app_core_services_analytic_service__WEBPACK_IMPORTED_MODULE_3__["AnalyticService"] }
+];
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], WidgetPartialComponent.prototype, "partialTitle", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], WidgetPartialComponent.prototype, "component", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], WidgetPartialComponent.prototype, "id", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], WidgetPartialComponent.prototype, "code", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], WidgetPartialComponent.prototype, "markup", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], WidgetPartialComponent.prototype, "files", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], WidgetPartialComponent.prototype, "showCode", void 0);
+WidgetPartialComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-widget-partial',
+        template: __webpack_require__(/*! raw-loader!./widget-partial.component.html */ "../node_modules/raw-loader/index.js!./src/app/shared/components/widget-partial/widget-partial.component.html"),
+        changeDetection: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectionStrategy"].OnPush,
+        styles: [__webpack_require__(/*! ./widget-partial.component.scss */ "./src/app/shared/components/widget-partial/widget-partial.component.scss")]
     })
-], CodeHighlightService);
+], WidgetPartialComponent);
 
 
 
 /***/ }),
 
-/***/ "./src/app/shared/services/timeline.service.ts":
-/*!*****************************************************!*\
-  !*** ./src/app/shared/services/timeline.service.ts ***!
-  \*****************************************************/
-/*! exports provided: TimelineService, TimelineResponse, TimelineEvent */
+/***/ "./src/app/shared/directives/fragment.directive.ts":
+/*!*********************************************************!*\
+  !*** ./src/app/shared/directives/fragment.directive.ts ***!
+  \*********************************************************/
+/*! exports provided: FragmentDirective */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TimelineService", function() { return TimelineService; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TimelineResponse", function() { return TimelineResponse; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TimelineEvent", function() { return TimelineEvent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FragmentDirective", function() { return FragmentDirective; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "../node_modules/@angular/common/fesm2015/http.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm2015/core.js");
 
 
-
-
-let TimelineService = class TimelineService {
-    constructor(httpClient) {
-        this.httpClient = httpClient;
-    }
-    getTimelineData() {
-        return this.httpClient.get(`${_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].FAKE_API}/assets/data/timeline.json`);
-    }
+let FragmentDirective = class FragmentDirective {
+    constructor() { }
 };
-TimelineService.ctorParameters = () => [
-    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] }
-];
-TimelineService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"])({
-        providedIn: 'root'
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], FragmentDirective.prototype, "fragment", void 0);
+FragmentDirective = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"])({
+        selector: '[appFragment]',
+        host: {
+            '[class.title-fragment]': 'true',
+            '[attr.id]': 'fragment'
+        }
     })
-], TimelineService);
+], FragmentDirective);
 
-class TimelineResponse {
-    constructor(id, isActive, time, source) {
-        this.id = id;
-        this.isActive = isActive;
-        this.time = time;
-        this.source = source;
-    }
-}
-TimelineResponse.ctorParameters = () => [
-    { type: String },
-    { type: Boolean },
-    { type: Date },
-    { type: undefined }
-];
-class TimelineEvent {
-    constructor(name, gender, company, email, phone, address) {
-        this.name = name;
-        this.gender = gender;
-        this.company = company;
-        this.email = email;
-        this.phone = phone;
-        this.address = address;
-    }
-}
-TimelineEvent.ctorParameters = () => [
-    { type: String },
-    { type: String },
-    { type: String },
-    { type: String },
-    { type: String },
-    { type: String }
-];
 
 
 /***/ }),
@@ -907,10 +1987,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "../node_modules/@angular/common/fesm2015/common.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _nw_widget_nw_widget__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @nw-widget/nw-widget */ "../src/public-api.ts");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "../node_modules/@angular/forms/fesm2015/forms.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common/http */ "../node_modules/@angular/common/fesm2015/http.js");
-/* harmony import */ var _components_code_code_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/code/code.component */ "./src/app/shared/components/code/code.component.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "../node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var _nw_widget_nw_widget__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @nw-widget/nw-widget */ "../src/public-api.ts");
+/* harmony import */ var _components_code_code_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/code/code.component */ "./src/app/shared/components/code/code.component.ts");
+/* harmony import */ var _components_widget_partial_widget_partial_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/widget-partial/widget-partial.component */ "./src/app/shared/components/widget-partial/widget-partial.component.ts");
+/* harmony import */ var _directives_fragment_directive__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./directives/fragment.directive */ "./src/app/shared/directives/fragment.directive.ts");
+
 
 
 
@@ -923,22 +2005,24 @@ let SharedModule = class SharedModule {
 SharedModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
         declarations: [
-            _components_code_code_component__WEBPACK_IMPORTED_MODULE_6__["CodeComponent"]
+            _components_code_code_component__WEBPACK_IMPORTED_MODULE_5__["CodeComponent"],
+            _components_widget_partial_widget_partial_component__WEBPACK_IMPORTED_MODULE_6__["WidgetPartialComponent"],
+            _directives_fragment_directive__WEBPACK_IMPORTED_MODULE_7__["FragmentDirective"]
         ],
         imports: [
             _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
-            _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"],
-            _angular_forms__WEBPACK_IMPORTED_MODULE_4__["ReactiveFormsModule"],
-            _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClientModule"],
-            _nw_widget_nw_widget__WEBPACK_IMPORTED_MODULE_3__["NwWidgetModule"]
+            _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"],
+            _nw_widget_nw_widget__WEBPACK_IMPORTED_MODULE_4__["NwWidgetModule"]
         ],
         exports: [
             _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
-            _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"],
-            _angular_forms__WEBPACK_IMPORTED_MODULE_4__["ReactiveFormsModule"],
-            _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClientModule"],
-            _nw_widget_nw_widget__WEBPACK_IMPORTED_MODULE_3__["NwWidgetModule"],
-            _components_code_code_component__WEBPACK_IMPORTED_MODULE_6__["CodeComponent"]
+            _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"],
+            _nw_widget_nw_widget__WEBPACK_IMPORTED_MODULE_4__["NwWidgetModule"],
+            _components_code_code_component__WEBPACK_IMPORTED_MODULE_5__["CodeComponent"],
+            _components_widget_partial_widget_partial_component__WEBPACK_IMPORTED_MODULE_6__["WidgetPartialComponent"],
+            _directives_fragment_directive__WEBPACK_IMPORTED_MODULE_7__["FragmentDirective"]
         ],
         schemas: [_angular_core__WEBPACK_IMPORTED_MODULE_2__["NO_ERRORS_SCHEMA"]]
     })
@@ -1073,6 +2157,77 @@ HomeComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
+/***/ "./src/app/views/previews/previews-routing.module.ts":
+/*!***********************************************************!*\
+  !*** ./src/app/views/previews/previews-routing.module.ts ***!
+  \***********************************************************/
+/*! exports provided: PREVIEWS_VIEWS_ROUTES, PreviewsRoutingModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PREVIEWS_VIEWS_ROUTES", function() { return PREVIEWS_VIEWS_ROUTES; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PreviewsRoutingModule", function() { return PreviewsRoutingModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "../node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _views_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../views.component */ "./src/app/views/views.component.ts");
+/* harmony import */ var _timeline_timeline_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./timeline/timeline.component */ "./src/app/views/previews/timeline/timeline.component.ts");
+
+
+
+
+
+const PREVIEWS_VIEWS_ROUTES = [
+    {
+        path: 'previews',
+        pathMatch: 'full',
+        redirectTo: 'previews/timeline',
+        data: {
+            name: 'previews',
+            title: 'Thành phần'
+        }
+    },
+    {
+        path: 'previews/timeline',
+        data: {
+            name: 'Timeline',
+            title: 'Dòng thời gian'
+        },
+        children: [
+            {
+                path: '', pathMatch: 'full', redirectTo: 'examples'
+            },
+            {
+                path: '',
+                component: _views_component__WEBPACK_IMPORTED_MODULE_3__["ViewsComponent"],
+                children: [
+                    {
+                        path: 'examples',
+                        component: _timeline_timeline_component__WEBPACK_IMPORTED_MODULE_4__["TimelineComponent"]
+                    },
+                    {
+                        path: 'api',
+                        component: _timeline_timeline_component__WEBPACK_IMPORTED_MODULE_4__["TimelineComponent"]
+                    }
+                ]
+            }
+        ]
+    }
+];
+let PreviewsRoutingModule = class PreviewsRoutingModule {
+};
+PreviewsRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+        imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forChild(PREVIEWS_VIEWS_ROUTES)],
+        exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]]
+    })
+], PreviewsRoutingModule);
+
+
+
+/***/ }),
+
 /***/ "./src/app/views/previews/previews.module.ts":
 /*!***************************************************!*\
   !*** ./src/app/views/previews/previews.module.ts ***!
@@ -1088,6 +2243,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "../node_modules/@angular/common/fesm2015/common.js");
 /* harmony import */ var _timeline_timeline_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./timeline/timeline.component */ "./src/app/views/previews/timeline/timeline.component.ts");
 /* harmony import */ var src_app_shared_shared_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/shared/shared.module */ "./src/app/shared/shared.module.ts");
+/* harmony import */ var _previews_routing_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./previews-routing.module */ "./src/app/views/previews/previews-routing.module.ts");
+
 
 
 
@@ -1102,7 +2259,8 @@ PreviewsModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         ],
         imports: [
             _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
-            src_app_shared_shared_module__WEBPACK_IMPORTED_MODULE_4__["SharedModule"]
+            src_app_shared_shared_module__WEBPACK_IMPORTED_MODULE_4__["SharedModule"],
+            _previews_routing_module__WEBPACK_IMPORTED_MODULE_5__["PreviewsRoutingModule"]
         ]
     })
 ], PreviewsModule);
@@ -1134,22 +2292,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TimelineComponent", function() { return TimelineComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var src_app_shared_services_timeline_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/shared/services/timeline.service */ "./src/app/shared/services/timeline.service.ts");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "../node_modules/rxjs/_esm2015/index.js");
 
 
 
 let TimelineComponent = class TimelineComponent {
-    constructor(service) {
-        this.service = service;
+    constructor() {
         this.showAccordion = 1;
     }
     ngOnInit() {
-        this.timelineSource = this.service.getTimelineData();
+        this.timelineSource = Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])([]);
     }
 };
-TimelineComponent.ctorParameters = () => [
-    { type: src_app_shared_services_timeline_service__WEBPACK_IMPORTED_MODULE_2__["TimelineService"] }
-];
 TimelineComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-timeline',
@@ -1157,6 +2311,316 @@ TimelineComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         styles: [__webpack_require__(/*! ./timeline.component.scss */ "./src/app/views/previews/timeline/timeline.component.scss")]
     })
 ], TimelineComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/views/tutorials/fake-api/fake-api.module.ts":
+/*!*************************************************************!*\
+  !*** ./src/app/views/tutorials/fake-api/fake-api.module.ts ***!
+  \*************************************************************/
+/*! exports provided: FakeApiModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FakeApiModule", function() { return FakeApiModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "../node_modules/@angular/common/fesm2015/common.js");
+/* harmony import */ var _filter_filter_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./filter/filter.component */ "./src/app/views/tutorials/fake-api/filter/filter.component.ts");
+/* harmony import */ var src_app_core_services_post_partial_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/core/services/post-partial.service */ "./src/app/core/services/post-partial.service.ts");
+/* harmony import */ var src_app_shared_shared_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/shared/shared.module */ "./src/app/shared/shared.module.ts");
+/* harmony import */ var _filter_filter_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./filter/filter.module */ "./src/app/views/tutorials/fake-api/filter/filter.module.ts");
+
+
+
+
+
+
+
+const PARTIALS = {
+    filter: {
+        title: 'Filter',
+        code: __webpack_require__(/*! raw-loader!./filter/filter.component */ "../node_modules/raw-loader/index.js!./src/app/views/tutorials/fake-api/filter/filter.component.ts"),
+        markup: __webpack_require__(/*! raw-loader!./filter/filter.component.html */ "../node_modules/raw-loader/index.js!./src/app/views/tutorials/fake-api/filter/filter.component.html"),
+        type: _filter_filter_component__WEBPACK_IMPORTED_MODULE_3__["FilterComponent"]
+    }
+};
+console.log('IIIIIIIIIIIIIIIIIII', __webpack_require__(/*! raw-loader!./filter/filter.component */ "../node_modules/raw-loader/index.js!./src/app/views/tutorials/fake-api/filter/filter.component.ts"));
+let FakeApiModule = class FakeApiModule {
+    constructor(partialService) {
+        partialService.register('fake-api', PARTIALS);
+    }
+};
+FakeApiModule.ctorParameters = () => [
+    { type: src_app_core_services_post_partial_service__WEBPACK_IMPORTED_MODULE_4__["PostPartialService"] }
+];
+FakeApiModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+        declarations: [],
+        imports: [
+            _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
+            src_app_shared_shared_module__WEBPACK_IMPORTED_MODULE_5__["SharedModule"],
+            _filter_filter_module__WEBPACK_IMPORTED_MODULE_6__["FilterModule"]
+        ]
+    })
+], FakeApiModule);
+
+
+
+/***/ }),
+
+/***/ "./src/app/views/tutorials/fake-api/filter/filter.component.scss":
+/*!***********************************************************************!*\
+  !*** ./src/app/views/tutorials/fake-api/filter/filter.component.scss ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJkZW1vL3NyYy9hcHAvdmlld3MvdHV0b3JpYWxzL2Zha2UtYXBpL2ZpbHRlci9maWx0ZXIuY29tcG9uZW50LnNjc3MifQ== */"
+
+/***/ }),
+
+/***/ "./src/app/views/tutorials/fake-api/filter/filter.component.ts":
+/*!*********************************************************************!*\
+  !*** ./src/app/views/tutorials/fake-api/filter/filter.component.ts ***!
+  \*********************************************************************/
+/*! exports provided: FilterComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FilterComponent", function() { return FilterComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm2015/core.js");
+
+
+let FilterComponent = class FilterComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+};
+FilterComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-filter',
+        template: __webpack_require__(/*! raw-loader!./filter.component.html */ "../node_modules/raw-loader/index.js!./src/app/views/tutorials/fake-api/filter/filter.component.html"),
+        styles: [__webpack_require__(/*! ./filter.component.scss */ "./src/app/views/tutorials/fake-api/filter/filter.component.scss")]
+    })
+], FilterComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/views/tutorials/fake-api/filter/filter.module.ts":
+/*!******************************************************************!*\
+  !*** ./src/app/views/tutorials/fake-api/filter/filter.module.ts ***!
+  \******************************************************************/
+/*! exports provided: FilterModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FilterModule", function() { return FilterModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "../node_modules/@angular/common/fesm2015/common.js");
+/* harmony import */ var _filter_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./filter.component */ "./src/app/views/tutorials/fake-api/filter/filter.component.ts");
+
+
+
+
+let FilterModule = class FilterModule {
+};
+FilterModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+        declarations: [_filter_component__WEBPACK_IMPORTED_MODULE_3__["FilterComponent"]],
+        imports: [
+            _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"]
+        ],
+        exports: [_filter_component__WEBPACK_IMPORTED_MODULE_3__["FilterComponent"]],
+        bootstrap: [_filter_component__WEBPACK_IMPORTED_MODULE_3__["FilterComponent"]]
+    })
+], FilterModule);
+
+
+
+/***/ }),
+
+/***/ "./src/app/views/tutorials/tutorials-routing.module.ts":
+/*!*************************************************************!*\
+  !*** ./src/app/views/tutorials/tutorials-routing.module.ts ***!
+  \*************************************************************/
+/*! exports provided: TUTORIALS_VIEWS_ROUTES, TutorialsRoutingModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TUTORIALS_VIEWS_ROUTES", function() { return TUTORIALS_VIEWS_ROUTES; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TutorialsRoutingModule", function() { return TutorialsRoutingModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "../node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _views_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../views.component */ "./src/app/views/views.component.ts");
+/* harmony import */ var _tutorials_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./tutorials.component */ "./src/app/views/tutorials/tutorials.component.ts");
+
+
+
+
+
+const TUTORIALS_VIEWS_ROUTES = [
+    {
+        path: 'tutorials',
+        pathMatch: 'full',
+        redirectTo: 'tutorials/fake-api',
+        data: {
+            name: 'tutorials',
+            title: 'Cẩm nang'
+        }
+    },
+    {
+        path: 'tutorials/fake-api',
+        data: {
+            name: 'Fake API',
+            title: 'Giả tạo API'
+        },
+        children: [
+            {
+                path: '', pathMatch: 'full', redirectTo: 'examples'
+            },
+            {
+                path: '',
+                component: _views_component__WEBPACK_IMPORTED_MODULE_3__["ViewsComponent"],
+                children: [
+                    {
+                        path: 'examples',
+                        component: _tutorials_component__WEBPACK_IMPORTED_MODULE_4__["TutorialsComponent"]
+                    },
+                    {
+                        path: 'api',
+                        component: _tutorials_component__WEBPACK_IMPORTED_MODULE_4__["TutorialsComponent"]
+                    }
+                ]
+            }
+        ]
+    }
+];
+let TutorialsRoutingModule = class TutorialsRoutingModule {
+};
+TutorialsRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+        imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forChild(TUTORIALS_VIEWS_ROUTES)],
+        exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]]
+    })
+], TutorialsRoutingModule);
+
+
+
+/***/ }),
+
+/***/ "./src/app/views/tutorials/tutorials.component.ts":
+/*!********************************************************!*\
+  !*** ./src/app/views/tutorials/tutorials.component.ts ***!
+  \********************************************************/
+/*! exports provided: TutorialsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TutorialsComponent", function() { return TutorialsComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "../node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var src_app_core_services_post_partial_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/core/services/post-partial.service */ "./src/app/core/services/post-partial.service.ts");
+
+
+
+
+let TutorialsComponent = class TutorialsComponent {
+    constructor(route, partialService) {
+        this.partials = [];
+        // We go up to parent route defining /{parent route}/:widget to read the widget name
+        // This route is declared in root views-routing.module.ts.
+        const _component = (this.component =
+            route.parent.parent.snapshot.url[1].path);
+        if (_component) {
+            const _partials = partialService.getPartials(_component);
+            console.log('_partials', _partials, _component, this.component);
+            if (_partials) {
+                this.partials = Object.keys(_partials).map(id => {
+                    return Object.assign({ id }, _partials[id]);
+                });
+            }
+        }
+    }
+};
+TutorialsComponent.ctorParameters = () => [
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] },
+    { type: src_app_core_services_post_partial_service__WEBPACK_IMPORTED_MODULE_3__["PostPartialService"] }
+];
+TutorialsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-tutorials-wrapper',
+        template: `
+        <app-widget-partial
+            *ngFor="let partial of partials"
+            [id]="partial.id"
+            [partialTitle]="partial.title"
+            [code]="partial.code"
+            [markup]="partial.markup"
+            [component]="component"
+            [files]="partial.files"
+            [showCode]="partial.showCode"
+        >
+            <ng-template [ngComponentOutlet]="partial.type"></ng-template>
+        </app-widget-partial>
+    `
+    })
+], TutorialsComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/views/tutorials/tutorials.module.ts":
+/*!*****************************************************!*\
+  !*** ./src/app/views/tutorials/tutorials.module.ts ***!
+  \*****************************************************/
+/*! exports provided: TutorialsModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TutorialsModule", function() { return TutorialsModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "../node_modules/@angular/common/fesm2015/common.js");
+/* harmony import */ var src_app_shared_shared_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/shared/shared.module */ "./src/app/shared/shared.module.ts");
+/* harmony import */ var _tutorials_routing_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./tutorials-routing.module */ "./src/app/views/tutorials/tutorials-routing.module.ts");
+/* harmony import */ var _tutorials_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./tutorials.component */ "./src/app/views/tutorials/tutorials.component.ts");
+/* harmony import */ var _fake_api_fake_api_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./fake-api/fake-api.module */ "./src/app/views/tutorials/fake-api/fake-api.module.ts");
+
+
+
+
+
+
+
+let TutorialsModule = class TutorialsModule {
+};
+TutorialsModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+        declarations: [_tutorials_component__WEBPACK_IMPORTED_MODULE_5__["TutorialsComponent"]],
+        imports: [
+            _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
+            src_app_shared_shared_module__WEBPACK_IMPORTED_MODULE_3__["SharedModule"],
+            _tutorials_routing_module__WEBPACK_IMPORTED_MODULE_4__["TutorialsRoutingModule"],
+            _fake_api_fake_api_module__WEBPACK_IMPORTED_MODULE_6__["FakeApiModule"]
+        ]
+    })
+], TutorialsModule);
 
 
 
@@ -1177,12 +2641,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "../node_modules/@angular/router/fesm2015/router.js");
-/* harmony import */ var _views_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./views.component */ "./src/app/views/views.component.ts");
+/* harmony import */ var _getting_started_getting_started_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./getting-started/getting-started.component */ "./src/app/views/getting-started/getting-started.component.ts");
 /* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./home/home.component */ "./src/app/views/home/home.component.ts");
-/* harmony import */ var _previews_timeline_timeline_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./previews/timeline/timeline.component */ "./src/app/views/previews/timeline/timeline.component.ts");
-/* harmony import */ var _getting_started_getting_started_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./getting-started/getting-started.component */ "./src/app/views/getting-started/getting-started.component.ts");
-
-
 
 
 
@@ -1191,81 +2651,11 @@ __webpack_require__.r(__webpack_exports__);
 const VIEWS_SIDEBAR_ROUTES = [
     {
         path: 'getting-started',
-        component: _getting_started_getting_started_component__WEBPACK_IMPORTED_MODULE_6__["GettingStartedComponent"],
+        component: _getting_started_getting_started_component__WEBPACK_IMPORTED_MODULE_3__["GettingStartedComponent"],
         data: {
             name: 'Getting started',
             title: 'Lời nói đầu'
         }
-    },
-    {
-        path: 'previews',
-        pathMatch: 'full',
-        redirectTo: 'previews/timeline',
-        data: {
-            name: 'previews',
-            title: 'Thành phần'
-        }
-    },
-    {
-        path: 'previews/timeline',
-        data: {
-            name: 'Timeline',
-            title: 'Dòng thời gian'
-        },
-        children: [
-            {
-                path: '', pathMatch: 'full', redirectTo: 'examples'
-            },
-            {
-                path: '',
-                component: _views_component__WEBPACK_IMPORTED_MODULE_3__["ViewsComponent"],
-                children: [
-                    {
-                        path: 'examples',
-                        component: _previews_timeline_timeline_component__WEBPACK_IMPORTED_MODULE_5__["TimelineComponent"]
-                    },
-                    {
-                        path: 'api',
-                        component: _previews_timeline_timeline_component__WEBPACK_IMPORTED_MODULE_5__["TimelineComponent"]
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        path: 'tutorials',
-        pathMatch: 'full',
-        redirectTo: 'tutorials/timeline',
-        data: {
-            name: 'tutorials',
-            title: 'Thành phần'
-        }
-    },
-    {
-        path: 'tutorials/timeline',
-        data: {
-            name: 'Timeline',
-            title: 'Dòng thời gian'
-        },
-        children: [
-            {
-                path: '', pathMatch: 'full', redirectTo: 'examples'
-            },
-            {
-                path: '',
-                component: _views_component__WEBPACK_IMPORTED_MODULE_3__["ViewsComponent"],
-                children: [
-                    {
-                        path: 'examples',
-                        component: _previews_timeline_timeline_component__WEBPACK_IMPORTED_MODULE_5__["TimelineComponent"]
-                    },
-                    {
-                        path: 'api',
-                        component: _previews_timeline_timeline_component__WEBPACK_IMPORTED_MODULE_5__["TimelineComponent"]
-                    }
-                ]
-            }
-        ]
     }
 ];
 const VIEWS_ROUTES = [
@@ -1286,10 +2676,7 @@ const VIEWS_ROUTES = [
             title: 'Trang chủ'
         }
     },
-    ...VIEWS_SIDEBAR_ROUTES,
-    {
-        path: '**', redirectTo: 'home'
-    }
+    ...VIEWS_SIDEBAR_ROUTES
 ];
 let ViewsRoutingModule = class ViewsRoutingModule {
 };
@@ -1345,8 +2732,8 @@ let ViewsComponent = class ViewsComponent {
         this._router.events.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["filter"])(event => event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_2__["NavigationEnd"])).subscribe(() => {
             const parentRoute = this.route.snapshot.parent;
             const tabRoute = this.route.snapshot.firstChild;
-            console.log('component', parentRoute);
-            console.log('activeTab', tabRoute);
+            // console.log('component', parentRoute);
+            // console.log('activeTab', tabRoute);
             this.component = parentRoute.url[1].path;
             this.activeTab = tabRoute.url[0].path;
         });
@@ -1360,8 +2747,8 @@ let ViewsComponent = class ViewsComponent {
         this.isLargeScreenOrLess = largeScreenQL.matches;
         // tslint:disable-next-line:deprecation
         largeScreenQL.addListener((event) => ngZone.run(() => this.isLargeScreenOrLess = event.matches));
-        console.log('isSmallScreenOrLess', this.isSmallScreenOrLess);
-        console.log('isLargeScreenOrLess', this.isLargeScreenOrLess);
+        // console.log('isSmallScreenOrLess', this.isSmallScreenOrLess);
+        // console.log('isLargeScreenOrLess', this.isLargeScreenOrLess);
     }
     ngOnInit() {
     }
@@ -1404,6 +2791,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _previews_previews_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./previews/previews.module */ "./src/app/views/previews/previews.module.ts");
 /* harmony import */ var _views_routing_module__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./views-routing.module */ "./src/app/views/views-routing.module.ts");
 /* harmony import */ var _views_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./views.component */ "./src/app/views/views.component.ts");
+/* harmony import */ var _tutorials_tutorials_module__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./tutorials/tutorials.module */ "./src/app/views/tutorials/tutorials.module.ts");
+
 
 
 
@@ -1430,7 +2819,8 @@ ViewsModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         imports: [
             _shared_shared_module__WEBPACK_IMPORTED_MODULE_5__["SharedModule"],
             _views_routing_module__WEBPACK_IMPORTED_MODULE_9__["ViewsRoutingModule"],
-            _previews_previews_module__WEBPACK_IMPORTED_MODULE_8__["PreviewsModule"]
+            _previews_previews_module__WEBPACK_IMPORTED_MODULE_8__["PreviewsModule"],
+            _tutorials_tutorials_module__WEBPACK_IMPORTED_MODULE_11__["TutorialsModule"]
         ],
         entryComponents: [],
         providers: []
@@ -1456,6 +2846,7 @@ __webpack_require__.r(__webpack_exports__);
 // The list of file replacements can be found in `angular.json`.
 const environment = {
     production: false,
+    enableMockUp: true,
     FAKE_API: '',
     demoAPI: 'localhost:3000/api',
     meta: {

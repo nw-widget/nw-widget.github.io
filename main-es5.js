@@ -414,7 +414,7 @@ module.exports = "<div class=\"container\">\r\n    <div id=\"accordion\" class=\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>filter works!</p>\n"
+module.exports = "<div class=\"row\">\n    <div class=\"col-md-12 mb-3\">\n        <form class=\"form-inline\" [formGroup]=\"search\">\n            <label for=\"name\">Name:</label>\n            <input type=\"text\" class=\"form-control ml-2\" id=\"name\" formControlName=\"name\">\n            <label for=\"email\" class=\"ml-5\">Email:</label>\n            <input type=\"email\" class=\"form-control ml-2\" id=\"email\" formControlName=\"email\">\n        </form>\n    </div>\n    <div class=\"col-md-12\">\n        <div class=\"table-responsive overflow-auto\" style=\"max-height: 250px;\">\n            <table class=\"table table-sm\">\n                <thead>\n                    <tr>\n                        <th *ngFor=\"let key of keyOfPerson\">{{key}}</th>\n                    </tr>\n                </thead>\n                <tbody>\n                    <tr *ngFor=\"let item of $persons | async as persons\">\n                        <td *ngFor=\"let key of keyOfPerson\">{{item[key]}}</td>\n                    </tr>\n                </tbody>\n            </table>\n        </div>\n    </div>\n</div>"
 
 /***/ }),
 
@@ -425,7 +425,7 @@ module.exports = "<p>filter works!</p>\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-filter',\n  templateUrl: './filter.component.html',\n  styleUrls: ['./filter.component.scss']\n})\nexport class FilterComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit() {\n  }\n\n}\n"
+module.exports = "import { Component, OnInit, OnDestroy } from '@angular/core';\nimport { HttpClient, HttpParams } from '@angular/common/http';\nimport { Observable, Subscription, Subject } from 'rxjs';\nimport { IPerson, Person } from 'src/app/core/fake-api/context/model/person.model';\nimport { FormBuilder, FormGroup } from '@angular/forms';\nimport { tap, debounceTime, distinctUntilChanged, takeUntil } from 'rxjs/operators';\n\n@Component({\n  selector: 'app-filter',\n  templateUrl: './filter.component.html',\n  styles: [`\n    table thead th {\n      text-transform: capitalize;\n    }\n  `]\n})\nexport class FilterComponent implements OnInit, OnDestroy {\n\n  $persons: Observable<IPerson[]>;\n\n  private _keyOfPerson = Object.keys(new Person());\n\n  get keyOfPerson() {\n    return this._keyOfPerson;\n  }\n\n  search: FormGroup;\n\n  subscription: Subscription;\n  subject: Subject<any>;\n\n  constructor(\n    private http: HttpClient,\n    private fb: FormBuilder\n  ) {\n    this.search = this.fb.group({\n      name: [],\n      email: []\n    });\n  }\n\n  ngOnInit() {\n    this.subject = new Subject();\n    this.$persons = this.http.get<IPerson[]>('api/persons').pipe(takeUntil(this.subject));\n    this.subscription = this.search.valueChanges.pipe(\n      debounceTime(300),\n      distinctUntilChanged(),\n      tap(value => {\n        let params = new HttpParams();\n        Object.keys(value).forEach(key => {\n          if (value[key]) {\n            params = params.append(key, value[key]);\n          }\n        });\n        this.$persons = this.http.get<IPerson[]>('api/persons', { params });\n      })\n    ).subscribe();\n  }\n\n  ngOnDestroy() {\n    if (this.subscription) {\n      this.subscription.unsubscribe();\n      this.subscription = null;\n    }\n    this.subject.next();\n    this.subject.complete();\n    this.subject = null;\n  }\n\n}\n"
 
 /***/ }),
 
@@ -1368,6 +1368,42 @@ var PersonDatatable = /** @class */ (function () {
         }
     ];
     return PersonDatatable;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/core/fake-api/context/model/person.model.ts":
+/*!*************************************************************!*\
+  !*** ./src/app/core/fake-api/context/model/person.model.ts ***!
+  \*************************************************************/
+/*! exports provided: Person */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Person", function() { return Person; });
+var Person = /** @class */ (function () {
+    function Person(id, name, birthday, gender, email, phone, address) {
+        this.id = id;
+        this.name = name;
+        this.birthday = birthday;
+        this.gender = gender;
+        this.email = email;
+        this.phone = phone;
+        this.address = address;
+    }
+    Person.ctorParameters = function () { return [
+        { type: String },
+        { type: String },
+        { type: undefined },
+        { type: String },
+        { type: String },
+        { type: String },
+        { type: String }
+    ]; };
+    return Person;
 }());
 
 
@@ -2448,17 +2484,6 @@ var FakeApiModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/views/tutorials/fake-api/filter/filter.component.scss":
-/*!***********************************************************************!*\
-  !*** ./src/app/views/tutorials/fake-api/filter/filter.component.scss ***!
-  \***********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJkZW1vL3NyYy9hcHAvdmlld3MvdHV0b3JpYWxzL2Zha2UtYXBpL2ZpbHRlci9maWx0ZXIuY29tcG9uZW50LnNjc3MifQ== */"
-
-/***/ }),
-
 /***/ "./src/app/views/tutorials/fake-api/filter/filter.component.ts":
 /*!*********************************************************************!*\
   !*** ./src/app/views/tutorials/fake-api/filter/filter.component.ts ***!
@@ -2471,18 +2496,67 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FilterComponent", function() { return FilterComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "../node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "../node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var src_app_core_fake_api_context_model_person_model__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/core/fake-api/context/model/person.model */ "./src/app/core/fake-api/context/model/person.model.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/forms */ "../node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs/operators */ "../node_modules/rxjs/_esm5/operators/index.js");
+
+
+
+
+
 
 
 var FilterComponent = /** @class */ (function () {
-    function FilterComponent() {
+    function FilterComponent(http, fb) {
+        this.http = http;
+        this.fb = fb;
+        this._keyOfPerson = Object.keys(new src_app_core_fake_api_context_model_person_model__WEBPACK_IMPORTED_MODULE_4__["Person"]());
+        this.search = this.fb.group({
+            name: [],
+            email: []
+        });
     }
+    Object.defineProperty(FilterComponent.prototype, "keyOfPerson", {
+        get: function () {
+            return this._keyOfPerson;
+        },
+        enumerable: true,
+        configurable: true
+    });
     FilterComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.subject = new rxjs__WEBPACK_IMPORTED_MODULE_3__["Subject"]();
+        this.$persons = this.http.get('api/persons').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["takeUntil"])(this.subject));
+        this.subscription = this.search.valueChanges.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["debounceTime"])(300), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["distinctUntilChanged"])(), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["tap"])(function (value) {
+            var params = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpParams"]();
+            Object.keys(value).forEach(function (key) {
+                if (value[key]) {
+                    params = params.append(key, value[key]);
+                }
+            });
+            _this.$persons = _this.http.get('api/persons', { params: params });
+        })).subscribe();
     };
+    FilterComponent.prototype.ngOnDestroy = function () {
+        if (this.subscription) {
+            this.subscription.unsubscribe();
+            this.subscription = null;
+        }
+        this.subject.next();
+        this.subject.complete();
+        this.subject = null;
+    };
+    FilterComponent.ctorParameters = function () { return [
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] },
+        { type: _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormBuilder"] }
+    ]; };
     FilterComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-filter',
             template: __webpack_require__(/*! raw-loader!./filter.component.html */ "../node_modules/raw-loader/index.js!./src/app/views/tutorials/fake-api/filter/filter.component.html"),
-            styles: [__webpack_require__(/*! ./filter.component.scss */ "./src/app/views/tutorials/fake-api/filter/filter.component.scss")]
+            styles: ["\n    table thead th {\n      text-transform: capitalize;\n    }\n  "]
         })
     ], FilterComponent);
     return FilterComponent;
@@ -2506,6 +2580,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "../node_modules/@angular/common/fesm5/common.js");
 /* harmony import */ var _filter_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./filter.component */ "./src/app/views/tutorials/fake-api/filter/filter.component.ts");
+/* harmony import */ var src_app_shared_shared_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/shared/shared.module */ "./src/app/shared/shared.module.ts");
+
 
 
 
@@ -2517,7 +2593,8 @@ var FilterModule = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
             declarations: [_filter_component__WEBPACK_IMPORTED_MODULE_3__["FilterComponent"]],
             imports: [
-                _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"]
+                _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
+                src_app_shared_shared_module__WEBPACK_IMPORTED_MODULE_4__["SharedModule"]
             ],
             exports: [_filter_component__WEBPACK_IMPORTED_MODULE_3__["FilterComponent"]],
             bootstrap: [_filter_component__WEBPACK_IMPORTED_MODULE_3__["FilterComponent"]]

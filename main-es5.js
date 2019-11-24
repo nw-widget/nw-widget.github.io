@@ -337,7 +337,7 @@ module.exports = "<div class=\"jumbotron\">\r\n    <p>oNiwa &copy;2019</p>\r\n</
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">\r\n    <a class=\"navbar-brand\" href=\"#\">\r\n        <img src=\"/assets/images/logo.png\" alt=\"Home\">\r\n    </a>\r\n\r\n    <div class=\"navbar-collapse\" id=\"navbarTogglerDemo03\">\r\n        <ul class=\"navbar-nav mr-auto mt-2 mt-lg-0\">\r\n            <li class=\"nav-item\" *ngFor=\"let item of navs\" [class.active]=\"isActive(item.route, false)\">\r\n                <a class=\"nav-link\" [routerLink]=\"item.route\" [class.active]=\"isActive(item.route, false)\" [title]=\"item.title\">{{item.name}} <span class=\"sr-only\">(current)</span></a>\r\n            </li>\r\n        </ul>\r\n        <form class=\"form-inline my-2 my-lg-0\">\r\n            <input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">\r\n            <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>\r\n        </form>\r\n    </div>\r\n</nav>"
+module.exports = "<nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">\r\n    <a class=\"navbar-brand\" href=\"#\">\r\n        <img src=\"images/logo.png\" alt=\"Home\">\r\n    </a>\r\n\r\n    <div class=\"navbar-collapse\" id=\"navbarTogglerDemo03\">\r\n        <ul class=\"navbar-nav mr-auto mt-2 mt-lg-0\">\r\n            <li class=\"nav-item\" *ngFor=\"let item of navs\" [class.active]=\"isActive(item.route, false)\">\r\n                <a class=\"nav-link\" [routerLink]=\"item.route\" [class.active]=\"isActive(item.route, false)\" [title]=\"item.title\">{{item.name}} <span class=\"sr-only\">(current)</span></a>\r\n            </li>\r\n        </ul>\r\n        <form class=\"form-inline my-2 my-lg-0\">\r\n            <input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">\r\n            <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>\r\n        </form>\r\n    </div>\r\n</nav>"
 
 /***/ }),
 
@@ -359,7 +359,7 @@ module.exports = "<nav class=\"navbar navbar-expand-lg sidebar p-0\">\r\n    <di
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"api-doc-component\" [class.deprecated]=\"apiDocs.deprecated\">\n  <h3>\n    <a\n      class=\"title-fragment\"\n      [routerLink]=\"\"\n      fragment=\"{{apiDocs.className}}\" appFragment\n      title=\"Anchor link to: {{apiDocs.className}}\"\n    >\n      <img src=\"assets/images/link-symbol.svg\" alt=\"Anchor link to: {{apiDocs.className}}\"/>\n    </a>\n    <span>\n      {{apiDocs.className}}<span class=\"text-muted font-weight-light\" *ngIf=\"apiDocs.typeParameter\">&lt;{{apiDocs.typeParameter}}&gt;</span>\n    </span>\n    <a\n      class=\"github-link\"\n      (click)=\"trackSourceClick()\"\n      href=\"{{fbTreeMaster}}/{{apiDocs.fileName}}\"\n      target=\"_blank\"\n      title=\"Link to Github: {{apiDocs.className}}\"\n    >\n      <img src=\"assets/images/github.svg\" alt=\"Link to Github {{apiDocs.className}}\"/>\n    </a>\n  </h3>\n  <nw-api-docs-badge [type]=\"apiDocs.type\" [deprecated]=\"apiDocs.deprecated\" [since]=\"apiDocs.since\"></nw-api-docs-badge>\n  <p *ngIf=\"apiDocs.deprecated\">{{ apiDocs.deprecated.description }}</p>\n  <p class=\"lead\" [innerHTML]=\"apiDocs.description\"></p>\n\n  <ng-template [ngIf]=\"apiDocs.properties && apiDocs.properties.length\">\n    <section>\n      <h4>Properties</h4>\n      <table class=\"table table-sm\">\n        <tbody>\n        <tr *ngFor=\"let prop of apiDocs.properties\" [class.deprecated]=\"prop.deprecated\">\n          <td class=\"label-cell\">\n            <code>{{prop.name}}</code><br>\n            <span *ngIf=\"prop.since\" class=\"badge badge-info\">since {{ prop.since.version }}</span>&ngsp;\n            <span *ngIf=\"prop.deprecated\" class=\"badge badge-secondary\">deprecated {{ prop.deprecated.version }}</span>\n          </td>\n          <td class=\"content-cell\">\n            <p *ngIf=\"prop.deprecated\">{{ prop.deprecated.description }}</p>\n            <p class=\"description\" [innerHTML]=\"prop.description\"></p>\n            <div class=\"meta\">\n              <div>\n                <i>Type: </i><code>{{ prop.type }}</code>\n              </div>\n              <div *ngIf=\"prop.defaultValue\">\n                <i>Default value: </i><code>{{prop.defaultValue || '-'}}</code>\n              </div>\n            </div>\n          </td>\n        </tr>\n        </tbody>\n      </table>\n    </section>\n  </ng-template>\n\n  <ng-template [ngIf]=\"apiDocs.methods && apiDocs.methods.length\">\n    <section>\n      <h4>Methods</h4>\n      <table class=\"table table-sm\">\n        <tbody>\n          <tr *ngFor=\"let method of apiDocs.methods\" [class.deprecated]=\"method.deprecated\">\n            <td class=\"label-cell\">\n              <code>{{method.name}}</code><br>\n              <span *ngIf=\"method.since\" class=\"badge badge-info\">since {{ method.since.version }}</span>&ngsp;\n              <span *ngIf=\"method.deprecated\" class=\"badge badge-secondary\">deprecated {{ method.deprecated.version }}</span>\n            </td>\n            <td class=\"content-cell\">\n                <p class=\"signature\">\n                    <code>{{methodSignature(method)}}</code>&ngsp;\n                    <small class=\"text-muted\" title=\"Return type\">=&gt; {{ method.returnType }}</small>\n                </p>\n                <p *ngIf=\"method.deprecated\">{{ method.deprecated.description }}</p>\n                <p class=\"description\" [innerHTML]=\"method.description\"></p>\n            </td>\n          </tr>\n        </tbody>\n      </table>\n    </section>\n  </ng-template>\n</div>\n\n"
+module.exports = "<div class=\"api-doc-component\" [class.deprecated]=\"apiDocs.deprecated\">\n  <h3>\n    <a\n      class=\"title-fragment\"\n      [routerLink]=\"\"\n      fragment=\"{{apiDocs.className}}\" appFragment\n      title=\"Anchor link to: {{apiDocs.className}}\"\n    >\n      <img src=\"images/link-symbol.svg\" alt=\"Anchor link to: {{apiDocs.className}}\"/>\n    </a>\n    <span>\n      {{apiDocs.className}}<span class=\"text-muted font-weight-light\" *ngIf=\"apiDocs.typeParameter\">&lt;{{apiDocs.typeParameter}}&gt;</span>\n    </span>\n    <a\n      class=\"github-link\"\n      (click)=\"trackSourceClick()\"\n      href=\"{{fbTreeMaster}}/{{apiDocs.fileName}}\"\n      target=\"_blank\"\n      title=\"Link to Github: {{apiDocs.className}}\"\n    >\n      <img src=\"images/github.svg\" alt=\"Link to Github {{apiDocs.className}}\"/>\n    </a>\n  </h3>\n  <nw-api-docs-badge [type]=\"apiDocs.type\" [deprecated]=\"apiDocs.deprecated\" [since]=\"apiDocs.since\"></nw-api-docs-badge>\n  <p *ngIf=\"apiDocs.deprecated\">{{ apiDocs.deprecated.description }}</p>\n  <p class=\"lead\" [innerHTML]=\"apiDocs.description\"></p>\n\n  <ng-template [ngIf]=\"apiDocs.properties && apiDocs.properties.length\">\n    <section>\n      <h4>Properties</h4>\n      <table class=\"table table-sm\">\n        <tbody>\n        <tr *ngFor=\"let prop of apiDocs.properties\" [class.deprecated]=\"prop.deprecated\">\n          <td class=\"label-cell\">\n            <code>{{prop.name}}</code><br>\n            <span *ngIf=\"prop.since\" class=\"badge badge-info\">since {{ prop.since.version }}</span>&ngsp;\n            <span *ngIf=\"prop.deprecated\" class=\"badge badge-secondary\">deprecated {{ prop.deprecated.version }}</span>\n          </td>\n          <td class=\"content-cell\">\n            <p *ngIf=\"prop.deprecated\">{{ prop.deprecated.description }}</p>\n            <p class=\"description\" [innerHTML]=\"prop.description\"></p>\n            <div class=\"meta\">\n              <div>\n                <i>Type: </i><code>{{ prop.type }}</code>\n              </div>\n              <div *ngIf=\"prop.defaultValue\">\n                <i>Default value: </i><code>{{prop.defaultValue || '-'}}</code>\n              </div>\n            </div>\n          </td>\n        </tr>\n        </tbody>\n      </table>\n    </section>\n  </ng-template>\n\n  <ng-template [ngIf]=\"apiDocs.methods && apiDocs.methods.length\">\n    <section>\n      <h4>Methods</h4>\n      <table class=\"table table-sm\">\n        <tbody>\n          <tr *ngFor=\"let method of apiDocs.methods\" [class.deprecated]=\"method.deprecated\">\n            <td class=\"label-cell\">\n              <code>{{method.name}}</code><br>\n              <span *ngIf=\"method.since\" class=\"badge badge-info\">since {{ method.since.version }}</span>&ngsp;\n              <span *ngIf=\"method.deprecated\" class=\"badge badge-secondary\">deprecated {{ method.deprecated.version }}</span>\n            </td>\n            <td class=\"content-cell\">\n                <p class=\"signature\">\n                    <code>{{methodSignature(method)}}</code>&ngsp;\n                    <small class=\"text-muted\" title=\"Return type\">=&gt; {{ method.returnType }}</small>\n                </p>\n                <p *ngIf=\"method.deprecated\">{{ method.deprecated.description }}</p>\n                <p class=\"description\" [innerHTML]=\"method.description\"></p>\n            </td>\n          </tr>\n        </tbody>\n      </table>\n    </section>\n  </ng-template>\n</div>\n\n"
 
 /***/ }),
 
@@ -370,7 +370,7 @@ module.exports = "<div class=\"api-doc-component\" [class.deprecated]=\"apiDocs.
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div (click)=\"trackSourceClick()\" class=\"api-doc-component\" [class.deprecated]=\"apiDocs.deprecated\">\n  <h3>\n    <a\n      class=\"title-fragment\"\n      [routerLink]=\"\"\n      fragment=\"{{apiDocs.className}}\"\n      appFragment\n      title=\"Anchor link to: {{apiDocs.className}}\"\n    >\n      <img src=\"assets/images/link-symbol.svg\" alt=\"Anchor link to: {{apiDocs.className}}\"/>\n    </a>\n    <span>\n      {{apiDocs.className}}<span class=\"text-muted font-weight-light\" *ngIf=\"apiDocs.typeParameter\">&lt;{{apiDocs.typeParameter}}&gt;</span>\n    </span>\n    <a\n      class=\"github-link\"\n      href=\"{{fbTreeMaster}}/{{apiDocs.fileName}}\"\n      target=\"_blank\"\n      title=\"Link to Github: {{apiDocs.className}}\"\n    >\n      <img src=\"assets/images/github.svg\" alt=\"Link to Github {{apiDocs.className}}\"/>\n    </a>\n  </h3>\n  <nw-api-docs-badge type=\"Configuration\" [deprecated]=\"apiDocs.deprecated\" [since]=\"apiDocs.since\"></nw-api-docs-badge>\n  <p *ngIf=\"apiDocs.deprecated\">{{ apiDocs.deprecated.description }}</p>\n  <p class=\"lead\" [innerHTML]=\"apiDocs.description\"></p>\n\n  <ng-template [ngIf]=\"apiDocs.properties && apiDocs.properties.length\">\n    <section>\n      <h4>Properties</h4>\n      <p class=\"description\">\n        <ng-template ngFor let-property [ngForOf]=\"apiDocs.properties\">\n          <code class=\"pr-2\">{{ property.name }}</code>&ngsp;\n        </ng-template>\n      </p>\n      <p class=\"mt-3\">Documentation available in <a [routerLink]=\"\" fragment=\"{{directiveName}}\">{{ directiveName }}</a></p>\n    </section>\n  </ng-template>\n</div>\n\n"
+module.exports = "<div (click)=\"trackSourceClick()\" class=\"api-doc-component\" [class.deprecated]=\"apiDocs.deprecated\">\n  <h3>\n    <a\n      class=\"title-fragment\"\n      [routerLink]=\"\"\n      fragment=\"{{apiDocs.className}}\"\n      appFragment\n      title=\"Anchor link to: {{apiDocs.className}}\"\n    >\n      <img src=\"images/link-symbol.svg\" alt=\"Anchor link to: {{apiDocs.className}}\"/>\n    </a>\n    <span>\n      {{apiDocs.className}}<span class=\"text-muted font-weight-light\" *ngIf=\"apiDocs.typeParameter\">&lt;{{apiDocs.typeParameter}}&gt;</span>\n    </span>\n    <a\n      class=\"github-link\"\n      href=\"{{fbTreeMaster}}/{{apiDocs.fileName}}\"\n      target=\"_blank\"\n      title=\"Link to Github: {{apiDocs.className}}\"\n    >\n      <img src=\"images/github.svg\" alt=\"Link to Github {{apiDocs.className}}\"/>\n    </a>\n  </h3>\n  <nw-api-docs-badge type=\"Configuration\" [deprecated]=\"apiDocs.deprecated\" [since]=\"apiDocs.since\"></nw-api-docs-badge>\n  <p *ngIf=\"apiDocs.deprecated\">{{ apiDocs.deprecated.description }}</p>\n  <p class=\"lead\" [innerHTML]=\"apiDocs.description\"></p>\n\n  <ng-template [ngIf]=\"apiDocs.properties && apiDocs.properties.length\">\n    <section>\n      <h4>Properties</h4>\n      <p class=\"description\">\n        <ng-template ngFor let-property [ngForOf]=\"apiDocs.properties\">\n          <code class=\"pr-2\">{{ property.name }}</code>&ngsp;\n        </ng-template>\n      </p>\n      <p class=\"mt-3\">Documentation available in <a [routerLink]=\"\" fragment=\"{{directiveName}}\">{{ directiveName }}</a></p>\n    </section>\n  </ng-template>\n</div>\n\n"
 
 /***/ }),
 
@@ -381,7 +381,7 @@ module.exports = "<div (click)=\"trackSourceClick()\" class=\"api-doc-component\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"api-doc-component\" [class.deprecated]=\"apiDocs.deprecated\">\n  <h3 class=\"title\">\n    <a\n      [routerLink]=\"\"\n      [fragment]=\"apiDocs.className\" appFragment\n      title=\"Anchor link to: {{apiDocs.className}}\"\n    >\n      <img src=\"assets/images/link-symbol.svg\" alt=\"Anchor link to: {{apiDocs.className}}\"/>\n    </a>\n    <span>\n      {{apiDocs.className}}<span class=\"text-muted font-weight-light\" *ngIf=\"apiDocs.typeParameter\">&lt;{{apiDocs.typeParameter}}&gt;</span>\n    </span>\n    <a\n      class=\"github-link\"\n      (click)=\"trackSourceClick()\"\n      href=\"{{fbTreeMaster}}/{{apiDocs.fileName}}\"\n      target=\"_blank\"\n      title=\"Link to Github: {{apiDocs.className}}\"\n    >\n      <img src=\"assets/images/github.svg\" alt=\"Link to Github {{apiDocs.className}}\"/>\n    </a>\n  </h3>\n  <nw-api-docs-badge [type]=\"apiDocs.type\" [deprecated]=\"apiDocs.deprecated\" [since]=\"apiDocs.since\"></nw-api-docs-badge>\n  <p *ngIf=\"apiDocs.deprecated\">{{ apiDocs.deprecated.description }}</p>\n  <p class=\"lead\" [innerHTML]=\"apiDocs.description\">\n  </p>\n\n  <section>\n    <h4>Selector <small><code class=\"selector\">{{apiDocs.selector}}</code></small></h4>\n    <h6 *ngIf=\"apiDocs.exportAs\">Exported as <small><code class=\"export-as\">{{apiDocs.exportAs}}</code></small></h6>\n  </section>\n\n  <ng-template [ngIf]=\"apiDocs.inputs.length\">\n    <section>\n      <h4>Inputs</h4>\n      <table class=\"table table-sm\">\n        <tbody>\n        <tr *ngFor=\"let input of apiDocs.inputs\" [class.deprecated]=\"input.deprecated\">\n          <td class=\"label-cell\">\n            <code>{{input.name}}</code><br>\n            <span *ngIf=\"input.since\" class=\"badge badge-info\">since {{ input.since.version }}</span>&ngsp;\n            <span *ngIf=\"input.deprecated\" class=\"badge badge-secondary\">deprecated {{ input.deprecated.version }}</span>\n          </td>\n          <td class=\"content-cell\">\n            <p *ngIf=\"input.deprecated\">{{ input.deprecated.description }}</p>\n            <p class=\"description\" [innerHTML]=\"input.description\"></p>\n            <div class=\"meta\">\n              <div>\n                <i>Type: </i><code>{{ input.type }}</code>\n              </div>\n              <div *ngIf=\"defaultInputValue(input) || hasConfigProperty(input)\">\n                <span><i>Default value: </i><code>{{ defaultInputValue(input) || '-' }}</code></span>&ngsp;\n                <span *ngIf=\"hasConfigProperty(input)\">&mdash; initialized from {{ configServiceName }} service</span>\n              </div>\n            </div>\n          </td>\n        </tr>\n        </tbody>\n      </table>\n    </section>\n  </ng-template>\n\n  <ng-template [ngIf]=\"apiDocs.outputs.length\">\n    <section>\n      <h4>Outputs</h4>\n      <table class=\"table table-sm\">\n        <tbody>\n          <tr *ngFor=\"let output of apiDocs.outputs\" [class.deprecated]=\"output.deprecated\">\n            <td class=\"label-cell\">\n              <code>{{output.name}}</code><br>\n              <span *ngIf=\"output.since\" class=\"badge badge-info\">since {{ output.since.version }}</span>&ngsp;\n              <span *ngIf=\"output.deprecated\" class=\"badge badge-secondary\">deprecated {{ output.deprecated.version }}</span>\n            </td>\n            <td class=\"content-cell\">\n              <p *ngIf=\"output.deprecated\">{{ output.deprecated.description }}</p>\n              <p class=\"description\" [innerHTML]=\"output.description\"></p>\n            </td>\n          </tr>\n        </tbody>\n      </table>\n    </section>\n  </ng-template>\n\n  <ng-template [ngIf]=\"apiDocs.methods.length && apiDocs.exportAs\">\n    <section>\n      <h4>Methods</h4>\n      <table class=\"table table-sm\">\n        <tbody>\n          <tr *ngFor=\"let method of apiDocs.methods\" [class.deprecated]=\"method.deprecated\">\n            <td class=\"label-cell\">\n              <code>{{method.name}}</code><br>\n              <span *ngIf=\"method.since\" class=\"badge badge-info\">since {{ method.since.version }}</span>&ngsp;\n              <span *ngIf=\"method.deprecated\" class=\"badge badge-secondary\">deprecated {{ method.deprecated.version }}</span>\n            </td>\n            <td class=\"content-cell\">\n                <p class=\"signature\">\n                    <code>{{methodSignature(method)}}</code>&ngsp;\n                    <small class=\"text-muted\" title=\"Return type\">=&gt; {{ method.returnType }}</small>\n                </p>\n                <p *ngIf=\"method.deprecated\">{{ method.deprecated.description }}</p>\n                <p class=\"description\" [innerHTML]=\"method.description\"></p>\n            </td>\n          </tr>\n        </tbody>\n      </table>\n    </section>\n  </ng-template>\n</div>\n"
+module.exports = "<div class=\"api-doc-component\" [class.deprecated]=\"apiDocs.deprecated\">\n  <h3 class=\"title\">\n    <a\n      [routerLink]=\"\"\n      [fragment]=\"apiDocs.className\" appFragment\n      title=\"Anchor link to: {{apiDocs.className}}\"\n    >\n      <img src=\"images/link-symbol.svg\" alt=\"Anchor link to: {{apiDocs.className}}\"/>\n    </a>\n    <span>\n      {{apiDocs.className}}<span class=\"text-muted font-weight-light\" *ngIf=\"apiDocs.typeParameter\">&lt;{{apiDocs.typeParameter}}&gt;</span>\n    </span>\n    <a\n      class=\"github-link\"\n      (click)=\"trackSourceClick()\"\n      href=\"{{fbTreeMaster}}/{{apiDocs.fileName}}\"\n      target=\"_blank\"\n      title=\"Link to Github: {{apiDocs.className}}\"\n    >\n      <img src=\"images/github.svg\" alt=\"Link to Github {{apiDocs.className}}\"/>\n    </a>\n  </h3>\n  <nw-api-docs-badge [type]=\"apiDocs.type\" [deprecated]=\"apiDocs.deprecated\" [since]=\"apiDocs.since\"></nw-api-docs-badge>\n  <p *ngIf=\"apiDocs.deprecated\">{{ apiDocs.deprecated.description }}</p>\n  <p class=\"lead\" [innerHTML]=\"apiDocs.description\">\n  </p>\n\n  <section>\n    <h4>Selector <small><code class=\"selector\">{{apiDocs.selector}}</code></small></h4>\n    <h6 *ngIf=\"apiDocs.exportAs\">Exported as <small><code class=\"export-as\">{{apiDocs.exportAs}}</code></small></h6>\n  </section>\n\n  <ng-template [ngIf]=\"apiDocs.inputs.length\">\n    <section>\n      <h4>Inputs</h4>\n      <table class=\"table table-sm\">\n        <tbody>\n        <tr *ngFor=\"let input of apiDocs.inputs\" [class.deprecated]=\"input.deprecated\">\n          <td class=\"label-cell\">\n            <code>{{input.name}}</code><br>\n            <span *ngIf=\"input.since\" class=\"badge badge-info\">since {{ input.since.version }}</span>&ngsp;\n            <span *ngIf=\"input.deprecated\" class=\"badge badge-secondary\">deprecated {{ input.deprecated.version }}</span>\n          </td>\n          <td class=\"content-cell\">\n            <p *ngIf=\"input.deprecated\">{{ input.deprecated.description }}</p>\n            <p class=\"description\" [innerHTML]=\"input.description\"></p>\n            <div class=\"meta\">\n              <div>\n                <i>Type: </i><code>{{ input.type }}</code>\n              </div>\n              <div *ngIf=\"defaultInputValue(input) || hasConfigProperty(input)\">\n                <span><i>Default value: </i><code>{{ defaultInputValue(input) || '-' }}</code></span>&ngsp;\n                <span *ngIf=\"hasConfigProperty(input)\">&mdash; initialized from {{ configServiceName }} service</span>\n              </div>\n            </div>\n          </td>\n        </tr>\n        </tbody>\n      </table>\n    </section>\n  </ng-template>\n\n  <ng-template [ngIf]=\"apiDocs.outputs.length\">\n    <section>\n      <h4>Outputs</h4>\n      <table class=\"table table-sm\">\n        <tbody>\n          <tr *ngFor=\"let output of apiDocs.outputs\" [class.deprecated]=\"output.deprecated\">\n            <td class=\"label-cell\">\n              <code>{{output.name}}</code><br>\n              <span *ngIf=\"output.since\" class=\"badge badge-info\">since {{ output.since.version }}</span>&ngsp;\n              <span *ngIf=\"output.deprecated\" class=\"badge badge-secondary\">deprecated {{ output.deprecated.version }}</span>\n            </td>\n            <td class=\"content-cell\">\n              <p *ngIf=\"output.deprecated\">{{ output.deprecated.description }}</p>\n              <p class=\"description\" [innerHTML]=\"output.description\"></p>\n            </td>\n          </tr>\n        </tbody>\n      </table>\n    </section>\n  </ng-template>\n\n  <ng-template [ngIf]=\"apiDocs.methods.length && apiDocs.exportAs\">\n    <section>\n      <h4>Methods</h4>\n      <table class=\"table table-sm\">\n        <tbody>\n          <tr *ngFor=\"let method of apiDocs.methods\" [class.deprecated]=\"method.deprecated\">\n            <td class=\"label-cell\">\n              <code>{{method.name}}</code><br>\n              <span *ngIf=\"method.since\" class=\"badge badge-info\">since {{ method.since.version }}</span>&ngsp;\n              <span *ngIf=\"method.deprecated\" class=\"badge badge-secondary\">deprecated {{ method.deprecated.version }}</span>\n            </td>\n            <td class=\"content-cell\">\n                <p class=\"signature\">\n                    <code>{{methodSignature(method)}}</code>&ngsp;\n                    <small class=\"text-muted\" title=\"Return type\">=&gt; {{ method.returnType }}</small>\n                </p>\n                <p *ngIf=\"method.deprecated\">{{ method.deprecated.description }}</p>\n                <p class=\"description\" [innerHTML]=\"method.description\"></p>\n            </td>\n          </tr>\n        </tbody>\n      </table>\n    </section>\n  </ng-template>\n</div>\n"
 
 /***/ }),
 
@@ -403,7 +403,7 @@ module.exports = "<pre class=\"language-{{ snippet.lang }}\"><code #code class=\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"widget-partial-wrapper\">\n    <a [id]=\"id\"></a>\n    <h2>\n        <a [routerLink]=\"\" [fragment]=\"id\" appFragment title=\"Anchor link to demo: {{id}}\">\n            <img src=\"/assets/images/link-symbol.svg\" alt=\"Anchor link to: {{id}}\" />\n        </a>\n        <span>{{ partialTitle }}</span>\n        <button type=\"button\" class=\"btn btn-light mr-2 toggle-code\" [class.active]=\"showCode\"\n            (click)=\"showCode = !showCode; trackShowCodeClick()\">\n            <svg aria-hidden=\"true\" xmlns=\"http://www.w3.org/2000/svg\" width=\"18\" height=\"18\" viewBox=\"0 0 24 24\">\n                <path\n                    d=\"M24 10.935v2.131l-8 3.947v-2.23l5.64-2.783-5.64-2.79v-2.223l8 3.948zm-16 3.848l-5.64-2.783 5.64-2.79v-2.223l-8 3.948v2.131l8 3.947v-2.23zm7.047-10.783h-2.078l-4.011 16h2.073l4.016-16z\" />\n            </svg>\n            <span class=\"ml-1\">Code</span>\n        </button>\n        <a role=\"button\" (click)=\"trackStackBlitzClick()\" class=\"stackblitz btn btn-light\" target=\"_blank\"\n            href=\"/stackblitzes/{{component}}/{{id}}/stackblitz.html\" title=\"Edit in StackBlitz\">\n            <img class=\"stackblitz-icon\" src=\"/assets/images/stackblitz-icon.svg\" alt=\"StackBlitz icon\" />\n            StackBlitz\n        </a>\n    </h2>\n    <div class=\"card\">\n        <div *ngIf=\"showCode\" class=\"bg-light border-bottom tabset-code\">\n            <nw-tabset [type]=\"hasManyFiles ? 'pills' : 'tabs'\" [class.d-flex]=\"hasManyFiles\"\n                [class.flex-row]=\"hasManyFiles\" [orientation]=\"hasManyFiles ? 'vertical' : 'horizontal'\">\n                <ng-template [ngIf]=\"files\" [ngIfElse]=\"old\">\n                    <nw-tab *ngFor=\"let file of files; index as index\" id=\"{{component}}-{{file.name}}-{{index}}\">\n                        <ng-template nwTabTitle>\n                            <span class=\"text-truncate\" [title]=\"tabType(file.name)\">{{file.name}}</span>\n                        </ng-template>\n                        <ng-template nwTabContent>\n                            <niwa-code [snippet]=\"getFileSnippet(file)\"></niwa-code>\n                        </ng-template>\n                    </nw-tab>\n                </ng-template>\n\n                <ng-template #old>\n                    <nw-tab id=\"{{component}}-{{id}}-html\" *ngIf=\"markup\">\n                        <ng-template nwTabTitle>\n                            <span class=\"ml-2\">{{component}}-{{id}}.html</span>\n                        </ng-template>\n                        <ng-template nwTabContent>\n                            <niwa-code [snippet]=\"markupSnippet\"></niwa-code>\n                        </ng-template>\n                    </nw-tab>\n                    <nw-tab id=\"{{component}}-{{id}}-{{stylesheet.lang}}\" *ngIf=\"stylesheet\">\n                        <ng-template nwTabTitle>\n                            <span class=\"ml-2\">{{component}}-{{id}}.{{stylesheet.lang}}</span>\n                        </ng-template>\n                        <ng-template nwTabContent>\n                            <niwa-code [snippet]=\"stylesheetSnippet\"></niwa-code>\n                        </ng-template>\n                    </nw-tab>\n                    <nw-tab id=\"{{component}}-{{id}}-typescript\" *ngIf=\"code\">\n                        <ng-template nwTabTitle>\n                            <span class=\"ml-2\">{{component}}-{{id}}.ts</span>\n                        </ng-template>\n                        <ng-template nwTabContent>\n                            <niwa-code [snippet]=\"codeSnippet\"></niwa-code>\n                        </ng-template>\n                    </nw-tab>\n                </ng-template>\n            </nw-tabset>\n        </div>\n        <div class=\"card-body\">\n            <ng-content></ng-content>\n        </div>\n\n    </div>\n</div>"
+module.exports = "<div class=\"widget-partial-wrapper\">\n    <a [id]=\"id\"></a>\n    <h2>\n        <a [routerLink]=\"\" [fragment]=\"id\" appFragment title=\"Anchor link to demo: {{id}}\">\n            <img src=\"images/link-symbol.svg\" alt=\"Anchor link to: {{id}}\" />\n        </a>\n        <span>{{ partialTitle }}</span>\n        <button type=\"button\" class=\"btn btn-light mr-2 toggle-code\" [class.active]=\"showCode\"\n            (click)=\"showCode = !showCode; trackShowCodeClick()\">\n            <svg aria-hidden=\"true\" xmlns=\"http://www.w3.org/2000/svg\" width=\"18\" height=\"18\" viewBox=\"0 0 24 24\">\n                <path\n                    d=\"M24 10.935v2.131l-8 3.947v-2.23l5.64-2.783-5.64-2.79v-2.223l8 3.948zm-16 3.848l-5.64-2.783 5.64-2.79v-2.223l-8 3.948v2.131l8 3.947v-2.23zm7.047-10.783h-2.078l-4.011 16h2.073l4.016-16z\" />\n            </svg>\n            <span class=\"ml-1\">Code</span>\n        </button>\n        <a role=\"button\" (click)=\"trackStackBlitzClick()\" class=\"stackblitz btn btn-light\" target=\"_blank\"\n            href=\"stackblitzes/{{component}}/{{id}}/stackblitz.html\" title=\"Edit in StackBlitz\">\n            <img class=\"stackblitz-icon\" src=\"images/stackblitz-icon.svg\" alt=\"StackBlitz icon\" />\n            StackBlitz\n        </a>\n    </h2>\n    <div class=\"card\">\n        <div *ngIf=\"showCode\" class=\"bg-light border-bottom tabset-code\">\n            <nw-tabset [type]=\"hasManyFiles ? 'pills' : 'tabs'\" [class.d-flex]=\"hasManyFiles\"\n                [class.flex-row]=\"hasManyFiles\" [orientation]=\"hasManyFiles ? 'vertical' : 'horizontal'\">\n                <ng-template [ngIf]=\"files\" [ngIfElse]=\"old\">\n                    <nw-tab *ngFor=\"let file of files; index as index\" id=\"{{component}}-{{file.name}}-{{index}}\">\n                        <ng-template nwTabTitle>\n                            <span class=\"text-truncate\" [title]=\"tabType(file.name)\">{{file.name}}</span>\n                        </ng-template>\n                        <ng-template nwTabContent>\n                            <niwa-code [snippet]=\"getFileSnippet(file)\"></niwa-code>\n                        </ng-template>\n                    </nw-tab>\n                </ng-template>\n\n                <ng-template #old>\n                    <nw-tab id=\"{{component}}-{{id}}-html\" *ngIf=\"markup\">\n                        <ng-template nwTabTitle>\n                            <span class=\"ml-2\">{{component}}-{{id}}.html</span>\n                        </ng-template>\n                        <ng-template nwTabContent>\n                            <niwa-code [snippet]=\"markupSnippet\"></niwa-code>\n                        </ng-template>\n                    </nw-tab>\n                    <nw-tab id=\"{{component}}-{{id}}-{{stylesheet.lang}}\" *ngIf=\"stylesheet\">\n                        <ng-template nwTabTitle>\n                            <span class=\"ml-2\">{{component}}-{{id}}.{{stylesheet.lang}}</span>\n                        </ng-template>\n                        <ng-template nwTabContent>\n                            <niwa-code [snippet]=\"stylesheetSnippet\"></niwa-code>\n                        </ng-template>\n                    </nw-tab>\n                    <nw-tab id=\"{{component}}-{{id}}-typescript\" *ngIf=\"code\">\n                        <ng-template nwTabTitle>\n                            <span class=\"ml-2\">{{component}}-{{id}}.ts</span>\n                        </ng-template>\n                        <ng-template nwTabContent>\n                            <niwa-code [snippet]=\"codeSnippet\"></niwa-code>\n                        </ng-template>\n                    </nw-tab>\n                </ng-template>\n            </nw-tabset>\n        </div>\n        <div class=\"card-body\">\n            <ng-content></ng-content>\n        </div>\n\n    </div>\n</div>"
 
 /***/ }),
 
@@ -440,28 +440,6 @@ module.exports = "<div class=\"container\">\r\n    <div id=\"accordion\" class=\
 
 /***/ }),
 
-/***/ "../node_modules/raw-loader/index.js!./src/app/views/tutorials/fake-api/filter/filter.component.html":
-/*!**************************************************************************************************!*\
-  !*** ../node_modules/raw-loader!./src/app/views/tutorials/fake-api/filter/filter.component.html ***!
-  \**************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n    <div class=\"col-md-12 mb-3\">\n        <form class=\"form-inline\" [formGroup]=\"search\">\n            <label for=\"name\">Name:</label>\n            <input type=\"text\" class=\"form-control ml-2\" id=\"name\" formControlName=\"name\">\n            <label for=\"email\" class=\"ml-5\">Email:</label>\n            <input type=\"email\" class=\"form-control ml-2\" id=\"email\" formControlName=\"email\">\n        </form>\n    </div>\n    <div class=\"col-md-12\">\n        <div class=\"table-responsive overflow-auto\" style=\"max-height: 250px;\">\n            <table class=\"table table-sm\">\n                <thead>\n                    <tr>\n                        <th *ngFor=\"let key of keyOfPerson\">{{key}}</th>\n                    </tr>\n                </thead>\n                <tbody>\n                    <tr *ngFor=\"let item of $persons | async as persons\">\n                        <td *ngFor=\"let key of keyOfPerson\">{{item[key]}}</td>\n                    </tr>\n                </tbody>\n            </table>\n        </div>\n    </div>\n</div>"
-
-/***/ }),
-
-/***/ "../node_modules/raw-loader/index.js!./src/app/views/tutorials/fake-api/filter/filter.component.ts":
-/*!************************************************************************************************!*\
-  !*** ../node_modules/raw-loader!./src/app/views/tutorials/fake-api/filter/filter.component.ts ***!
-  \************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "import { Component, OnInit, OnDestroy } from '@angular/core';\nimport { HttpClient, HttpParams } from '@angular/common/http';\nimport { Observable, Subscription, Subject } from 'rxjs';\nimport { IPerson, Person } from 'src/app/core/fake-api/context/model/person.model';\nimport { FormBuilder, FormGroup } from '@angular/forms';\nimport { tap, debounceTime, distinctUntilChanged, takeUntil } from 'rxjs/operators';\n\n@Component({\n  selector: 'app-filter',\n  templateUrl: './filter.component.html',\n  styles: [`\n    table thead th {\n      text-transform: capitalize;\n    }\n  `]\n})\nexport class FilterComponent implements OnInit, OnDestroy {\n\n  $persons: Observable<IPerson[]>;\n\n  private _keyOfPerson = Object.keys(new Person());\n\n  get keyOfPerson() {\n    return this._keyOfPerson;\n  }\n\n  search: FormGroup;\n\n  subscription: Subscription;\n  subject: Subject<any>;\n\n  constructor(\n    private http: HttpClient,\n    private fb: FormBuilder\n  ) {\n    this.search = this.fb.group({\n      name: [],\n      email: []\n    });\n  }\n\n  ngOnInit() {\n    this.subject = new Subject();\n    this.$persons = this.http.get<IPerson[]>('api/persons').pipe(takeUntil(this.subject));\n    this.subscription = this.search.valueChanges.pipe(\n      debounceTime(300),\n      distinctUntilChanged(),\n      tap(value => {\n        let params = new HttpParams();\n        Object.keys(value).forEach(key => {\n          if (value[key]) {\n            params = params.append(key, value[key]);\n          }\n        });\n        this.$persons = this.http.get<IPerson[]>('api/persons', { params });\n      })\n    ).subscribe();\n  }\n\n  ngOnDestroy() {\n    if (this.subscription) {\n      this.subscription.unsubscribe();\n      this.subscription = null;\n    }\n    this.subject.next();\n    this.subject.complete();\n    this.subject = null;\n  }\n\n}\n"
-
-/***/ }),
-
 /***/ "../node_modules/raw-loader/index.js!./src/app/views/tutorials/fake-api/overview/fake-api-overview.component.html":
 /*!***************************************************************************************************************!*\
   !*** ../node_modules/raw-loader!./src/app/views/tutorials/fake-api/overview/fake-api-overview.component.html ***!
@@ -473,6 +451,28 @@ module.exports = "<p>\n  Toasts provide feedback messages as notifications to th
 
 /***/ }),
 
+/***/ "../node_modules/raw-loader/index.js!./src/app/views/tutorials/fake-api/sections/filter/filter.component.html":
+/*!***********************************************************************************************************!*\
+  !*** ../node_modules/raw-loader!./src/app/views/tutorials/fake-api/sections/filter/filter.component.html ***!
+  \***********************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\n    <div class=\"col-md-12 mb-3\">\n        <form class=\"form-inline\" [formGroup]=\"search\">\n            <label for=\"name\">Name:</label>\n            <input type=\"text\" class=\"form-control ml-2\" id=\"name\" formControlName=\"name\">\n            <label for=\"email\" class=\"ml-5\">Email:</label>\n            <input type=\"email\" class=\"form-control ml-2\" id=\"email\" formControlName=\"email\">\n        </form>\n    </div>\n    <div class=\"col-md-12\">\n        <div class=\"table-responsive overflow-auto\" style=\"max-height: 250px;\">\n            <table class=\"table table-sm\">\n                <thead>\n                    <tr>\n                        <th *ngFor=\"let key of keyOfPerson\">{{key}}</th>\n                    </tr>\n                </thead>\n                <tbody>\n                    <tr *ngFor=\"let item of $persons | async as persons\">\n                        <td *ngFor=\"let key of keyOfPerson\">{{item[key]}}</td>\n                    </tr>\n                </tbody>\n            </table>\n        </div>\n    </div>\n</div>"
+
+/***/ }),
+
+/***/ "../node_modules/raw-loader/index.js!./src/app/views/tutorials/fake-api/sections/filter/filter.component.ts":
+/*!*********************************************************************************************************!*\
+  !*** ../node_modules/raw-loader!./src/app/views/tutorials/fake-api/sections/filter/filter.component.ts ***!
+  \*********************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "import { Component, OnInit, OnDestroy } from '@angular/core';\nimport { HttpClient, HttpParams } from '@angular/common/http';\nimport { Observable, Subscription, Subject } from 'rxjs';\nimport { IPerson, Person } from '../../../../../core/fake-api/context/model/person.model';\nimport { FormBuilder, FormGroup } from '@angular/forms';\nimport { tap, debounceTime, distinctUntilChanged, takeUntil } from 'rxjs/operators';\n\n@Component({\n  selector: 'app-filter',\n  templateUrl: './filter.component.html',\n  styles: [`\n    table thead th {\n      text-transform: capitalize;\n    }\n  `]\n})\nexport class FilterComponent implements OnInit, OnDestroy {\n\n  $persons: Observable<IPerson[]>;\n\n  private _keyOfPerson = Object.keys(new Person());\n\n  get keyOfPerson() {\n    return this._keyOfPerson;\n  }\n\n  search: FormGroup;\n\n  subscription: Subscription;\n  subject: Subject<any>;\n\n  constructor(\n    private http: HttpClient,\n    private fb: FormBuilder\n  ) {\n    this.search = this.fb.group({\n      name: [],\n      email: []\n    });\n  }\n\n  ngOnInit() {\n    this.subject = new Subject();\n    this.$persons = this.http.get<IPerson[]>('api/persons').pipe(takeUntil(this.subject));\n    this.subscription = this.search.valueChanges.pipe(\n      debounceTime(300),\n      distinctUntilChanged(),\n      tap(value => {\n        let params = new HttpParams();\n        Object.keys(value).forEach(key => {\n          if (value[key]) {\n            params = params.append(key, value[key]);\n          }\n        });\n        this.$persons = this.http.get<IPerson[]>('api/persons', { params });\n      })\n    ).subscribe();\n  }\n\n  ngOnDestroy() {\n    if (this.subscription) {\n      this.subscription.unsubscribe();\n      this.subscription = null;\n    }\n    this.subject.next();\n    this.subject.complete();\n    this.subject = null;\n  }\n\n}\n"
+
+/***/ }),
+
 /***/ "../node_modules/raw-loader/index.js!./src/app/views/views.component.html":
 /*!***********************************************************************!*\
   !*** ../node_modules/raw-loader!./src/app/views/views.component.html ***!
@@ -480,7 +480,711 @@ module.exports = "<p>\n  Toasts provide feedback messages as notifications to th
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-header></app-header>\r\n<div class=\"container-fluid\">\r\n    <div class=\"row\">\r\n        <div class=\"col-12 col-lg-2\" style=\"border-right: 1px solid rgba(0, 0, 0, 0.1)\">\r\n            <app-navigation></app-navigation>\r\n        </div>\r\n        <div class=\"col-12 col-lg-10\">\r\n            <!-- <router-outlet></router-outlet> -->\r\n            <header class=\"bg-light pt-4 pb-md-5 px-4 px-lg-5 d-flex d-md-block align-items-center title\">\r\n                <h1 class=\"mb-4 mr-auto mr-md-none\">{{ component | titlecase }}</h1>\r\n\r\n                <ul class=\"nav nav-tabs px-4 px-lg-5 content-tabset justify-content-md-start justify-content-end\">\r\n\r\n                    <li class=\"nav-item\" *ngFor=\"let childRoute of route.routeConfig.children\">\r\n                        <a class=\"nav-link\" routerLink=\"./{{childRoute.path}}\"\r\n                            [class.active]=\"activeTab === childRoute.path\">\r\n                            {{ childRoute.path | titlecase }}\r\n                        </a>\r\n                    </li>\r\n\r\n                    <li ngbDropdown placement=\"bottom-right\"\r\n                        class=\"nav-item align-self-center ml-0 ml-md-auto navigation-dropdown\"\r\n                        *ngIf=\"tableOfContent.length && isLargeScreenOrLess\">\r\n                        <span ngbDropdownToggle class=\"nav-link\" title=\"Table of content\">\r\n                            <span class=\"sr-only\">Table of content</span>\r\n                            <svg aria-hidden=\"true\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 512 512\">\r\n                                <path fill=\"currentColor\"\r\n                                    d=\"M464 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V80c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V86a6 6 0 0 1 6-6h404a6 6 0 0 1 6 6v340a6 6 0 0 1-6 6zm-42-92v24c0 6.627-5.373 12-12 12H204c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h200c6.627 0 12 5.373 12 12zm0-96v24c0 6.627-5.373 12-12 12H204c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h200c6.627 0 12 5.373 12 12zm0-96v24c0 6.627-5.373 12-12 12H204c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h200c6.627 0 12 5.373 12 12zm-252 12c0 19.882-16.118 36-36 36s-36-16.118-36-36 16.118-36 36-36 36 16.118 36 36zm0 96c0 19.882-16.118 36-36 36s-36-16.118-36-36 16.118-36 36-36 36 16.118 36 36zm0 96c0 19.882-16.118 36-36 36s-36-16.118-36-36 16.118-36 36-36 36 16.118 36 36z\">\r\n                                </path>\r\n                            </svg>\r\n                        </span>\r\n\r\n                        <div class=\"dropdown-menu-right\" ngbDropdownMenu>\r\n                            <ng-template ngFor [ngForOf]=\"tableOfContent\" let-topic>\r\n                                <a *ngIf=\"topic.title else divider\" class=\"dropdown-item\"\r\n                                    [routerLink]=\"['.', this.activeTab]\" [fragment]=\"topic.fragment\">{{topic.title}}</a>\r\n                            </ng-template>\r\n                            <ng-template #divider>\r\n                                <div class=\"dropdown-divider\"></div>\r\n                            </ng-template>\r\n                        </div>\r\n                    </li>\r\n                </ul>\r\n            </header>\r\n\r\n            <section class=\"row py-5 px-2 px-md-4 px-lg-5\">\r\n                <div class=\"col-12 col-xl-9 px-md-0 pr-xl-4\">\r\n                    <router-outlet (activate)=\"updateNavigation($event)\"></router-outlet>\r\n                </div>\r\n\r\n                <div class=\"col-12 col-xl-3 d-none d-xl-block contextual-nav\" *ngIf=\"!isLargeScreenOrLess\">\r\n                    <ul class=\"nav flex-column text-muted pt-4\">\r\n                        <li *ngFor=\"let topic of tableOfContent\" class=\"nav-item\">\r\n                            <a *ngIf=\"topic.title else divider\" class=\"nav-link\" [routerLink]=\"['.', this.activeTab]\"\r\n                                [fragment]=\"topic.fragment\">{{topic.title}}</a>\r\n                        </li>\r\n                        <ng-template #divider>&nbsp;</ng-template>\r\n                    </ul>\r\n                </div>\r\n            </section>\r\n        </div>\r\n    </div>\r\n</div>\r\n<app-footer></app-footer>"
+module.exports = "<app-header></app-header>\r\n<div class=\"container-fluid\">\r\n    <div class=\"row\">\r\n        <div class=\"col-12 col-lg-2\" style=\"border-right: 1px solid rgba(0, 0, 0, 0.1)\">\r\n            <app-navigation></app-navigation>\r\n        </div>\r\n        <div class=\"col-12 col-lg-10\">\r\n            <!-- <router-outlet></router-outlet> -->\r\n            <header class=\"bg-light pt-4 pb-md-5 px-4 px-lg-5 d-flex d-md-block align-items-center title\">\r\n                <h1 class=\"mb-4 mr-auto mr-md-none\">{{ component | titlecase }}</h1>\r\n\r\n                <ul class=\"nav nav-tabs px-4 px-lg-5 content-tabset justify-content-md-start justify-content-end\">\r\n\r\n                    <li class=\"nav-item\" *ngFor=\"let childRoute of route.routeConfig.children\">\r\n                        <a class=\"nav-link\" routerLink=\"./{{childRoute.path}}\"\r\n                            [class.active]=\"activeTab === childRoute.path\">\r\n                            {{ childRoute.path | titlecase }}\r\n                        </a>\r\n                    </li>\r\n\r\n                    <li nwDropdown placement=\"bottom-right\"\r\n                        class=\"nav-item align-self-center ml-0 ml-md-auto navigation-dropdown\"\r\n                        *ngIf=\"tableOfContent.length && isLargeScreenOrLess\">\r\n                        <span nwDropdownToggle class=\"nav-link\" title=\"Table of content\">\r\n                            <span class=\"sr-only\">Table of content</span>\r\n                            <svg aria-hidden=\"true\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 512 512\">\r\n                                <path fill=\"currentColor\"\r\n                                    d=\"M464 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V80c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V86a6 6 0 0 1 6-6h404a6 6 0 0 1 6 6v340a6 6 0 0 1-6 6zm-42-92v24c0 6.627-5.373 12-12 12H204c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h200c6.627 0 12 5.373 12 12zm0-96v24c0 6.627-5.373 12-12 12H204c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h200c6.627 0 12 5.373 12 12zm0-96v24c0 6.627-5.373 12-12 12H204c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h200c6.627 0 12 5.373 12 12zm-252 12c0 19.882-16.118 36-36 36s-36-16.118-36-36 16.118-36 36-36 36 16.118 36 36zm0 96c0 19.882-16.118 36-36 36s-36-16.118-36-36 16.118-36 36-36 36 16.118 36 36zm0 96c0 19.882-16.118 36-36 36s-36-16.118-36-36 16.118-36 36-36 36 16.118 36 36z\">\r\n                                </path>\r\n                            </svg>\r\n                        </span>\r\n\r\n                        <div class=\"dropdown-menu-right\" nwDropdownMenu>\r\n                            <ng-template ngFor [ngForOf]=\"tableOfContent\" let-topic>\r\n                                <a *ngIf=\"topic.title else divider\" class=\"dropdown-item\"\r\n                                    [routerLink]=\"['.', this.activeTab]\" [fragment]=\"topic.fragment\">{{topic.title}}</a>\r\n                            </ng-template>\r\n                            <ng-template #divider>\r\n                                <div class=\"dropdown-divider\"></div>\r\n                            </ng-template>\r\n                        </div>\r\n                    </li>\r\n                </ul>\r\n            </header>\r\n\r\n            <section class=\"row py-5 px-2 px-md-4 px-lg-5\">\r\n                <div class=\"col-12 col-xl-9 px-md-0 pr-xl-4\">\r\n                    <router-outlet (activate)=\"updateNavigation($event)\"></router-outlet>\r\n                </div>\r\n\r\n                <div class=\"col-12 col-xl-3 d-none d-xl-block contextual-nav\" *ngIf=\"!isLargeScreenOrLess\">\r\n                    <ul class=\"nav flex-column text-muted pt-4\">\r\n                        <li *ngFor=\"let topic of tableOfContent\" class=\"nav-item\">\r\n                            <a *ngIf=\"topic.title else divider\" class=\"nav-link\" [routerLink]=\"['.', this.activeTab]\"\r\n                                [fragment]=\"topic.fragment\">{{topic.title}}</a>\r\n                        </li>\r\n                        <ng-template #divider>&nbsp;</ng-template>\r\n                    </ul>\r\n                </div>\r\n            </section>\r\n        </div>\r\n    </div>\r\n</div>\r\n<app-footer></app-footer>"
+
+/***/ }),
+
+/***/ "../src/lib/nw-dropdown/index.ts":
+/*!***************************************!*\
+  !*** ../src/lib/nw-dropdown/index.ts ***!
+  \***************************************/
+/*! exports provided: NwDropdown, NwDropdownAnchor, NwDropdownToggle, NwDropdownMenu, NwDropdownItem, NwNavbar, NwDropdownConfig */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _nw_dropdown_directive__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./nw-dropdown.directive */ "../src/lib/nw-dropdown/nw-dropdown.directive.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NwDropdown", function() { return _nw_dropdown_directive__WEBPACK_IMPORTED_MODULE_0__["NwDropdown"]; });
+
+/* harmony import */ var _nw_dropdown_anchor_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./nw-dropdown-anchor.directive */ "../src/lib/nw-dropdown/nw-dropdown-anchor.directive.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NwDropdownAnchor", function() { return _nw_dropdown_anchor_directive__WEBPACK_IMPORTED_MODULE_1__["NwDropdownAnchor"]; });
+
+/* harmony import */ var _nw_dropdown_toggle_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./nw-dropdown-toggle.directive */ "../src/lib/nw-dropdown/nw-dropdown-toggle.directive.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NwDropdownToggle", function() { return _nw_dropdown_toggle_directive__WEBPACK_IMPORTED_MODULE_2__["NwDropdownToggle"]; });
+
+/* harmony import */ var _nw_dropdown_menu_directive__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./nw-dropdown-menu.directive */ "../src/lib/nw-dropdown/nw-dropdown-menu.directive.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NwDropdownMenu", function() { return _nw_dropdown_menu_directive__WEBPACK_IMPORTED_MODULE_3__["NwDropdownMenu"]; });
+
+/* harmony import */ var _nw_dropdown_item_directive__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./nw-dropdown-item.directive */ "../src/lib/nw-dropdown/nw-dropdown-item.directive.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NwDropdownItem", function() { return _nw_dropdown_item_directive__WEBPACK_IMPORTED_MODULE_4__["NwDropdownItem"]; });
+
+/* harmony import */ var _nw_navbar_directive__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./nw-navbar.directive */ "../src/lib/nw-dropdown/nw-navbar.directive.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NwNavbar", function() { return _nw_navbar_directive__WEBPACK_IMPORTED_MODULE_5__["NwNavbar"]; });
+
+/* harmony import */ var _nw_dropdown_config_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./nw-dropdown-config.service */ "../src/lib/nw-dropdown/nw-dropdown-config.service.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NwDropdownConfig", function() { return _nw_dropdown_config_service__WEBPACK_IMPORTED_MODULE_6__["NwDropdownConfig"]; });
+
+
+
+
+
+
+
+
+
+
+/***/ }),
+
+/***/ "../src/lib/nw-dropdown/nw-dropdown-anchor.directive.ts":
+/*!**************************************************************!*\
+  !*** ../src/lib/nw-dropdown/nw-dropdown-anchor.directive.ts ***!
+  \**************************************************************/
+/*! exports provided: NwDropdownAnchor */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NwDropdownAnchor", function() { return NwDropdownAnchor; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _nw_dropdown_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./nw-dropdown.directive */ "../src/lib/nw-dropdown/nw-dropdown.directive.ts");
+
+
+
+/**
+ * A directive to mark an element to which dropdown menu will be anchored.
+ *
+ * This is a simple version of the `NwDropdownToggle` directive.
+ * It plays the same role, but doesn't listen to click events to toggle dropdown menu thus enabling support
+ * for events other than click.
+ *
+ * @since 1.1.0
+ */
+var NwDropdownAnchor = /** @class */ (function () {
+    function NwDropdownAnchor(dropdown, _elementRef) {
+        this.dropdown = dropdown;
+        this._elementRef = _elementRef;
+        this.anchorEl = _elementRef.nativeElement;
+    }
+    NwDropdownAnchor.prototype.getNativeElement = function () { return this._elementRef.nativeElement; };
+    NwDropdownAnchor.ctorParameters = function () { return [
+        { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["forwardRef"])(function () { return _nw_dropdown_directive__WEBPACK_IMPORTED_MODULE_2__["NwDropdown"]; }),] }] },
+        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"] }
+    ]; };
+    NwDropdownAnchor = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"])({
+            selector: '[nwDropdownAnchor]',
+            host: {
+                'class': 'dropdown-toggle',
+                'aria-haspopup': 'true',
+                '[attr.aria-expanded]': 'dropdown.isOpen()'
+            }
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["forwardRef"])(function () { return _nw_dropdown_directive__WEBPACK_IMPORTED_MODULE_2__["NwDropdown"]; })))
+    ], NwDropdownAnchor);
+    return NwDropdownAnchor;
+}());
+
+
+
+/***/ }),
+
+/***/ "../src/lib/nw-dropdown/nw-dropdown-config.service.ts":
+/*!************************************************************!*\
+  !*** ../src/lib/nw-dropdown/nw-dropdown-config.service.ts ***!
+  \************************************************************/
+/*! exports provided: NwDropdownConfig */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NwDropdownConfig", function() { return NwDropdownConfig; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
+
+
+/**
+ * A configuration service for the [`NwDropdown`](#/components/dropdown/api#NwDropdown) component.
+ *
+ * You can inject this service, typically in your root component, and customize the values of its properties in
+ * order to provide default values for all the dropdowns used in the application.
+ */
+var NwDropdownConfig = /** @class */ (function () {
+    function NwDropdownConfig() {
+        this.autoClose = true;
+        this.placement = ['bottom-left', 'bottom-right', 'top-left', 'top-right'];
+    }
+    NwDropdownConfig = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        })
+    ], NwDropdownConfig);
+    return NwDropdownConfig;
+}());
+
+
+
+/***/ }),
+
+/***/ "../src/lib/nw-dropdown/nw-dropdown-item.directive.ts":
+/*!************************************************************!*\
+  !*** ../src/lib/nw-dropdown/nw-dropdown-item.directive.ts ***!
+  \************************************************************/
+/*! exports provided: NwDropdownItem */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NwDropdownItem", function() { return NwDropdownItem; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
+
+
+/**
+ * A directive you should put on a dropdown item to enable keyboard navigation.
+ * Arrow keys will move focus between items marked with this directive.
+ *
+ * @since 4.1.0
+ */
+var NwDropdownItem = /** @class */ (function () {
+    function NwDropdownItem(elementRef) {
+        this.elementRef = elementRef;
+        this._disabled = false;
+    }
+    Object.defineProperty(NwDropdownItem.prototype, "disabled", {
+        get: function () { return this._disabled; },
+        set: function (value) {
+            this._disabled = value === '' || value === true; // accept an empty attribute as true
+        },
+        enumerable: true,
+        configurable: true
+    });
+    NwDropdownItem.ctorParameters = function () { return [
+        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"] }
+    ]; };
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+    ], NwDropdownItem.prototype, "disabled", null);
+    NwDropdownItem = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"])({
+            selector: '[nwDropdownItem]',
+            host: {
+                'class': 'dropdown-item',
+                '[class.disabled]': 'disabled'
+            }
+        })
+    ], NwDropdownItem);
+    return NwDropdownItem;
+}());
+
+
+
+/***/ }),
+
+/***/ "../src/lib/nw-dropdown/nw-dropdown-menu.directive.ts":
+/*!************************************************************!*\
+  !*** ../src/lib/nw-dropdown/nw-dropdown-menu.directive.ts ***!
+  \************************************************************/
+/*! exports provided: NwDropdownMenu */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NwDropdownMenu", function() { return NwDropdownMenu; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _nw_dropdown_item_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./nw-dropdown-item.directive */ "../src/lib/nw-dropdown/nw-dropdown-item.directive.ts");
+/* harmony import */ var _nw_dropdown_directive__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./nw-dropdown.directive */ "../src/lib/nw-dropdown/nw-dropdown.directive.ts");
+
+
+
+
+/**
+ * A directive that wraps dropdown menu content and dropdown items.
+ */
+var NwDropdownMenu = /** @class */ (function () {
+    function NwDropdownMenu(dropdown) {
+        this.dropdown = dropdown;
+        this.placement = 'bottom';
+        this.isOpen = false;
+    }
+    NwDropdownMenu.ctorParameters = function () { return [
+        { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["forwardRef"])(function () { return _nw_dropdown_directive__WEBPACK_IMPORTED_MODULE_3__["NwDropdown"]; }),] }] }
+    ]; };
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ContentChildren"])(_nw_dropdown_item_directive__WEBPACK_IMPORTED_MODULE_2__["NwDropdownItem"])
+    ], NwDropdownMenu.prototype, "menuItems", void 0);
+    NwDropdownMenu = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"])({
+            selector: '[nwDropdownMenu]',
+            host: {
+                '[class.dropdown-menu]': 'true',
+                '[class.show]': 'dropdown.isOpen()',
+                '[attr.x-placement]': 'placement',
+                '(keydown.ArrowUp)': 'dropdown.onKeyDown($event)',
+                '(keydown.ArrowDown)': 'dropdown.onKeyDown($event)',
+                '(keydown.Home)': 'dropdown.onKeyDown($event)',
+                '(keydown.End)': 'dropdown.onKeyDown($event)',
+                '(keydown.Enter)': 'dropdown.onKeyDown($event)',
+                '(keydown.Space)': 'dropdown.onKeyDown($event)'
+            }
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["forwardRef"])(function () { return _nw_dropdown_directive__WEBPACK_IMPORTED_MODULE_3__["NwDropdown"]; })))
+    ], NwDropdownMenu);
+    return NwDropdownMenu;
+}());
+
+
+
+/***/ }),
+
+/***/ "../src/lib/nw-dropdown/nw-dropdown-toggle.directive.ts":
+/*!**************************************************************!*\
+  !*** ../src/lib/nw-dropdown/nw-dropdown-toggle.directive.ts ***!
+  \**************************************************************/
+/*! exports provided: NwDropdownToggle */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NwDropdownToggle", function() { return NwDropdownToggle; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _nw_dropdown_anchor_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./nw-dropdown-anchor.directive */ "../src/lib/nw-dropdown/nw-dropdown-anchor.directive.ts");
+/* harmony import */ var _nw_dropdown_directive__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./nw-dropdown.directive */ "../src/lib/nw-dropdown/nw-dropdown.directive.ts");
+
+
+
+
+/**
+ * A directive to mark an element that will toggle dropdown via the `click` event.
+ *
+ * You can also use `NwDropdownAnchor` as an alternative.
+ */
+var NwDropdownToggle = /** @class */ (function (_super) {
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](NwDropdownToggle, _super);
+    function NwDropdownToggle(dropdown, elementRef) {
+        return _super.call(this, dropdown, elementRef) || this;
+    }
+    NwDropdownToggle_1 = NwDropdownToggle;
+    var NwDropdownToggle_1;
+    NwDropdownToggle.ctorParameters = function () { return [
+        { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["forwardRef"])(function () { return _nw_dropdown_directive__WEBPACK_IMPORTED_MODULE_3__["NwDropdown"]; }),] }] },
+        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"] }
+    ]; };
+    NwDropdownToggle = NwDropdownToggle_1 = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"])({
+            selector: '[nwDropdownToggle]',
+            host: {
+                'class': 'dropdown-toggle',
+                'aria-haspopup': 'true',
+                '[attr.aria-expanded]': 'dropdown.isOpen()',
+                '(click)': 'dropdown.toggle()',
+                '(keydown.ArrowUp)': 'dropdown.onKeyDown($event)',
+                '(keydown.ArrowDown)': 'dropdown.onKeyDown($event)',
+                '(keydown.Home)': 'dropdown.onKeyDown($event)',
+                '(keydown.End)': 'dropdown.onKeyDown($event)'
+            },
+            providers: [{ provide: _nw_dropdown_anchor_directive__WEBPACK_IMPORTED_MODULE_2__["NwDropdownAnchor"], useExisting: Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["forwardRef"])(function () { return NwDropdownToggle_1; }) }]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["forwardRef"])(function () { return _nw_dropdown_directive__WEBPACK_IMPORTED_MODULE_3__["NwDropdown"]; })))
+    ], NwDropdownToggle);
+    return NwDropdownToggle;
+}(_nw_dropdown_anchor_directive__WEBPACK_IMPORTED_MODULE_2__["NwDropdownAnchor"]));
+
+
+
+/***/ }),
+
+/***/ "../src/lib/nw-dropdown/nw-dropdown.directive.ts":
+/*!*******************************************************!*\
+  !*** ../src/lib/nw-dropdown/nw-dropdown.directive.ts ***!
+  \*******************************************************/
+/*! exports provided: NwDropdown */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NwDropdown", function() { return NwDropdown; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "../node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "../node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "../node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var _util_autoclose_util__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../util/autoclose.util */ "../src/lib/util/autoclose.util.ts");
+/* harmony import */ var _util_key_util__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../util/key.util */ "../src/lib/util/key.util.ts");
+/* harmony import */ var _util_positioning_util__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../util/positioning.util */ "../src/lib/util/positioning.util.ts");
+/* harmony import */ var _nw_dropdown_anchor_directive__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./nw-dropdown-anchor.directive */ "../src/lib/nw-dropdown/nw-dropdown-anchor.directive.ts");
+/* harmony import */ var _nw_dropdown_config_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./nw-dropdown-config.service */ "../src/lib/nw-dropdown/nw-dropdown-config.service.ts");
+/* harmony import */ var _nw_dropdown_menu_directive__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./nw-dropdown-menu.directive */ "../src/lib/nw-dropdown/nw-dropdown-menu.directive.ts");
+/* harmony import */ var _nw_navbar_directive__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./nw-navbar.directive */ "../src/lib/nw-dropdown/nw-navbar.directive.ts");
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * A directive that provides contextual overlays for displaying lists of links and more.
+ */
+var NwDropdown = /** @class */ (function () {
+    function NwDropdown(_changeDetector, config, _document, _ngZone, _elementRef, _renderer, ngbNavbar) {
+        var _this = this;
+        this._changeDetector = _changeDetector;
+        this._document = _document;
+        this._ngZone = _ngZone;
+        this._elementRef = _elementRef;
+        this._renderer = _renderer;
+        this._closed$ = new rxjs__WEBPACK_IMPORTED_MODULE_3__["Subject"]();
+        /**
+         * Defines whether or not the dropdown menu is opened initially.
+         */
+        this._open = false;
+        /**
+         * An event fired when the dropdown is opened or closed.
+         *
+         * The event payload is a `boolean`:
+         * * `true` - the dropdown was opened
+         * * `false` - the dropdown was closed
+         */
+        this.openChange = new _angular_core__WEBPACK_IMPORTED_MODULE_2__["EventEmitter"]();
+        this.placement = config.placement;
+        this.container = config.container;
+        this.autoClose = config.autoClose;
+        this.display = ngbNavbar ? 'static' : 'dynamic';
+        this._zoneSubscription = _ngZone.onStable.subscribe(function () { _this._positionMenu(); });
+    }
+    NwDropdown.prototype.ngAfterContentInit = function () {
+        var _this = this;
+        this._ngZone.onStable.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["take"])(1)).subscribe(function () {
+            _this._applyPlacementClasses();
+            if (_this._open) {
+                _this._setCloseHandlers();
+            }
+        });
+    };
+    NwDropdown.prototype.ngOnChanges = function (changes) {
+        if (changes.container && this._open) {
+            this._applyContainer(this.container);
+        }
+        if (changes.placement && !changes.placement.isFirstChange) {
+            this._applyPlacementClasses();
+        }
+    };
+    /**
+     * Checks if the dropdown menu is open.
+     */
+    NwDropdown.prototype.isOpen = function () { return this._open; };
+    /**
+     * Opens the dropdown menu.
+     */
+    NwDropdown.prototype.open = function () {
+        if (!this._open) {
+            this._open = true;
+            this._applyContainer(this.container);
+            this.openChange.emit(true);
+            this._setCloseHandlers();
+        }
+    };
+    NwDropdown.prototype._setCloseHandlers = function () {
+        var _this = this;
+        var anchor = this._anchor;
+        Object(_util_autoclose_util__WEBPACK_IMPORTED_MODULE_5__["nwAutoClose"])(this._ngZone, this._document, this.autoClose, function () { return _this.close(); }, this._closed$, this._menu ? [this._menuElement.nativeElement] : [], anchor ? [anchor.getNativeElement()] : [], '.dropdown-item,.dropdown-divider');
+    };
+    /**
+     * Closes the dropdown menu.
+     */
+    NwDropdown.prototype.close = function () {
+        if (this._open) {
+            this._open = false;
+            this._resetContainer();
+            this._closed$.next();
+            this.openChange.emit(false);
+            this._changeDetector.markForCheck();
+        }
+    };
+    /**
+     * Toggles the dropdown menu.
+     */
+    NwDropdown.prototype.toggle = function () {
+        if (this.isOpen()) {
+            this.close();
+        }
+        else {
+            this.open();
+        }
+    };
+    NwDropdown.prototype.ngOnDestroy = function () {
+        this._resetContainer();
+        this._closed$.next();
+        this._zoneSubscription.unsubscribe();
+    };
+    NwDropdown.prototype.onKeyDown = function (event) {
+        var _this = this;
+        // tslint:disable-next-line:deprecation
+        var key = event.which;
+        var itemElements = this._getMenuElements();
+        var position = -1;
+        var isEventFromItems = false;
+        var isEventFromToggle = this._isEventFromToggle(event);
+        if (!isEventFromToggle && itemElements.length) {
+            itemElements.forEach(function (itemElement, index) {
+                if (itemElement.contains(event.target)) {
+                    isEventFromItems = true;
+                }
+                if (itemElement === _this._document.activeElement) {
+                    position = index;
+                }
+            });
+        }
+        // closing on Enter / Space
+        if (key === _util_key_util__WEBPACK_IMPORTED_MODULE_6__["Key"].Space || key === _util_key_util__WEBPACK_IMPORTED_MODULE_6__["Key"].Enter) {
+            if (isEventFromItems && (this.autoClose === true || this.autoClose === 'inside')) {
+                this.close();
+            }
+            return;
+        }
+        // opening / navigating
+        if (isEventFromToggle || isEventFromItems) {
+            this.open();
+            if (itemElements.length) {
+                switch (key) {
+                    case _util_key_util__WEBPACK_IMPORTED_MODULE_6__["Key"].ArrowDown:
+                        position = Math.min(position + 1, itemElements.length - 1);
+                        break;
+                    case _util_key_util__WEBPACK_IMPORTED_MODULE_6__["Key"].ArrowUp:
+                        if (this._isDropup() && position === -1) {
+                            position = itemElements.length - 1;
+                            break;
+                        }
+                        position = Math.max(position - 1, 0);
+                        break;
+                    case _util_key_util__WEBPACK_IMPORTED_MODULE_6__["Key"].Home:
+                        position = 0;
+                        break;
+                    case _util_key_util__WEBPACK_IMPORTED_MODULE_6__["Key"].End:
+                        position = itemElements.length - 1;
+                        break;
+                }
+                itemElements[position].focus();
+            }
+            event.preventDefault();
+        }
+    };
+    NwDropdown.prototype._isDropup = function () { return this._elementRef.nativeElement.classList.contains('dropup'); };
+    NwDropdown.prototype._isEventFromToggle = function (event) {
+        return this._anchor.getNativeElement().contains(event.target);
+    };
+    NwDropdown.prototype._getMenuElements = function () {
+        var menu = this._menu;
+        if (menu == null) {
+            return [];
+        }
+        return menu.menuItems.filter(function (item) { return !item.disabled; }).map(function (item) { return item.elementRef.nativeElement; });
+    };
+    NwDropdown.prototype._positionMenu = function () {
+        var menu = this._menu;
+        if (this.isOpen() && menu) {
+            this._applyPlacementClasses(this.display === 'dynamic' ?
+                Object(_util_positioning_util__WEBPACK_IMPORTED_MODULE_7__["positionElements"])(this._anchor.anchorEl, this._bodyContainer || this._menuElement.nativeElement, this.placement, this.container === 'body') :
+                this._getFirstPlacement(this.placement));
+        }
+    };
+    NwDropdown.prototype._getFirstPlacement = function (placement) {
+        return Array.isArray(placement) ? placement[0] : placement.split(' ')[0];
+    };
+    NwDropdown.prototype._resetContainer = function () {
+        var renderer = this._renderer;
+        var menuElement = this._menuElement;
+        if (menuElement) {
+            var dropdownElement = this._elementRef.nativeElement;
+            var dropdownMenuElement = menuElement.nativeElement;
+            renderer.appendChild(dropdownElement, dropdownMenuElement);
+            renderer.removeStyle(dropdownMenuElement, 'position');
+            renderer.removeStyle(dropdownMenuElement, 'transform');
+        }
+        if (this._bodyContainer) {
+            renderer.removeChild(this._document.body, this._bodyContainer);
+            this._bodyContainer = null;
+        }
+    };
+    NwDropdown.prototype._applyContainer = function (container) {
+        if (container === void 0) { container = null; }
+        this._resetContainer();
+        if (container === 'body') {
+            var renderer = this._renderer;
+            var dropdownMenuElement = this._menuElement.nativeElement;
+            var bodyContainer = this._bodyContainer = this._bodyContainer || renderer.createElement('div');
+            // Override some styles to have the positionning working
+            renderer.setStyle(bodyContainer, 'position', 'absolute');
+            renderer.setStyle(dropdownMenuElement, 'position', 'static');
+            renderer.setStyle(bodyContainer, 'z-index', '1050');
+            renderer.appendChild(bodyContainer, dropdownMenuElement);
+            renderer.appendChild(this._document.body, bodyContainer);
+        }
+    };
+    NwDropdown.prototype._applyPlacementClasses = function (placement) {
+        var menu = this._menu;
+        if (menu) {
+            if (!placement) {
+                placement = this._getFirstPlacement(this.placement);
+            }
+            var renderer = this._renderer;
+            var dropdownElement = this._elementRef.nativeElement;
+            // remove the current placement classes
+            renderer.removeClass(dropdownElement, 'dropup');
+            renderer.removeClass(dropdownElement, 'dropdown');
+            menu.placement = this.display === 'static' ? null : placement;
+            /*
+            * apply the new placement
+            * in case of top use up-arrow or down-arrow otherwise
+            */
+            var dropdownClass = placement.search('^top') !== -1 ? 'dropup' : 'dropdown';
+            renderer.addClass(dropdownElement, dropdownClass);
+            var bodyContainer = this._bodyContainer;
+            if (bodyContainer) {
+                renderer.removeClass(bodyContainer, 'dropup');
+                renderer.removeClass(bodyContainer, 'dropdown');
+                renderer.addClass(bodyContainer, dropdownClass);
+            }
+        }
+    };
+    NwDropdown.ctorParameters = function () { return [
+        { type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["ChangeDetectorRef"] },
+        { type: _nw_dropdown_config_service__WEBPACK_IMPORTED_MODULE_9__["NwDropdownConfig"] },
+        { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Inject"], args: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["DOCUMENT"],] }] },
+        { type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["NgZone"] },
+        { type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["ElementRef"] },
+        { type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Renderer2"] },
+        { type: _nw_navbar_directive__WEBPACK_IMPORTED_MODULE_11__["NwNavbar"], decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Optional"] }] }
+    ]; };
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ContentChild"])(_nw_dropdown_menu_directive__WEBPACK_IMPORTED_MODULE_10__["NwDropdownMenu"], { static: false })
+    ], NwDropdown.prototype, "_menu", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ContentChild"])(_nw_dropdown_menu_directive__WEBPACK_IMPORTED_MODULE_10__["NwDropdownMenu"], { read: _angular_core__WEBPACK_IMPORTED_MODULE_2__["ElementRef"], static: false })
+    ], NwDropdown.prototype, "_menuElement", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ContentChild"])(_nw_dropdown_anchor_directive__WEBPACK_IMPORTED_MODULE_8__["NwDropdownAnchor"], { static: false })
+    ], NwDropdown.prototype, "_anchor", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])()
+    ], NwDropdown.prototype, "autoClose", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])('open')
+    ], NwDropdown.prototype, "_open", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])()
+    ], NwDropdown.prototype, "placement", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])()
+    ], NwDropdown.prototype, "container", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])()
+    ], NwDropdown.prototype, "display", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Output"])()
+    ], NwDropdown.prototype, "openChange", void 0);
+    NwDropdown = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Directive"])({
+            selector: '[nwDropdown]',
+            exportAs: 'nwDropdown',
+            host: {
+                '[class.show]': 'isOpen()'
+            }
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Inject"])(_angular_common__WEBPACK_IMPORTED_MODULE_1__["DOCUMENT"])),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](6, Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Optional"])())
+    ], NwDropdown);
+    return NwDropdown;
+}());
+
+
+
+/***/ }),
+
+/***/ "../src/lib/nw-dropdown/nw-dropdown.module.ts":
+/*!****************************************************!*\
+  !*** ../src/lib/nw-dropdown/nw-dropdown.module.ts ***!
+  \****************************************************/
+/*! exports provided: NwDropdown, NwDropdownAnchor, NwDropdownConfig, NwDropdownItem, NwDropdownMenu, NwDropdownToggle, NwNavbar, NwDropdownModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NwDropdownModule", function() { return NwDropdownModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "../node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! . */ "../src/lib/nw-dropdown/index.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NwDropdown", function() { return ___WEBPACK_IMPORTED_MODULE_3__["NwDropdown"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NwDropdownAnchor", function() { return ___WEBPACK_IMPORTED_MODULE_3__["NwDropdownAnchor"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NwDropdownConfig", function() { return ___WEBPACK_IMPORTED_MODULE_3__["NwDropdownConfig"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NwDropdownItem", function() { return ___WEBPACK_IMPORTED_MODULE_3__["NwDropdownItem"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NwDropdownMenu", function() { return ___WEBPACK_IMPORTED_MODULE_3__["NwDropdownMenu"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NwDropdownToggle", function() { return ___WEBPACK_IMPORTED_MODULE_3__["NwDropdownToggle"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NwNavbar", function() { return ___WEBPACK_IMPORTED_MODULE_3__["NwNavbar"]; });
+
+
+
+
+
+
+var DECLARATION_ITEMS = [
+    ___WEBPACK_IMPORTED_MODULE_3__["NwDropdown"],
+    ___WEBPACK_IMPORTED_MODULE_3__["NwDropdownAnchor"],
+    ___WEBPACK_IMPORTED_MODULE_3__["NwDropdownToggle"],
+    ___WEBPACK_IMPORTED_MODULE_3__["NwDropdownMenu"],
+    ___WEBPACK_IMPORTED_MODULE_3__["NwDropdownItem"],
+    ___WEBPACK_IMPORTED_MODULE_3__["NwNavbar"]
+];
+var NwDropdownModule = /** @class */ (function () {
+    function NwDropdownModule() {
+    }
+    NwDropdownModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
+            declarations: tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](DECLARATION_ITEMS),
+            imports: [
+                _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]
+            ],
+            exports: tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](DECLARATION_ITEMS)
+        })
+    ], NwDropdownModule);
+    return NwDropdownModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "../src/lib/nw-dropdown/nw-navbar.directive.ts":
+/*!*****************************************************!*\
+  !*** ../src/lib/nw-dropdown/nw-navbar.directive.ts ***!
+  \*****************************************************/
+/*! exports provided: NwNavbar */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NwNavbar", function() { return NwNavbar; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
+
+
+var NwNavbar = /** @class */ (function () {
+    function NwNavbar() {
+    }
+    NwNavbar = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"])({
+            selector: '[nwNavbar]'
+        })
+    ], NwNavbar);
+    return NwNavbar;
+}());
+
+
 
 /***/ }),
 
@@ -498,10 +1202,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
 
 
+/**
+ * A directive to wrap content to be displayed in a tab.
+ */
 var NwTabContent = /** @class */ (function () {
     function NwTabContent(templateRef) {
         this.templateRef = templateRef;
-        console.log('templateRef', templateRef);
     }
     NwTabContent.ctorParameters = function () { return [
         { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"] }
@@ -532,6 +1238,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
 
 
+/**
+ * A directive to wrap tab titles that need to contain HTML markup or other directives.
+ *
+ * Alternatively you could use the `NgbTab.title` input for string titles.
+ */
 var NwTabTitle = /** @class */ (function () {
     function NwTabTitle(templateRef) {
         this.templateRef = templateRef;
@@ -570,6 +1281,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var nwTabNextId = 0;
+/**
+ * A directive representing an individual tab.
+ */
 var NwTab = /** @class */ (function () {
     function NwTab() {
         /**
@@ -680,6 +1394,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+/**
+ * A component that makes it easy to create tabbed interface.
+ */
 var NwTabsetComponent = /** @class */ (function () {
     function NwTabsetComponent(config) {
         /**
@@ -918,7 +1635,7 @@ var NwTimelineModule = /** @class */ (function () {
 /*!**************************************!*\
   !*** ../src/lib/nw-widget.module.ts ***!
   \**************************************/
-/*! exports provided: NwWidgetModule, NwTimelineModule, NwTabsetModule */
+/*! exports provided: NwWidgetModule, NwTimelineModule, NwTabsetModule, NwDropdown, NwDropdownAnchor, NwDropdownConfig, NwDropdownItem, NwDropdownMenu, NwDropdownToggle, NwNavbar, NwDropdownModule */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -928,17 +1645,36 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _nw_timeline_nw_timeline_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./nw-timeline/nw-timeline.module */ "../src/lib/nw-timeline/nw-timeline.module.ts");
 /* harmony import */ var _nw_tabset_nw_tabset_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./nw-tabset/nw-tabset.module */ "../src/lib/nw-tabset/nw-tabset.module.ts");
+/* harmony import */ var _nw_dropdown_nw_dropdown_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./nw-dropdown/nw-dropdown.module */ "../src/lib/nw-dropdown/nw-dropdown.module.ts");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NwTimelineModule", function() { return _nw_timeline_nw_timeline_module__WEBPACK_IMPORTED_MODULE_2__["NwTimelineModule"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NwTabsetModule", function() { return _nw_tabset_nw_tabset_module__WEBPACK_IMPORTED_MODULE_3__["NwTabsetModule"]; });
 
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NwDropdown", function() { return _nw_dropdown_nw_dropdown_module__WEBPACK_IMPORTED_MODULE_4__["NwDropdown"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NwDropdownAnchor", function() { return _nw_dropdown_nw_dropdown_module__WEBPACK_IMPORTED_MODULE_4__["NwDropdownAnchor"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NwDropdownConfig", function() { return _nw_dropdown_nw_dropdown_module__WEBPACK_IMPORTED_MODULE_4__["NwDropdownConfig"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NwDropdownItem", function() { return _nw_dropdown_nw_dropdown_module__WEBPACK_IMPORTED_MODULE_4__["NwDropdownItem"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NwDropdownMenu", function() { return _nw_dropdown_nw_dropdown_module__WEBPACK_IMPORTED_MODULE_4__["NwDropdownMenu"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NwDropdownToggle", function() { return _nw_dropdown_nw_dropdown_module__WEBPACK_IMPORTED_MODULE_4__["NwDropdownToggle"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NwNavbar", function() { return _nw_dropdown_nw_dropdown_module__WEBPACK_IMPORTED_MODULE_4__["NwNavbar"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NwDropdownModule", function() { return _nw_dropdown_nw_dropdown_module__WEBPACK_IMPORTED_MODULE_4__["NwDropdownModule"]; });
 
 
 
 
 
 
-var NW_WIDGET_MODULE = [_nw_timeline_nw_timeline_module__WEBPACK_IMPORTED_MODULE_2__["NwTimelineModule"], _nw_tabset_nw_tabset_module__WEBPACK_IMPORTED_MODULE_3__["NwTabsetModule"]];
+
+
+
+var NW_WIDGET_MODULE = [_nw_timeline_nw_timeline_module__WEBPACK_IMPORTED_MODULE_2__["NwTimelineModule"], _nw_tabset_nw_tabset_module__WEBPACK_IMPORTED_MODULE_3__["NwTabsetModule"], _nw_dropdown_nw_dropdown_module__WEBPACK_IMPORTED_MODULE_4__["NwDropdownModule"]];
 var NwWidgetModule = /** @class */ (function () {
     function NwWidgetModule() {
     }
@@ -946,6 +1682,7 @@ var NwWidgetModule = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
             imports: NW_WIDGET_MODULE,
             exports: NW_WIDGET_MODULE,
+            declarations: [],
         })
     ], NwWidgetModule);
     return NwWidgetModule;
@@ -955,11 +1692,441 @@ var NwWidgetModule = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "../src/lib/util/autoclose.util.ts":
+/*!*****************************************!*\
+  !*** ../src/lib/util/autoclose.util.ts ***!
+  \*****************************************/
+/*! exports provided: nwAutoClose */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "nwAutoClose", function() { return nwAutoClose; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ "../node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "../node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var _key_util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./key.util */ "../src/lib/util/key.util.ts");
+/* harmony import */ var _common_util__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./common.util */ "../src/lib/util/common.util.ts");
+
+
+
+
+
+var isContainedIn = function (element, array) {
+    return array ? array.some(function (item) { return item.contains(element); }) : false;
+};
+var matchesSelectorIfAny = function (element, selector) {
+    return !selector || Object(_common_util__WEBPACK_IMPORTED_MODULE_4__["closest"])(element, selector) != null;
+};
+// we'll have to use 'touch' events instead of 'mouse' events on iOS and add a more significant delay
+// to avoid re-opening when handling (click) on a toggling element
+// TODO: use proper Angular platform detection when NgbAutoClose becomes a service and we can inject PLATFORM_ID
+var iOS = false;
+if (typeof navigator !== 'undefined') {
+    iOS = !!navigator.userAgent && /iPad|iPhone|iPod/.test(navigator.userAgent);
+}
+// setting 'nwAutoClose' synchronously on iOS results in immediate popup closing
+// when tapping on the triggering element
+var wrapAsyncForiOS = function (fn) { return iOS ? function () { return setTimeout(function () { return fn(); }, 100); } : fn; };
+function nwAutoClose(zone, document, type, close, closed$, insideElements, ignoreElements, insideSelector) {
+    // closing on ESC and outside clicks
+    if (type) {
+        zone.runOutsideAngular(wrapAsyncForiOS(function () {
+            var shouldCloseOnClick = function (event) {
+                var element = event.target;
+                if (event.button === 2 || isContainedIn(element, ignoreElements)) {
+                    return false;
+                }
+                if (type === 'inside') {
+                    return isContainedIn(element, insideElements) && matchesSelectorIfAny(element, insideSelector);
+                }
+                else if (type === 'outside') {
+                    return !isContainedIn(element, insideElements);
+                }
+                else /* if (type === true) */ {
+                    return matchesSelectorIfAny(element, insideSelector) || !isContainedIn(element, insideElements);
+                }
+            };
+            var escapes$ = Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["fromEvent"])(document, 'keydown')
+                .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["takeUntil"])(closed$), 
+            // tslint:disable-next-line:deprecation
+            Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["filter"])(function (e) { return e.which === _key_util__WEBPACK_IMPORTED_MODULE_3__["Key"].Escape; }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["tap"])(function (e) { return e.preventDefault(); }));
+            // we have to pre-calculate 'shouldCloseOnClick' on 'mousedown/touchstart',
+            // because on 'mouseup/touchend' DOM nodes might be detached
+            var mouseDowns$ = Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["fromEvent"])(document, 'mousedown').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(shouldCloseOnClick), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["takeUntil"])(closed$));
+            var closeableClicks$ = Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["fromEvent"])(document, 'mouseup')
+                .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["withLatestFrom"])(mouseDowns$), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["filter"])(function (_a) {
+                var _b = tslib__WEBPACK_IMPORTED_MODULE_0__["__read"](_a, 2), _ = _b[0], shouldClose = _b[1];
+                return shouldClose;
+            }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["delay"])(0), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["takeUntil"])(closed$));
+            Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["race"])([escapes$, closeableClicks$]).subscribe(function () { return zone.run(close); });
+        }));
+    }
+}
+
+
+/***/ }),
+
+/***/ "../src/lib/util/common.util.ts":
+/*!**************************************!*\
+  !*** ../src/lib/util/common.util.ts ***!
+  \**************************************/
+/*! exports provided: toInteger, toString, getValueInRange, isString, isNumber, isInteger, isDefined, padNumber, regExpEscape, hasClassName, closest */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "toInteger", function() { return toInteger; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "toString", function() { return toString; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getValueInRange", function() { return getValueInRange; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isString", function() { return isString; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isNumber", function() { return isNumber; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isInteger", function() { return isInteger; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isDefined", function() { return isDefined; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "padNumber", function() { return padNumber; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "regExpEscape", function() { return regExpEscape; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hasClassName", function() { return hasClassName; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "closest", function() { return closest; });
+function toInteger(value) {
+    return parseInt("" + value, 10);
+}
+function toString(value) {
+    return (value !== undefined && value !== null) ? "" + value : '';
+}
+function getValueInRange(value, max, min) {
+    if (min === void 0) { min = 0; }
+    return Math.max(Math.min(value, max), min);
+}
+function isString(value) {
+    return typeof value === 'string';
+}
+function isNumber(value) {
+    return !isNaN(toInteger(value));
+}
+function isInteger(value) {
+    return typeof value === 'number' && isFinite(value) && Math.floor(value) === value;
+}
+function isDefined(value) {
+    return value !== undefined && value !== null;
+}
+function padNumber(value) {
+    if (isNumber(value)) {
+        return ("0" + value).slice(-2);
+    }
+    else {
+        return '';
+    }
+}
+function regExpEscape(text) {
+    return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
+}
+function hasClassName(element, className) {
+    return element && element.className && element.className.split &&
+        element.className.split(/\s+/).indexOf(className) >= 0;
+}
+if (typeof Element !== 'undefined' && !Element.prototype.closest) {
+    // Polyfill for ie10+
+    if (!Element.prototype.matches) {
+        // IE uses the non-standard name: msMatchesSelector
+        Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector;
+    }
+    Element.prototype.closest = function (s) {
+        var el = this;
+        if (!document.documentElement.contains(el)) {
+            return null;
+        }
+        do {
+            if (el.matches(s)) {
+                return el;
+            }
+            el = el.parentElement || el.parentNode;
+        } while (el !== null && el.nodeType === 1);
+        return null;
+    };
+}
+function closest(element, selector) {
+    if (!selector) {
+        return null;
+    }
+    return element.closest(selector);
+}
+
+
+/***/ }),
+
+/***/ "../src/lib/util/key.util.ts":
+/*!***********************************!*\
+  !*** ../src/lib/util/key.util.ts ***!
+  \***********************************/
+/*! exports provided: Key */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Key", function() { return Key; });
+var Key;
+(function (Key) {
+    Key[Key["Tab"] = 9] = "Tab";
+    Key[Key["Enter"] = 13] = "Enter";
+    Key[Key["Escape"] = 27] = "Escape";
+    Key[Key["Space"] = 32] = "Space";
+    Key[Key["PageUp"] = 33] = "PageUp";
+    Key[Key["PageDown"] = 34] = "PageDown";
+    Key[Key["End"] = 35] = "End";
+    Key[Key["Home"] = 36] = "Home";
+    Key[Key["ArrowLeft"] = 37] = "ArrowLeft";
+    Key[Key["ArrowUp"] = 38] = "ArrowUp";
+    Key[Key["ArrowRight"] = 39] = "ArrowRight";
+    Key[Key["ArrowDown"] = 40] = "ArrowDown";
+})(Key || (Key = {}));
+
+
+/***/ }),
+
+/***/ "../src/lib/util/positioning.util.ts":
+/*!*******************************************!*\
+  !*** ../src/lib/util/positioning.util.ts ***!
+  \*******************************************/
+/*! exports provided: Positioning, positionElements */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Positioning", function() { return Positioning; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "positionElements", function() { return positionElements; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
+
+var Positioning = /** @class */ (function () {
+    function Positioning() {
+    }
+    Positioning.prototype.getAllStyles = function (element) { return window.getComputedStyle(element); };
+    Positioning.prototype.getStyle = function (element, prop) { return this.getAllStyles(element)[prop]; };
+    Positioning.prototype.isStaticPositioned = function (element) {
+        return (this.getStyle(element, 'position') || 'static') === 'static';
+    };
+    Positioning.prototype.offsetParent = function (element) {
+        var offsetParentEl = element.offsetParent || document.documentElement;
+        while (offsetParentEl && offsetParentEl !== document.documentElement && this.isStaticPositioned(offsetParentEl)) {
+            offsetParentEl = offsetParentEl.offsetParent;
+        }
+        return offsetParentEl || document.documentElement;
+    };
+    Positioning.prototype.position = function (element, round) {
+        if (round === void 0) { round = true; }
+        var elPosition;
+        var parentOffset = { width: 0, height: 0, top: 0, bottom: 0, left: 0, right: 0 };
+        if (this.getStyle(element, 'position') === 'fixed') {
+            elPosition = element.getBoundingClientRect();
+            elPosition = {
+                top: elPosition.top,
+                bottom: elPosition.bottom,
+                left: elPosition.left,
+                right: elPosition.right,
+                height: elPosition.height,
+                width: elPosition.width
+            };
+        }
+        else {
+            var offsetParentEl = this.offsetParent(element);
+            elPosition = this.offset(element, false);
+            if (offsetParentEl !== document.documentElement) {
+                parentOffset = this.offset(offsetParentEl, false);
+            }
+            parentOffset.top += offsetParentEl.clientTop;
+            parentOffset.left += offsetParentEl.clientLeft;
+        }
+        elPosition.top -= parentOffset.top;
+        elPosition.bottom -= parentOffset.top;
+        elPosition.left -= parentOffset.left;
+        elPosition.right -= parentOffset.left;
+        if (round) {
+            elPosition.top = Math.round(elPosition.top);
+            elPosition.bottom = Math.round(elPosition.bottom);
+            elPosition.left = Math.round(elPosition.left);
+            elPosition.right = Math.round(elPosition.right);
+        }
+        return elPosition;
+    };
+    Positioning.prototype.offset = function (element, round) {
+        if (round === void 0) { round = true; }
+        var elBcr = element.getBoundingClientRect();
+        var viewportOffset = {
+            top: window.pageYOffset - document.documentElement.clientTop,
+            left: window.pageXOffset - document.documentElement.clientLeft
+        };
+        var elOffset = {
+            height: elBcr.height || element.offsetHeight,
+            width: elBcr.width || element.offsetWidth,
+            top: elBcr.top + viewportOffset.top,
+            bottom: elBcr.bottom + viewportOffset.top,
+            left: elBcr.left + viewportOffset.left,
+            right: elBcr.right + viewportOffset.left
+        };
+        if (round) {
+            elOffset.height = Math.round(elOffset.height);
+            elOffset.width = Math.round(elOffset.width);
+            elOffset.top = Math.round(elOffset.top);
+            elOffset.bottom = Math.round(elOffset.bottom);
+            elOffset.left = Math.round(elOffset.left);
+            elOffset.right = Math.round(elOffset.right);
+        }
+        return elOffset;
+    };
+    /*
+      Return false if the element to position is outside the viewport
+    */
+    Positioning.prototype.positionElements = function (hostElement, targetElement, placement, appendToBody) {
+        var _a = tslib__WEBPACK_IMPORTED_MODULE_0__["__read"](placement.split('-'), 2), _b = _a[0], placementPrimary = _b === void 0 ? 'top' : _b, _c = _a[1], placementSecondary = _c === void 0 ? 'center' : _c;
+        var hostElPosition = appendToBody ? this.offset(hostElement, false) : this.position(hostElement, false);
+        var targetElStyles = this.getAllStyles(targetElement);
+        var marginTop = parseFloat(targetElStyles.marginTop);
+        var marginBottom = parseFloat(targetElStyles.marginBottom);
+        var marginLeft = parseFloat(targetElStyles.marginLeft);
+        var marginRight = parseFloat(targetElStyles.marginRight);
+        var topPosition = 0;
+        var leftPosition = 0;
+        switch (placementPrimary) {
+            case 'top':
+                topPosition = (hostElPosition.top - (targetElement.offsetHeight + marginTop + marginBottom));
+                break;
+            case 'bottom':
+                topPosition = (hostElPosition.top + hostElPosition.height);
+                break;
+            case 'left':
+                leftPosition = (hostElPosition.left - (targetElement.offsetWidth + marginLeft + marginRight));
+                break;
+            case 'right':
+                leftPosition = (hostElPosition.left + hostElPosition.width);
+                break;
+        }
+        switch (placementSecondary) {
+            case 'top':
+                topPosition = hostElPosition.top;
+                break;
+            case 'bottom':
+                topPosition = hostElPosition.top + hostElPosition.height - targetElement.offsetHeight;
+                break;
+            case 'left':
+                leftPosition = hostElPosition.left;
+                break;
+            case 'right':
+                leftPosition = hostElPosition.left + hostElPosition.width - targetElement.offsetWidth;
+                break;
+            case 'center':
+                if (placementPrimary === 'top' || placementPrimary === 'bottom') {
+                    leftPosition = (hostElPosition.left + hostElPosition.width / 2 - targetElement.offsetWidth / 2);
+                }
+                else {
+                    topPosition = (hostElPosition.top + hostElPosition.height / 2 - targetElement.offsetHeight / 2);
+                }
+                break;
+        }
+        /// The translate3d/gpu acceleration render a blurry text on chrome, the next line is commented until a browser fix
+        // targetElement.style.transform = `translate3d(${Math.round(leftPosition)}px, ${Math.floor(topPosition)}px, 0px)`;
+        targetElement.style.transform = "translate(" + Math.round(leftPosition) + "px, " + Math.round(topPosition) + "px)";
+        // Check if the targetElement is inside the viewport
+        var targetElBCR = targetElement.getBoundingClientRect();
+        var html = document.documentElement;
+        var windowHeight = window.innerHeight || html.clientHeight;
+        var windowWidth = window.innerWidth || html.clientWidth;
+        return targetElBCR.left >= 0 && targetElBCR.top >= 0 && targetElBCR.right <= windowWidth &&
+            targetElBCR.bottom <= windowHeight;
+    };
+    return Positioning;
+}());
+
+var placementSeparator = /\s+/;
+var positionService = new Positioning();
+/*
+ * Accept the placement array and applies the appropriate placement dependent on the viewport.
+ * Returns the applied placement.
+ * In case of auto placement, placements are selected in order
+ *   'top', 'bottom', 'left', 'right',
+ *   'top-left', 'top-right',
+ *   'bottom-left', 'bottom-right',
+ *   'left-top', 'left-bottom',
+ *   'right-top', 'right-bottom'.
+ * */
+function positionElements(hostElement, targetElement, placement, appendToBody, baseClass) {
+    var e_1, _a;
+    var placementVals = Array.isArray(placement) ? placement : placement.split(placementSeparator);
+    var allowedPlacements = [
+        'top', 'bottom', 'left', 'right', 'top-left', 'top-right', 'bottom-left', 'bottom-right', 'left-top', 'left-bottom',
+        'right-top', 'right-bottom'
+    ];
+    var classList = targetElement.classList;
+    var addClassesToTarget = function (targetPlacement) {
+        var _a = tslib__WEBPACK_IMPORTED_MODULE_0__["__read"](targetPlacement.split('-'), 2), primary = _a[0], secondary = _a[1];
+        var classes = [];
+        if (baseClass) {
+            classes.push(baseClass + "-" + primary);
+            if (secondary) {
+                classes.push(baseClass + "-" + primary + "-" + secondary);
+            }
+            classes.forEach(function (classname) { classList.add(classname); });
+        }
+        return classes;
+    };
+    // Remove old placement classes to avoid issues
+    if (baseClass) {
+        allowedPlacements.forEach(function (placementToRemove) { classList.remove(baseClass + "-" + placementToRemove); });
+    }
+    // replace auto placement with other placements
+    var hasAuto = placementVals.findIndex(function (val) { return val === 'auto'; });
+    if (hasAuto >= 0) {
+        allowedPlacements.forEach(function (obj) {
+            if (placementVals.find(function (val) { return val.search('^' + obj) !== -1; }) == null) {
+                placementVals.splice(hasAuto++, 1, obj);
+            }
+        });
+    }
+    // coordinates where to position
+    // Required for transform:
+    var style = targetElement.style;
+    style.position = 'absolute';
+    style.top = '0';
+    style.left = '0';
+    style['will-change'] = 'transform';
+    var testPlacement;
+    var isInViewport = false;
+    try {
+        for (var placementVals_1 = tslib__WEBPACK_IMPORTED_MODULE_0__["__values"](placementVals), placementVals_1_1 = placementVals_1.next(); !placementVals_1_1.done; placementVals_1_1 = placementVals_1.next()) {
+            testPlacement = placementVals_1_1.value;
+            var addedClasses = addClassesToTarget(testPlacement);
+            if (positionService.positionElements(hostElement, targetElement, testPlacement, appendToBody)) {
+                isInViewport = true;
+                break;
+            }
+            // Remove the baseClasses for further calculation
+            if (baseClass) {
+                addedClasses.forEach(function (classname) { classList.remove(classname); });
+            }
+        }
+    }
+    catch (e_1_1) { e_1 = { error: e_1_1 }; }
+    finally {
+        try {
+            if (placementVals_1_1 && !placementVals_1_1.done && (_a = placementVals_1.return)) _a.call(placementVals_1);
+        }
+        finally { if (e_1) throw e_1.error; }
+    }
+    if (!isInViewport) {
+        // If nothing match, the first placement is the default one
+        testPlacement = placementVals[0];
+        addClassesToTarget(testPlacement);
+        positionService.positionElements(hostElement, targetElement, testPlacement, appendToBody);
+    }
+    return testPlacement;
+}
+
+
+/***/ }),
+
 /***/ "../src/public-api.ts":
 /*!****************************!*\
   !*** ../src/public-api.ts ***!
   \****************************/
-/*! exports provided: NwWidgetModule, NwTimelineModule, NwTabsetModule */
+/*! exports provided: NwWidgetModule, NwTimelineModule, NwTabsetModule, NwDropdown, NwDropdownAnchor, NwDropdownConfig, NwDropdownItem, NwDropdownMenu, NwDropdownToggle, NwNavbar, NwDropdownModule */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -970,6 +2137,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NwTimelineModule", function() { return _lib_nw_widget_module__WEBPACK_IMPORTED_MODULE_0__["NwTimelineModule"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NwTabsetModule", function() { return _lib_nw_widget_module__WEBPACK_IMPORTED_MODULE_0__["NwTabsetModule"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NwDropdown", function() { return _lib_nw_widget_module__WEBPACK_IMPORTED_MODULE_0__["NwDropdown"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NwDropdownAnchor", function() { return _lib_nw_widget_module__WEBPACK_IMPORTED_MODULE_0__["NwDropdownAnchor"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NwDropdownConfig", function() { return _lib_nw_widget_module__WEBPACK_IMPORTED_MODULE_0__["NwDropdownConfig"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NwDropdownItem", function() { return _lib_nw_widget_module__WEBPACK_IMPORTED_MODULE_0__["NwDropdownItem"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NwDropdownMenu", function() { return _lib_nw_widget_module__WEBPACK_IMPORTED_MODULE_0__["NwDropdownMenu"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NwDropdownToggle", function() { return _lib_nw_widget_module__WEBPACK_IMPORTED_MODULE_0__["NwDropdownToggle"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NwNavbar", function() { return _lib_nw_widget_module__WEBPACK_IMPORTED_MODULE_0__["NwNavbar"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NwDropdownModule", function() { return _lib_nw_widget_module__WEBPACK_IMPORTED_MODULE_0__["NwDropdownModule"]; });
 
 /*
  * Public API Surface of nw-widgets
@@ -1020,61 +2203,225 @@ module.exports = webpackAsyncContext;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 var API_DOCS = {
-    "NwTabsetConfig": {
-        "fileName": "src/lib/nw-tabset/nw-tabset-config.ts",
-        "className": "NwTabsetConfig",
-        "description": "<p>A configuration service for the <a href=\"#/components/nw-tabset/api#NwTabset\"><code>NwTabset</code></a> component.</p>\n<p>You can inject this service, typically in your root component, and customize the values of its properties in\norder to provide default values for all the tabsets used in the application.</p>",
+    "NwDropdownAnchor": {
+        "fileName": "src/lib/nw-dropdown/nw-dropdown-anchor.directive.ts",
+        "className": "NwDropdownAnchor",
+        "description": "<p>A directive to mark an element to which dropdown menu will be anchored.</p>\n<p>This is a simple version of the <code>NwDropdownToggle</code> directive.\nIt plays the same role, but doesn&#39;t listen to click events to toggle dropdown menu thus enabling support\nfor events other than click.</p>",
+        "since": {
+            "version": "1.1.0",
+            "description": ""
+        },
+        "type": "Directive",
+        "selector": "[nwDropdownAnchor]",
+        "inputs": [],
+        "outputs": [],
+        "properties": [
+            {
+                "name": "anchorEl",
+                "type": "any",
+                "description": ""
+            }
+        ],
+        "methods": []
+    },
+    "NwDropdownConfig": {
+        "fileName": "src/lib/nw-dropdown/nw-dropdown-config.service.ts",
+        "className": "NwDropdownConfig",
+        "description": "<p>A configuration service for the <a href=\"#/components/dropdown/api#NwDropdown\"><code>NwDropdown</code></a> component.</p>\n<p>You can inject this service, typically in your root component, and customize the values of its properties in\norder to provide default values for all the dropdowns used in the application.</p>",
         "type": "Service",
         "methods": [],
         "properties": [
             {
-                "name": "justify",
-                "defaultValue": "start",
-                "type": "\"start\" | \"center\" | \"end\" | \"fill\" | \"justified\"",
+                "name": "autoClose",
+                "defaultValue": "true",
+                "type": "boolean | \"outside\" | \"inside\"",
                 "description": ""
             },
             {
-                "name": "orientation",
-                "defaultValue": "horizontal",
-                "type": "\"horizontal\" | \"vertical\"",
+                "name": "container",
+                "type": "\"body\"",
                 "description": ""
             },
             {
-                "name": "type",
-                "defaultValue": "tabs",
-                "type": "\"tabs\" | \"pills\"",
+                "name": "placement",
+                "type": "PlacementArray",
                 "description": ""
             }
         ]
     },
-    "NwTabTitle": {
-        "fileName": "src/lib/nw-tabset/nw-tabset.ts",
-        "className": "NwTabTitle",
-        "description": "<p>A directive to wrap tab titles that need to contain HTML markup or other directives.</p>\n<p>Alternatively you could use the <code>NwTab.title</code> input for string titles.</p>",
+    "NwDropdownItem": {
+        "fileName": "src/lib/nw-dropdown/nw-dropdown-item.directive.ts",
+        "className": "NwDropdownItem",
+        "description": "<p>A directive you should put on a dropdown item to enable keyboard navigation.\nArrow keys will move focus between items marked with this directive.</p>",
+        "since": {
+            "version": "4.1.0",
+            "description": ""
+        },
         "type": "Directive",
-        "selector": "ng-template[NwTabTitle]",
+        "selector": "[nwDropdownItem]",
+        "inputs": [
+            {
+                "name": "disabled",
+                "type": "boolean",
+                "description": ""
+            }
+        ],
+        "outputs": [],
+        "properties": [
+            {
+                "name": "disabled",
+                "type": "boolean",
+                "description": ""
+            }
+        ],
+        "methods": []
+    },
+    "NwDropdownMenu": {
+        "fileName": "src/lib/nw-dropdown/nw-dropdown-menu.directive.ts",
+        "className": "NwDropdownMenu",
+        "description": "<p>A directive that wraps dropdown menu content and dropdown items.</p>",
+        "type": "Directive",
+        "selector": "[nwDropdownMenu]",
+        "inputs": [],
+        "outputs": [],
+        "properties": [
+            {
+                "name": "isOpen",
+                "defaultValue": "false",
+                "type": "boolean",
+                "description": ""
+            },
+            {
+                "name": "menuItems",
+                "type": "QueryList<NwDropdownItem>",
+                "description": ""
+            },
+            {
+                "name": "placement",
+                "defaultValue": "bottom",
+                "type": "Placement",
+                "description": ""
+            }
+        ],
+        "methods": []
+    },
+    "NwDropdownToggle": {
+        "fileName": "src/lib/nw-dropdown/nw-dropdown-toggle.directive.ts",
+        "className": "NwDropdownToggle",
+        "description": "<p>A directive to mark an element that will toggle dropdown via the <code>click</code> event.</p>\n<p>You can also use <code>NwDropdownAnchor</code> as an alternative.</p>",
+        "type": "Directive",
+        "selector": "[nwDropdownToggle]",
         "inputs": [],
         "outputs": [],
         "properties": [],
         "methods": []
     },
+    "NwDropdown": {
+        "fileName": "src/lib/nw-dropdown/nw-dropdown.directive.ts",
+        "className": "NwDropdown",
+        "description": "<p>A directive that provides contextual overlays for displaying lists of links and more.</p>",
+        "type": "Directive",
+        "selector": "[nwDropdown]",
+        "exportAs": "nwDropdown",
+        "inputs": [
+            {
+                "name": "autoClose",
+                "type": "boolean | \"outside\" | \"inside\"",
+                "description": "<p>Indicates whether the dropdown should be closed when clicking one of dropdown items or pressing ESC.</p>\n<ul>\n<li><code>true</code> - the dropdown will close on both outside and inside (menu) clicks.</li>\n<li><code>false</code> - the dropdown can only be closed manually via <code>close()</code> or <code>toggle()</code> methods.</li>\n<li><code>&quot;inside&quot;</code> - the dropdown will close on inside menu clicks, but not outside clicks.</li>\n<li><code>&quot;outside&quot;</code> - the dropdown will close only on the outside clicks and not on menu clicks.</li>\n</ul>"
+            },
+            {
+                "name": "container",
+                "type": "\"body\"",
+                "description": "<p>A selector specifying the element the dropdown should be appended to.\nCurrently only supports &quot;body&quot;.</p>",
+                "since": {
+                    "version": "4.1.0",
+                    "description": ""
+                }
+            },
+            {
+                "name": "display",
+                "type": "\"dynamic\" | \"static\"",
+                "description": "<p>Enable or disable the dynamic positioning. The default value is dynamic unless the dropdown is used\ninside a Bootstrap navbar. If you need custom placement for a dropdown in a navbar, set it to\ndynamic explicitly. See the <a href=\"#/positioning#dropdown\">positioning of dropdown</a>\nand the <a href=\"/#/components/dropdown/examples#navbar\">navbar demo</a> for more details.</p>",
+                "since": {
+                    "version": "4.2.0",
+                    "description": ""
+                }
+            },
+            {
+                "name": "open",
+                "defaultValue": "false",
+                "type": "boolean",
+                "description": "<p>Defines whether or not the dropdown menu is opened initially.</p>"
+            },
+            {
+                "name": "placement",
+                "type": "PlacementArray",
+                "description": "<p>The preferred placement of the dropdown.</p>\n<p>Possible values are <code>&quot;top&quot;</code>, <code>&quot;top-left&quot;</code>, <code>&quot;top-right&quot;</code>, <code>&quot;bottom&quot;</code>, <code>&quot;bottom-left&quot;</code>,\n<code>&quot;bottom-right&quot;</code>, <code>&quot;left&quot;</code>, <code>&quot;left-top&quot;</code>, <code>&quot;left-bottom&quot;</code>, <code>&quot;right&quot;</code>, <code>&quot;right-top&quot;</code>,\n<code>&quot;right-bottom&quot;</code></p>\n<p>Accepts an array of strings or a string with space separated possible values.</p>\n<p>The default order of preference is <code>&quot;bottom-left bottom-right top-left top-right&quot;</code></p>\n<p>Please see the <a href=\"#/positioning\">positioning overview</a> for more details.</p>"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "openChange",
+                "description": "<p>An event fired when the dropdown is opened or closed.</p>\n<p>The event payload is a <code>boolean</code>:</p>\n<ul>\n<li><code>true</code> - the dropdown was opened</li>\n<li><code>false</code> - the dropdown was closed</li>\n</ul>"
+            }
+        ],
+        "properties": [],
+        "methods": [
+            {
+                "name": "isOpen",
+                "description": "<p>Checks if the dropdown menu is open.</p>",
+                "args": [],
+                "returnType": "boolean"
+            },
+            {
+                "name": "open",
+                "description": "<p>Opens the dropdown menu.</p>",
+                "args": [],
+                "returnType": "void"
+            },
+            {
+                "name": "close",
+                "description": "<p>Closes the dropdown menu.</p>",
+                "args": [],
+                "returnType": "void"
+            },
+            {
+                "name": "toggle",
+                "description": "<p>Toggles the dropdown menu.</p>",
+                "args": [],
+                "returnType": "void"
+            }
+        ]
+    },
     "NwTabContent": {
-        "fileName": "src/lib/nw-tabset/nw-tabset.ts",
+        "fileName": "src/lib/nw-tabset/nw-tab-content.directive.ts",
         "className": "NwTabContent",
         "description": "<p>A directive to wrap content to be displayed in a tab.</p>",
         "type": "Directive",
-        "selector": "ng-template[NwTabContent]",
+        "selector": "ng-template[nwTabContent]",
+        "inputs": [],
+        "outputs": [],
+        "properties": [],
+        "methods": []
+    },
+    "NwTabTitle": {
+        "fileName": "src/lib/nw-tabset/nw-tab-title.directive.ts",
+        "className": "NwTabTitle",
+        "description": "<p>A directive to wrap tab titles that need to contain HTML markup or other directives.</p>\n<p>Alternatively you could use the <code>NgbTab.title</code> input for string titles.</p>",
+        "type": "Directive",
+        "selector": "ng-template[nwTabTitle]",
         "inputs": [],
         "outputs": [],
         "properties": [],
         "methods": []
     },
     "NwTab": {
-        "fileName": "src/lib/nw-tabset/nw-tabset.ts",
+        "fileName": "src/lib/nw-tabset/nw-tab.directive.ts",
         "className": "NwTab",
         "description": "<p>A directive representing an individual tab.</p>",
         "type": "Directive",
-        "selector": "Nw-tab",
+        "selector": "nw-tab",
+        "exportAs": "nwTab",
         "inputs": [
             {
                 "name": "disabled",
@@ -1090,7 +2437,7 @@ var API_DOCS = {
             {
                 "name": "title",
                 "type": "string",
-                "description": "<p>The tab title.</p>\n<p>Use the <a href=\"#/components/nw-tabset/api#NwTabTitle\"><code>NwTabTitle</code></a> directive for non-string titles.</p>"
+                "description": "<p>The tab title.</p>\n<p>Use the <a href=\"#/components/tabset/api#NgbTabTitle\"><code>NgbTabTitle</code></a> directive for non-string titles.</p>"
             }
         ],
         "outputs": [],
@@ -1118,37 +2465,13 @@ var API_DOCS = {
         ],
         "methods": []
     },
-    "NwTabChangeEvent": {
-        "fileName": "src/lib/nw-tabset/nw-tabset.ts",
-        "className": "NwTabChangeEvent",
-        "description": "<p>The payload of the change event fired right before the tab change.</p>",
-        "type": "Interface",
-        "methods": [],
-        "properties": [
-            {
-                "name": "activeId",
-                "type": "string",
-                "description": "<p>The id of the currently active tab.</p>"
-            },
-            {
-                "name": "nextId",
-                "type": "string",
-                "description": "<p>The id of the newly selected tab.</p>"
-            },
-            {
-                "name": "preventDefault",
-                "type": "() => void",
-                "description": "<p>Calling this function will prevent tab switching.</p>"
-            }
-        ]
-    },
-    "NwTabset": {
-        "fileName": "src/lib/nw-tabset/nw-tabset.ts",
-        "className": "NwTabset",
+    "NwTabsetComponent": {
+        "fileName": "src/lib/nw-tabset/nw-tabset.component.ts",
+        "className": "NwTabsetComponent",
         "description": "<p>A component that makes it easy to create tabbed interface.</p>",
         "type": "Component",
-        "selector": "Nw-tabset",
-        "exportAs": "NwTabset",
+        "selector": "nw-tabset",
+        "exportAs": "nwTabset",
         "inputs": [
             {
                 "name": "activeId",
@@ -1180,7 +2503,7 @@ var API_DOCS = {
         "outputs": [
             {
                 "name": "tabChange",
-                "description": "<p>A tab change event emitted right before the tab change happens.</p>\n<p>See <a href=\"#/components/nw-tabset/api#NwTabChangeEvent\"><code>NwTabChangeEvent</code></a> for payload details.</p>"
+                "description": "<p>A tab change event emitted right before the tab change happens.</p>\n<p>See <a href=\"#/components/tabset/api#NgbTabChangeEvent\"><code>NgbTabChangeEvent</code></a> for payload details.</p>"
             }
         ],
         "properties": [
@@ -1206,6 +2529,30 @@ var API_DOCS = {
                     }
                 ],
                 "returnType": "void"
+            }
+        ]
+    },
+    "NwTabChangeEvent": {
+        "fileName": "src/lib/nw-tabset/nw-tabset.component.ts",
+        "className": "NwTabChangeEvent",
+        "description": "<p>The payload of the change event fired right before the tab change.</p>",
+        "type": "Interface",
+        "methods": [],
+        "properties": [
+            {
+                "name": "activeId",
+                "type": "string",
+                "description": "<p>The id of the currently active tab.</p>"
+            },
+            {
+                "name": "nextId",
+                "type": "string",
+                "description": "<p>The id of the newly selected tab.</p>"
+            },
+            {
+                "name": "preventDefault",
+                "type": "() => void",
+                "description": "<p>Calling this function will prevent tab switching.</p>"
             }
         ]
     }
@@ -1236,9 +2583,6 @@ var routes = [
         path: '',
         loadChildren: './views/views.module#ViewsModule'
     },
-    {
-        path: '**', redirectTo: 'home'
-    }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -1281,7 +2625,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "../node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "../node_modules/rxjs/_esm5/operators/index.js");
-/* harmony import */ var src_environments_environment__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../environments/environment */ "./src/environments/environment.ts");
 /* harmony import */ var _core_services_seo_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./core/services/seo.service */ "./src/app/core/services/seo.service.ts");
 
 
@@ -1305,22 +2649,22 @@ var AppComponent = /** @class */ (function () {
             return route;
         }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["filter"])(function (route) { return route.outlet === 'primary'; }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["mergeMap"])(function (route) { return route.data; }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function (event) {
             var og = {
-                url: event.url || src_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].meta.url,
-                type: event.type || src_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].meta.type,
-                title: event.title || src_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].meta.title,
-                image: event.image || src_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].meta.image,
-                description: event.description || src_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].meta.description,
-                keywords: event.keywords || src_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].meta.keywords,
-                site_name: event.site_name || src_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].meta.site_name,
-                email: event.email || src_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].meta.email,
-                phone_number: event.phone_number || src_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].meta.phone_number,
+                url: event.url || _environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].meta.url,
+                type: event.type || _environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].meta.type,
+                title: event.title || _environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].meta.title,
+                image: event.image || _environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].meta.image,
+                description: event.description || _environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].meta.description,
+                keywords: event.keywords || _environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].meta.keywords,
+                site_name: event.site_name || _environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].meta.site_name,
+                email: event.email || _environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].meta.email,
+                phone_number: event.phone_number || _environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].meta.phone_number,
             };
             var tw = {
-                card: event.card || src_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].meta.card,
-                site: event.site || src_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].meta.site,
-                title: event.title || src_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].meta.title,
-                description: event.description || src_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].meta.description,
-                image: event.image || src_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].meta.image,
+                card: event.card || _environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].meta.card,
+                site: event.site || _environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].meta.site,
+                title: event.title || _environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].meta.title,
+                description: event.description || _environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].meta.description,
+                image: event.image || _environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].meta.image,
             };
             _this.seoService.updateTitle("\u2665 H\u1EEFu \u0110\u1EA1i \u2665 - \u2666 Nw-Widgets \u2666 - \u25CB " + og.title);
             _this.seoService.updateMetaOrganizationTag(og);
@@ -2047,8 +3391,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _views_views_routing_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../views/views-routing.module */ "./src/app/views/views-routing.module.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "../node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var src_app_views_previews_previews_routing_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/views/previews/previews-routing.module */ "./src/app/views/previews/previews-routing.module.ts");
-/* harmony import */ var src_app_views_tutorials_tutorials_routing_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/views/tutorials/tutorials-routing.module */ "./src/app/views/tutorials/tutorials-routing.module.ts");
+/* harmony import */ var _views_previews_previews_routing_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../views/previews/previews-routing.module */ "./src/app/views/previews/previews-routing.module.ts");
+/* harmony import */ var _views_tutorials_tutorials_routing_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../views/tutorials/tutorials-routing.module */ "./src/app/views/tutorials/tutorials-routing.module.ts");
 
 
 
@@ -2059,7 +3403,7 @@ var NavigationComponent = /** @class */ (function () {
     function NavigationComponent(router) {
         var _this = this;
         this.router = router;
-        this.routes = tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](_views_views_routing_module__WEBPACK_IMPORTED_MODULE_2__["VIEWS_SIDEBAR_ROUTES"], src_app_views_previews_previews_routing_module__WEBPACK_IMPORTED_MODULE_4__["PREVIEWS_VIEWS_ROUTES"], src_app_views_tutorials_tutorials_routing_module__WEBPACK_IMPORTED_MODULE_5__["TUTORIALS_VIEWS_ROUTES"]);
+        this.routes = tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"](_views_views_routing_module__WEBPACK_IMPORTED_MODULE_2__["VIEWS_SIDEBAR_ROUTES"], _views_previews_previews_routing_module__WEBPACK_IMPORTED_MODULE_4__["PREVIEWS_VIEWS_ROUTES"], _views_tutorials_tutorials_routing_module__WEBPACK_IMPORTED_MODULE_5__["TUTORIALS_VIEWS_ROUTES"]);
         this.collapse = true;
         this.navs = [];
         this.getNavFromRoute = function (r) {
@@ -2173,7 +3517,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _api_docs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../api-docs */ "./src/api-docs.ts");
 /* harmony import */ var _api_docs_model__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./api-docs.model */ "./src/app/shared/components/api-docs/api-docs.model.ts");
-/* harmony import */ var src_app_core_services_analytic_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/core/services/analytic.service */ "./src/app/core/services/analytic.service.ts");
+/* harmony import */ var _core_services_analytic_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../core/services/analytic.service */ "./src/app/core/services/analytic.service.ts");
 
 
 
@@ -2201,7 +3545,7 @@ var NwApiDocsClass = /** @class */ (function () {
         this._analytics.trackEvent('Source File View', this.apiDocs.className);
     };
     NwApiDocsClass.ctorParameters = function () { return [
-        { type: src_app_core_services_analytic_service__WEBPACK_IMPORTED_MODULE_4__["AnalyticService"] }
+        { type: _core_services_analytic_service__WEBPACK_IMPORTED_MODULE_4__["AnalyticService"] }
     ]; };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
@@ -2234,7 +3578,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _api_docs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../api-docs */ "./src/api-docs.ts");
-/* harmony import */ var src_app_core_services_analytic_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/core/services/analytic.service */ "./src/app/core/services/analytic.service.ts");
+/* harmony import */ var _core_services_analytic_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../core/services/analytic.service */ "./src/app/core/services/analytic.service.ts");
 
 
 
@@ -2264,7 +3608,7 @@ var NwApiDocsConfig = /** @class */ (function () {
         this._analytics.trackEvent('Source File View', this.apiDocs.className);
     };
     NwApiDocsConfig.ctorParameters = function () { return [
-        { type: src_app_core_services_analytic_service__WEBPACK_IMPORTED_MODULE_3__["AnalyticService"] }
+        { type: _core_services_analytic_service__WEBPACK_IMPORTED_MODULE_3__["AnalyticService"] }
     ]; };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
@@ -2297,7 +3641,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _api_docs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../api-docs */ "./src/api-docs.ts");
 /* harmony import */ var _api_docs_model__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./api-docs.model */ "./src/app/shared/components/api-docs/api-docs.model.ts");
-/* harmony import */ var src_app_core_services_analytic_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/core/services/analytic.service */ "./src/app/core/services/analytic.service.ts");
+/* harmony import */ var _core_services_analytic_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../core/services/analytic.service */ "./src/app/core/services/analytic.service.ts");
 
 
 
@@ -2352,7 +3696,7 @@ var NwApiDocs = /** @class */ (function () {
         return configApiDocs.properties.filter(function (prop) { return prop.name === input.name; })[0];
     };
     NwApiDocs.ctorParameters = function () { return [
-        { type: src_app_core_services_analytic_service__WEBPACK_IMPORTED_MODULE_4__["AnalyticService"] }
+        { type: _core_services_analytic_service__WEBPACK_IMPORTED_MODULE_4__["AnalyticService"] }
     ]; };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
@@ -2554,7 +3898,7 @@ var NwOverviewSectionComponent = /** @class */ (function () {
             host: {
                 'class': 'd-block'
             },
-            template: "\n    <h2>\n      <a class=\"title-fragment\" [routerLink]=\"\" [fragment]=\"section.fragment\" nwFragment>\n        <img src=\"assets/images/link-symbol.svg\" />\n      </a>\n      {{ section.title }}\n    </h2>\n\n    <ng-content></ng-content>\n  "
+            template: "\n    <h2>\n      <a class=\"title-fragment\" [routerLink]=\"\" [fragment]=\"section.fragment\" nwFragment>\n        <img src=\"/images/link-symbol.svg\" />\n      </a>\n      {{ section.title }}\n    </h2>\n\n    <ng-content></ng-content>\n  "
         })
     ], NwOverviewSectionComponent);
     return NwOverviewSectionComponent;
@@ -2830,25 +4174,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GettingStartedComponent", function() { return GettingStartedComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var src_app_shared_components_code_code_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/shared/components/code/code.component */ "./src/app/shared/components/code/code.component.ts");
+/* harmony import */ var _shared_components_code_code_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared/components/code/code.component */ "./src/app/shared/components/code/code.component.ts");
 
 
 
 var GettingStartedComponent = /** @class */ (function () {
     function GettingStartedComponent() {
-        this.codeInstall = Object(src_app_shared_components_code_code_component__WEBPACK_IMPORTED_MODULE_2__["Snippet"])({
+        this.codeInstall = Object(_shared_components_code_code_component__WEBPACK_IMPORTED_MODULE_2__["Snippet"])({
             lang: 'bash',
             code: "npm install --save @nw-widget/nw-widget",
         });
-        this.codeRoot = Object(src_app_shared_components_code_code_component__WEBPACK_IMPORTED_MODULE_2__["Snippet"])({
+        this.codeRoot = Object(_shared_components_code_code_component__WEBPACK_IMPORTED_MODULE_2__["Snippet"])({
             lang: 'typescript',
             code: "\n    import { NwWidgetModule } from '@nw-widget/nw-widget';\n      @NgModule({\n        ...\n        imports: [NwWidgetModule, ...],\n        ...\n      })\n      export class YourAppModule {\n      }\n    ",
         });
-        this.codeOther = Object(src_app_shared_components_code_code_component__WEBPACK_IMPORTED_MODULE_2__["Snippet"])({
+        this.codeOther = Object(_shared_components_code_code_component__WEBPACK_IMPORTED_MODULE_2__["Snippet"])({
             lang: 'typescript',
             code: "\n    import { NwTimelineModule } from '@nw-widget/nw-widget';\n      @NgModule({\n        ...\n        imports: [NwTimelineModule, ...],\n        ...\n      })\n      export class YourAppModule {\n      }\n    ",
         });
-        this.codeSystem = Object(src_app_shared_components_code_code_component__WEBPACK_IMPORTED_MODULE_2__["Snippet"])({
+        this.codeSystem = Object(_shared_components_code_code_component__WEBPACK_IMPORTED_MODULE_2__["Snippet"])({
             lang: 'typescript',
             code: "\n      map: {\n        '@nw-widget/nw-widget': 'node_modules/@nw-widget/nw-widget/bundles/nw-widget.js',\n      }\n    ",
         });
@@ -3089,12 +4433,12 @@ var TimelineComponent = /** @class */ (function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FakeApiModule", function() { return FakeApiModule; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "../node_modules/@angular/common/fesm5/common.js");
-/* harmony import */ var _filter_filter_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./filter/filter.component */ "./src/app/views/tutorials/fake-api/filter/filter.component.ts");
-/* harmony import */ var src_app_core_services_post_partial_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/core/services/post-partial.service */ "./src/app/core/services/post-partial.service.ts");
-/* harmony import */ var src_app_shared_shared_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/shared/shared.module */ "./src/app/shared/shared.module.ts");
-/* harmony import */ var _filter_filter_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./filter/filter.module */ "./src/app/views/tutorials/fake-api/filter/filter.module.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "../node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _core_services_post_partial_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../core/services/post-partial.service */ "./src/app/core/services/post-partial.service.ts");
+/* harmony import */ var _shared_shared_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../shared/shared.module */ "./src/app/shared/shared.module.ts");
+/* harmony import */ var _sections_filter_filter_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./sections/filter/filter.component */ "./src/app/views/tutorials/fake-api/sections/filter/filter.component.ts");
+/* harmony import */ var _sections_filter_filter_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./sections/filter/filter.module */ "./src/app/views/tutorials/fake-api/sections/filter/filter.module.ts");
 
 
 
@@ -3105,9 +4449,9 @@ __webpack_require__.r(__webpack_exports__);
 var PARTIALS = {
     filter: {
         title: 'Filter',
-        code: __webpack_require__(/*! raw-loader!./filter/filter.component */ "../node_modules/raw-loader/index.js!./src/app/views/tutorials/fake-api/filter/filter.component.ts"),
-        markup: __webpack_require__(/*! raw-loader!./filter/filter.component.html */ "../node_modules/raw-loader/index.js!./src/app/views/tutorials/fake-api/filter/filter.component.html"),
-        type: _filter_filter_component__WEBPACK_IMPORTED_MODULE_3__["FilterComponent"]
+        code: __webpack_require__(/*! raw-loader!./sections/filter/filter.component */ "../node_modules/raw-loader/index.js!./src/app/views/tutorials/fake-api/sections/filter/filter.component.ts"),
+        markup: __webpack_require__(/*! raw-loader!./sections/filter/filter.component.html */ "../node_modules/raw-loader/index.js!./src/app/views/tutorials/fake-api/sections/filter/filter.component.html"),
+        type: _sections_filter_filter_component__WEBPACK_IMPORTED_MODULE_5__["FilterComponent"]
     }
 };
 var OVERVIEW = {
@@ -3119,15 +4463,15 @@ var FakeApiModule = /** @class */ (function () {
         partialService.register('fake-api', PARTIALS, OVERVIEW);
     }
     FakeApiModule.ctorParameters = function () { return [
-        { type: src_app_core_services_post_partial_service__WEBPACK_IMPORTED_MODULE_4__["PostPartialService"] }
+        { type: _core_services_post_partial_service__WEBPACK_IMPORTED_MODULE_3__["PostPartialService"] }
     ]; };
     FakeApiModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
             declarations: [],
             imports: [
-                _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
-                src_app_shared_shared_module__WEBPACK_IMPORTED_MODULE_5__["SharedModule"],
-                _filter_filter_module__WEBPACK_IMPORTED_MODULE_6__["FilterModule"]
+                _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
+                _shared_shared_module__WEBPACK_IMPORTED_MODULE_4__["SharedModule"],
+                _sections_filter_filter_module__WEBPACK_IMPORTED_MODULE_6__["FilterModule"]
             ]
         })
     ], FakeApiModule);
@@ -3138,10 +4482,82 @@ var FakeApiModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/views/tutorials/fake-api/filter/filter.component.ts":
-/*!*********************************************************************!*\
-  !*** ./src/app/views/tutorials/fake-api/filter/filter.component.ts ***!
-  \*********************************************************************/
+/***/ "./src/app/views/tutorials/fake-api/overview/fake-api-overview.component.ts":
+/*!**********************************************************************************!*\
+  !*** ./src/app/views/tutorials/fake-api/overview/fake-api-overview.component.ts ***!
+  \**********************************************************************************/
+/*! exports provided: FakeApiOverviewComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FakeApiOverviewComponent", function() { return FakeApiOverviewComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _shared_components_code_code_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../shared/components/code/code.component */ "./src/app/shared/components/code/code.component.ts");
+/* harmony import */ var _core_services_post_partial_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../core/services/post-partial.service */ "./src/app/core/services/post-partial.service.ts");
+
+
+
+
+var FakeApiOverviewComponent = /** @class */ (function () {
+    function FakeApiOverviewComponent(partialService) {
+        this.TOAST_INLINE_BASIC = Object(_shared_components_code_code_component__WEBPACK_IMPORTED_MODULE_2__["Snippet"])({
+            lang: 'html',
+            code: "\n      <nw-toast header=\"Notification header\">\n        Content of the notification\n      </nw-toast>"
+        });
+        this.TOAST_INLINE_LIFECYCLE = Object(_shared_components_code_code_component__WEBPACK_IMPORTED_MODULE_2__["Snippet"])({
+            lang: 'html',
+            code: "\n      <!-- Using *ngIf to toggle display (showToast = true initially) -->\n      <nw-toast header=\"I can be closed!\" *ngIf=\"showToast\" (hide)=\"showToast = false\">\n        <!-- Content here -->\n      </nw-toast>\n\n      <!-- or looping over a collection of toasts with *ngFor -->\n      <nw-toast [header]=\"'Toast #'+index+' here!'\"\n        *ngFor=\"let toast of toasts; index as index\" (hide)=\"toasts.splice(index, 1)\">\n        <!-- Content here -->\n      </nw-toast>",
+        });
+        this.APP_TOAST_SERVICE = Object(_shared_components_code_code_component__WEBPACK_IMPORTED_MODULE_2__["Snippet"])({
+            lang: 'typescript',
+            code: "\n      @Injectable({ providedIn: 'root' })\n      export class AppToastService {\n        toasts: any[] = [];\n\n        show(header: string, body: string) {\n          this.toasts.push({ header, body });\n        }\n      }",
+        });
+        this.APP_TOAST_SERVICE_REMOVE = Object(_shared_components_code_code_component__WEBPACK_IMPORTED_MODULE_2__["Snippet"])({
+            lang: 'typescript',
+            code: "\n      remove(toast) {\n        this.toasts = this.toasts.filter(t => t != toast);\n      }",
+        });
+        this.APP_TOASTS_CONTAINER_TPL = Object(_shared_components_code_code_component__WEBPACK_IMPORTED_MODULE_2__["Snippet"])({
+            lang: 'html',
+            code: "\n      <nw-toast\n        *ngFor=\"let toast of toastService.toasts\"\n        [header]=\"toast.header\" [autohide]=\"true\" [delay]=\"toast.delay || 5000\"\n        (hide)=\"toastService.remove(toast)\"\n      >{{toast.body}}</nw-toast>",
+        });
+        this.APP_TOASTS_CONTAINER_STYLES = Object(_shared_components_code_code_component__WEBPACK_IMPORTED_MODULE_2__["Snippet"])({
+            lang: 'css',
+            code: "\n      :host {\n        position: fixed;\n        top: 0;\n        right: 0;\n        margin: 0.5em;\n        z-index: 1200;\n      }",
+        });
+        this.APP_TOASTS_CONTAINER = Object(_shared_components_code_code_component__WEBPACK_IMPORTED_MODULE_2__["Snippet"])({
+            lang: 'typescript',
+            code: "\n      @Component({\n        selector: 'app-toasts',\n        template: ' ... ',\n        styles: [' ... ']\n      })\n      export class AppToastsComponent {\n        constructor(toastService: AppToastService) {}\n      }",
+        });
+        this.CONTAINER_USAGE = Object(_shared_components_code_code_component__WEBPACK_IMPORTED_MODULE_2__["Snippet"])({
+            lang: 'html',
+            code: "\n      <!-- somewhere in your root component template -->\n      <app-toasts aria-live=\"polite\" aria-atomic=\"true\"></app-toasts>",
+        });
+        this.sections = {};
+        this.sections = partialService.getOverviewSections('fake-api');
+    }
+    FakeApiOverviewComponent.ctorParameters = function () { return [
+        { type: _core_services_post_partial_service__WEBPACK_IMPORTED_MODULE_3__["PostPartialService"] }
+    ]; };
+    FakeApiOverviewComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-fake-api-overview',
+            template: __webpack_require__(/*! raw-loader!./fake-api-overview.component.html */ "../node_modules/raw-loader/index.js!./src/app/views/tutorials/fake-api/overview/fake-api-overview.component.html"),
+            host: { '[class.overview]': 'true' }
+        })
+    ], FakeApiOverviewComponent);
+    return FakeApiOverviewComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/views/tutorials/fake-api/sections/filter/filter.component.ts":
+/*!******************************************************************************!*\
+  !*** ./src/app/views/tutorials/fake-api/sections/filter/filter.component.ts ***!
+  \******************************************************************************/
 /*! exports provided: FilterComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -3152,7 +4568,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "../node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "../node_modules/rxjs/_esm5/index.js");
-/* harmony import */ var src_app_core_fake_api_context_model_person_model__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/core/fake-api/context/model/person.model */ "./src/app/core/fake-api/context/model/person.model.ts");
+/* harmony import */ var _core_fake_api_context_model_person_model__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../../core/fake-api/context/model/person.model */ "./src/app/core/fake-api/context/model/person.model.ts");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/forms */ "../node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs/operators */ "../node_modules/rxjs/_esm5/operators/index.js");
 
@@ -3166,7 +4582,7 @@ var FilterComponent = /** @class */ (function () {
     function FilterComponent(http, fb) {
         this.http = http;
         this.fb = fb;
-        this._keyOfPerson = Object.keys(new src_app_core_fake_api_context_model_person_model__WEBPACK_IMPORTED_MODULE_4__["Person"]());
+        this._keyOfPerson = Object.keys(new _core_fake_api_context_model_person_model__WEBPACK_IMPORTED_MODULE_4__["Person"]());
         this.search = this.fb.group({
             name: [],
             email: []
@@ -3209,7 +4625,7 @@ var FilterComponent = /** @class */ (function () {
     FilterComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-filter',
-            template: __webpack_require__(/*! raw-loader!./filter.component.html */ "../node_modules/raw-loader/index.js!./src/app/views/tutorials/fake-api/filter/filter.component.html"),
+            template: __webpack_require__(/*! raw-loader!./filter.component.html */ "../node_modules/raw-loader/index.js!./src/app/views/tutorials/fake-api/sections/filter/filter.component.html"),
             styles: ["\n    table thead th {\n      text-transform: capitalize;\n    }\n  "]
         })
     ], FilterComponent);
@@ -3220,10 +4636,10 @@ var FilterComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/views/tutorials/fake-api/filter/filter.module.ts":
-/*!******************************************************************!*\
-  !*** ./src/app/views/tutorials/fake-api/filter/filter.module.ts ***!
-  \******************************************************************/
+/***/ "./src/app/views/tutorials/fake-api/sections/filter/filter.module.ts":
+/*!***************************************************************************!*\
+  !*** ./src/app/views/tutorials/fake-api/sections/filter/filter.module.ts ***!
+  \***************************************************************************/
 /*! exports provided: FilterModule */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -3231,10 +4647,10 @@ var FilterComponent = /** @class */ (function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FilterModule", function() { return FilterModule; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "../node_modules/@angular/common/fesm5/common.js");
-/* harmony import */ var _filter_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./filter.component */ "./src/app/views/tutorials/fake-api/filter/filter.component.ts");
-/* harmony import */ var src_app_shared_shared_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/shared/shared.module */ "./src/app/shared/shared.module.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "../node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _shared_shared_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../shared/shared.module */ "./src/app/shared/shared.module.ts");
+/* harmony import */ var _filter_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./filter.component */ "./src/app/views/tutorials/fake-api/sections/filter/filter.component.ts");
 
 
 
@@ -3244,89 +4660,17 @@ var FilterModule = /** @class */ (function () {
     function FilterModule() {
     }
     FilterModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-            declarations: [_filter_component__WEBPACK_IMPORTED_MODULE_3__["FilterComponent"]],
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
+            declarations: [_filter_component__WEBPACK_IMPORTED_MODULE_4__["FilterComponent"]],
             imports: [
-                _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
-                src_app_shared_shared_module__WEBPACK_IMPORTED_MODULE_4__["SharedModule"]
+                _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
+                _shared_shared_module__WEBPACK_IMPORTED_MODULE_3__["SharedModule"]
             ],
-            exports: [_filter_component__WEBPACK_IMPORTED_MODULE_3__["FilterComponent"]],
-            bootstrap: [_filter_component__WEBPACK_IMPORTED_MODULE_3__["FilterComponent"]]
+            exports: [_filter_component__WEBPACK_IMPORTED_MODULE_4__["FilterComponent"]],
+            bootstrap: [_filter_component__WEBPACK_IMPORTED_MODULE_4__["FilterComponent"]]
         })
     ], FilterModule);
     return FilterModule;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/views/tutorials/fake-api/overview/fake-api-overview.component.ts":
-/*!**********************************************************************************!*\
-  !*** ./src/app/views/tutorials/fake-api/overview/fake-api-overview.component.ts ***!
-  \**********************************************************************************/
-/*! exports provided: FakeApiOverviewComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FakeApiOverviewComponent", function() { return FakeApiOverviewComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var src_app_shared_components_code_code_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/shared/components/code/code.component */ "./src/app/shared/components/code/code.component.ts");
-/* harmony import */ var src_app_core_services_post_partial_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/core/services/post-partial.service */ "./src/app/core/services/post-partial.service.ts");
-
-
-
-
-var FakeApiOverviewComponent = /** @class */ (function () {
-    function FakeApiOverviewComponent(partialService) {
-        this.TOAST_INLINE_BASIC = Object(src_app_shared_components_code_code_component__WEBPACK_IMPORTED_MODULE_2__["Snippet"])({
-            lang: 'html',
-            code: "\n      <nw-toast header=\"Notification header\">\n        Content of the notification\n      </nw-toast>"
-        });
-        this.TOAST_INLINE_LIFECYCLE = Object(src_app_shared_components_code_code_component__WEBPACK_IMPORTED_MODULE_2__["Snippet"])({
-            lang: 'html',
-            code: "\n      <!-- Using *ngIf to toggle display (showToast = true initially) -->\n      <nw-toast header=\"I can be closed!\" *ngIf=\"showToast\" (hide)=\"showToast = false\">\n        <!-- Content here -->\n      </nw-toast>\n\n      <!-- or looping over a collection of toasts with *ngFor -->\n      <nw-toast [header]=\"'Toast #'+index+' here!'\"\n        *ngFor=\"let toast of toasts; index as index\" (hide)=\"toasts.splice(index, 1)\">\n        <!-- Content here -->\n      </nw-toast>",
-        });
-        this.APP_TOAST_SERVICE = Object(src_app_shared_components_code_code_component__WEBPACK_IMPORTED_MODULE_2__["Snippet"])({
-            lang: 'typescript',
-            code: "\n      @Injectable({ providedIn: 'root' })\n      export class AppToastService {\n        toasts: any[] = [];\n\n        show(header: string, body: string) {\n          this.toasts.push({ header, body });\n        }\n      }",
-        });
-        this.APP_TOAST_SERVICE_REMOVE = Object(src_app_shared_components_code_code_component__WEBPACK_IMPORTED_MODULE_2__["Snippet"])({
-            lang: 'typescript',
-            code: "\n      remove(toast) {\n        this.toasts = this.toasts.filter(t => t != toast);\n      }",
-        });
-        this.APP_TOASTS_CONTAINER_TPL = Object(src_app_shared_components_code_code_component__WEBPACK_IMPORTED_MODULE_2__["Snippet"])({
-            lang: 'html',
-            code: "\n      <nw-toast\n        *ngFor=\"let toast of toastService.toasts\"\n        [header]=\"toast.header\" [autohide]=\"true\" [delay]=\"toast.delay || 5000\"\n        (hide)=\"toastService.remove(toast)\"\n      >{{toast.body}}</nw-toast>",
-        });
-        this.APP_TOASTS_CONTAINER_STYLES = Object(src_app_shared_components_code_code_component__WEBPACK_IMPORTED_MODULE_2__["Snippet"])({
-            lang: 'css',
-            code: "\n      :host {\n        position: fixed;\n        top: 0;\n        right: 0;\n        margin: 0.5em;\n        z-index: 1200;\n      }",
-        });
-        this.APP_TOASTS_CONTAINER = Object(src_app_shared_components_code_code_component__WEBPACK_IMPORTED_MODULE_2__["Snippet"])({
-            lang: 'typescript',
-            code: "\n      @Component({\n        selector: 'app-toasts',\n        template: ' ... ',\n        styles: [' ... ']\n      })\n      export class AppToastsComponent {\n        constructor(toastService: AppToastService) {}\n      }",
-        });
-        this.CONTAINER_USAGE = Object(src_app_shared_components_code_code_component__WEBPACK_IMPORTED_MODULE_2__["Snippet"])({
-            lang: 'html',
-            code: "\n      <!-- somewhere in your root component template -->\n      <app-toasts aria-live=\"polite\" aria-atomic=\"true\"></app-toasts>",
-        });
-        this.sections = {};
-        this.sections = partialService.getOverviewSections('fake-api');
-    }
-    FakeApiOverviewComponent.ctorParameters = function () { return [
-        { type: src_app_core_services_post_partial_service__WEBPACK_IMPORTED_MODULE_3__["PostPartialService"] }
-    ]; };
-    FakeApiOverviewComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-fake-api-overview',
-            template: __webpack_require__(/*! raw-loader!./fake-api-overview.component.html */ "../node_modules/raw-loader/index.js!./src/app/views/tutorials/fake-api/overview/fake-api-overview.component.html"),
-            host: { '[class.overview]': 'true' }
-        })
-    ], FakeApiOverviewComponent);
-    return FakeApiOverviewComponent;
 }());
 
 
@@ -3471,9 +4815,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "../node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _views_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../views.component */ "./src/app/views/views.component.ts");
-/* harmony import */ var _tutorials_examples_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./tutorials-examples.component */ "./src/app/views/tutorials/tutorials-examples.component.ts");
+/* harmony import */ var _fake_api_overview_fake_api_overview_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./fake-api/overview/fake-api-overview.component */ "./src/app/views/tutorials/fake-api/overview/fake-api-overview.component.ts");
 /* harmony import */ var _tutorials_api_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./tutorials-api.component */ "./src/app/views/tutorials/tutorials-api.component.ts");
-/* harmony import */ var _fake_api_overview_fake_api_overview_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./fake-api/overview/fake-api-overview.component */ "./src/app/views/tutorials/fake-api/overview/fake-api-overview.component.ts");
+/* harmony import */ var _tutorials_examples_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./tutorials-examples.component */ "./src/app/views/tutorials/tutorials-examples.component.ts");
 
 
 
@@ -3512,11 +4856,11 @@ var TUTORIALS_VIEWS_ROUTES = [
                 children: [
                     {
                         path: 'overview',
-                        component: _fake_api_overview_fake_api_overview_component__WEBPACK_IMPORTED_MODULE_6__["FakeApiOverviewComponent"]
+                        component: _fake_api_overview_fake_api_overview_component__WEBPACK_IMPORTED_MODULE_4__["FakeApiOverviewComponent"]
                     },
                     {
                         path: 'examples',
-                        component: _tutorials_examples_component__WEBPACK_IMPORTED_MODULE_4__["TutorialsExampleComponent"]
+                        component: _tutorials_examples_component__WEBPACK_IMPORTED_MODULE_6__["TutorialsExampleComponent"]
                     },
                     {
                         path: 'api',

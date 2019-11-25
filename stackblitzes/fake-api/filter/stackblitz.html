@@ -39,7 +39,7 @@
     <input type="hidden" name="project[title]" value="nw-widget - Fake-api - Filter">
     <input type="hidden" name="project[description]"
       value="Example usage of the fake-api widget from https://nw-widget.github.io">
-    <input type="hidden" name="project[dependencies]" value="{&#34;@angular/core&#34;:&#34;~8.2.0&#34;,&#34;@angular/common&#34;:&#34;~8.2.0&#34;,&#34;@angular/compiler&#34;:&#34;~8.2.0&#34;,&#34;@angular/platform-browser&#34;:&#34;~8.2.0&#34;,&#34;@angular/platform-browser-dynamic&#34;:&#34;~8.2.0&#34;,&#34;@angular/router&#34;:&#34;~8.2.0&#34;,&#34;@angular/forms&#34;:&#34;~8.2.0&#34;,&#34;@nw-widget/nw-widget&#34;:&#34;0.0.1&#34;,&#34;core-js&#34;:&#34;^3.4.2&#34;,&#34;rxjs&#34;:&#34;~6.4.0&#34;,&#34;zone.js&#34;:&#34;~0.9.1&#34;}">
+    <input type="hidden" name="project[dependencies]" value="{&#34;@angular/core&#34;:&#34;~8.2.0&#34;,&#34;@angular/common&#34;:&#34;~8.2.0&#34;,&#34;@angular/compiler&#34;:&#34;~8.2.0&#34;,&#34;@angular/platform-browser&#34;:&#34;~8.2.0&#34;,&#34;@angular/platform-browser-dynamic&#34;:&#34;~8.2.0&#34;,&#34;@angular/router&#34;:&#34;~8.2.0&#34;,&#34;@angular/forms&#34;:&#34;~8.2.0&#34;,&#34;angular-in-memory-web-api&#34;:&#34;^0.9.0&#34;,&#34;moment&#34;:&#34;^2.24.0&#34;,&#34;core-js&#34;:&#34;2.6.10&#34;,&#34;rxjs&#34;:&#34;~6.4.0&#34;,&#34;zone.js&#34;:&#34;~0.9.1&#34;}">
     
     <input type="hidden" name="project[tags][]" value="angular">
     
@@ -170,6 +170,38 @@ platformBrowserDynamic()
     .catch(err =&gt; console.error(err));
 ">
     
+    <input type="hidden" name="project[files][app/fake-api-filter.service.spec.ts]" value="import { TestBed } from &#39;@angular/core/testing&#39;;
+
+import { FakeApiFilterService } from &#39;./fake-api-filter.service&#39;;
+
+describe(&#39;FakeApiFilterService&#39;, () =&gt; {
+  beforeEach(() =&gt; TestBed.configureTestingModule({}));
+
+  it(&#39;should be created&#39;, () =&gt; {
+    const service: FakeApiFilterService = TestBed.get(FakeApiFilterService);
+    expect(service).toBeTruthy();
+  });
+});
+">
+    
+    <input type="hidden" name="project[files][app/fake-api-filter.service.ts]" value="import { Injectable } from &#39;@angular/core&#39;;
+import { InMemoryDbService, RequestInfo } from &#39;angular-in-memory-web-api&#39;;
+import { Observable } from &#39;rxjs&#39;;
+import { PersonDatatable } from &#39;./person.datatable&#39;;
+
+@Injectable({
+  providedIn: &#39;root&#39;
+})
+export class FakeApiFilterService implements InMemoryDbService {
+  createDb(reqInfo?: RequestInfo): {} | Observable&lt;{}&gt; | Promise&lt;{}&gt; {
+    let context = {
+      persons: PersonDatatable.persons
+    };
+    return context;
+  }
+}
+">
+    
     <input type="hidden" name="project[files][app/filter.component.html]" value="&lt;div class=&#34;row&#34;&gt;
     &lt;div class=&#34;col-md-12 mb-3&#34;&gt;
         &lt;form class=&#34;form-inline&#34; [formGroup]=&#34;search&#34;&gt;
@@ -227,9 +259,9 @@ describe(&#39;FilterComponent&#39;, () =&gt; {
     <input type="hidden" name="project[files][app/filter.component.ts]" value="import { Component, OnInit, OnDestroy } from &#39;@angular/core&#39;;
 import { HttpClient, HttpParams } from &#39;@angular/common/http&#39;;
 import { Observable, Subscription, Subject } from &#39;rxjs&#39;;
-import { IPerson, Person } from &#39;../../../../../core/fake-api/context/model/person.model&#39;;
 import { FormBuilder, FormGroup } from &#39;@angular/forms&#39;;
 import { tap, debounceTime, distinctUntilChanged, takeUntil } from &#39;rxjs/operators&#39;;
+import { IPerson, Person } from &#39;./person.datatable&#39;;
 
 @Component({
   selector: &#39;app-filter&#39;,
@@ -298,8 +330,11 @@ export class FilterComponent implements OnInit, OnDestroy {
     
     <input type="hidden" name="project[files][app/filter.module.ts]" value="import { CommonModule } from &#39;@angular/common&#39;;
 import { NgModule } from &#39;@angular/core&#39;;
-import { SharedModule } from &#39;../../../../../shared/shared.module&#39;;
 import { FilterComponent } from &#39;./filter.component&#39;;
+import { FormsModule, ReactiveFormsModule } from &#39;@angular/forms&#39;;
+import { HttpClientModule } from &#39;@angular/common/http&#39;;
+import { HttpClientInMemoryWebApiModule } from &#39;angular-in-memory-web-api&#39;;
+import { FakeApiFilterService } from &#39;./fake-api-filter.service&#39;;
 
 
 
@@ -307,7 +342,10 @@ import { FilterComponent } from &#39;./filter.component&#39;;
   declarations: [FilterComponent],
   imports: [
     CommonModule,
-    SharedModule
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(FakeApiFilterService),
   ],
   exports: [FilterComponent],
   bootstrap: [FilterComponent]
@@ -315,6 +353,164 @@ import { FilterComponent } from &#39;./filter.component&#39;;
 })
 export class FilterModule { }
 ">
+    
+    <input type="hidden" name="project[files][app/person.datatable.ts]" value="import moment from &#39;moment&#39;;
+
+export interface IPerson {
+    id?: string;
+    name?: string;
+    birthday?: moment.Moment;
+    gender?: string;
+    email?: string;
+    phone?: string;
+    address?: string;
+}
+
+export class Person implements IPerson {
+    constructor(
+        public id?: string,
+        public name?: string,
+        public birthday?: moment.Moment,
+        public gender?: string,
+        public email?: string,
+        public phone?: string,
+        public address?: string
+    ) { }
+}
+
+export class PersonDatatable {
+    public static persons: IPerson[] = [
+        {
+            id: &#39;5dcfbe4aef051e03d0c31cd4&#39;,
+            name: &#39;Daphne Beasley&#39;,
+            birthday: moment(&#39;07-01-2010&#39;, &#39;MM-DD-YYYY&#39;),
+            gender: &#39;female&#39;,
+            email: &#39;daphnebeasley@architax.com&#39;,
+            phone: &#39;(958) 546-3235&#39;,
+            address: &#39;307 Rockwell Place, Bentley, Maryland, 9925&#39;
+        }, {
+            id: &#39;5dcfbe4acd50d57e51ddf61c&#39;,
+            name: &#39;Russo Ray&#39;,
+            birthday: moment(&#39;01-06-1990&#39;, &#39;MM-DD-YYYY&#39;),
+            gender: &#39;male&#39;,
+            email: &#39;russoray@architax.com&#39;,
+            phone: &#39;(826) 479-2379&#39;,
+            address: &#39;209 Doughty Street, Kersey, Texas, 7549&#39;
+        }, {
+            id: &#39;5dcfbe4a49c43ce5b46e9fcd&#39;,
+            name: &#39;Carla Hogan&#39;,
+            birthday: moment(&#39;07-30-1970&#39;, &#39;MM-DD-YYYY&#39;),
+            gender: &#39;female&#39;,
+            email: &#39;carlahogan@architax.com&#39;,
+            phone: &#39;(830) 457-2405&#39;,
+            address: &#39;960 Louisa Street, Downsville, New Jersey, 4644&#39;
+        }, {
+            id: &#39;5dcfbe4af838d207966c80b7&#39;,
+            name: &#39;Steele Sargent&#39;,
+            birthday: moment(&#39;05-24-2015&#39;, &#39;MM-DD-YYYY&#39;),
+            gender: &#39;male&#39;,
+            email: &#39;steelesargent@architax.com&#39;,
+            phone: &#39;(953) 580-2504&#39;,
+            address: &#39;665 Williamsburg Street, Efland, Northern Mariana Islands, 7168&#39;
+        }, {
+            id: &#39;5dcfbe4a29b4869ec39dd86a&#39;,
+            name: &#39;Michele Cantrell&#39;,
+            birthday: moment(&#39;07-04-1971&#39;, &#39;MM-DD-YYYY&#39;),
+            gender: &#39;female&#39;,
+            email: &#39;michelecantrell@architax.com&#39;,
+            phone: &#39;(891) 549-3461&#39;,
+            address: &#39;246 Broadway , Dalton, Virgin Islands, 2918&#39;
+        }, {
+            id: &#39;5dcfbe4a49a49f624450b847&#39;,
+            name: &#39;Cooke Knight&#39;,
+            birthday: moment(&#39;07-12-1980&#39;, &#39;MM-DD-YYYY&#39;),
+            gender: &#39;male&#39;,
+            email: &#39;cookeknight@architax.com&#39;,
+            phone: &#39;(812) 482-2197&#39;,
+            address: &#39;170 Nevins Street, Enoree, Kentucky, 7418&#39;
+        }, {
+            id: &#39;5dcfbe4a170d855e2266bddf&#39;,
+            name: &#39;Sears Gross&#39;,
+            birthday: moment(&#39;06-13-2006&#39;, &#39;MM-DD-YYYY&#39;),
+            gender: &#39;male&#39;,
+            email: &#39;searsgross@architax.com&#39;,
+            phone: &#39;(839) 505-2064&#39;,
+            address: &#39;556 Ivan Court, Bynum, North Dakota, 9556&#39;
+        }, {
+            id: &#39;5dcfbe4ae8c4854989bea1e9&#39;,
+            name: &#39;Olson Walker&#39;,
+            birthday: moment(&#39;02-03-2008&#39;, &#39;MM-DD-YYYY&#39;),
+            gender: &#39;male&#39;,
+            email: &#39;olsonwalker@architax.com&#39;,
+            phone: &#39;(878) 549-3213&#39;,
+            address: &#39;232 Allen Avenue, Roberts, Minnesota, 2194&#39;
+        }, {
+            id: &#39;5dcfbe4a7f569838f7eff817&#39;,
+            name: &#39;Kerr Ferguson&#39;,
+            birthday: moment(&#39;08-05-2004&#39;, &#39;MM-DD-YYYY&#39;),
+            gender: &#39;male&#39;,
+            email: &#39;kerrferguson@architax.com&#39;,
+            phone: &#39;(899) 515-3211&#39;,
+            address: &#39;214 Crawford Avenue, Boykin, Alaska, 9151&#39;
+        }, {
+            id: &#39;5dcfbe4ae8bd207d7339d332&#39;,
+            name: &#39;Roberta Cole&#39;,
+            birthday: moment(&#39;12-18-1987&#39;, &#39;MM-DD-YYYY&#39;),
+            gender: &#39;female&#39;,
+            email: &#39;robertacole@architax.com&#39;,
+            phone: &#39;(882) 419-3716&#39;,
+            address: &#39;478 Livingston Street, Cressey, Delaware, 5136&#39;
+        }, {
+            id: &#39;5dcfbe4af823e350cc9bbeb6&#39;,
+            name: &#39;Billie Fischer&#39;,
+            birthday: moment(&#39;11-23-2001&#39;, &#39;MM-DD-YYYY&#39;),
+            gender: &#39;female&#39;,
+            email: &#39;billiefischer@architax.com&#39;,
+            phone: &#39;(825) 515-2932&#39;,
+            address: &#39;880 Dennett Place, Eden, American Samoa, 303&#39;
+        }, {
+            id: &#39;5dcfbe4a7dfb1d994a24a061&#39;,
+            name: &#39;Saunders Booth&#39;,
+            birthday: moment(&#39;09-13-1991&#39;, &#39;MM-DD-YYYY&#39;),
+            gender: &#39;male&#39;,
+            email: &#39;saundersbooth@architax.com&#39;,
+            phone: &#39;(896) 556-3337&#39;,
+            address: &#39;491 Mill Road, Macdona, New Mexico, 7329&#39;
+        }, {
+            id: &#39;5dcfbe4a683f9586448f622e&#39;,
+            name: &#39;Jewel Pena&#39;,
+            birthday: moment(&#39;02-12-1987&#39;, &#39;MM-DD-YYYY&#39;),
+            gender: &#39;female&#39;,
+            email: &#39;jewelpena@architax.com&#39;,
+            phone: &#39;(990) 456-3996&#39;,
+            address: &#39;319 Dakota Place, Detroit, Connecticut, 6180&#39;
+        }, {
+            id: &#39;5dcfbe4a09664a31b34af187&#39;,
+            name: &#39;Olga Calderon&#39;,
+            birthday: moment(&#39;07-18-1999&#39;, &#39;MM-DD-YYYY&#39;),
+            gender: &#39;female&#39;,
+            email: &#39;olgacalderon@architax.com&#39;,
+            phone: &#39;(829) 494-3430&#39;,
+            address: &#39;333 Irving Place, Noxen, Ohio, 4845&#39;
+        }, {
+            id: &#39;5dcfbe4a044d133498e0df51&#39;,
+            name: &#39;Swanson Bowman&#39;,
+            birthday: moment(&#39;06-17-2019&#39;, &#39;MM-DD-YYYY&#39;),
+            gender: &#39;male&#39;,
+            email: &#39;swansonbowman@architax.com&#39;,
+            phone: &#39;(997) 540-3005&#39;,
+            address: &#39;137 Catherine Street, Woodlake, District Of Columbia, 811&#39;
+        }, {
+            id: &#39;5dcfbe4a3e9c7aa9bf267e87&#39;,
+            name: &#39;Agnes Justice&#39;,
+            birthday: moment(&#39;01-14-2004&#39;, &#39;MM-DD-YYYY&#39;),
+            gender: &#39;female&#39;,
+            email: &#39;agnesjustice@architax.com&#39;,
+            phone: &#39;(859) 481-3245&#39;,
+            address: &#39;828 Foster Avenue, Coaldale, West Virginia, 7124&#39;
+        }
+    ];
+}">
     
   </form>
   <script>document.getElementById("mainForm").submit();</script>
